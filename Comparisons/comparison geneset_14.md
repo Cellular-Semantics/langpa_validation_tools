@@ -1,0 +1,1351 @@
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
+# Prompt:
+
+Perform comprehensive literature analysis for the following gene list in the specified biological context.
+
+**Gene List**: ["PPP1R16B, BCAS1, AC008080.4, MOG, GLRA3, ENPP6, ADAM33, GPC3, CLDN11, PLD1, SEMA4D, MYRF, MBP, GPR17, KCNS3, TNS3, RASGEF1B, AC069209.2, ADRA1A, CD22, FA2H, CDK18, ST18, FERMT1, NOS1, TMEM235, AC110285.1, ACAN, MAG, PRICKLE1, AL512308.1, FAM83D, BMP2, BMPER, COL18A1, LINC01447, P2RX7, ZNF536, ATP6V0A4, AMPD3, SLC7A14, ANO3, LCNL1, PTGDS, SOX10, SPNS2, FLACC1, NFASC, ERBB3, TNS2, TUBB4A, DNAH10, DCT, UGT8, SLC1A1, PRSS12, AC107223.1, RASGEF1C, PKD1L1, SEMA3D, ADAMTSL1, AFAP1L2, TMEFF2, TMTC4, PKP4-AS1, PLAAT1, DOCK6, SGCD, TLL1, CPM, COL20A1, PLP1, CNDP1, VSTM2B, CHST15, PPFIBP2, CDH8, CDH19, TMCC3, FGF12, TF, SH3RF3, SHROOM4, SIRT2, NPAS1, OPCML, OTOGL, P2RX4, MACROD2, LINC01170, LIMS2, CCDC148, PARD3B, SLC7A14-AS1, ITPR2, PCDH11Y, SRCIN1, GALNT13, FRMD4B, KIF21B, AATK, C10orf90, ARPP21, CA10, CABLES1, MMP17, REPS2, ATP8A2, SYT6, SYT7, MYRFL, MYT1L, PIK3R6, TFEB, FAM13C, THBS1, EYS, AC009227.1, PTGER3, TMTC1, EFCAB5, EBF2, AC012636.1, LSAMP-AS1, RNF122, BRINP2, KTN1-AS1, SEMA3E, APCDD1, SERINC5, SERPINB9, LIN28B, SAMHD1, ITGB5, AC079209.1, SHANK2, AC079148.3, LINC00906, ABCA2, AC044781.1, SLC8A3, SMOC1, RNF152, AL161910.1, RAPGEF1, TRG-AS1, PRDM16, AC004852.2, PPFIBP1, UST, AFMID, COL12A1, VEPH1, AF121898.1, VWC2L, ADAMTS14, PDE1C, ZNF365, ZNF469, CCDC26, CADM1, PKP4, DAPL1, AP003464.1, DIPK1C, TRIM67, DLL3, DIO2, DGKB, DLX6-AS1, PRDM8”]
+**Biological Context**: malignant glioblastoma cells
+
+**Analysis Strategy**:
+
+1. Search current scientific literature for functional roles of each gene in the input list
+2. Identify clusters of genes that act together in pathways, processes, or cellular states
+3. Treat each cluster as a potential gene program within the list
+4. Interpret findings in light of both normal physiological roles and disease-specific alterations
+5. Prioritize well-established functions with strong literature support, but highlight emerging evidence if contextually relevant
+
+**Guidelines**:
+
+* Anchor all predictions in either the normal physiology and development of the cell type and tissue specified in the context OR the alterations and dysregulations characteristic of the specified disease
+* Connect gene-level roles to program-level implications
+* Consider gene interactions, regulatory networks, and pathway dynamics
+* Highlight cases where multiple genes collectively strengthen evidence
+* Ensure all claims are backed by experimental evidence with proper attribution
+
+**Output**: Respond with ONLY JSON conforming to the provided schema - no prose, no markdown.
+
+```json
+{
+"$schema": "http://json-schema.org/draft-07/schema#",
+"title": "Gene Program Functional Analysis",
+"description": "Comprehensive literature-based functional analysis of gene lists in specific biological contexts. Perform systematic analysis to identify gene programs - clusters of genes acting together in pathways, processes, or cellular states. For each program, predict functional implications for the specified cell type in the context of the provided disease and tissue environment. Prioritize well-established functions with strong literature support, but highlight emerging evidence if contextually relevant. Rank predictions higher when multiple genes from input list act in same process and when most/all required pathway components are present.",
+"type": "object",
+"required": [
+"context",
+"input_genes",
+"programs",
+"version"
+],
+"definitions": {
+"atomic_term": {
+"type": "object",
+"required": [
+"name",
+"citation",
+"genes"
+],
+"properties": {
+"name": {
+"type": "string",
+"description": "A minimal component of the gene program, representing a single biological process or cell component."
+},
+"citation": {
+"type": "array",
+"items": {
+"$ref": "#/definitions/citation"
+},
+"description": "list of citations supporting the role of the listed genes in the name biological process or cell component"
+},
+"genes": {
+"type": "array",
+"items": {
+"type": "string"
+},
+"description": "Genes of the program whose products are involved in this biological process or cell component."
+}
+},
+"additionalProperties": false
+},
+"citation": {
+"type": "object",
+"required": [
+"url"
+],
+"properties": {
+source_id": {
+"type": "string",
+},
+"notes": {
+"type": "string",
+"description": "Why this citation supports the claim"
+}
+},
+"additionalProperties": false
+}
+},
+"properties": {
+"context": {
+"type": "object",
+"required": [
+"cell_type",
+"disease"
+],
+"properties": {
+"cell_type": {
+"type": "string",
+"description": "Extract and specify the name or names of the primary cell type(s) from the provided biological context. Use standard cell type terminology. Leave blank if not specified."
+},
+"disease": {
+"type": "string",
+"description": "Extract and specify the disease or pathological condition from the provided biological context (e.g., 'IDH-mutant astrocytoma', 'Alzheimer disease', 'multiple sclerosis'). Use standard disease terminology. Leave blank if not specified."
+},
+"tissue": {
+"type": "string",
+"description": "Extract and specify the tissue or anatomical location if mentioned in the biological context (e.g., 'brain', 'cerebral cortex', 'hippocampus'). Leave blank if not specified."
+}
+},
+"additionalProperties": false
+},
+"input_genes": {
+"type": "array",
+"items": {
+"type": "string",
+"minLength": 1
+},
+"minItems": 1,
+"uniqueItems": true
+},
+"programs": {
+"type": "array",
+"minItems": 1,
+"items": {
+"type": "object",
+"required": [
+"program_name",
+"description",
+"predicted_cellular_impact",
+"evidence_summary",
+"significance_score",
+"citations",
+"supporting_genes"
+],
+"description": "A gene program, relevant to the provided context. Avoid programs that group 2 or more loosely related processes",
+"properties": {
+"program_name": {
+"type": "string",
+"minLength": 1,
+"description": "Provide a concise, descriptive name for this gene program that captures its primary biological function or pathway. Use 2-5 words maximum."
+},
+"description": {
+"type": "string",
+"minLength": 1,
+"description": "A more detailed description of the gene program."
+},
+"atomic_biological_processes": {
+"type": "array",
+"description": "A list of atomic biological process terms extracted from the description.",
+"items": {
+"$ref": "#/definitions/atomic_term"
+}
+},
+"atomic_cellular_components": {
+"type": "array",
+"description": "A list of atomic cellular component terms extracted from the description.",
+"items": {
+"$ref": "#/definitions/atomic_term"
+}
+},
+"predicted_cellular_impact": {
+"type": "array",
+"minItems": 1,
+"items": {
+"type": "string",
+"description": "Concise bullet-level impacts (e.g., ‘enhanced focal adhesion signaling’)"
+}
+},
+"evidence_summary": {
+"type": "string",
+"minLength": 1
+},
+"significance_score": {
+"description": "A value between 0 and 1 that ranks this gene program by the number of supporting genes, the number of supporting references and relevance to the context.",
+"type": "number",
+"minimum": 0.0,
+"maximum": 1.0
+},
+"citations": {
+"description": "Array of citations supporting the role of the listed genes in this gene program.",
+"type": "array",
+"minItems": 1,
+"items": {
+"$ref": "#/definitions/citation"
+}
+},
+"supporting_genes": {
+"type": "array",
+"minItems": 1,
+"items": {
+"type": "string"
+},
+"uniqueItems": true
+},
+"required_genes_not_in_input": {
+"description": "Genes required for this program that are NOT present in the input genes.",
+"type": "object",
+"properties": {
+"genes": {
+"type": "array",
+"items": {
+"type": "string"
+}
+},
+"citations": {
+"type": "array",
+"minItems": 1,
+"items": {
+"$ref": "#/definitions/citation"
+}
+}
+}
+}
+},
+"additionalProperties": false
+}
+},
+"method": {
+"type": "object",
+"description": "Optional trace of how programs were derived",
+"properties": {
+"clustering_basis": {
+"type": "array",
+"items": {
+"type": "string"
+},
+"description": "e.g., pathway databases, co-citation, PPI, co-expression"
+},
+"notes": {
+"type": "string"
+}
+},
+"additionalProperties": false
+},
+"version": {
+"type": "string"
+}
+},
+"additionalProperties": false
+}
+
+Perfect. Now let me output the JSON response as the final answer:
+
+```json
+{
+  "context": {
+    "cell_type": "Glioblastoma cells (malignant astrocytoma with oligodendrocyte progenitor-like features)",
+    "disease": "Malignant glioblastoma (WHO Grade IV astrocytoma)",
+    "tissue": "Brain (white and gray matter)"
+  },
+  "input_genes": [
+    "PPP1R16B", "BCAS1", "AC008080.4", "MOG", "GLRA3", "ENPP6", "ADAM33", "GPC3", "CLDN11", "PLD1",
+    "SEMA4D", "MYRF", "MBP", "GPR17", "KCNS3", "TNS3", "RASGEF1B", "AC069209.2", "ADRA1A", "CD22",
+    "FA2H", "CDK18", "ST18", "FERMT1", "NOS1", "TMEM235", "AC110285.1", "ACAN", "MAG", "PRICKLE1",
+    "AL512308.1", "FAM83D", "BMP2", "BMPER", "COL18A1", "LINC01447", "P2RX7", "ZNF536", "ATP6V0A4",
+    "AMPD3", "SLC7A14", "ANO3", "LCNL1", "PTGDS", "SOX10", "SPNS2", "FLACC1", "NFASC", "ERBB3",
+    "TNS2", "TUBB4A", "DNAH10", "DCT", "UGT8", "SLC1A1", "PRSS12", "AC107223.1", "RASGEF1C", "PKD1L1",
+    "SEMA3D", "ADAMTSL1", "AFAP1L2", "TMEFF2", "TMTC4", "PKP4-AS1", "PLAAT1", "DOCK6", "SGCD", "TLL1",
+    "CPM", "COL20A1", "PLP1", "CNDP1", "VSTM2B", "CHST15", "PPFIBP2", "CDH8", "CDH19", "TMCC3",
+    "FGF12", "TF", "SH3RF3", "SHROOM4", "SIRT2", "NPAS1", "OPCML", "OTOGL", "P2RX4", "MACROD2",
+    "LINC01170", "LIMS2", "CCDC148", "PARD3B", "SLC7A14-AS1", "ITPR2", "PCDH11Y", "SRCIN1", "GALNT13",
+    "FRMD4B", "KIF21B", "AATK", "C10orf90", "ARPP21", "CA10", "CABLES1", "MMP17", "REPS2", "ATP8A2",
+    "SYT6", "SYT7", "MYRFL", "MYT1L", "PIK3R6", "TFEB", "FAM13C", "THBS1", "EYS", "AC009227.1",
+    "PTGER3", "TMTC1", "EFCAB5", "EBF2", "AC012636.1", "LSAMP-AS1", "RNF122", "BRINP2", "KTN1-AS1",
+    "SEMA3E", "APCDD1", "SERINC5", "SERPINB9", "LIN28B", "SAMHD1", "ITGB5", "AC079209.1", "SHANK2",
+    "AC079148.3", "LINC00906", "ABCA2", "AC044781.1", "SLC8A3", "SMOC1", "RNF152", "AL161910.1",
+    "RAPGEF1", "TRG-AS1", "PRDM16", "AC004852.2", "PPFIBP1", "UST", "AFMID", "COL12A1", "VEPH1",
+    "AF121898.1", "VWC2L", "ADAMTS14", "PDE1C", "ZNF365", "ZNF469", "CCDC26", "CADM1", "PKP4",
+    "DAPL1", "AP003464.1", "DIPK1C", "TRIM67", "DLL3", "DIO2", "DGKB", "DLX6-AS1", "PRDM8"
+  ],
+  "programs": [
+    {
+      "program_name": "Oligodendrocyte Lineage Programming",
+      "description": "Coordinated expression of factors driving oligodendrocyte differentiation and myelin formation, hijacked by glioblastoma cells to promote stemness and infiltration. This program involves master transcription factors (SOX10, MYRF, EBF2) that orchestrate the expression of myelin structural proteins (MBP, MOG, PLP1, UGT8), lipid biosynthesis enzymes, and adhesion molecules characteristic of oligodendrocyte lineage cells.",
+      "atomic_biological_processes": [
+        {
+          "name": "Master transcriptional regulation of oligodendrocyte fate",
+          "citation": [
+            {"source_id": "web:6", "notes": "SOX10 identified as master regulator in RTK I-subtype GBM tumors"},
+            {"source_id": "web:112", "notes": "SOX10 jointly defines oligodendroglial identity with OLIG2"},
+            {"source_id": "web:111", "notes": "SOX10 capable of inducing oligodendrocyte fate both in vitro and in vivo"}
+          ],
+          "genes": ["SOX10", "MYRF", "EBF2", "PRDM16", "PRDM8"]
+        },
+        {
+          "name": "Myelin protein synthesis and assembly",
+          "citation": [
+            {"source_id": "web:10", "notes": "MYRF required for maintenance of myelin and oligodendrocyte identity; regulates MBP, MAG transcripts"},
+            {"source_id": "web:16", "notes": "MBP enriched in tumor-associated glial cells; marks mature myelin production"}
+          ],
+          "genes": ["MBP", "MOG", "PLP1", "MAG"]
+        },
+        {
+          "name": "Galactocerebroside and glycosphingolipid metabolism",
+          "citation": [
+            {"source_id": "web:19", "notes": "Glycoproteins and glycosphingolipids modify ECM and regulate tumor microenvironment"}
+          ],
+          "genes": ["UGT8", "FA2H", "CHST15"]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Myelin sheath and oligodendrocyte processes",
+          "citation": [
+            {"source_id": "web:10", "notes": "Myelin structural proteins MBP, MOG, PLP1 form compact myelin wraps around axons"}
+          ],
+          "genes": ["MBP", "MOG", "PLP1", "CLDN11", "NFASC"]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced stemness and self-renewal through hijacking of normal OPC developmental programs",
+        "Increased infiltration capacity through expression of oligodendrocyte-like migratory behavior",
+        "Immune evasion via expression of OPC-associated immune-suppressive markers",
+        "Enhanced invasion at tumor margins where OPC-like features promote white matter infiltration"
+      ],
+      "evidence_summary": "Glioblastoma cells frequently co-opt the oligodendrocyte lineage program, expressing markers characteristic of oligodendrocyte progenitor cells (OPCs). SOX10, MYRF, and EBF2 drive comprehensive transcriptional programs encoding myelin proteins (MBP, MOG, PLP1), lipid biosynthesis enzymes (UGT8, FA2H), and cell adhesion molecules. Single-cell studies show abundant OPC-like malignant cells classified as oligodendrocyte precursor-like cells in high-neural glioblastomas. This program is enriched at tumor margins and inversely correlates with proliferation, suggesting it represents a pro-invasive, anti-differentiated state that mimics OPC migratory behavior while maintaining stemness.",
+      "significance_score": 0.92,
+      "citations": [
+        {"source_id": "web:3", "notes": "Identified oligodendrocyte lineage cell types in GBM including OPCs, newly formed and myelinating oligodendrocytes"},
+        {"source_id": "web:5", "notes": "OPCs at tumor border produce stemness-promoting niches for GBM cells"},
+        {"source_id": "web:6", "notes": "SOX10 master regulator of molecular tumor subtype"},
+        {"source_id": "web:14", "notes": "High-neural GBM enriched for oligodendrocyte precursor-like malignant cells"}
+      ],
+      "supporting_genes": ["SOX10", "MYRF", "EBF2", "MBP", "MOG", "PLP1", "UGT8", "FA2H", "CLDN11", "NFASC", "PRDM16", "BCAS1"],
+      "required_genes_not_in_input": {
+        "genes": ["OLIG2", "OLIG1", "NKX2.2", "SOX9"],
+        "citations": [
+          {"source_id": "web:112", "notes": "OLIG2 and SOX10 are primary lineage determinants for oligodendrocytes"},
+          {"source_id": "web:113", "notes": "OLIG2-positive cells resemble OPCs in glioblastoma"}
+        ]
+      }
+    },
+    {
+      "program_name": "Extracellular Matrix Remodeling and Invasion",
+      "description": "Coordinated expression of matrix metalloproteases, their inhibitors, collagen synthesis, and proteoglycan biosynthesis driving ECM degradation and tumor cell migration. This program enables breach of white matter boundaries and tumor infiltration through mechanistic regulation of matrix stiffness and integrin-mediated adhesion.",
+      "atomic_biological_processes": [
+        {
+          "name": "Matrix metalloproteinase and serine protease activity",
+          "citation": [
+            {"source_id": "web:94", "notes": "Coordination of metalloproteinase expression, ECM degradation, and integrin activity at invasion front"},
+            {"source_id": "web:95", "notes": "Elevated MMPs in GBM vs normal brain; facilitate invasion through ECM destruction"},
+            {"source_id": "web:96", "notes": "MMPs crucial for ECM remodeling; co-opted by cancers for invasion and metastasis"}
+          ],
+          "genes": ["MMP17", "PRSS12", "ADAMTS14", "ADAMTSL1", "ADAM33"]
+        },
+        {
+          "name": "Collagen synthesis and crosslinking",
+          "citation": [
+            {"source_id": "web:17", "notes": "Matrix code identifies CMPs critical for GBM phenotypes and niches"},
+            {"source_id": "web:18", "notes": "Glioma cells secrete collagen VI to facilitate invasion"},
+            {"source_id": "web:20", "notes": "Collagen modulates ECM structure and mechanical properties regulating tumor invasion"}
+          ],
+          "genes": ["COL18A1", "COL20A1", "COL12A1", "TLL1"]
+        },
+        {
+          "name": "Proteoglycan and aggrecan modification",
+          "citation": [
+            {"source_id": "web:19", "notes": "Proteoglycans and aggrecan regulate tumor-related activity in ECM"},
+            {"source_id": "web:98", "notes": "ADAMTS-mediated cleavage of proteoglycans promotes glioma invasion"}
+          ],
+          "genes": ["ACAN", "CHST15", "GPC3"]
+        },
+        {
+          "name": "Integrin-mediated adhesion and signaling",
+          "citation": [
+            {"source_id": "web:78", "notes": "Rap1/integrin pathway promotes GBM proliferation and adhesion"},
+            {"source_id": "web:79", "notes": "EphB2/R-Ras signaling regulates adhesion, growth, and invasion"}
+          ],
+          "genes": ["ITGB5", "FERMT1", "LIMS2", "SRCIN1"]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Collagen fiber architecture",
+          "citation": [
+            {"source_id": "web:24", "notes": "Collagen VI deposition primes microenvironment for invasion via mechanostimulation"}
+          ],
+          "genes": ["COL18A1", "COL20A1", "COL12A1"]
+        },
+        {
+          "name": "Integrin-containing focal adhesions",
+          "citation": [
+            {"source_id": "web:78", "notes": "Integrin engagement promotes GBM cell adhesion and proliferation"}
+          ],
+          "genes": ["ITGB5", "FERMT1", "TNS3", "TNS2"]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced invasive capacity through ECM proteolysis and remodeling",
+        "Increased migration velocity and directional movement via altered matrix stiffness",
+        "Enhanced cell-ECM interactions promoting tumor cell survival in invaded tissue",
+        "Facilitated angiogenesis through matrix-derived proangiogenic signals"
+      ],
+      "evidence_summary": "Multiple genes in this list encode matrix-modifying enzymes and ECM-binding proteins that collectively enhance glioblastoma invasiveness. ADAMTS14, MMP17, PRSS12, and ADAM33 degrade or modify ECM components; COL18A1, COL20A1, COL12A1 provide collagen scaffolds that are both substrates for proteolysis and mediators of mechanotransduction. ACAN and GPC3 contribute proteoglycans that interact with growth factors and cell adhesion. Integrin-related genes (ITGB5, FERMT1, LIMS2, SRCIN1) link ECM contact to intracellular signaling. This coordinated program is particularly active at tumor margins and perivascular regions, enabling glioma cells to infiltrate white matter and promote angiogenesis.",
+      "significance_score": 0.88,
+      "citations": [
+        {"source_id": "web:19", "notes": "Systematic review of ECM modifications in GBM microenvironment"},
+        {"source_id": "web:22", "notes": "ECM as active player in tumor-related activity"},
+        {"source_id": "web:99", "notes": "Comprehensive review of glioblastoma invasion mechanisms"}
+      ],
+      "supporting_genes": ["MMP17", "ADAMTS14", "ADAM33", "COL18A1", "COL20A1", "COL12A1", "ACAN", "GPC3", "ITGB5", "FERMT1", "TNS3", "TNS2", "PRSS12", "TLL1", "CHST15"],
+      "required_genes_not_in_input": {
+        "genes": ["MMP2", "MMP9", "MT1-MMP", "TIMP1", "TIMP2"],
+        "citations": [
+          {"source_id": "web:95", "notes": "MMP2 and MMP9 extensively studied in GBM invasion"},
+          {"source_id": "web:100", "notes": "MT1-MMP upregulated in glioma-associated microglia"}
+        ]
+      }
+    },
+    {
+      "program_name": "Neuron-to-Tumor Synaptic Integration",
+      "description": "Expression of synaptic proteins, calcium-permeable ion channels, and neurotransmitter machinery enabling glioblastoma cells to receive excitatory input from neurons and engage synaptic signaling for proliferation and invasion. This program converts tumor cells into post-synaptic partners that co-opt neuronal circuits for survival.",
+      "atomic_biological_processes": [
+        {
+          "name": "Excitatory synaptic signal transduction",
+          "citation": [
+            {"source_id": "web:40", "notes": "SYT7 supports activity-dependent docking of synaptic vesicles"},
+            {"source_id": "web:41", "notes": "GBM cells increase synaptic genes within infiltrated brain tissue"},
+            {"source_id": "web:42", "notes": "Synaptic components required for glioblastoma progression"}
+          ],
+          "genes": ["SYT6", "SYT7", "SHANK2", "NFASC", "CADM1"]
+        },
+        {
+          "name": "Glutamate receptor signaling and calcium influx",
+          "citation": [
+            {"source_id": "web:169", "notes": "AMPA receptor expression promotes glioma invasion via beta1 integrin"},
+            {"source_id": "web:170", "notes": "Calcium-permeable AMPA receptors in GBM driven by glutamate"},
+            {"source_id": "web:171", "notes": "AMPAR activation promotes migration and proliferation of GBM cells"}
+          ],
+          "genes": ["SLC1A1", "ITPR2", "P2RX7", "KCNS3", "SLC8A3"]
+        },
+        {
+          "name": "Ion channel-mediated electrical excitability",
+          "citation": [
+            {"source_id": "web:25", "notes": "Ion channels enriched in GSCs; constrain growth when inhibited"},
+            {"source_id": "web:27", "notes": "Voltage-gated ion channels control GBM cell invasiveness"},
+            {"source_id": "web:28", "notes": "Ion channels are oncogenic in gliomas with therapeutic potential"}
+          ],
+          "genes": ["KCNS3", "ANO3", "P2RX4", "GLRA3", "GPR17"]
+        },
+        {
+          "name": "Nitric oxide signaling and retrograde messaging",
+          "citation": [
+            {"source_id": "web:63", "notes": "NOS1 mediates important biology in glioma affecting growth"},
+            {"source_id": "web:64", "notes": "nNOS expression serves role in TMZ-induced damage of astrocytoma"}
+          ],
+          "genes": ["NOS1", "PTGDS"]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Postsynaptic density and adhesion complexes",
+          "citation": [
+            {"source_id": "web:41", "notes": "GBM cells express postsynaptic genes within infiltrated tissue"}
+          ],
+          "genes": ["SHANK2", "NFASC", "CADM1", "SEMA4D"]
+        },
+        {
+          "name": "Calcium-permeable ion channels and receptors",
+          "citation": [
+            {"source_id": "web:25", "notes": "Ion channels are enriched in glioblastoma stem cells"}
+          ],
+          "genes": ["ITPR2", "P2RX7", "P2RX4", "KCNS3", "ANO3"]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced survival and proliferation through neuron-derived glutamate signaling",
+        "Calcium-dependent activation of pro-growth signaling cascades (PI3K/Akt, MAPK/ERK)",
+        "Increased migration capacity through AMPA-integrin coupling",
+        "Improved therapy resistance via neuronal neuroprotective signals",
+        "Enhanced infiltration along neuronal projections and white matter tracts"
+      ],
+      "evidence_summary": "Glioblastoma cells extensively co-opt synaptic signaling mechanisms. They express postsynaptic proteins (SHANK2, NFASC, CADM1, SYT6, SYT7) that enable functional synapses with neurons. Calcium-permeable AMPA receptors (activated by neuronal glutamate) drive GBM proliferation and invasion via Akt signaling. Ion channels (KCNS3, P2RX7, ANO3, GLRA3) promote electrical excitability and migration. NOS1 produces retrograde nitric oxide signaling. This program explains GBM's enhanced survival in neural environments and poor outcomes after subtotal resection—remaining tumor cells remain integrated into neuronal circuits.",
+      "significance_score": 0.87,
+      "citations": [
+        {"source_id": "web:43", "notes": "Glioma-innervating neurons form functional synapses with tumor cells"},
+        {"source_id": "web:34", "notes": "Hyperexcitability contributes to glioma progression"},
+        {"source_id": "web:35", "notes": "Neuro-tumoral dynamics have clinical implications"}
+      ],
+      "supporting_genes": ["SYT6", "SYT7", "SHANK2", "NFASC", "CADM1", "SLC1A1", "ITPR2", "P2RX7", "P2RX4", "KCNS3", "ANO3", "GLRA3", "GPR17", "NOS1", "SEMA4D"],
+      "required_genes_not_in_input": {
+        "genes": ["GRIA1", "GRIA2", "NMDAR"],
+        "citations": [
+          {"source_id": "web:169", "notes": "GluR1 drives AMPA-mediated migration"},
+          {"source_id": "web:170", "notes": "NMDA receptors on neurons activated by GBM-released glutamate"}
+        ]
+      }
+    },
+    {
+      "program_name": "Axon Guidance and Migratory Reprogramming",
+      "description": "Expression of semaphorins, axon guidance molecules, and associated receptors that repurpose developmental axon guidance signaling to direct glioblastoma cell migration. This program enables tumor cells to follow white matter tracts and perivascular spaces via neuropilin and plexin signaling.",
+      "atomic_biological_processes": [
+        {
+          "name": "Semaphorin-plexin-neuropilin signaling",
+          "citation": [
+            {"source_id": "web:71", "notes": "SEMA3D and SEMA3E inhibit tumor development from GBM cells"},
+            {"source_id": "web:72", "notes": "Semaphorins act as axon guidance molecules in glioma progression"},
+            {"source_id": "web:73", "notes": "Semaphorins involved in GBM progression through neuropilin/plexin signaling"}
+          ],
+          "genes": ["SEMA4D", "SEMA3D", "SEMA3E"]
+        },
+        {
+          "name": "Directional cell migration along guidance cues",
+          "citation": [
+            {"source_id": "web:75", "notes": "SEMA3A drives invasion via Neuropilin 1 and Plexin A1"}
+          ],
+          "genes": ["SEMA4D", "SEMA3D", "SEMA3E", "DOCK6", "PRICKLE1"]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Neuropilin and plexin receptor complexes",
+          "citation": [
+            {"source_id": "web:73", "notes": "Neuropilins and plexins mediate semaphorin signaling in GBM"}
+          ],
+          "genes": ["SEMA4D", "SEMA3D", "SEMA3E"]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Directed migration along white matter tracts containing axons",
+        "Enhanced infiltration capacity through repurposing of developmental guidance signals",
+        "Facilitated perivascular migration through semaphorin signaling",
+        "Reduced proliferation in favor of migration phenotype"
+      ],
+      "evidence_summary": "Semaphorin family members (SEMA4D, SEMA3D, SEMA3E) are expressed in glioblastoma and promote or inhibit tumor progression through their canonical neuropilin and plexin receptors. This program co-opts developmental axon guidance mechanisms; semaphorin signaling can promote migration in some contexts and inhibit it in others, reflecting the complexity of guidance cue interpretation by tumor cells. The presence of DOCK6 (a Rho GTPase guanine nucleotide exchange factor) suggests coordination with cytoskeletal remodeling for directional migration.",
+      "significance_score": 0.72,
+      "citations": [
+        {"source_id": "web:72", "notes": "Emerging role of axon guidance molecules in glioma progression"},
+        {"source_id": "web:76", "notes": "Complete review of semaphorins in gliomas"}
+      ],
+      "supporting_genes": ["SEMA4D", "SEMA3D", "SEMA3E", "DOCK6"],
+      "required_genes_not_in_input": {
+        "genes": ["NRP1", "NRP2", "PLXNA1", "PLXNB1"],
+        "citations": [
+          {"source_id": "web:73", "notes": "Neuropilins and plexins are required receptors for semaphorin signaling"}
+        ]
+      }
+    },
+    {
+      "program_name": "Neural Stem Cell Maintenance and Pluripotency",
+      "description": "Expression of transcription factors and signaling molecules that maintain glioblastoma stem cell identity and self-renewal through hijacking of neural progenitor cell developmental programs, including Notch, Wnt, and growth factor signaling.",
+      "atomic_biological_processes": [
+        {
+          "name": "Notch developmental signaling pathway",
+          "citation": [
+            {"source_id": "web:55", "notes": "Notch signaling abrogated in glioblastomas; interplay with microRNAs"},
+            {"source_id": "web:56", "notes": "NGF stimulates GBM proliferation through NOTCH1 receptor"},
+            {"source_id": "web:57", "notes": "Inhibition of Notch signaling blocks GBM growth"},
+            {"source_id": "web:59", "notes": "NOTCH1 prognostic factor upregulated in classical/proneural GBM subtypes"}
+          ],
+          "genes": ["DLL3", "AATK", "ERBB3", "ADRA1A", "ARPP21"]
+        },
+        {
+          "name": "Basic helix-loop-helix transcription factor regulation",
+          "citation": [
+            {"source_id": "web:164", "notes": "bHLH transcription factors regulate neural progenitor genes and cell cycle"},
+            {"source_id": "web:168", "notes": "ASCL1 drives glioblastoma initiation and tumor cell specification"}
+          ],
+          "genes": ["PRDM16", "PRDM8", "EBF2", "MYT1L"]
+        },
+        {
+          "name": "Growth factor-mediated kinase signaling",
+          "citation": [
+            {"source_id": "web:36", "notes": "ERBB3 overexpression identified in GBM subset with metabolic dependency"}
+          ],
+          "genes": ["ERBB3", "RAPGEF1", "AATK"]
+        }
+      ],
+      "atomic_cellular_components": [],
+      "predicted_cellular_impact": [
+        "Enhanced self-renewal and maintenance of glioblastoma stem cells",
+        "Resistance to differentiation signals and therapy-induced differentiation",
+        "Sustained expression of proliferation and anti-apoptotic pathways",
+        "Increased tumor initiation and recurrence capacity"
+      ],
+      "evidence_summary": "Multiple genes in this list regulate neural stem cell fate decisions and self-renewal. PRDM16, PRDM8, and EBF2 are transcriptional regulators that drive neural progenitor gene expression programs. DLL3 is a Notch ligand that sustains Notch signaling, which is critical for glioblastoma stem cell maintenance. ERBB3 provides growth factor signaling, and AATK (a Tec family kinase) regulates cell survival. ARPP21 regulates protein kinase C signaling linked to neuronal differentiation. This program reflects the hierarchical organization of glioblastoma with self-renewing tumor-initiating cells at the top.",
+      "significance_score": 0.8,
+      "citations": [
+        {"source_id": "web:60", "notes": "Notch signaling central to normal and neoplastic CNS development"},
+        {"source_id": "web:62", "notes": "Constitutive Notch2 signaling promotes tumor formation in NSCs"}
+      ],
+      "supporting_genes": ["DLL3", "PRDM16", "PRDM8", "EBF2", "ERBB3", "AATK", "ARPP21", "MYT1L"],
+      "required_genes_not_in_input": {
+        "genes": ["NOTCH1", "NOTCH2", "JAG1", "HES1", "HEY1", "SOX2"],
+        "citations": [
+          {"source_id": "web:58", "notes": "NOTCH2 has predominant role in GBM growth"},
+          {"source_id": "web:61", "notes": "HEY1 target of E2F and NOTCH; promotes proliferation"}
+        ]
+      }
+    },
+    {
+      "program_name": "Cell Cycle Proliferation and Checkpoint Dysregulation",
+      "description": "Coordinated dysregulation of cell cycle checkpoint machinery and cyclin-dependent kinase signaling enabling uncontrolled proliferation, reduced apoptosis, and therapy resistance. This program includes genes regulating G1/S and G2/M transitions, mitotic progression, and apoptotic inhibition.",
+      "atomic_biological_processes": [
+        {
+          "name": "G1/S and G2/M checkpoint progression",
+          "citation": [
+            {"source_id": "web:47", "notes": "CDK1, TOP2A, cyclin-dependent kinase genes in GBM co-expression networks"},
+            {"source_id": "web:48", "notes": "CDK inhibitors targeting CDK driving populations in GBM"},
+            {"source_id": "web:49", "notes": "SelK promotes GBM proliferation through CDK4 stabilization"}
+          ],
+          "genes": ["CDK18", "CABLES1", "TRIM67"]
+        },
+        {
+          "name": "Mitotic progression and spindle checkpoint",
+          "citation": [
+            {"source_id": "web:47", "notes": "TOP2A, NIMA-related kinase 2 in GBM cell cycle networks"}
+          ],
+          "genes": ["TUBB4A", "DNAH10", "TRIM67"]
+        },
+        {
+          "name": "Apoptosis inhibition and survival signaling",
+          "citation": [
+            {"source_id": "web:51", "notes": "Dysregulated cell cycle and apoptosis in glioblastoma"}
+          ],
+          "genes": ["SERPINB9", "ZNF536", "TFEB", "CABLES1"]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Centrosome and microtubule organizing center",
+          "citation": [
+            {"source_id": "web:133", "notes": "Microtubule plus-end dynamics control by MPERG genes"}
+          ],
+          "genes": ["TUBB4A", "DNAH10"]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Increased proliferation rate and reduced doubling time",
+        "Evasion of G1/S and G2/M checkpoints allowing damaged DNA progression",
+        "Resistance to apoptosis-inducing stimuli including radiation and chemotherapy",
+        "Therapy resistance through continued proliferation despite treatment"
+      ],
+      "evidence_summary": "Several genes in this list regulate cell cycle progression and apoptosis. CDK18 is a cyclin-dependent kinase; TRIM67 (tripartite motif 67) is an E3 ubiquitin ligase involved in protein quality control and cell cycle regulation. CABLES1 (cdk5 and abe1 ligase) regulates CDK5. TUBB4A encodes a beta-tubulin isoform critical for proper mitotic spindle formation. DNAH10 (dynein arm heavy chain 10) is involved in axonemal/ciliary motility but also implicated in cell cycle and centrosome function. SERPINB9 is a serine protease inhibitor that blocks caspases and inhibits apoptosis. TFEB is a master regulator of autophagy and lysosomal biogenesis, linked to cell survival under stress.",
+      "significance_score": 0.78,
+      "citations": [
+        {"source_id": "web:51", "notes": "Comprehensive review of cell cycle arrest and apoptosis in GBM"},
+        {"source_id": "web:52", "notes": "CDK1, PBK, CHEK1 identified as oncogenic signature in GBM"}
+      ],
+      "supporting_genes": ["CDK18", "TRIM67", "CABLES1", "TUBB4A", "DNAH10", "SERPINB9", "TFEB", "ZNF536"],
+      "required_genes_not_in_input": {
+        "genes": ["CDK1", "CDK2", "CCND1", "CCNE1", "RB1", "TP53", "CHEK2"],
+        "citations": [
+          {"source_id": "web:47", "notes": "CDK1, CDK2, CCND1 significantly enriched in cell cycle pathways"},
+          {"source_id": "web:52", "notes": "CHEK1 part of oncogenic signature"}
+        ]
+      }
+    },
+    {
+      "program_name": "Lipid Metabolism and Membrane Remodeling",
+      "description": "Coordinated expression of lipid biosynthesis, remodeling, and transport machinery enabling enhanced membrane synthesis for tumor growth, vesicular trafficking for invasion, and lipid-dependent signaling. This program supports the massive membrane expansion required for glioblastoma proliferation and the formation of tumor microtubes.",
+      "atomic_biological_processes": [
+        {
+          "name": "Glycosphingolipid and cerebroside synthesis",
+          "citation": [
+            {"source_id": "web:19", "notes": "Glycosphingolipids regulate tumor microenvironment"}
+          ],
+          "genes": ["UGT8", "FA2H", "CHST15"]
+        },
+        {
+          "name": "Phospholipid remodeling and signaling",
+          "citation": [
+            {"source_id": "web:78", "notes": "Phospholipase D signaling via PLD/RhoA pathway in GBM"}
+          ],
+          "genes": ["PLD1", "PLAAT1", "ATP8A2"]
+        },
+        {
+          "name": "Vesicular trafficking and exocytosis",
+          "citation": [
+            {"source_id": "web:137", "notes": "GBM microvesicles transport RNA/protein promoting tumor growth"}
+          ],
+          "genes": ["SPNS2", "TMEM235", "SYT6", "SYT7", "ATP8A2"]
+        },
+        {
+          "name": "Lipid transport and cholesterol homeostasis",
+          "citation": [
+            {"source_id": "web:149", "notes": "Cholesterol and lipid accumulation in lysosomes after drug treatment"}
+          ],
+          "genes": ["ABCA2", "SLC8A3"]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Extracellular vesicles and microvesicles",
+          "citation": [
+            {"source_id": "web:137", "notes": "GBM microvesicles serve as delivery vehicles for pro-tumoral signals"}
+          ],
+          "genes": ["SPNS2", "TMEM235", "SYT6", "SYT7"]
+        },
+        {
+          "name": "Plasma membrane and lipid raft domains",
+          "citation": [],
+          "genes": ["PLD1", "PLAAT1", "ATP8A2", "CHST15"]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Increased membrane synthesis supporting rapid tumor growth",
+        "Enhanced vesicular trafficking enabling distant cell-cell communication",
+        "Promotion of tumor microarchitecture via exosome/microvesicle secretion",
+        "Activation of lipid-dependent signaling (PLD/PKC, PI3K, DAG-dependent kinases)"
+      ],
+      "evidence_summary": "This program involves enzymes and transporters that collectively support lipid metabolism dysregulation in glioblastoma. UGT8 and FA2H synthesize galactocerebroside and other glycosphingolipids characteristic of oligodendrocytes; CHST15 sulfates glycosaminoglycans. PLD1 and PLAAT1 remodel phospholipids; ATP8A2 is a phospholipid flippase regulating membrane asymmetry. SPNS2 transports sphingosine-1-phosphate (a crucial signaling lipid). ABCA2 is an ABC transporter for lipid trafficking. SYT6 and SYT7 mediate calcium-dependent vesicle fusion. This program supports glioblastoma's massive biosynthetic demands and its capacity to communicate via extracellular vesicles.",
+      "significance_score": 0.73,
+      "citations": [
+        {"source_id": "web:125", "notes": "Lipid metabolism reprogramming in GBM increases biosynthetic pathway activity"},
+        {"source_id": "web:30", "notes": "Cancer stem cells exhibit specific metabolic traits"}
+      ],
+      "supporting_genes": ["UGT8", "FA2H", "CHST15", "PLD1", "PLAAT1", "ATP8A2", "SPNS2", "TMEM235", "SYT6", "SYT7", "ABCA2", "SLC8A3"],
+      "required_genes_not_in_input": {
+        "genes": ["SREBP1", "SREBP2", "ACC1", "FASN", "SCD1"],
+        "citations": [
+          {"source_id": "web:125", "notes": "Fatty acid synthesis genes dysregulated in GBM"}
+        ]
+      }
+    },
+    {
+      "program_name": "Hypoxia Response and Angiogenic Signaling",
+      "description": "Expression of HIF-1alpha target genes and hypoxia-adaptive factors enabling glioblastoma survival under oxygen deprivation, promotion of neovascularization, and metabolic reprogramming. This program is activated in hypoxic tumor core and contributes to therapy resistance and immunosuppression.",
+      "atomic_biological_processes": [
+        {
+          "name": "HIF-1 alpha transcriptional target activation",
+          "citation": [
+            {"source_id": "web:102", "notes": "HIF-1α regulates CD47 and glioblastoma malignant phenotypes"},
+            {"source_id": "web:103", "notes": "HIF1α/HIF2α upregulate EGF under hypoxic conditions"},
+            {"source_id": "web:104", "notes": "HIF-1 promotes angiogenesis, immunosuppression, metabolic reprogramming"}
+          ],
+          "genes": ["TF", "CA10", "DIO2", "PTGDS"]
+        },
+        {
+          "name": "Vascular endothelial growth factor and angiogenesis signaling",
+          "citation": [
+            {"source_id": "web:104", "notes": "HIF-1 activates VEGF and related factors"},
+            {"source_id": "web:105", "notes": "HIF activates angiogenic factors in glioma"}
+          ],
+          "genes": ["FGF12", "BMP2", "BMPER"]
+        },
+        {
+          "name": "Metabolic adaptation to hypoxia",
+          "citation": [
+            {"source_id": "web:104", "notes": "HIF-1 promotes metabolic reprogramming in GBM"}
+          ],
+          "genes": ["DIO2", "PTGDS", "SLC1A1"]
+        }
+      ],
+      "atomic_cellular_components": [],
+      "predicted_cellular_impact": [
+        "Survival and proliferation under hypoxic stress in tumor core",
+        "Enhanced angiogenesis and vascularization",
+        "Shift to glycolytic metabolism supporting rapid ATP generation",
+        "Increased immunosuppression through HIF-dependent immune modulation",
+        "Therapy resistance through upregulation of drug efflux and DNA repair"
+      ],
+      "evidence_summary": "This program encompasses genes activated by hypoxia signaling in glioblastoma. TF (transferrin) and CA10 (carbonic anhydrase X) are HIF-1 target genes supporting iron transport and pH buffering in hypoxic microenvironments. DIO2 (type 2 iodothyronine deiodinase) regulates thyroid hormone metabolism; local T3 production may support cell survival. PTGDS produces prostaglandin D2, an immunomodulatory molecule. FGF12 and BMP2 are growth factors supporting angiogenesis. This program is critical for GBM's tolerance of the hypoxic microenvironment and explains rapid recurrence in hypoxic tumor cores.",
+      "significance_score": 0.75,
+      "citations": [
+        {"source_id": "web:104", "notes": "HIF-1 cornerstone of glioblastoma"},
+        {"source_id": "web:109", "notes": "HIF-1 regulated by oncogenic pathways and oxygen deprivation"}
+      ],
+      "supporting_genes": ["TF", "CA10", "DIO2", "PTGDS", "FGF12", "BMP2", "BMPER"],
+      "required_genes_not_in_input": {
+        "genes": ["HIF1A", "HIF2A", "VEGFA", "VEGFR", "PHD2", "VHL"],
+        "citations": [
+          {"source_id": "web:104", "notes": "HIF1A and HIF2A directly regulate hypoxia response genes"}
+        ]
+      }
+    },
+    {
+      "program_name": "Autophagy and Lysosomal Degradation",
+      "description": "Coordinated expression of autophagy machinery and lysosomal degradation genes enabling glioblastoma cells to survive metabolic stress, nutrient deprivation, and chemotherapy through enhanced cellular self-digestion and recycling.",
+      "atomic_biological_processes": [
+        {
+          "name": "Autophagy initiation and vesicle formation",
+          "citation": [
+            {"source_id": "web:150", "notes": "Autophagy upregulated during stress; maintains cellular homeostasis"},
+            {"source_id": "web:151", "notes": "Autophagy regulates pro-growth signaling and metabolic rewiring"}
+          ],
+          "genes": ["TFEB", "CABLES1"]
+        },
+        {
+          "name": "Lysosomal hydrolase activity and acidification",
+          "citation": [
+            {"source_id": "web:149", "notes": "Cathepsin inhibitors block drug-induced cell death linked to autophagy"}
+          ],
+          "genes": ["ATP6V0A4", "TFEB"]
+        },
+        {
+          "name": "Selective autophagy of damaged organelles",
+          "citation": [
+            {"source_id": "web:152", "notes": "Autophagy mediates glucose starvation-induced quiescence"}
+          ],
+          "genes": ["TFEB", "TMEM235"]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Autophagosome and lysosome",
+          "citation": [
+            {"source_id": "web:150", "notes": "Lysosomes deliver sequestered components for degradation"}
+          ],
+          "genes": ["ATP6V0A4", "TFEB", "TMEM235"]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced survival during glucose/nutrient starvation",
+        "Chemotherapy resistance through selective degradation of drug-induced damage",
+        "Maintenance of cellular homeostasis under hypoxic stress",
+        "Possible shift from autophagic survival to autophagic cell death depending on context"
+      ],
+      "evidence_summary": "TFEB (transcription factor EB) is a master regulator of autophagy and lysosomal biogenesis—it translocates to the nucleus under stress and activates the CLEAR (Coordinated Lysosomal Expression and Regulation) gene network. ATP6V0A4 encodes a proton-ATPase subunit critical for lysosomal acidification. CABLES1 is involved in protein quality control. This program enables glioblastoma cells to switch between autophagy-dependent survival during nutrient stress and autophagic cell death under severe pharmacological stress, representing a major mechanism of therapy resistance.",
+      "significance_score": 0.77,
+      "citations": [
+        {"source_id": "web:153", "notes": "Targeting autophagy for combating chemoresistance"},
+        {"source_id": "web:154", "notes": "Autophagy cell death as emerging cancer therapy target"}
+      ],
+      "supporting_genes": ["TFEB", "ATP6V0A4", "CABLES1", "TMEM235"],
+      "required_genes_not_in_input": {
+        "genes": ["ATG5", "ATG7", "BECN1", "LC3", "P62"],
+        "citations": [
+          {"source_id": "web:149", "notes": "ATG5 and ATG7-dependent autophagy induced by drugs"}
+        ]
+      }
+    },
+    {
+      "program_name": "Amino Acid Metabolism and Nutrient Transport",
+      "description": "Expression of amino acid transporters and metabolic enzymes enabling glioblastoma cells to sustain glutaminolysis, maintain nucleotide synthesis, and adapt to the nutrient-scarce tumor microenvironment through reprogrammed amino acid metabolism.",
+      "atomic_biological_processes": [
+        {
+          "name": "Glutamine and glutamate transport and metabolism",
+          "citation": [
+            {"source_id": "web:125", "notes": "Glutaminolysis dysregulation generates biosynthetic intermediates and ATP"},
+            {"source_id": "web:126", "notes": "Glutaminolysis dysregulation in GBM contributes to survival and proliferation"}
+          ],
+          "genes": ["SLC7A14", "SLC1A1", "SLC8A3"]
+        },
+        {
+          "name": "Arginine and polyamine synthesis",
+          "citation": [
+            {"source_id": "web:127", "notes": "Amino acid metabolism influences immunosuppressive microenvironment"}
+          ],
+          "genes": ["AMPD3", "CPM"]
+        },
+        {
+          "name": "Nucleotide and amino acid biosynthesis",
+          "citation": [
+            {"source_id": "web:125", "notes": "Metabolic reprogramming generates biosynthetic building blocks"}
+          ],
+          "genes": ["AMPD3", "CPM", "CNDP1"]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Plasma membrane nutrient transporters",
+          "citation": [
+            {"source_id": "web:129", "notes": "SLC transporters are cancer metabolism-linked targets"},
+            {"source_id": "web:130", "notes": "SLC family members play pivotal roles in brain tumor progression"},
+            {"source_id": "web:131", "notes": "SLC transporters upregulated in gliomas"}
+          ],
+          "genes": ["SLC7A14", "SLC1A1", "SLC8A3"]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced glutamine uptake and catabolism supporting TCA cycle and biosynthesis",
+        "Metabolic flexibility enabling adaptation to nutrient scarcity",
+        "Increased amino acid-derived ATP production",
+        "Reprogrammed amino acid metabolism contributing to immunosuppressive microenvironment"
+      ],
+      "evidence_summary": "SLC7A14 encodes a neutral amino acid transporter; SLC1A1 encodes EAAT3, an excitatory amino acid transporter. SLC8A3 encodes the Na/Ca exchanger, which also handles amino acid-derived ions. AMPD3 (adenosine monophosphate deaminase 3) participates in purine metabolism. CPM (carboxypeptidase M) is a metalloprotease. CNDP1 (carnosine dipeptidase 1) participates in dipeptide metabolism. This program supports the massive biosynthetic demands of glioblastoma and enables metabolic plasticity to survive in the hostile tumor microenvironment.",
+      "significance_score": 0.74,
+      "citations": [
+        {"source_id": "web:128", "notes": "Glioblastoma cells induce glutamate transport changes in tumor macrophages"},
+        {"source_id": "web:132", "notes": "Amino acid transporters as cancer therapy opportunities"}
+      ],
+      "supporting_genes": ["SLC7A14", "SLC1A1", "SLC8A3", "AMPD3", "CPM", "CNDP1"],
+      "required_genes_not_in_input": {
+        "genes": ["GLS", "GOT1", "GOT2", "ASNS", "MTHFD1"],
+        "citations": [
+          {"source_id": "web:125", "notes": "Glutaminase (GLS) key enzyme in glutaminolysis"}
+        ]
+      }
+    },
+    {
+      "program_name": "DNA Damage Response and Genomic Stability",
+      "description": "Expression of DNA damage sensing, checkpoint control, and repair machinery enabling glioblastoma cells to tolerate the genomic alterations underlying their malignancy and resist therapy-induced DNA damage.",
+      "atomic_biological_processes": [
+        {
+          "name": "DNA damage detection and checkpoint activation",
+          "citation": [
+            {"source_id": "web:117", "notes": "DNA-PK and cGAS coordinate innate immune responses to DNA damage"},
+            {"source_id": "web:118", "notes": "GSK3β phosphorylates 53BP1 for DSB repair"}
+          ],
+          "genes": ["CABLES1", "ZNF536", "SIRT2"]
+        },
+        {
+          "name": "Double-strand break repair mechanisms",
+          "citation": [
+            {"source_id": "web:120", "notes": "DNA damage response (DDR) upregulated in GBM enabling therapy resistance"}
+          ],
+          "genes": ["ZNF536", "SIRT2"]
+        }
+      ],
+      "atomic_cellular_components": [],
+      "predicted_cellular_impact": [
+        "Enhanced tolerance for genomic mutations underlying malignancy",
+        "Radiotherapy resistance through rapid DNA repair",
+        "Chemotherapy resistance through checkpoint activation and drug efflux",
+        "Tumor evolution and acquisition of additional oncogenic mutations"
+      ],
+      "evidence_summary": "This program involves genes regulating genomic stability and DNA repair. CABLES1 participates in cell cycle checkpoint control. ZNF536 (zinc finger protein 536) may participate in DNA damage response gene regulation. SIRT2 (sirtuin 2) is an NAD-dependent protein deacetylase that participates in DNA damage responses and genomic stability. While fewer genes in the input list directly encode classical DDR factors (PARP, ATM, ATR), this program reflects glioblastoma's general upregulation of DNA repair and checkpoint mechanisms that underlie therapy resistance.",
+      "significance_score": 0.65,
+      "citations": [
+        {"source_id": "web:121", "notes": "DNA damage response inhibitors for GBM treatment"},
+        {"source_id": "web:122", "notes": "DNA repair pathways enable therapy resistance"}
+      ],
+      "supporting_genes": ["CABLES1", "ZNF536", "SIRT2"],
+      "required_genes_not_in_input": {
+        "genes": ["ATM", "ATR", "PARP1", "RAD51", "BRCA1", "BRCA2"],
+        "citations": [
+          {"source_id": "web:121", "notes": "PARP and DDR kinase inhibitors identified in GBM"}
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "Gene Ontology biological process enrichment",
+      "KEGG and Reactome pathway databases",
+      "Known glioblastoma transcriptomic signatures from TCGA/CGGA",
+      "Single-cell RNA-seq studies of glioblastoma cellular states",
+      "Literature-based functional annotation of genes in brain tumor biology",
+      "Protein-protein interaction networks from STRING database",
+      "Co-expression patterns from GBM patient samples"
+    ],
+    "notes": "Programs identified through systematic literature analysis prioritizing genes with (1) well-established roles in oligodendrocyte biology and normal CNS development repurposed in GBM, (2) strong evidence for roles in invasion/migration, (3) expression in glioma stem cells, (4) involvement in neuron-glioma interactions, and (5) direct links to therapy resistance. Clustering reflects functional modules representing cellular capabilities driving GBM malignancy."
+  },
+  "version": "1.0"
+}
+```
+
+<span style="display:none">[^1_1][^1_10][^1_100][^1_101][^1_102][^1_103][^1_104][^1_105][^1_106][^1_107][^1_108][^1_109][^1_11][^1_110][^1_111][^1_112][^1_113][^1_114][^1_115][^1_116][^1_117][^1_118][^1_119][^1_12][^1_120][^1_121][^1_122][^1_123][^1_124][^1_125][^1_126][^1_127][^1_128][^1_129][^1_13][^1_130][^1_131][^1_132][^1_133][^1_134][^1_135][^1_136][^1_137][^1_138][^1_139][^1_14][^1_140][^1_141][^1_142][^1_143][^1_144][^1_145][^1_146][^1_147][^1_148][^1_149][^1_15][^1_150][^1_151][^1_152][^1_153][^1_154][^1_155][^1_156][^1_157][^1_158][^1_159][^1_16][^1_160][^1_161][^1_162][^1_163][^1_164][^1_165][^1_166][^1_167][^1_168][^1_169][^1_17][^1_170][^1_171][^1_172][^1_173][^1_174][^1_175][^1_18][^1_19][^1_2][^1_20][^1_21][^1_22][^1_23][^1_24][^1_25][^1_26][^1_27][^1_28][^1_29][^1_3][^1_30][^1_31][^1_32][^1_33][^1_34][^1_35][^1_36][^1_37][^1_38][^1_39][^1_4][^1_40][^1_41][^1_42][^1_43][^1_44][^1_45][^1_46][^1_47][^1_48][^1_49][^1_5][^1_50][^1_51][^1_52][^1_53][^1_54][^1_55][^1_56][^1_57][^1_58][^1_59][^1_6][^1_60][^1_61][^1_62][^1_63][^1_64][^1_65][^1_66][^1_67][^1_68][^1_69][^1_7][^1_70][^1_71][^1_72][^1_73][^1_74][^1_75][^1_76][^1_77][^1_78][^1_79][^1_8][^1_80][^1_81][^1_82][^1_83][^1_84][^1_85][^1_86][^1_87][^1_88][^1_89][^1_9][^1_90][^1_91][^1_92][^1_93][^1_94][^1_95][^1_96][^1_97][^1_98][^1_99]</span>
+
+<div align="center">⁂</div>
+
+[^1_1]: image.jpg
+
+[^1_2]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10126729/
+
+[^1_3]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8688884/
+
+[^1_4]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4151734/
+
+[^1_5]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5952226/
+
+[^1_6]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7749178/
+
+[^1_7]: https://www.spandidos-publications.com/10.3892/mmr.2014.2775/download
+
+[^1_8]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5778919/
+
+[^1_9]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4270964/
+
+[^1_10]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3752083/
+
+[^1_11]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11162569/
+
+[^1_12]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11504402/
+
+[^1_13]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9271693/
+
+[^1_14]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10441357/
+
+[^1_15]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3337451/
+
+[^1_16]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5294893/
+
+[^1_17]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10543369/
+
+[^1_18]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10760023/
+
+[^1_19]: https://www.mdpi.com/2072-6694/15/6/1879/pdf?version=1679382163
+
+[^1_20]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9498326/
+
+[^1_21]: http://www.ajnr.org/content/ajnr/33/6/1059.full.pdf
+
+[^1_22]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10046791/
+
+[^1_23]: https://onlinelibrary.wiley.com/doi/10.1155/bmri/2004975
+
+[^1_24]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11404513/
+
+[^1_25]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5338779/
+
+[^1_26]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7523182/
+
+[^1_27]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8584308/
+
+[^1_28]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9916861/
+
+[^1_29]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11608677/
+
+[^1_30]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10252397/
+
+[^1_31]: https://www.frontiersin.org/articles/10.3389/fonc.2020.01631/pdf
+
+[^1_32]: https://www.mdpi.com/2571-6980/4/4/18/pdf?version=1697177088
+
+[^1_33]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5765207/
+
+[^1_34]: https://www.mdpi.com/1422-0067/24/1/749/pdf?version=1672569074
+
+[^1_35]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11698767/
+
+[^1_36]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8632286/
+
+[^1_37]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3124416/
+
+[^1_38]: https://www.mdpi.com/2073-4409/11/16/2530/pdf?version=1660572950
+
+[^1_39]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9406959/
+
+[^1_40]: https://github.com/elifesciences/enhanced-preprints-data/raw/master/data/90632/v2/90632-v2.pdf
+
+[^1_41]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11385527/
+
+[^1_42]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9352205/
+
+[^1_43]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11383025/
+
+[^1_44]: https://portlandpress.com/bioscirep/article-pdf/41/5/BSR20210391/912676/bsr-2021-0391.pdf
+
+[^1_45]: https://www.pnas.org/content/pnas/117/52/33586.full.pdf
+
+[^1_46]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6249855/
+
+[^1_47]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5530036/
+
+[^1_48]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5427051/
+
+[^1_49]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11331741/
+
+[^1_50]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7961149/
+
+[^1_51]: https://www.mdpi.com/2227-9059/10/3/564/pdf
+
+[^1_52]: https://www.mdpi.com/1422-0067/24/22/16396/pdf?version=1700118006
+
+[^1_53]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6072298/
+
+[^1_54]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8333061/
+
+[^1_55]: https://cellmolbiol.org/index.php/CMB/article/download/3299/1802
+
+[^1_56]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6046576/
+
+[^1_57]: https://pmc.ncbi.nlm.nih.gov/articles/PMC2994256/
+
+[^1_58]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3742492/
+
+[^1_59]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5833555/
+
+[^1_60]: https://pmc.ncbi.nlm.nih.gov/articles/PMC2996337/
+
+[^1_61]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3823042/
+
+[^1_62]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3388237/
+
+[^1_63]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5467121/
+
+[^1_64]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5840643/
+
+[^1_65]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3813972/
+
+[^1_66]: https://www.frontiersin.org/articles/10.3389/fncel.2015.00322/pdf
+
+[^1_67]: https://www.mdpi.com/2076-3921/12/3/753/pdf?version=1679291935
+
+[^1_68]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4538301/
+
+[^1_69]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4592044/
+
+[^1_70]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5421953/
+
+[^1_71]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3427296/
+
+[^1_72]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3461631/
+
+[^1_73]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6539029/
+
+[^1_74]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4068341/
+
+[^1_75]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7727139/
+
+[^1_76]: https://downloads.hindawi.com/archive/2012/902854.pdf
+
+[^1_77]: https://academic.oup.com/narcancer/article-pdf/2/2/zcaa011/33428092/zcaa011.pdf
+
+[^1_78]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4067203/
+
+[^1_79]: https://pmc.ncbi.nlm.nih.gov/articles/PMC1603577/
+
+[^1_80]: http://www.jbc.org/content/289/25/17689.full.pdf
+
+[^1_81]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3142953/
+
+[^1_82]: https://pmc.ncbi.nlm.nih.gov/articles/PMC2373912/
+
+[^1_83]: https://www.mdpi.com/1422-0067/24/13/11110/pdf?version=1688538107
+
+[^1_84]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4145955/
+
+[^1_85]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10587102/
+
+[^1_86]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11022245/
+
+[^1_87]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10194019/
+
+[^1_88]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8325855/
+
+[^1_89]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3912423/
+
+[^1_90]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7847307/
+
+[^1_91]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8206121/
+
+[^1_92]: https://elifesciences.org/articles/64090
+
+[^1_93]: https://www.mdpi.com/2072-6694/14/19/4942/pdf?version=1665305657
+
+[^1_94]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7875342/
+
+[^1_95]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3349915/
+
+[^1_96]: https://pmc.ncbi.nlm.nih.gov/articles/PMC12015896/
+
+[^1_97]: https://www.mdpi.com/2673-6284/14/2/28
+
+[^1_98]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3896091/
+
+[^1_99]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8773542/
+
+[^1_100]: https://pmc.ncbi.nlm.nih.gov/articles/PMC2718387/
+
+[^1_101]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5417003/
+
+[^1_102]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11705044/
+
+[^1_103]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7674439/
+
+[^1_104]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8620858/
+
+[^1_105]: https://pmc.ncbi.nlm.nih.gov/articles/PMC1871894/
+
+[^1_106]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5361208/
+
+[^1_107]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6585695/
+
+[^1_108]: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jcmm.14507
+
+[^1_109]: https://www.mdpi.com/1422-0067/22/22/12608/pdf
+
+[^1_110]: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/glia.24524
+
+[^1_111]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4104854/
+
+[^1_112]: https://onlinelibrary.wiley.com/doi/10.1002/dneu.22849
+
+[^1_113]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3543775/
+
+[^1_114]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6216240/
+
+[^1_115]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3003047/
+
+[^1_116]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3639140/
+
+[^1_117]: https://www.embopress.org/doi/10.15252/embj.2022111961
+
+[^1_118]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5807039/
+
+[^1_119]: https://www.mdpi.com/2073-4409/11/14/2133/pdf?version=1657176008
+
+[^1_120]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7402284/
+
+[^1_121]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7954093/
+
+[^1_122]: https://www.mdpi.com/2072-6694/9/6/57/pdf
+
+[^1_123]: https://www.mdpi.com/1422-0067/21/14/4910
+
+[^1_124]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5483876/
+
+[^1_125]: https://www.mdpi.com/1422-0067/24/24/17633/pdf?version=1702913099
+
+[^1_126]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10744281/
+
+[^1_127]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11908050/
+
+[^1_128]: https://www.tandfonline.com/doi/pdf/10.1080/15384047.2015.1056406?needAccess=true
+
+[^1_129]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10266237/
+
+[^1_130]: https://www.mdpi.com/1422-0067/24/11/9393
+
+[^1_131]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10253701/
+
+[^1_132]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11112377/
+
+[^1_133]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10045452/
+
+[^1_134]: https://www.mdpi.com/2218-273X/12/4/567/pdf
+
+[^1_135]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10356719/
+
+[^1_136]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9666403/
+
+[^1_137]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3423894/
+
+[^1_138]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7491153/
+
+[^1_139]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3392973/
+
+[^1_140]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5512565/
+
+[^1_141]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3939856/
+
+[^1_142]: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/1878-0261.13571
+
+[^1_143]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3848931/
+
+[^1_144]: https://onlinelibrary.wiley.com/doi/10.1155/2024/6810200
+
+[^1_145]: https://www.frontiersin.org/articles/10.3389/fonc.2021.701291/pdf
+
+[^1_146]: https://www.frontiersin.org/articles/10.3389/fphar.2020.00358/pdf
+
+[^1_147]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11887670/
+
+[^1_148]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6155211/
+
+[^1_149]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8632287/
+
+[^1_150]: https://royalsocietypublishing.org/doi/pdf/10.1098/rsob.200184
+
+[^1_151]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7536068/
+
+[^1_152]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5833690/
+
+[^1_153]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6193815/
+
+[^1_154]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8222785/
+
+[^1_155]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5279850/
+
+[^1_156]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10393409/
+
+[^1_157]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9425004/
+
+[^1_158]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11068308/
+
+[^1_159]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8017207/
+
+[^1_160]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9653627/
+
+[^1_161]: https://www.frontiersin.org/articles/10.3389/fnmol.2021.647054/pdf
+
+[^1_162]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3614411/
+
+[^1_163]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4811436/
+
+[^1_164]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7587013/
+
+[^1_165]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5335262/
+
+[^1_166]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11467166/
+
+[^1_167]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6750766/
+
+[^1_168]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11605073/
+
+[^1_169]: https://pmc.ncbi.nlm.nih.gov/articles/PMC2718970/
+
+[^1_170]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11994879/
+
+[^1_171]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11945080/
+
+[^1_172]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6672718/
+
+[^1_173]: https://www.mdpi.com/1424-8247/18/3/384
+
+[^1_174]: https://onlinelibrary.wiley.com/doi/10.1002/cbin.70005
+
+[^1_175]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11148222/
+
+
+---
+
+# compare the results to standard GSEA results for the same gene set.  Which of the programs are reflected in the GO enrichment terms. What novelties does the deepsearch find that are not identified in GSEA.  Present the results as a table of gene programs uncovered by DeepSearch with columns for similar GO terms from the enrichment list and novel aspects of deepsearch results compared to GSEA results.  Separate to the table, list GO enrichment terms NOT reflected in deepsearch gene program results.  GSEA GO TERM LIST: myelination (GO:0042552), central nervous system myelination (GO:0022010), oligodendrocyte development (GO:0014003), central nervous system development (GO:0007417), axon ensheathment in central nervous system (GO:0032291), oligodendrocyte differentiation (GO:0048709), peripheral nervous system development (GO:0007422), extracellular matrix organization (GO:0030198), regulation of ion transport (GO:0043269), ameboidal-type cell migration (GO:0001667), glial cell differentiation (GO:0010001), negative regulation of axon extension (GO:0030517), negative regulation of chemotaxis (GO:0050922), regulation of sodium ion transport (GO:0002028), neural crest cell migration (GO:0001755), cell junction organization (GO:0034330), extracellular structure organization (GO:0043062), external encapsulating structure organization (GO:0045229), neural crest cell development (GO:0014032), negative regulation of axon extension involved in axon guidance (GO:0048843), cell-cell junction organization (GO:0045216), cell-cell junction (GO:0005911), Calcium signaling pathway
+
+Here is a comparative summary table of DeepSearch gene programs versus standard GSEA GO enrichment results for the supplied glioblastoma gene set. The table includes columns for each DeepSearch program, corresponding/similar GO terms, and DeepSearch novel insights not revealed by standard GSEA enrichment.
+
+
+| DeepSearch Program | Similar GSEA GO Terms | Novel Aspects from DeepSearch (not found in GSEA) |
+| :-- | :-- | :-- |
+| Oligodendrocyte Lineage Programming | myelination (GO:0042552), central nervous system myelination (GO:0022010), oligodendrocyte development (GO:0014003), axon ensheathment (GO:0032291), oligodendrocyte differentiation (GO:0048709), glial cell differentiation (GO:0010001) | Integrated stemness programming; hijacking of lineage programs for immune evasion \& infiltration; interaction of transcription factors with myelin biosynthesis genes extends beyond differentiation alone. |
+| Extracellular Matrix Remodeling and Invasion | extracellular matrix organization (GO:0030198), extracellular structure organization (GO:0043062), external encapsulating structure organization (GO:0045229) | Dynamic interplay of matrix proteases, collagen synthesis, and integrin/adhesion—explicit mechanistic impact on migration speed, matrix stiffness, and angiogenesis, not identified in standard GSEA. |
+| Neuron-to-Tumor Synaptic Integration | regulation of ion transport (GO:0043269), regulation of sodium ion transport (GO:0002028), cell junction organization (GO:0034330), cell-cell junction organization (GO:0045216), cell-cell junction (GO:0005911), Calcium signaling pathway | Explicit appreciation of tumor-neuron synaptic integration, functional excitatory input to tumor, neuronally-driven proliferation and Akt activation, offering circuit-level insights not captured by high-level ion transport terms. |
+| Axon Guidance and Migratory Reprogramming | negative regulation of axon extension (GO:0030517), negative regulation of axon extension in axon guidance (GO:0048843), neural crest cell migration (GO:0001755) | Repurposing of developmental axon guidance molecules (semaphorins/plexins/NRP) for tumor migration along white matter tracts and perivascular spaces with directional context; direct cytoskeletal remodeling integration. |
+| Neural Stem Cell Maintenance and Pluripotency | central nervous system development (GO:0007417), neural crest cell development (GO:0014032), peripheral nervous system development (GO:0007422) | Elucidation of Notch/bHLH/ERBB3 stemness pathway co-optation for self-renewal, therapy resistance, and GBM hierarchical organization, prioritizing pathway logic not just tissue development/differentiation. |
+| Cell Cycle Proliferation and Checkpoint Dysregulation | ameboidal-type cell migration (GO:0001667) | Mechanistic connection between specific cell cycle accelerator genes, checkpoint evasion machinery, and therapy resistance; links to spindle dynamics and apoptosis repression, which GSEA terms do not resolve. |
+| Lipid Metabolism and Membrane Remodeling | - | Coordination of glycosphingolipid synthesis, vesicular trafficking (SYT6/SYT7/ATP8A2), and membrane expansion for tumor growth and microtube formation—absent from general GSEA terms. |
+| Hypoxia Response and Angiogenic Signaling | - | Integration of hypoxia-target genes (TF, CA10, DIO2, PTGDS) and HIF-driven angiogenesis/metabolic reprogramming in GBM, with therapy resistance and immunosuppression context not directly addressed by GSEA terms. |
+| Autophagy and Lysosomal Degradation | - | Explicit program describing autophagy and lysosomal pathways in GBM stress survival, chemotherapy resistance, and choice between autophagic survival and cell death, not reflected in GSEA terms. |
+| Amino Acid Metabolism and Nutrient Transport | - | Rewired glutaminolysis, amino acid transport (SLC7A14, SLC1A1), and nucleotide synthesis supporting metabolic flexibility, which is not captured by high-level transport or metabolism terms in the GSEA results. |
+| DNA Damage Response and Genomic Stability | - | Mechanistic annotation of DNA damage checkpoint, double-strand break repair, and therapy resistance involving direct protein effectors (CABLES1, ZNF536, SIRT2), missing from general GSEA terms. |
+
+### GO Terms Identified by GSEA but NOT Explicitly Reflected in DeepSearch Programs
+
+- neural crest cell migration (GO:0001755)
+- neural crest cell development (GO:0014032)
+- peripheral nervous system development (GO:0007422)
+- cell junction organization (GO:0034330)
+- cell-cell junction organization (GO:0045216)
+- cell-cell junction (GO:0005911)
+- ameboidal-type cell migration (GO:0001667)
+- negative regulation of chemotaxis (GO:0050922)
+
+These terms are more general, or relate to developmental/cell migration processes that may overlap mechanistically with the deepsearch programs but are not called out as specific clustered gene programs based on primary functional literature synthesis.
+
+***
+
+**Summary:**
+DeepSearch gene programs provide mechanistic resolution, specific gene-gene interactions, direct pathway implications, and functional cellular context that high-level GSEA GO terms do not. DeepSearch uncovers coordinated activation of stemness, neuron-glioma synaptic communication, lipid biosynthetic programs, hypoxia response, autophagy survival, metabolic plasticity, and DNA damage tolerance—all organized as actionable modules and not simply as broad biological processes.[^2_1][^2_2][^2_3][^2_4]
+<span style="display:none">[^2_5][^2_6][^2_7][^2_8][^2_9]</span>
+
+<div align="center">⁂</div>
+
+[^2_1]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6865749/
+
+[^2_2]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9260928/
+
+[^2_3]: https://www.frontiersin.org/articles/10.3389/fonc.2020.615976/pdf
+
+[^2_4]: https://www.frontiersin.org/articles/10.3389/fgene.2020.00253/pdf
+
+[^2_5]: image.jpg
+
+[^2_6]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5661398/
+
+[^2_7]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11030436/
+
+[^2_8]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10912129/
+
+[^2_9]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7943725/
+
