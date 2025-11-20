@@ -4,10 +4,8 @@ run_id,program_index,program_name,folder,metamodule,annotation
 01_OPC-AC-like_1_run2,3,Proliferation and Aberrant Cell Cycle Regulation,01_OPC-AC-like_1,1,OPC-AC-like 1
 01_OPC-AC-like_1_run2,4,Aberrant Neural and Synaptic Programs,01_OPC-AC-like_1,1,OPC-AC-like 1
 02_NPC-neuronal-like_1_run1,4,cAMP Signaling and Kinase Cascades,02_NPC-neuronal-like_1,2,NPC-neuronal-like 1
-02_NPC-neuronal-like_1_run1,5,Neuregulin-BMP Signaling,02_NPC-neuronal-like_1,2,NPC-neuronal-like 1
 02_NPC-neuronal-like_1_run1,6,Solute Carrier Transporters,02_NPC-neuronal-like_1,2,NPC-neuronal-like 1
 02_NPC-neuronal-like_1_run1,7,Immune Cell Markers,02_NPC-neuronal-like_1,2,NPC-neuronal-like 1
-02_NPC-neuronal-like_1_run2,2,Inflammatory and Mesenchymal Signaling,02_NPC-neuronal-like_1,2,NPC-neuronal-like 1
 03_NPC-neuronal-like_2_run1,2,Axon Guidance & Cell Migration,03_NPC-neuronal-like_2,3,NPC-neuronal-like 2
 03_NPC-neuronal-like_2_run1,4,Potassium Channel & Ion Transport Adaptations,03_NPC-neuronal-like_2,3,NPC-neuronal-like 2
 04_AC-gliosis-like_1_run2,6,Mesenchymal State Induction via Cytokine Receptors,04_AC-gliosis-like_1,4,AC-gliosis-like 1
@@ -16,14 +14,16 @@ run_id,program_index,program_name,folder,metamodule,annotation
 06_OPC-NPC-like_run1,0,Sonic Hedgehog and GLI Signaling,06_OPC-NPC-like,6,OPC-NPC-like
 06_OPC-NPC-like_run1,1,Notch Signaling,06_OPC-NPC-like,6,OPC-NPC-like
 06_OPC-NPC-like_run1,3,Stemness and Dedifferentiation Program,06_OPC-NPC-like,6,OPC-NPC-like
+06_OPC-NPC-like_run1,5,Immunosuppression,06_OPC-NPC-like,6,OPC-NPC-like
 06_OPC-NPC-like_run2,2,"Aberrant Translation, Ribosome Biogenesis, and Metabolic Adaptation",06_OPC-NPC-like,6,OPC-NPC-like
+06_OPC-NPC-like_run2,3,Apoptosis and Therapy Resistance Programs,06_OPC-NPC-like,6,OPC-NPC-like
 06_OPC-NPC-like_run2,4,"Neural and Axon Guidance, Migration",06_OPC-NPC-like,6,OPC-NPC-like
+07_Proliferative_run1,0,Cell Cycle Checkpoint Control,07_Proliferative,7,Proliferative
 07_Proliferative_run1,2,Aurora Kinase Signaling,07_Proliferative,7,Proliferative
 07_Proliferative_run1,3,Transcriptional Cell Cycle Regulation,07_Proliferative,7,Proliferative
 07_Proliferative_run1,4,Kinesin Motor Protein Function,07_Proliferative,7,Proliferative
 07_Proliferative_run1,5,Centromere and Kinetochore Assembly,07_Proliferative,7,Proliferative
 07_Proliferative_run1,6,Mitotic Kinase Cascades,07_Proliferative,7,Proliferative
-07_Proliferative_run1,7,DNA Replication and S-Phase Progression,07_Proliferative,7,Proliferative
 07_Proliferative_run1,8,Sister Chromatid Cohesion and Separation,07_Proliferative,7,Proliferative
 07_Proliferative_run1,10,Condensin-Mediated Chromosome Condensation,07_Proliferative,7,Proliferative
 08_Gliosis-hypoxia_run1,2,Angiogenesis & Vascular Niche,08_Gliosis-hypoxia,8,Gliosis-hypoxia

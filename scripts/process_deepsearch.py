@@ -64,10 +64,18 @@ def sanitize_whitespace(text: str) -> str:
     return re.sub(r"\s+", " ", text.strip())
 
 
-def compute_text_similarity(text_a: str, text_b: str) -> float:
-    """Token Jaccard similarity between two short texts."""
-    tokens_a = set(re.findall(r"[A-Za-z0-9]+", text_a.lower()))
-    tokens_b = set(re.findall(r"[A-Za-z0-9]+", text_b.lower()))
+def normalize_name(text: str) -> List[str]:
+    """Return normalized tokens for a program name."""
+    clean = re.sub(r"[^A-Za-z0-9]+", " ", text.lower())
+    tokens = [tok for tok in clean.split() if tok]
+    return tokens
+
+
+def compute_name_similarity(name_a: str, name_b: str) -> float:
+    tokens_a = set(normalize_name(name_a))
+    tokens_b = set(normalize_name(name_b))
+    if not tokens_a or not tokens_b:
+        return 0.0
     union = len(tokens_a | tokens_b)
     return len(tokens_a & tokens_b) / union if union else 0.0
 
@@ -77,17 +85,13 @@ def compute_program_similarity(prog_a: Dict, prog_b: Dict) -> Dict:
     genes_b = set(prog_b.get("supporting_genes") or [])
     union = len(genes_a | genes_b)
     gene_jaccard = len(genes_a & genes_b) / union if union else 0.0
-    text_a = sanitize_whitespace(
-        f"{prog_a.get('program_name', '')} {prog_a.get('description', '')}"
-    )
-    text_b = sanitize_whitespace(
-        f"{prog_b.get('program_name', '')} {prog_b.get('description', '')}"
-    )
-    text_sim = compute_text_similarity(text_a, text_b)
-    combined = 0.6 * gene_jaccard + 0.4 * text_sim
+    name_a = prog_a.get("program_name", "") or ""
+    name_b = prog_b.get("program_name", "") or ""
+    name_sim = compute_name_similarity(name_a, name_b)
+    combined = 0.5 * gene_jaccard + 0.5 * name_sim
     return {
         "gene_jaccard": gene_jaccard,
-        "text_similarity": text_sim,
+        "name_similarity": name_sim,
         "combined_similarity": combined,
     }
 
@@ -194,7 +198,7 @@ def main() -> None:
                         "program_a_name": prog_a.get("program_name"),
                         "program_b_name": prog_b.get("program_name"),
                         "gene_jaccard": sim["gene_jaccard"],
-                        "text_similarity": sim["text_similarity"],
+                        "name_similarity": sim["name_similarity"],
                         "combined_similarity": sim["combined_similarity"],
                         "folder": folder.name,
                         "metamodule": meta,

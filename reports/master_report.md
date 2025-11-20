@@ -1,14 +1,16 @@
+<!-- TODO: insert summary by editing reports/summary_intro.md -->
+
 # DeepSearch Consistency and GO Coverage Report
 
 ## Run-to-run gene program consistency
 DeepSearch run pairs are generally stable: the combined similarity metric (50 % gene-set Jaccard, 50 % name overlap) ranges from ~0.24 to ~0.54. Gliosis, Proliferative 2, and AC-gliosis-like 1 display the tightest reproducibility, while mixed OPC/NPC states fluctuate more, with higher fractions of unmatched programs. These results reinforce the need to treat program-level interpretations as probabilistic, especially in lineage-plastic contexts.
 
-![Run-to-run similarity](run_consistency.svg)
+![Run-to-run similarity](/reports/run_consistency.svg)
 
 ## GO enrichment coverage
 All but one comparison file reports complete GO coverage: DeepSearch captured every GO term listed in the GSEA output, except for the Proliferative 2 model where 30 umbrella DNA-metabolism terms remained unmatched (76 % coverage). The gliosis-hypoxia and OPC-like 1 comparison markdowns still lack standardized tables, so those gene sets are excluded from the aggregate coverage stats.
 
-![GO coverage](go_coverage.svg)
+![GO coverage](reports/go_coverage.svg)
 
 ## Methods
 - DeepSearch outputs (`run_1.md`, `run_2.md`) were parsed via `scripts/process_deepsearch.py`, which extracts program metadata, supporting genes, and similarity metrics. Name similarity uses token overlap, weighted equally with gene-set Jaccard.
@@ -34,3 +36,73 @@ Ranked by the number of supporting genes (DeepSearch run 1).
 ## Limitations and notes
 - Comparison sets 9 (gliosis-hypoxia) and 12 (OPC-like 1) lack the required GO table, so they’re omitted from GO coverage metrics.
 - The 50 / 50 similarity metric is heuristic: name changes between runs still rely on gene overlap to link programs.
+
+## 00_Gliosis
+
+![00_Gliosis overlap plot](../analysis/confusion_heatmaps/00_Gliosis_bubble.png)
+
+## 01_OPC-AC-like_1
+
+![01_OPC-AC-like_1 overlap plot](../analysis/confusion_heatmaps/01_OPC-AC-like_1_bubble.png)
+
+Reports: [Run 1](01_OPC-AC-like_1/run_1.md) | [Run 2](01_OPC-AC-like_1/run_2.md)
+
+## 02_NPC-neuronal-like_1
+
+![02_NPC-neuronal-like_1 overlap plot](../analysis/confusion_heatmaps/02_NPC-neuronal-like_1_bubble.png)
+
+## 03_NPC-neuronal-like_2
+
+![03_NPC-neuronal-like_2 overlap plot](../analysis/confusion_heatmaps/03_NPC-neuronal-like_2_bubble.png)
+
+Reports: [Run 1](03_NPC-neuronal-like_2/run_1.md) | [Run 2](03_NPC-neuronal-like_2/run_2.md)
+
+## 04_AC-gliosis-like_1
+
+![04_AC-gliosis-like_1 overlap plot](../analysis/confusion_heatmaps/04_AC-gliosis-like_1_bubble.png)
+
+## 05_AC-neuronal-like
+
+![05_AC-neuronal-like overlap plot](../analysis/confusion_heatmaps/05_AC-neuronal-like_bubble.png)
+
+Reports: [Run 1](05_AC-neuronal-like/run_1.md)
+
+## 06_OPC-NPC-like
+
+![06_OPC-NPC-like overlap plot](../analysis/confusion_heatmaps/06_OPC-NPC-like_bubble.png)
+
+## 07_Proliferative
+
+![07_Proliferative overlap plot](../analysis/confusion_heatmaps/07_Proliferative_bubble.png)
+
+Reports: [Run 1](07_Proliferative/run_1.md)
+
+## 08_Gliosis-hypoxia
+
+![08_Gliosis-hypoxia overlap plot](../analysis/confusion_heatmaps/08_Gliosis-hypoxia_bubble.png)
+
+## 09_Proliferative_2
+
+![09_Proliferative_2 overlap plot](../analysis/confusion_heatmaps/09_Proliferative_2_bubble.png)
+
+Reports: [Run 1](09_Proliferative_2/run_1.md)
+
+## 10_AC-gliosis-like_2
+
+![10_AC-gliosis-like_2 overlap plot](../analysis/confusion_heatmaps/10_AC-gliosis-like_2_bubble.png)
+
+Reports: [Run 1](10_AC-gliosis-like_2/run_1.md)
+
+## 11_OPC-like_1
+
+![11_OPC-like_1 overlap plot](../analysis/confusion_heatmaps/11_OPC-like_1_bubble.png)
+
+## 12_NPC-neuronal-like_3
+
+![12_NPC-neuronal-like_3 overlap plot](../analysis/confusion_heatmaps/12_NPC-neuronal-like_3_bubble.png)
+
+## 13_OPC-like_2
+
+![13_OPC-like_2 overlap plot](../analysis/confusion_heatmaps/13_OPC-like_2_bubble.png)
+
+Reports: [Run 2](13_OPC-like_2/run_2.md)
