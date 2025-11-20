@@ -1,0 +1,44 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='800' height='392'>
+<style>text { font-family: Arial, sans-serif; font-size: 12px; }</style>
+<text x='400.0' y='20' text-anchor='middle' font-size='16'>Run-to-run similarity</text>
+<rect x='150' y='40' width='312.75603254572616' height='18' fill='#4C72B0' />
+<text x='145' y='52.0' text-anchor='end' dominant-baseline='middle'>NPC-neuronal-like 1</text>
+<text x='467.75603254572616' y='52.0' dominant-baseline='middle'>0.52</text>
+<rect x='150' y='64' width='255.12783008925615' height='18' fill='#4C72B0' />
+<text x='145' y='76.0' text-anchor='end' dominant-baseline='middle'>AC-gliosis-like 1</text>
+<text x='410.1278300892561' y='76.0' dominant-baseline='middle'>0.43</text>
+<rect x='150' y='88' width='251.61048652839693' height='18' fill='#4C72B0' />
+<text x='145' y='100.0' text-anchor='end' dominant-baseline='middle'>Gliosis</text>
+<text x='406.6104865283969' y='100.0' dominant-baseline='middle'>0.42</text>
+<rect x='150' y='112' width='251.33319363836645' height='18' fill='#4C72B0' />
+<text x='145' y='124.0' text-anchor='end' dominant-baseline='middle'>Proliferative 2</text>
+<text x='406.3331936383664' y='124.0' dominant-baseline='middle'>0.42</text>
+<rect x='150' y='136' width='240.04197665688343' height='18' fill='#4C72B0' />
+<text x='145' y='148.0' text-anchor='end' dominant-baseline='middle'>OPC-like 2</text>
+<text x='395.04197665688343' y='148.0' dominant-baseline='middle'>0.40</text>
+<rect x='150' y='160' width='229.99195204073254' height='18' fill='#4C72B0' />
+<text x='145' y='172.0' text-anchor='end' dominant-baseline='middle'>OPC-AC-like 1</text>
+<text x='384.99195204073254' y='172.0' dominant-baseline='middle'>0.38</text>
+<rect x='150' y='184' width='215.18952207476792' height='18' fill='#4C72B0' />
+<text x='145' y='196.0' text-anchor='end' dominant-baseline='middle'>NPC-neuronal-like 2</text>
+<text x='370.1895220747679' y='196.0' dominant-baseline='middle'>0.36</text>
+<rect x='150' y='208' width='185.07967182160726' height='18' fill='#4C72B0' />
+<text x='145' y='220.0' text-anchor='end' dominant-baseline='middle'>OPC-like 1</text>
+<text x='340.07967182160723' y='220.0' dominant-baseline='middle'>0.31</text>
+<rect x='150' y='232' width='163.81880665563781' height='18' fill='#4C72B0' />
+<text x='145' y='244.0' text-anchor='end' dominant-baseline='middle'>AC-gliosis-like 2</text>
+<text x='318.8188066556378' y='244.0' dominant-baseline='middle'>0.27</text>
+<rect x='150' y='256' width='158.50616088716774' height='18' fill='#4C72B0' />
+<text x='145' y='268.0' text-anchor='end' dominant-baseline='middle'>AC-neuronal-like</text>
+<text x='313.50616088716777' y='268.0' dominant-baseline='middle'>0.26</text>
+<rect x='150' y='280' width='152.8273825360123' height='18' fill='#4C72B0' />
+<text x='145' y='292.0' text-anchor='end' dominant-baseline='middle'>Gliosis-hypoxia</text>
+<text x='307.8273825360123' y='292.0' dominant-baseline='middle'>0.25</text>
+<rect x='150' y='304' width='147.76975405546833' height='18' fill='#4C72B0' />
+<text x='145' y='316.0' text-anchor='end' dominant-baseline='middle'>OPC-NPC-like</text>
+<text x='302.7697540554683' y='316.0' dominant-baseline='middle'>0.25</text>
+<rect x='150' y='328' width='139.87214240534922' height='18' fill='#4C72B0' />
+<text x='145' y='340.0' text-anchor='end' dominant-baseline='middle'>Proliferative</text>
+<text x='294.8721424053492' y='340.0' dominant-baseline='middle'>0.23</text>
+<text x='400.0' y='387' text-anchor='middle'>Average combined similarity</text>
+</svg>

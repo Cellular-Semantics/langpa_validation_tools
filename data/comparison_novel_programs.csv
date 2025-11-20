@@ -1,0 +1,27 @@
+metamodule,annotation,folder,source_file,program_name,supporting_gene_count
+12,NPC-neuronal-like 3,12_NPC-neuronal-like_3,comparison geneset_13.md,**Transcriptional & Epigenetic Reprogramming**,
+13,OPC-like 2,13_OPC-like_2,comparison geneset_14.md,Lipid Metabolism and Membrane Remodeling,12.0
+13,OPC-like 2,13_OPC-like_2,comparison geneset_14.md,Hypoxia Response and Angiogenic Signaling,7.0
+13,OPC-like 2,13_OPC-like_2,comparison geneset_14.md,Autophagy and Lysosomal Degradation,4.0
+13,OPC-like 2,13_OPC-like_2,comparison geneset_14.md,Amino Acid Metabolism and Nutrient Transport,6.0
+13,OPC-like 2,13_OPC-like_2,comparison geneset_14.md,DNA Damage Response and Genomic Stability,3.0
+1,OPC-AC-like 1,01_OPC-AC-like_1,comparison geneset_2.md,Glial/astrocyte differentiation and tumor plasticity,3.0
+1,OPC-AC-like 1,01_OPC-AC-like_1,comparison geneset_2.md,Redox and ferroptosis resistance,2.0
+1,OPC-AC-like 1,01_OPC-AC-like_1,comparison geneset_2.md,Immune evasion: MHC class I downregulation,1.0
+2,NPC-neuronal-like 1,02_NPC-neuronal-like_1,comparison geneset_3.md,GABAergic Neurotransmission,5.0
+2,NPC-neuronal-like 1,02_NPC-neuronal-like_1,comparison geneset_3.md,Transcriptional Regulation and Chromatin Remodeling,7.0
+2,NPC-neuronal-like 1,02_NPC-neuronal-like_1,comparison geneset_3.md,cAMP Signaling and Kinase Cascades,4.0
+2,NPC-neuronal-like 1,02_NPC-neuronal-like_1,comparison geneset_3.md,Neuregulin-BMP Signaling,2.0
+2,NPC-neuronal-like 1,02_NPC-neuronal-like_1,comparison geneset_3.md,Solute Carrier Transporters,3.0
+2,NPC-neuronal-like 1,02_NPC-neuronal-like_1,comparison geneset_3.md,Immune Cell Markers,3.0
+3,NPC-neuronal-like 2,03_NPC-neuronal-like_2,comparison geneset_4.md,Glioma Stem Cell Maintenance and Therapy Resistance,8.0
+4,AC-gliosis-like 1,04_AC-gliosis-like_1,comparison geneset_5.md,Angiogenesis and Vascular Remodeling,5.0
+4,AC-gliosis-like 1,04_AC-gliosis-like_1,comparison geneset_5.md,"Immunomodulation, Hypoxia, and Inflammation",3.0
+4,AC-gliosis-like 1,04_AC-gliosis-like_1,comparison geneset_5.md,Metabolic Adaptation and Glycolysis,1.0
+4,AC-gliosis-like 1,04_AC-gliosis-like_1,comparison geneset_5.md,Mesenchymal State Induction via Cytokine Receptors,1.0
+5,AC-neuronal-like,05_AC-neuronal-like,comparison geneset_6.md,Glioblastoma Immune Suppression,6.0
+5,AC-neuronal-like,05_AC-neuronal-like,comparison geneset_6.md,Angiogenesis & Hypoxic Adaptation,
+6,OPC-NPC-like,06_OPC-NPC-like,comparison geneset_7.md,Sonic Hedgehog and GLI Signaling,4.0
+6,OPC-NPC-like,06_OPC-NPC-like,comparison geneset_7.md,Notch Signaling,1.0
+6,OPC-NPC-like,06_OPC-NPC-like,comparison geneset_7.md,EGFR/ERBB Family Signaling,2.0
+6,OPC-NPC-like,06_OPC-NPC-like,comparison geneset_7.md,Immunosuppression,2.0

@@ -1,0 +1,12 @@
+metamodule,annotation,folder,source_file,total_gsea_terms,unmatched_go_terms_reported,unmatched_go_terms_listed,matched_go_terms_estimated,programs_total,programs_without_go_match
+9,Proliferative 2,09_Proliferative_2,comparison geneset_10.md,128,30,0,98,5,0
+10,AC-gliosis-like 2,10_AC-gliosis-like_2,comparison geneset_11.md,25,0,0,25,5,0
+12,NPC-neuronal-like 3,12_NPC-neuronal-like_3,comparison geneset_13.md,14,0,0,14,5,1
+13,OPC-like 2,13_OPC-like_2,comparison geneset_14.md,22,0,0,22,12,5
+1,OPC-AC-like 1,01_OPC-AC-like_1,comparison geneset_2.md,1,0,0,1,4,3
+2,NPC-neuronal-like 1,02_NPC-neuronal-like_1,comparison geneset_3.md,15,0,0,15,9,6
+3,NPC-neuronal-like 2,03_NPC-neuronal-like_2,comparison geneset_4.md,8,0,0,8,3,1
+4,AC-gliosis-like 1,04_AC-gliosis-like_1,comparison geneset_5.md,11,0,0,11,7,4
+5,AC-neuronal-like,05_AC-neuronal-like,comparison geneset_6.md,3,0,0,3,4,2
+6,OPC-NPC-like,06_OPC-NPC-like,comparison geneset_7.md,24,0,0,24,5,4
+7,Proliferative,07_Proliferative,comparison geneset_8.md,156,0,0,156,3,0
