@@ -12,6 +12,7 @@ import pandas as pd
 from process_deepsearch import parse_run  # type: ignore
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+RUN_ROOT = BASE_DIR / "deepsearch"
 REPORT_DIR = BASE_DIR / "reports"
 REPORT_DIR.mkdir(exist_ok=True)
 
@@ -134,7 +135,7 @@ def generate_reports() -> None:
     mapping = pd.read_csv(BASE_DIR / "geneset_folder_mapping.csv")
 
     for _, row in mapping.iterrows():
-        folder = BASE_DIR / row["new_folder"]
+        folder = RUN_ROOT / row["new_folder"]
         run_files = sorted(folder.glob("*.md"))
         if len(run_files) != 2:
             continue

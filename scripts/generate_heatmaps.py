@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import json
+import os
 from pathlib import Path
+
+os.environ.setdefault("MPLCONFIGDIR", str(Path(__file__).resolve().parent.parent / ".mpl-cache"))
 
 import matplotlib
 

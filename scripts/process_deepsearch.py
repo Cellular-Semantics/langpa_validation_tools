@@ -14,6 +14,7 @@ from typing import Dict, List
 import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+RUN_ROOT = BASE_DIR / "deepsearch"
 MAPPING_FILE = BASE_DIR / "geneset_folder_mapping.csv"
 DATA_DIR = BASE_DIR / "data"
 
@@ -113,7 +114,7 @@ def main() -> None:
     invalid_program_rows: List[Dict] = []
 
     for _, row in mapping.iterrows():
-        folder = BASE_DIR / row["new_folder"]
+        folder = RUN_ROOT / row["new_folder"]
         meta = int(row["metamodule"])
         annotation = row["annotation"]
         run_files = sorted(folder.glob("*.md"))

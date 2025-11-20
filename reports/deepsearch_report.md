@@ -3,12 +3,12 @@
 ## Run-to-run gene program consistency
 DeepSearch run pairs are generally stable: the combined similarity metric (50 % gene-set Jaccard, 50 % name overlap) ranges from ~0.24 to ~0.54. Gliosis, Proliferative 2, and AC-gliosis-like 1 display the tightest reproducibility, while mixed OPC/NPC states fluctuate more, with higher fractions of unmatched programs. These results reinforce the need to treat program-level interpretations as probabilistic, especially in lineage-plastic contexts.
 
-![Run-to-run similarity](run_consistency.svg)
+![Run-to-run similarity](../analysis/run_consistency.svg)
 
 ## GO enrichment coverage
 All but one comparison file reports complete GO coverage: DeepSearch captured every GO term listed in the GSEA output, except for the Proliferative 2 model where 30 umbrella DNA-metabolism terms remained unmatched (76 % coverage). The gliosis-hypoxia and OPC-like 1 comparison markdowns still lack standardized tables, so those gene sets are excluded from the aggregate coverage stats.
 
-![GO coverage](go_coverage.svg)
+![GO coverage](../analysis/go_coverage.svg)
 
 ## Methods
 - DeepSearch outputs (`run_1.md`, `run_2.md`) were parsed via `scripts/process_deepsearch.py`, which extracts program metadata, supporting genes, and similarity metrics. Name similarity uses token overlap, weighted equally with gene-set Jaccard.

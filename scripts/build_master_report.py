@@ -9,7 +9,7 @@ from pathlib import Path
 import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-ANALYSIS_REPORT = BASE_DIR / "analysis" / "deepsearch_report.md"
+ANALYSIS_REPORT = BASE_DIR / "reports" / "deepsearch_report.md"
 SUMMARY_SNIPPET = BASE_DIR / "reports" / "summary_intro.md"
 MASTER_REPORT = BASE_DIR / "reports" / "master_report.md"
 BUBBLE_DIR = BASE_DIR / "analysis" / "confusion_heatmaps"
@@ -30,7 +30,8 @@ def main() -> None:
         content.append("")
     content.append(load_text(ANALYSIS_REPORT).strip())
     content.append("")
-    for folder in sorted(BASE_DIR.glob('[0-9][0-9]_*/')):
+    report_folders = sorted((BASE_DIR / "reports").glob('[0-9][0-9]_*/'))
+    for folder in report_folders:
         bubble = BUBBLE_DIR / f"{folder.name}_bubble.png"
         run_dir = RUN_REPORT_ROOT / folder.name
         run_links = []

@@ -9,12 +9,13 @@ import csv
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+RUN_ROOT = BASE_DIR / "deepsearch"
 MAPPING_FILE = BASE_DIR / "run_file_mapping.csv"
 
 
 def rename_runs() -> None:
     records = []
-    for folder in sorted(BASE_DIR.glob("[0-9][0-9]_*/")):
+    for folder in sorted(RUN_ROOT.glob("[0-9][0-9]_*/")):
         run_files = sorted(folder.glob("*.md"))
         if len(run_files) != 2:
             print(f"Skipping {folder} (expected 2 .md files, found {len(run_files)})")

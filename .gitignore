@@ -1,2 +1,11 @@
 .DS_Store
 .venv/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.env
+.mpl-cache/
+*.egg-info/
+dist/
+build/
