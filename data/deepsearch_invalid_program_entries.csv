@@ -1,0 +1,7 @@
+run_id,metamodule,annotation,folder,run_index,program_index,raw_entry
+14_OPC-AC-like_2_run1,14,OPC-AC-like 2,14_OPC-AC-like_2,1,0,type
+14_OPC-AC-like_2_run1,14,OPC-AC-like 2,14_OPC-AC-like_2,1,1,minItems
+14_OPC-AC-like_2_run1,14,OPC-AC-like 2,14_OPC-AC-like_2,1,2,items
+14_OPC-AC-like_2_run2,14,OPC-AC-like 2,14_OPC-AC-like_2,2,0,type
+14_OPC-AC-like_2_run2,14,OPC-AC-like 2,14_OPC-AC-like_2,2,1,minItems
+14_OPC-AC-like_2_run2,14,OPC-AC-like 2,14_OPC-AC-like_2,2,2,items
