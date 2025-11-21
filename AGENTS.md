@@ -19,4 +19,6 @@ I have a few tasks that need running:
   5. Write the whole thing up as a Jupyter notebook (minus any agentic extraction and comparison steps - just the stats and figures calc with tables) and a MarkDown report with figures.
 
 Individual DeepSearch runs can be summarized via `scripts/generate_reports.py`, which reads each `run_*.md` file and writes human-readable reports into `reports/<folder>/`.
+
+Use `make master_report` to regenerate the entire pipeline (parsing, comparisons, figures, per-run reports, and the combined summary) inside the `.venv` environment.
 ß

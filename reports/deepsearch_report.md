@@ -33,4 +33,5 @@ Ranked by the number of supporting genes (DeepSearch run 1).
 
 ## Limitations and notes
 - Comparison sets 9 (gliosis-hypoxia) and 12 (OPC-like 1) lack the required GO table, so they’re omitted from GO coverage metrics.
+- Duplicate DeepSearch runs (identical program lists) are automatically detected and omitted from the similarity plot.
 - The 50 / 50 similarity metric is heuristic: name changes between runs still rely on gene overlap to link programs.

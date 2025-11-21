@@ -11,12 +11,19 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List
 
+import hashlib
 import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 RUN_ROOT = BASE_DIR / "deepsearch"
 MAPPING_FILE = BASE_DIR / "geneset_folder_mapping.csv"
 DATA_DIR = BASE_DIR / "data"
+DATA_DIR.mkdir(exist_ok=True)
+
+
+def compute_signature(programs: List[Dict]) -> str:
+    canonical = json.dumps(programs, sort_keys=True, ensure_ascii=False)
+    return hashlib.md5(canonical.encode("utf-8")).hexdigest()
 
 
 def extract_json_block(text: str) -> str:
@@ -112,6 +119,7 @@ def main() -> None:
     match_rows: List[Dict] = []
     unmatched_rows: List[Dict] = []
     invalid_program_rows: List[Dict] = []
+    duplicate_rows: List[Dict] = []
 
     for _, row in mapping.iterrows():
         folder = RUN_ROOT / row["new_folder"]
@@ -128,6 +136,7 @@ def main() -> None:
             except Exception as exc:  # noqa: BLE001
                 raise RuntimeError(f"Failed parsing {file}") from exc
             run_id = f"{folder.name}_run{idx}"
+            signature = compute_signature(data.get("programs", []))
             run_records.append(
                 {
                     "metamodule": meta,
@@ -137,6 +146,7 @@ def main() -> None:
                     "run_file": file.name,
                     "run_id": run_id,
                     "program_count": len(data.get("programs", [])),
+                    "program_signature": signature,
                 }
             )
             raw_programs = data.get("programs", [])
@@ -180,10 +190,20 @@ def main() -> None:
                         ),
                     }
                 )
-            run_payloads.append({"id": run_id, "programs": program_list})
+            run_payloads.append({"id": run_id, "programs": program_list, "signature": signature})
 
         # compute similarities between the two runs
         run_a, run_b = run_payloads
+        duplicate_pair = run_a.get("signature") == run_b.get("signature")
+        duplicate_rows.append(
+            {
+                "folder": folder.name,
+                "annotation": annotation,
+                "duplicate": bool(duplicate_pair),
+            }
+        )
+        if duplicate_pair:
+            print(f"Warning: duplicate DeepSearch runs detected for {folder.name}")
         similarities = []
         for prog_a in run_a["programs"]:
             idx_a = prog_a.get("_parsed_index")
@@ -260,6 +280,9 @@ def main() -> None:
         pd.DataFrame(invalid_program_rows).to_csv(
             DATA_DIR / "deepsearch_invalid_program_entries.csv", index=False
         )
+    pd.DataFrame(duplicate_rows).to_csv(
+        DATA_DIR / "deepsearch_duplicate_runs.csv", index=False
+    )
     print("Processed DeepSearch runs and wrote CSV outputs in data/.")
 
 

@@ -17,6 +17,11 @@ OUTPUT_DIR = Path("analysis/confusion_heatmaps")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 programs = pd.read_csv(DATA_DIR / "deepsearch_programs.csv")
 programs["genes"] = programs["supporting_genes"].apply(json.loads)
+duplicates_path = DATA_DIR / "deepsearch_duplicate_runs.csv"
+duplicate_folders: set[str] = set()
+if duplicates_path.exists():
+    dup_df = pd.read_csv(duplicates_path)
+    duplicate_folders = set(dup_df[dup_df["duplicate"]]["folder"].tolist())
 
 
 def jaccard(a, b):
@@ -32,7 +37,7 @@ def truncate(name, max_len):
     return name if len(name) <= max_len else name[: max_len - 1] + '…'
 
 
-def render_plot(folder, annotation, run1, run2):
+def render_plot(folder_name, annotation, run1, run2):
     row_ids = [f"R1-{i+1}" for i in range(len(run1))]
     col_ids = [f"R2-{j+1}" for j in range(len(run2))]
     x_vals = []
@@ -87,7 +92,7 @@ def render_plot(folder, annotation, run1, run2):
     ax.set_xlabel("Run 2 programs")
     ax.set_ylabel("Run 1 programs")
     ax.set_title(
-        f"{annotation} ({folder})\nBubble size = overlap gene count, color = Jaccard overlap",
+        f"{annotation} ({folder_name})\nBubble size = overlap gene count, color = Jaccard overlap",
         fontsize=12,
     )
     ax.grid(True, which="both", linestyle="--", linewidth=0.5, alpha=0.5)
@@ -123,13 +128,28 @@ def render_plot(folder, annotation, run1, run2):
         legend_ax.text(x, size_y - 0.02, f"{size}", ha="center", va="top", fontsize=8)
     legend_ax.text(0.1, size_y + 0.05, "Bubble size = overlap genes", fontsize=8)
     plt.tight_layout()
-    fig.savefig(OUTPUT_DIR / f"{folder}_bubble.png", dpi=200)
+    fig.savefig(OUTPUT_DIR / f"{folder_name}_bubble.png", dpi=200)
     plt.close(fig)
 
 
-for (folder, annotation), grp in programs.groupby(["folder", "annotation"]):
+for (folder_name, annotation), grp in programs.groupby(["folder", "annotation"]):
     run1 = grp[grp["run_index"] == 1].sort_values("program_index").reset_index(drop=True)
     run2 = grp[grp["run_index"] == 2].sort_values("program_index").reset_index(drop=True)
     if run1.empty or run2.empty:
         continue
-    render_plot(folder, annotation, run1, run2)
+    if folder_name in duplicate_folders:
+        fig, ax = plt.subplots(figsize=(6, 3))
+        ax.axis("off")
+        ax.text(
+            0.5,
+            0.5,
+            "Duplicate runs detected\n(no overlap plot)",
+            ha="center",
+            va="center",
+            fontsize=12,
+        )
+        plt.tight_layout()
+        fig.savefig(OUTPUT_DIR / f"{folder_name}_bubble.png", dpi=200)
+        plt.close(fig)
+        continue
+    render_plot(folder_name, annotation, run1, run2)

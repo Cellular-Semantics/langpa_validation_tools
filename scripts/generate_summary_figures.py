@@ -21,6 +21,11 @@ OUT_DIR.mkdir(exist_ok=True)
 
 def plot_run_consistency() -> None:
     matches = pd.read_csv(DATA_DIR / "deepsearch_program_matches.csv")
+    dup_path = DATA_DIR / "deepsearch_duplicate_runs.csv"
+    duplicate_annotations: set[str] = set()
+    if dup_path.exists():
+        dup_df = pd.read_csv(dup_path)
+        duplicate_annotations = set(dup_df[dup_df["duplicate"]]["annotation"].tolist())
     summary = (
         matches.groupby("annotation")
         .agg(
@@ -31,6 +36,8 @@ def plot_run_consistency() -> None:
         .reset_index()
         .sort_values("annotation")
     )
+    if duplicate_annotations:
+        summary = summary[~summary["annotation"].isin(duplicate_annotations)]
     labels = summary["annotation"].tolist()
     x = np.arange(len(labels))
     width = 0.25
