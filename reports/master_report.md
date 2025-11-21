@@ -101,6 +101,8 @@ Reports: [Run 1](10_AC-gliosis-like_2/run_1.md)
 
 ![12_NPC-neuronal-like_3 overlap plot](../analysis/confusion_heatmaps/12_NPC-neuronal-like_3_bubble.png)
 
+Reports: (DeepSearch run duplicated; both run outputs are identical, so only run_1 is shown.)
+
 ## 13_OPC-like_2
 
 ![13_OPC-like_2 overlap plot](../analysis/confusion_heatmaps/13_OPC-like_2_bubble.png)
