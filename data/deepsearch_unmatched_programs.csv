@@ -1,8 +1,6 @@
 run_id,program_index,program_name,folder,metamodule,annotation
 00_Gliosis_run2,4,Therapy Resistance and Drug Efflux,00_Gliosis,0,Gliosis
-01_OPC-AC-like_1_run1,0,Glial/astrocyte differentiation and tumor plasticity,01_OPC-AC-like_1,1,OPC-AC-like 1
 01_OPC-AC-like_1_run2,3,Proliferation and Aberrant Cell Cycle Regulation,01_OPC-AC-like_1,1,OPC-AC-like 1
-01_OPC-AC-like_1_run2,4,Aberrant Neural and Synaptic Programs,01_OPC-AC-like_1,1,OPC-AC-like 1
 02_NPC-neuronal-like_1_run1,4,cAMP Signaling and Kinase Cascades,02_NPC-neuronal-like_1,2,NPC-neuronal-like 1
 02_NPC-neuronal-like_1_run1,6,Solute Carrier Transporters,02_NPC-neuronal-like_1,2,NPC-neuronal-like 1
 02_NPC-neuronal-like_1_run1,7,Immune Cell Markers,02_NPC-neuronal-like_1,2,NPC-neuronal-like 1
@@ -13,11 +11,7 @@ run_id,program_index,program_name,folder,metamodule,annotation
 05_AC-neuronal-like_run2,2,Calcium & Glutamate Signaling,05_AC-neuronal-like,5,AC-neuronal-like
 06_OPC-NPC-like_run1,0,Sonic Hedgehog and GLI Signaling,06_OPC-NPC-like,6,OPC-NPC-like
 06_OPC-NPC-like_run1,1,Notch Signaling,06_OPC-NPC-like,6,OPC-NPC-like
-06_OPC-NPC-like_run1,3,Stemness and Dedifferentiation Program,06_OPC-NPC-like,6,OPC-NPC-like
-06_OPC-NPC-like_run1,5,Immunosuppression,06_OPC-NPC-like,6,OPC-NPC-like
 06_OPC-NPC-like_run2,2,"Aberrant Translation, Ribosome Biogenesis, and Metabolic Adaptation",06_OPC-NPC-like,6,OPC-NPC-like
-06_OPC-NPC-like_run2,3,Apoptosis and Therapy Resistance Programs,06_OPC-NPC-like,6,OPC-NPC-like
-06_OPC-NPC-like_run2,4,"Neural and Axon Guidance, Migration",06_OPC-NPC-like,6,OPC-NPC-like
 07_Proliferative_run1,0,Cell Cycle Checkpoint Control,07_Proliferative,7,Proliferative
 07_Proliferative_run1,2,Aurora Kinase Signaling,07_Proliferative,7,Proliferative
 07_Proliferative_run1,3,Transcriptional Cell Cycle Regulation,07_Proliferative,7,Proliferative
@@ -32,12 +26,10 @@ run_id,program_index,program_name,folder,metamodule,annotation
 09_Proliferative_2_run2,2,Mitotic Regulation and Chromosome Segregation,09_Proliferative_2,9,Proliferative 2
 10_AC-gliosis-like_2_run1,3,Neuronal-Synaptic & Neurotransmitter Modulation,10_AC-gliosis-like_2,10,AC-gliosis-like 2
 10_AC-gliosis-like_2_run1,4,Hypoxia/Metabolic Stress Adaptation,10_AC-gliosis-like_2,10,AC-gliosis-like 2
-11_OPC-like_1_run1,3,Angiogenesis and Vascular Remodeling,11_OPC-like_1,11,OPC-like 1
 11_OPC-like_1_run2,2,Neuregulin-ErbB Receptor Signaling & Growth Promotion,11_OPC-like_1,11,OPC-like 1
 11_OPC-like_1_run2,4,Cell Cycle Progression & Proliferation Control,11_OPC-like_1,11,OPC-like 1
 11_OPC-like_1_run2,5,Epithelial-Mesenchymal Transition & Invasion,11_OPC-like_1,11,OPC-like 1
 11_OPC-like_1_run2,6,Lipid Metabolism & Bioenergetics Rewiring,11_OPC-like_1,11,OPC-like 1
-11_OPC-like_1_run2,7,Hypoxia Response & Angiogenic Signaling,11_OPC-like_1,11,OPC-like 1
 11_OPC-like_1_run2,8,Cancer Stem Cell Maintenance & Plasticity,11_OPC-like_1,11,OPC-like 1
 11_OPC-like_1_run2,9,Long Non-Coding RNA Regulatory Networks,11_OPC-like_1,11,OPC-like 1
 13_OPC-like_2_run2,2,Neuron-to-Tumor Synaptic Integration,13_OPC-like_2,13,OPC-like 2

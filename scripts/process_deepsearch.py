@@ -9,9 +9,12 @@ import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional, Tuple
 
 import hashlib
+import os
+
+import numpy as np
 import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,11 +22,58 @@ RUN_ROOT = BASE_DIR / "deepsearch"
 MAPPING_FILE = BASE_DIR / "geneset_folder_mapping.csv"
 DATA_DIR = BASE_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
+EMBED_INDEX = DATA_DIR / "embeddings_index.csv"
+EMBED_VECTORS = DATA_DIR / "embeddings_name.npy"
+CALIBRATION_STATS = BASE_DIR / "analysis" / "embedding_calibration_stats.json"
+USE_EMBEDDINGS = os.getenv("USE_EMBEDDINGS", "1") not in {"0", "false", "False"}
 
 
 def compute_signature(programs: List[Dict]) -> str:
     canonical = json.dumps(programs, sort_keys=True, ensure_ascii=False)
     return hashlib.md5(canonical.encode("utf-8")).hexdigest()
+
+
+def load_embeddings() -> Dict[Tuple[str, int, int], np.ndarray]:
+    if not USE_EMBEDDINGS or not EMBED_INDEX.exists() or not EMBED_VECTORS.exists():
+        return {}
+    index_df = pd.read_csv(EMBED_INDEX)
+    vectors = np.load(EMBED_VECTORS)
+    if len(index_df) != len(vectors):
+        print("Embedding index and vector count mismatch; ignoring embeddings.")
+        return {}
+    norms = np.linalg.norm(vectors, axis=1, keepdims=True)
+    norms[norms == 0] = 1.0
+    normalized = vectors / norms
+    mapping: Dict[Tuple[str, int, int], np.ndarray] = {}
+    for (folder, run_idx, prog_idx), vec in zip(
+        zip(index_df["folder"], index_df["run_index"], index_df["program_index"]),
+        normalized,
+    ):
+        mapping[(folder, int(run_idx), int(prog_idx))] = vec
+    return mapping
+
+
+def load_name_similarity_baseline() -> Optional[float]:
+    if not CALIBRATION_STATS.exists():
+        return None
+    try:
+        data = json.loads(CALIBRATION_STATS.read_text())
+    except Exception as exc:  # noqa: BLE001
+        print(f"Failed to read {CALIBRATION_STATS}: {exc}")
+        return None
+    mean_value = data.get("mean")
+    try:
+        return float(mean_value)
+    except (TypeError, ValueError):
+        return None
+
+
+def rescale_name_similarity(raw_value: float, baseline: Optional[float]) -> float:
+    if baseline is None:
+        return raw_value
+    denom = max(1e-6, 1.0 - baseline)
+    scaled = (raw_value - baseline) / denom
+    return max(-1.0, min(1.0, scaled))
 
 
 def extract_json_block(text: str) -> str:
@@ -88,14 +138,32 @@ def compute_name_similarity(name_a: str, name_b: str) -> float:
     return len(tokens_a & tokens_b) / union if union else 0.0
 
 
-def compute_program_similarity(prog_a: Dict, prog_b: Dict) -> Dict:
+def get_embedding(program: Dict, embeddings: Dict[tuple, np.ndarray], folder: str) -> np.ndarray | None:
+    key = (folder, program.get("_run_index"), program.get("_program_index"))
+    return embeddings.get(key)
+
+
+def compute_program_similarity(
+    prog_a: Dict,
+    prog_b: Dict,
+    embeddings: Dict[tuple, np.ndarray],
+    folder: str,
+    name_baseline: Optional[float],
+) -> Dict:
     genes_a = set(prog_a.get("supporting_genes") or [])
     genes_b = set(prog_b.get("supporting_genes") or [])
     union = len(genes_a | genes_b)
     gene_jaccard = len(genes_a & genes_b) / union if union else 0.0
-    name_a = prog_a.get("program_name", "") or ""
-    name_b = prog_b.get("program_name", "") or ""
-    name_sim = compute_name_similarity(name_a, name_b)
+    vec_a = get_embedding(prog_a, embeddings, folder)
+    vec_b = get_embedding(prog_b, embeddings, folder)
+    if vec_a is not None and vec_b is not None:
+        raw_name_sim = float(np.dot(vec_a, vec_b))
+        name_sim = rescale_name_similarity(raw_name_sim, name_baseline)
+    else:
+        name_a = prog_a.get("program_name", "") or ""
+        name_b = prog_b.get("program_name", "") or ""
+        raw_name_sim = compute_name_similarity(name_a, name_b)
+        name_sim = raw_name_sim
     combined = 0.5 * gene_jaccard + 0.5 * name_sim
     return {
         "gene_jaccard": gene_jaccard,
@@ -111,6 +179,14 @@ class ProgramRef:
 
 
 def main() -> None:
+    embeddings = load_embeddings()
+    if USE_EMBEDDINGS and not embeddings:
+        print("Embedding files not found or invalid; falling back to name token similarity.")
+    name_baseline = load_name_similarity_baseline()
+    if name_baseline is None:
+        print("Embedding calibration stats missing; name similarity will not be rescaled.")
+    else:
+        print(f"Using embedding baseline mean {name_baseline:.3f} for name similarity rescaling.")
     DATA_DIR.mkdir(exist_ok=True)
     mapping = pd.read_csv(MAPPING_FILE)
 
@@ -166,6 +242,9 @@ def main() -> None:
                     )
                     continue
                 program = dict(entry)
+                program["_folder"] = folder.name
+                program["_run_index"] = idx
+                program["_program_index"] = p_idx
                 program["_parsed_index"] = p_idx
                 program_list.append(program)
                 program_rows.append(
@@ -209,7 +288,13 @@ def main() -> None:
             idx_a = prog_a.get("_parsed_index")
             for prog_b in run_b["programs"]:
                 idx_b = prog_b.get("_parsed_index")
-                sim = compute_program_similarity(prog_a, prog_b)
+                sim = compute_program_similarity(
+                    prog_a,
+                    prog_b,
+                    embeddings,
+                    folder.name,
+                    name_baseline,
+                )
                 similarities.append(
                     {
                         "run_a_id": run_a["id"],

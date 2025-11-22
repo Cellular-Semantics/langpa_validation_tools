@@ -6,6 +6,7 @@ and per-gene-set sections referencing bubble plots and run reports.
 from __future__ import annotations
 
 from pathlib import Path
+import json
 import os
 import pandas as pd
 
@@ -56,8 +57,29 @@ def main() -> None:
     )
     program_catalog = pd.read_csv(
         DATA_DIR / "deepsearch_programs.csv",
-        usecols=["folder", "run_index", "program_index", "program_name"],
+        usecols=["folder", "run_index", "program_index", "program_name", "supporting_genes"],
     )
+
+    def parse_genes(cell: str):
+        if isinstance(cell, float) and pd.isna(cell):
+            return []
+        if not cell:
+            return []
+        try:
+            return json.loads(cell)
+        except json.JSONDecodeError:
+            return []
+
+    program_catalog["gene_set"] = program_catalog["supporting_genes"].apply(parse_genes)
+    gene_lookup = {
+        (row.folder, int(row.run_index), int(row.program_index)): set(row.gene_set)
+        for row in program_catalog.itertuples(index=False)
+    }
+
+    def overlap_genes(folder_name: str, run_a: int, idx_a: int, run_b: int, idx_b: int) -> int:
+        genes_a = gene_lookup.get((folder_name, run_a, idx_a), set())
+        genes_b = gene_lookup.get((folder_name, run_b, idx_b), set())
+        return len(genes_a & genes_b)
     report_folders = sorted((BASE_DIR / "reports").glob('[0-9][0-9]_*/'))
     for folder in report_folders:
         bubble = BUBBLE_DIR / f"{folder.name}_bubble.png"
@@ -107,26 +129,38 @@ def main() -> None:
                     row["program_a_index"]: row for _, row in best_rows.iterrows()
                 }
                 for _, prog_row in catalog_subset.iterrows():
-                    match_row = best_map.get(prog_row["program_index"])
+                    prog_idx = int(prog_row["program_index"])
+                    match_row = best_map.get(prog_idx)
                     if match_row is None:
                         table_rows.append(
-                            (
-                                prog_row["program_name"],
-                                "(no match)",
-                                "-",
-                                "-",
-                                "-",
-                            )
+                            {
+                                "small_name": prog_row["program_name"],
+                                "other_name": "(no match)",
+                                "overlap": "-",
+                                "gene": "-",
+                                "name": "-",
+                                "combined": "-",
+                                "combined_val": -1.0,
+                            }
                         )
                     else:
+                        overlap = overlap_genes(
+                            folder.name,
+                            1,
+                            prog_idx,
+                            2,
+                            int(match_row["program_b_index"]),
+                        )
                         table_rows.append(
-                            (
-                                prog_row["program_name"],
-                                match_row["program_b_name"],
-                                f"{match_row['gene_jaccard']:.2f}",
-                                f"{match_row['name_similarity']:.2f}",
-                                f"{match_row['combined_similarity']:.2f}",
-                            )
+                            {
+                                "small_name": prog_row["program_name"],
+                                "other_name": match_row["program_b_name"],
+                                "overlap": str(overlap),
+                                "gene": f"{match_row['gene_jaccard']:.2f}",
+                                "name": f"{match_row['name_similarity']:.2f}",
+                                "combined": f"{match_row['combined_similarity']:.2f}",
+                                "combined_val": match_row["combined_similarity"],
+                            }
                         )
             else:
                 best_idx = folder_matches.groupby("program_b_index")[
@@ -137,34 +171,49 @@ def main() -> None:
                     row["program_b_index"]: row for _, row in best_rows.iterrows()
                 }
                 for _, prog_row in catalog_subset.iterrows():
-                    match_row = best_map.get(prog_row["program_index"])
+                    prog_idx = int(prog_row["program_index"])
+                    match_row = best_map.get(prog_idx)
                     if match_row is None:
                         table_rows.append(
-                            (
-                                prog_row["program_name"],
-                                "(no match)",
-                                "-",
-                                "-",
-                                "-",
-                            )
+                            {
+                                "small_name": prog_row["program_name"],
+                                "other_name": "(no match)",
+                                "overlap": "-",
+                                "gene": "-",
+                                "name": "-",
+                                "combined": "-",
+                                "combined_val": -1.0,
+                            }
                         )
                     else:
+                        overlap = overlap_genes(
+                            folder.name,
+                            2,
+                            prog_idx,
+                            1,
+                            int(match_row["program_a_index"]),
+                        )
                         table_rows.append(
-                            (
-                                prog_row["program_name"],
-                                match_row["program_a_name"],
-                                f"{match_row['gene_jaccard']:.2f}",
-                                f"{match_row['name_similarity']:.2f}",
-                                f"{match_row['combined_similarity']:.2f}",
-                            )
+                            {
+                                "small_name": prog_row["program_name"],
+                                "other_name": match_row["program_a_name"],
+                                "overlap": str(overlap),
+                                "gene": f"{match_row['gene_jaccard']:.2f}",
+                                "name": f"{match_row['name_similarity']:.2f}",
+                                "combined": f"{match_row['combined_similarity']:.2f}",
+                                "combined_val": match_row["combined_similarity"],
+                            }
                         )
             if table_rows:
+                table_rows.sort(key=lambda row: row["combined_val"], reverse=True)
                 content.append(
-                    "| Run 1 program | Run 2 program | Gene Jaccard | Name overlap | Combined |"
+                    "| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |"
                 )
-                content.append("| --- | --- | --- | --- | --- |")
+                content.append("| --- | --- | --- | --- | --- | --- |")
                 for row in table_rows:
-                    content.append("| " + " | ".join(row) + " |")
+                    content.append(
+                        f"| {row['small_name']} | {row['other_name']} | {row['overlap']} | {row['gene']} | {row['name']} | {row['combined']} |"
+                    )
                 content.append("")
         
         if bubble.exists():
