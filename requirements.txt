@@ -1,0 +1,7 @@
+jupyter
+matplotlib
+numpy
+openai>=1.0.0
+pandas
+python-dotenv
+scipy

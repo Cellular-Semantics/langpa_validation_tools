@@ -1,0 +1,16 @@
+folder,annotation,duplicate
+00_Gliosis,Gliosis,False
+01_OPC-AC-like_1,OPC-AC-like 1,False
+02_NPC-neuronal-like_1,NPC-neuronal-like 1,False
+03_NPC-neuronal-like_2,NPC-neuronal-like 2,False
+04_AC-gliosis-like_1,AC-gliosis-like 1,False
+05_AC-neuronal-like,AC-neuronal-like,False
+06_OPC-NPC-like,OPC-NPC-like,False
+07_Proliferative,Proliferative,False
+08_Gliosis-hypoxia,Gliosis-hypoxia,False
+09_Proliferative_2,Proliferative 2,False
+10_AC-gliosis-like_2,AC-gliosis-like 2,False
+11_OPC-like_1,OPC-like 1,False
+12_NPC-neuronal-like_3,NPC-neuronal-like 3,True
+13_OPC-like_2,OPC-like 2,False
+14_OPC-AC-like_2,OPC-AC-like 2,True
