@@ -1,0 +1,650 @@
+annotation,go_term,go_id,order
+Gliosis,cellular response to cytokine stimulus,GO:0071345,1
+Gliosis,cellular response to molecule of bacterial origin,GO:0071219,2
+Gliosis,cytokine-mediated signaling pathway,GO:0019221,3
+Gliosis,cellular response to lipopolysaccharide,GO:0071222,4
+Gliosis,regulation of angiogenesis,GO:0045765,5
+Gliosis,response to lipopolysaccharide,GO:0032496,6
+Gliosis,cellular response to lipid,GO:0071396,7
+Gliosis,positive regulation of vasculature development,GO:1904018,8
+Gliosis,regulation of inflammatory response,GO:0050727,9
+Gliosis,extracellular structure organization,GO:0043062,10
+Gliosis,external encapsulating structure organization,GO:0045229,11
+Gliosis,positive regulation of angiogenesis,GO:0045766,12
+Gliosis,regulation of vascular wound healing,GO:0061043,13
+Gliosis,cellular response to oxygen-containing compound,GO:1901701,14
+Gliosis,regulation of tumor necrosis factor superfamily cytokine production,GO:1903555,15
+Gliosis,antimicrobial humoral immune response mediated by antimicrobial peptide,GO:0061844,16
+Gliosis,negative regulation of extrinsic apoptotic signaling pathway via death domain receptors,GO:1902042,17
+Gliosis,extracellular matrix organization,GO:0030198,18
+Gliosis,negative regulation of programmed cell death,GO:0043069,19
+Gliosis,defense response to bacterium,GO:0042742,20
+Gliosis,positive regulation of endothelial cell chemotaxis,GO:2001028,21
+Gliosis,negative regulation of apoptotic process,GO:0043066,22
+Gliosis,positive regulation of signal transduction,GO:0009967,23
+Gliosis,regulation of extrinsic apoptotic signaling pathway via death domain receptors,GO:1902041,24
+Gliosis,positive regulation of osteoblast differentiation,GO:0045669,25
+Gliosis,positive regulation of cytokine production,GO:0001819,26
+Gliosis,regulation of osteoblast proliferation,GO:0033688,27
+Gliosis,positive regulation of chemotaxis,GO:0050921,28
+Gliosis,positive regulation of MAPK cascade,GO:0043410,29
+Gliosis,positive regulation of defense response,GO:0031349,30
+Gliosis,positive regulation of intracellular signal transduction,GO:1902533,31
+Gliosis,positive regulation of leukocyte chemotaxis,GO:0002690,32
+Gliosis,regulation of apoptotic process,GO:0042981,33
+Gliosis,inflammatory response,GO:0006954,34
+Gliosis,positive regulation of interleukin-18 production,GO:0032741,35
+Gliosis,mammary gland development,GO:0030879,36
+Gliosis,positive regulation of tyrosine phosphorylation of STAT protein,GO:0042531,37
+Gliosis,regulation of MAPK cascade,GO:0043408,38
+Gliosis,positive regulation of interleukin-8 production,GO:0032757,39
+Gliosis,response to tumor necrosis factor,GO:0034612,40
+Gliosis,mononuclear cell differentiation,GO:1903131,41
+Gliosis,negative regulation of endothelial cell apoptotic process,GO:2000352,42
+Gliosis,response to glucocorticoid,GO:0051384,43
+Gliosis,positive regulation of toll-like receptor signaling pathway,GO:0034123,44
+Gliosis,positive regulation of epithelial cell differentiation involved in kidney development,GO:2000698,45
+Gliosis,positive regulation of osteoblast proliferation,GO:0033690,46
+Gliosis,negative regulation of cytokine production,GO:0001818,47
+Gliosis,positive regulation of leukocyte migration,GO:0002687,48
+Gliosis,regulation of tyrosine phosphorylation of STAT protein,GO:0042509,49
+Gliosis,neutrophil chemotaxis,GO:0030593,50
+Gliosis,defense response to Gram-positive bacterium,GO:0050830,51
+Gliosis,regulation of entry of bacterium into host cell,GO:2000535,52
+Gliosis,regulation of tumor necrosis factor production,GO:0032680,53
+Gliosis,peptide cross-linking,GO:0018149,54
+Gliosis,positive regulation of cellular process,GO:0048522,55
+Gliosis,granulocyte chemotaxis,GO:0071621,56
+Gliosis,response to molecule of bacterial origin,GO:0002237,57
+Gliosis,cellular response to tumor necrosis factor,GO:0071356,58
+Gliosis,muscle cell development,GO:0055001,59
+Gliosis,positive regulation of lymphocyte proliferation,GO:0050671,60
+Gliosis,regulation of interleukin-18 production,GO:0032661,61
+Gliosis,regulation of toll-like receptor 3 signaling pathway,GO:0034139,62
+Gliosis,positive regulation of pri-miRNA transcription by RNA polymerase II,GO:1902895,63
+Gliosis,neutrophil migration,GO:1990266,64
+Gliosis,cellular response to hydrogen peroxide,GO:0070301,65
+Gliosis,negative regulation of extrinsic apoptotic signaling pathway,GO:2001237,66
+Gliosis,positive regulation of cell adhesion,GO:0045785,67
+Gliosis,negative regulation of bone resorption,GO:0045779,68
+Gliosis,regulation of cell adhesion molecule production,GO:0060353,69
+Gliosis,regulation of nephron tubule epithelial cell differentiation,GO:0072182,70
+Gliosis,regulation of pinocytosis,GO:0048548,71
+Gliosis,response to vitamin,GO:0033273,72
+Gliosis,response to vitamin D,GO:0033280,73
+Gliosis,regulation of interleukin-8 production,GO:0032677,74
+Gliosis,negative regulation of epithelial cell apoptotic process,GO:1904036,75
+Gliosis,regulation of osteoblast differentiation,GO:0045667,76
+Gliosis,positive regulation of cell population proliferation,GO:0008284,77
+Gliosis,lactation,GO:0007595,78
+Gliosis,positive regulation of T cell apoptotic process,GO:0070234,79
+Gliosis,response to interleukin-1,GO:0070555,80
+Gliosis,positive regulation of inflammatory response,GO:0050729,81
+Gliosis,positive regulation of transcription by RNA polymerase II,GO:0045944,82
+Gliosis,negative regulation of bone remodeling,GO:0046851,83
+Gliosis,cellular response to increased oxygen levels,GO:0036295,84
+Gliosis,regulation of T cell apoptotic process,GO:0070232,85
+Gliosis,induction of positive chemotaxis,GO:0050930,86
+Gliosis,positive regulation of peptidyl-serine phosphorylation,GO:0033138,87
+Gliosis,branching morphogenesis of an epithelial tube,GO:0048754,88
+Gliosis,regulation of endothelial cell apoptotic process,GO:2000351,89
+Gliosis,skeletal system development,GO:0001501,90
+Gliosis,regulation of astrocyte differentiation,GO:0048710,91
+Gliosis,eye photoreceptor cell differentiation,GO:0001754,92
+Gliosis,modulation by host of viral process,GO:0044788,93
+Gliosis,negative regulation by host of viral process,GO:0044793,94
+Gliosis,regulation of pri-miRNA transcription by RNA polymerase II,GO:1902893,95
+Gliosis,regulation of ERK1 and ERK2 cascade,GO:0070372,96
+Gliosis,regulation of peptidyl-serine phosphorylation,GO:0033135,97
+Gliosis,positive regulation of transcription,,98
+Gliosis,DNA-templated,GO:0045893,99
+Gliosis,regulation of wound healing,GO:0061041,100
+Gliosis,cellular protein metabolic process,GO:0044267,101
+Gliosis,cardiac cell development,GO:0055006,102
+Gliosis,negative regulation of tumor necrosis factor superfamily cytokine production,GO:1903556,103
+Gliosis,calcium-mediated signaling,GO:0019722,104
+Gliosis,receptor internalization,GO:0031623,105
+Gliosis,response to hydrogen peroxide,GO:0042542,106
+Gliosis,positive regulation of protein serine/threonine kinase activity,GO:0071902,107
+Gliosis,acute-phase response,GO:0006953,108
+Gliosis,regulation of endothelial cell chemotaxis,GO:2001026,109
+Gliosis,positive regulation of acute inflammatory response,GO:0002675,110
+Gliosis,positive regulation of multicellular organismal process,GO:0051240,111
+Gliosis,positive regulation of B cell activation,GO:0050871,112
+Gliosis,positive regulation of cell differentiation,GO:0045597,113
+Gliosis,body fluid secretion,GO:0007589,114
+Gliosis,chemokine-mediated signaling pathway,GO:0070098,115
+Gliosis,regulation of cell killing,GO:0031341,116
+Gliosis,positive regulation of cytokine production involved in inflammatory response,GO:1900017,117
+Gliosis,ribosomal small subunit assembly,GO:0000028,118
+Gliosis,positive regulation of positive chemotaxis,GO:0050927,119
+Gliosis,collagen-containing extracellular matrix,GO:0062023,120
+Gliosis,endoplasmic reticulum lumen,GO:0005788,121
+Gliosis,platelet alpha granule lumen,GO:0031093,122
+Gliosis,intracellular organelle lumen,GO:0070013,123
+Gliosis,cytosolic small ribosomal subunit,GO:0022627,124
+Gliosis,platelet alpha granule,GO:0031091,125
+Gliosis,secretory granule lumen,GO:0034774,126
+Gliosis,small ribosomal subunit,GO:0015935,127
+Gliosis,TNF signaling pathway,,128
+Gliosis,NF-kappa B signaling pathway,,129
+Gliosis,Rheumatoid arthritis,,130
+Gliosis,IL-17 signaling pathway,,131
+Gliosis,Kaposi sarcoma-associated herpesvirus infection,,132
+Gliosis,AGE-RAGE signaling pathway in diabetic complications,,133
+Gliosis,Amoebiasis,,134
+Gliosis,Cytokine-cytokine receptor interaction,,135
+Gliosis,Coronavirus disease,,136
+Gliosis,NOD-like receptor signaling pathway,,137
+Gliosis,Malaria,,138
+Gliosis,Focal adhesion,,139
+Gliosis,African trypanosomiasis,,140
+Gliosis,Human papillomavirus infection,,141
+Gliosis,Transcriptional misregulation in cancer,,142
+Gliosis,ECM-receptor interaction,,143
+Gliosis,Epstein-Barr virus infection,,144
+Gliosis,Proteoglycans in cancer,,145
+Gliosis,PI3K-Akt signaling pathway,,146
+Gliosis,Lipid and atherosclerosis,,147
+Gliosis,Human T-cell leukemia virus 1 infection,,148
+Gliosis,Viral protein interaction with cytokine and cytokine receptor,,149
+Gliosis,Chagas disease,,150
+Gliosis,Human cytomegalovirus infection,,151
+Gliosis,Legionellosis,,152
+Gliosis,Toll-like receptor signaling pathway,,153
+Gliosis,Influenza A,,154
+Gliosis,Epithelial cell signaling in Helicobacter pylori infection,,155
+Gliosis,Pathways in cancer,,156
+Gliosis,Measles,,157
+Gliosis,Small cell lung cancer,,158
+Gliosis,Cellular senescence,,159
+Gliosis,Hepatitis B,,160
+Gliosis,Hematopoietic cell lineage,,161
+Gliosis,Th17 cell differentiation,,162
+Gliosis,VEGF signaling pathway,,163
+Gliosis,Pathogenic Escherichia coli infection,,164
+Gliosis,Inflammatory bowel disease,,165
+Gliosis,Yersinia infection,,166
+Gliosis,Fluid shear stress and atherosclerosis,,167
+Gliosis,p53 signaling pathway,,168
+Gliosis,Bacterial invasion of epithelial cells,,169
+Gliosis,Complement and coagulation cascades,,170
+Gliosis,PD-L1 expression and PD-1 checkpoint pathway in cancer,,171
+OPC-AC-like 1,glycoprotein biosynthetic process,GO:0009101,1
+NPC-neuronal-like 1,cilium movement,GO:0003341,1
+NPC-neuronal-like 1,regulation of cilium movement,GO:0003352,2
+NPC-neuronal-like 1,axonemal dynein complex assembly,GO:0070286,3
+NPC-neuronal-like 1,cilium organization,GO:0044782,4
+NPC-neuronal-like 1,regulation of cilium beat frequency,GO:0003356,5
+NPC-neuronal-like 1,cilium assembly,GO:0060271,6
+NPC-neuronal-like 1,axoneme assembly,GO:0035082,7
+NPC-neuronal-like 1,inner dynein arm assembly,GO:0036159,8
+NPC-neuronal-like 1,regulation of microtubule motor activity,GO:2000574,9
+NPC-neuronal-like 1,plasma membrane bounded cell projection assembly,GO:0120031,10
+NPC-neuronal-like 1,extracellular matrix organization,GO:0030198,11
+NPC-neuronal-like 1,collagen fibril organization,GO:0030199,12
+NPC-neuronal-like 1,cilium,GO:0005929,13
+NPC-neuronal-like 1,motile cilium,GO:0031514,14
+NPC-neuronal-like 1,collagen-containing extracellular matrix,GO:0062023,15
+NPC-neuronal-like 1,Retrograde endocannabinoid signaling,,16
+NPC-neuronal-like 1,Taste transduction,,17
+NPC-neuronal-like 1,Morphine addiction,,18
+NPC-neuronal-like 1,Protein digestion and absorption,,19
+NPC-neuronal-like 1,Glutamatergic synapse,,20
+NPC-neuronal-like 2,exocytic vesicle membrane,GO:0099501,1
+NPC-neuronal-like 2,synaptic vesicle membrane,GO:0030672,2
+NPC-neuronal-like 2,catenin complex,GO:0016342,3
+NPC-neuronal-like 2,collagen-containing extracellular matrix,GO:0062023,4
+NPC-neuronal-like 2,excitatory synapse,GO:0060076,5
+NPC-neuronal-like 2,ionotropic glutamate receptor complex,GO:0008328,6
+NPC-neuronal-like 2,neuron projection,GO:0043005,7
+NPC-neuronal-like 2,cation channel complex,GO:0034703,8
+AC-gliosis-like 1,extracellular structure organization,GO:0043062,1
+AC-gliosis-like 1,external encapsulating structure organization,GO:0045229,2
+AC-gliosis-like 1,negative regulation of endopeptidase activity,GO:0010951,3
+AC-gliosis-like 1,extracellular matrix organization,GO:0030198,4
+AC-gliosis-like 1,cellular response to glucocorticoid stimulus,GO:0071385,5
+AC-gliosis-like 1,positive regulation of morphogenesis of an epithelium,GO:1905332,6
+AC-gliosis-like 1,negative regulation of peptidase activity,GO:0010466,7
+AC-gliosis-like 1,cellular water homeostasis,GO:0009992,8
+AC-gliosis-like 1,regulation of endopeptidase activity,GO:0052548,9
+AC-gliosis-like 1,collagen-containing extracellular matrix,GO:0062023,10
+AC-gliosis-like 1,integral component of plasma membrane,GO:0005887,11
+AC-gliosis-like 1,Calcium signaling pathway,,12
+AC-gliosis-like 1,Complement and coagulation cascades,,13
+AC-gliosis-like 1,Bile secretion,,14
+AC-neuronal-like,actin-based cell projection,GO:0098858,1
+AC-neuronal-like,exocytic vesicle membrane,GO:0099501,2
+AC-neuronal-like,synaptic vesicle membrane,GO:0030672,3
+OPC-NPC-like,SRP-dependent cotranslational protein targeting to membrane,GO:0006614,1
+OPC-NPC-like,cytoplasmic translation,GO:0002181,2
+OPC-NPC-like,cotranslational protein targeting to membrane,GO:0006613,3
+OPC-NPC-like,protein targeting to ER,GO:0045047,4
+OPC-NPC-like,nuclear-transcribed mRNA catabolic process,,5
+OPC-NPC-like,nonsense-mediated decay,GO:0000184,6
+OPC-NPC-like,peptide biosynthetic process,GO:0043043,7
+OPC-NPC-like,nuclear-transcribed mRNA catabolic process,GO:0000956,8
+OPC-NPC-like,rRNA metabolic process,GO:0016072,9
+OPC-NPC-like,translation,GO:0006412,10
+OPC-NPC-like,rRNA processing,GO:0006364,11
+OPC-NPC-like,ribosome biogenesis,GO:0042254,12
+OPC-NPC-like,ncRNA processing,GO:0034470,13
+OPC-NPC-like,gene expression,GO:0010467,14
+OPC-NPC-like,cellular macromolecule biosynthetic process,GO:0034645,15
+OPC-NPC-like,cellular protein metabolic process,GO:0044267,16
+OPC-NPC-like,regulation of neuron apoptotic process,GO:0043523,17
+OPC-NPC-like,spinal cord development,GO:0021510,18
+OPC-NPC-like,axonogenesis,GO:0007409,19
+OPC-NPC-like,axon guidance,GO:0007411,20
+OPC-NPC-like,skeletal system development,GO:0001501,21
+OPC-NPC-like,cytosolic large ribosomal subunit,GO:0022625,22
+OPC-NPC-like,large ribosomal subunit,GO:0015934,23
+OPC-NPC-like,ribosome,GO:0005840,24
+OPC-NPC-like,polysomal ribosome,GO:0042788,25
+OPC-NPC-like,Coronavirus disease,,26
+OPC-NPC-like,Ribosome,,27
+Proliferative,microtubule cytoskeleton organization involved in mitosis,GO:1902850,1
+Proliferative,mitotic spindle organization,GO:0007052,2
+Proliferative,mitotic sister chromatid segregation,GO:0000070,3
+Proliferative,sister chromatid segregation,GO:0000819,4
+Proliferative,mitotic nuclear division,GO:0140014,5
+Proliferative,regulation of cell cycle process,GO:0010564,6
+Proliferative,mitotic metaphase plate congression,GO:0007080,7
+Proliferative,regulation of cytokinesis,GO:0032465,8
+Proliferative,mitotic cytokinesis,GO:0000281,9
+Proliferative,cytoskeleton-dependent cytokinesis,GO:0061640,10
+Proliferative,mitotic cell cycle phase transition,GO:0044772,11
+Proliferative,positive regulation of cell cycle process,GO:0090068,12
+Proliferative,regulation of mitotic cell cycle phase transition,GO:1901990,13
+Proliferative,mitotic spindle assembly,GO:0090307,14
+Proliferative,regulation of mitotic cell cycle,GO:0007346,15
+Proliferative,mitotic spindle elongation,GO:0000022,16
+Proliferative,mitotic spindle midzone assembly,GO:0051256,17
+Proliferative,anaphase-promoting complex-dependent catabolic process,GO:0031145,18
+Proliferative,regulation of cell cycle G2/M phase transition,GO:1902749,19
+Proliferative,spindle assembly checkpoint signaling,GO:0071173,20
+Proliferative,mitotic spindle assembly checkpoint signaling,GO:0007094,21
+Proliferative,mitotic spindle checkpoint signaling,GO:0071174,22
+Proliferative,negative regulation of mitotic metaphase/anaphase transition,GO:0045841,23
+Proliferative,G2/M transition of mitotic cell cycle,GO:0000086,24
+Proliferative,cell cycle G2/M phase transition,GO:0044839,25
+Proliferative,chromosome condensation,GO:0030261,26
+Proliferative,regulation of mitotic metaphase/anaphase transition,GO:0030071,27
+Proliferative,kinetochore organization,GO:0051383,28
+Proliferative,mitotic chromosome condensation,GO:0007076,29
+Proliferative,regulation of G2/M transition of mitotic cell cycle,GO:0010389,30
+Proliferative,retrograde vesicle-mediated transport,,31
+Proliferative,Golgi to endoplasmic reticulum,GO:0006890,32
+Proliferative,regulation of mitotic sister chromatid separation,GO:0010965,33
+Proliferative,regulation of mitotic nuclear division,GO:0007088,34
+Proliferative,microtubule depolymerization,GO:0007019,35
+Proliferative,centromere complex assembly,GO:0034508,36
+Proliferative,antigen processing and presentation of exogenous peptide antigen via MHC class II,GO:0019886,37
+Proliferative,regulation of cell cycle,GO:0051726,38
+Proliferative,meiotic sister chromatid cohesion,GO:0051177,39
+Proliferative,antigen processing and presentation of peptide antigen via MHC class II,GO:0002495,40
+Proliferative,antigen processing and presentation of exogenous peptide antigen,GO:0002478,41
+Proliferative,DNA damage response,,42
+Proliferative,signal transduction by p53 class mediator,GO:0030330,43
+Proliferative,regulation of cell division,GO:0051302,44
+Proliferative,microtubule polymerization or depolymerization,GO:0031109,45
+Proliferative,protein depolymerization,GO:0051261,46
+Proliferative,attachment of mitotic spindle microtubules to kinetochore,GO:0051315,47
+Proliferative,mitotic nuclear membrane disassembly,GO:0007077,48
+Proliferative,protein localization to condensed chromosome,GO:1903083,49
+Proliferative,DNA damage response,,50
+Proliferative,signal transduction by p53 class mediator resulting in cell cycle arrest,GO:0006977,51
+Proliferative,positive regulation of mitotic cell cycle phase transition,GO:1901992,52
+Proliferative,regulation of cell cycle phase transition,GO:1901987,53
+Proliferative,nuclear membrane disassembly,GO:0051081,54
+Proliferative,protein localization to kinetochore,GO:0034501,55
+Proliferative,proteasome-mediated ubiquitin-dependent protein catabolic process,GO:0043161,56
+Proliferative,mitotic G1 DNA damage checkpoint signaling,GO:0031571,57
+Proliferative,positive regulation of cytokinesis,GO:0032467,58
+Proliferative,protein localization to chromosome,,59
+Proliferative,centromeric region,GO:0071459,60
+Proliferative,regulation of chromosome segregation,GO:0051983,61
+Proliferative,centromeric sister chromatid cohesion,GO:0070601,62
+Proliferative,regulation of intracellular signal transduction,GO:1902531,63
+Proliferative,regulation of nuclear division,GO:0051783,64
+Proliferative,positive regulation of cell division,GO:0051781,65
+Proliferative,regulation of cyclin-dependent protein serine/threonine kinase activity,GO:0000079,66
+Proliferative,regulation of metaphase/anaphase transition of cell cycle,GO:1902099,67
+Proliferative,regulation of cyclin-dependent protein kinase activity,GO:1904029,68
+Proliferative,kinetochore assembly,GO:0051382,69
+Proliferative,establishment of mitotic spindle localization,GO:0040001,70
+Proliferative,regulation of attachment of spindle microtubules to kinetochore,GO:0051988,71
+Proliferative,negative regulation of cell cycle process,GO:0010948,72
+Proliferative,DNA replication,GO:0006260,73
+Proliferative,positive regulation of ubiquitin protein ligase activity,GO:1904668,74
+Proliferative,regulation of mitotic spindle organization,GO:0060236,75
+Proliferative,positive regulation of mitotic nuclear division,GO:0045840,76
+Proliferative,DNA replication-independent nucleosome assembly,GO:0006336,77
+Proliferative,modification-dependent protein catabolic process,GO:0019941,78
+Proliferative,regulation of small GTPase mediated signal transduction,GO:0051056,79
+Proliferative,regulation of spindle organization,GO:0090224,80
+Proliferative,positive regulation of G2/M transition of mitotic cell cycle,GO:0010971,81
+Proliferative,regulation of signal transduction by p53 class mediator,GO:1901796,82
+Proliferative,regulation of ubiquitin protein ligase activity,GO:1904666,83
+Proliferative,homologous chromosome segregation,GO:0045143,84
+Proliferative,positive regulation of cell cycle G2/M phase transition,GO:1902751,85
+Proliferative,mitotic cell cycle checkpoint signaling,GO:0007093,86
+Proliferative,chromosome organization,GO:0051276,87
+Proliferative,meiotic sister chromatid segregation,GO:0045144,88
+Proliferative,trophoblast giant cell differentiation,GO:0060707,89
+Proliferative,regulation of protein serine/threonine kinase activity,GO:0071900,90
+Proliferative,meiosis I,GO:0007127,91
+Proliferative,negative regulation of cytokinesis,GO:0032466,92
+Proliferative,positive regulation of protein localization to nucleus,GO:1900182,93
+Proliferative,CENP-A containing chromatin organization,GO:0061641,94
+Proliferative,CENP-A containing nucleosome assembly,GO:0034080,95
+Proliferative,positive regulation of cellular protein localization,GO:1903829,96
+Proliferative,ubiquitin-dependent protein catabolic process,GO:0006511,97
+Proliferative,positive regulation of ubiquitin-protein transferase activity,GO:0051443,98
+Proliferative,chromatin remodeling at centromere,GO:0031055,99
+Proliferative,DNA metabolic process,GO:0006259,100
+Proliferative,negative regulation of chromosome organization,GO:2001251,101
+Proliferative,DNA topological change,GO:0006265,102
+Proliferative,histone exchange,GO:0043486,103
+Proliferative,regulation of exit from mitosis,GO:0007096,104
+Proliferative,positive regulation of protein kinase activity,GO:0045860,105
+Proliferative,ciliary basal body-plasma membrane docking,GO:0097711,106
+Proliferative,regulation of sister chromatid cohesion,GO:0007063,107
+Proliferative,negative regulation of cell division,GO:0051782,108
+Proliferative,cell cycle checkpoint signaling,GO:0000075,109
+Proliferative,positive regulation of metaphase/anaphase transition of cell cycle,GO:1902101,110
+Proliferative,positive regulation of mitotic metaphase/anaphase transition,GO:0045842,111
+Proliferative,positive regulation of mitotic sister chromatid separation,GO:1901970,112
+Proliferative,regulation of protein localization to nucleus,GO:1900180,113
+Proliferative,regulation of mitotic cell cycle spindle assembly checkpoint,GO:0090266,114
+Proliferative,mitotic nuclear membrane organization,GO:0101024,115
+Proliferative,mitotic nuclear membrane reassembly,GO:0007084,116
+Proliferative,establishment of spindle localization,GO:0051293,117
+Proliferative,nuclear membrane reassembly,GO:0031468,118
+Proliferative,activation of protein kinase activity,GO:0032147,119
+Proliferative,midbody abscission,GO:0061952,120
+Proliferative,DNA conformation change,GO:0071103,121
+Proliferative,regulation of centriole replication,GO:0046599,122
+Proliferative,protein phosphorylation,GO:0006468,123
+Proliferative,DNA repair,GO:0006281,124
+Proliferative,mitotic cytokinetic process,GO:1902410,125
+Proliferative,phosphorylation,GO:0016310,126
+Proliferative,regulation of chromosome organization,GO:0033044,127
+Proliferative,cellular macromolecule biosynthetic process,GO:0034645,128
+Proliferative,regulation of cellular component organization,GO:0051128,129
+Proliferative,regulation of cell population proliferation,GO:0042127,130
+Proliferative,establishment of mitotic spindle orientation,GO:0000132,131
+Proliferative,apoptotic nuclear changes,GO:0030262,132
+Proliferative,positive regulation of hydrolase activity,GO:0051345,133
+Proliferative,DNA geometric change,GO:0032392,134
+Proliferative,positive regulation of nuclear division,GO:0051785,135
+Proliferative,peptidyl-serine phosphorylation,GO:0018105,136
+Proliferative,regulation of multicellular organismal development,GO:2000026,137
+Proliferative,spindle assembly,GO:0051225,138
+Proliferative,establishment of spindle orientation,GO:0051294,139
+Proliferative,double-strand break repair,GO:0006302,140
+Proliferative,spindle,GO:0005819,141
+Proliferative,microtubule cytoskeleton,GO:0015630,142
+Proliferative,microtubule,GO:0005874,143
+Proliferative,mitotic spindle,GO:0072686,144
+Proliferative,spindle microtubule,GO:0005876,145
+Proliferative,nucleus,GO:0005634,146
+Proliferative,intracellular non-membrane-bounded organelle,GO:0043232,147
+Proliferative,intracellular membrane-bounded organelle,GO:0043231,148
+Proliferative,polymeric cytoskeletal fiber,GO:0099513,149
+Proliferative,condensed chromosome,GO:0000793,150
+Proliferative,cyclin-dependent protein kinase holoenzyme complex,GO:0000307,151
+Proliferative,serine/threonine protein kinase complex,GO:1902554,152
+Proliferative,chromosome,GO:0005694,153
+Proliferative,condensed chromosome,,154
+Proliferative,centromeric region,GO:0000779,155
+Proliferative,cytoskeleton,GO:0005856,156
+Proliferative,astral microtubule,GO:0000235,157
+Proliferative,kinetochore microtubule,GO:0005828,158
+Proliferative,anaphase-promoting complex,GO:0005680,159
+Proliferative,cullin-RING ubiquitin ligase complex,GO:0031461,160
+Proliferative,nuclear lumen,GO:0031981,161
+Proliferative,Oocyte meiosis,,162
+Proliferative,Cell cycle,,163
+Proliferative,Progesterone-mediated oocyte maturation,,164
+Proliferative,p53 signaling pathway,,165
+Proliferative,Cellular senescence,,166
+Proliferative,FoxO signaling pathway,,167
+Proliferative,Human T-cell leukemia virus 1 infection,,168
+Gliosis-hypoxia,cellular response to decreased oxygen levels,GO:0036294,1
+Gliosis-hypoxia,cellular response to hypoxia,GO:0071456,2
+Gliosis-hypoxia,collagen-containing extracellular matrix,GO:0062023,3
+Gliosis-hypoxia,microvillus membrane,GO:0031528,4
+Proliferative 2,DNA metabolic process,GO:0006259,1
+Proliferative 2,DNA replication,GO:0006260,2
+Proliferative 2,DNA repair,GO:0006281,3
+Proliferative 2,cellular response to DNA damage stimulus,GO:0006974,4
+Proliferative 2,DNA-dependent DNA replication,GO:0006261,5
+Proliferative 2,DNA replication initiation,GO:0006270,6
+Proliferative 2,cellular macromolecule biosynthetic process,GO:0034645,7
+Proliferative 2,double-strand break repair via homologous recombination,GO:0000724,8
+Proliferative 2,mitotic DNA replication,GO:1902969,9
+Proliferative 2,DNA strand elongation involved in DNA replication,GO:0006271,10
+Proliferative 2,regulation of transcription involved in G1/S transition of mitotic cell cycle,GO:0000083,11
+Proliferative 2,double-strand break repair,GO:0006302,12
+Proliferative 2,microtubule cytoskeleton organization involved in mitosis,GO:1902850,13
+Proliferative 2,postreplication repair,GO:0006301,14
+Proliferative 2,base-excision repair,GO:0006284,15
+Proliferative 2,interstrand cross-link repair,GO:0036297,16
+Proliferative 2,mitotic spindle organization,GO:0007052,17
+Proliferative 2,DNA integrity checkpoint signaling,GO:0031570,18
+Proliferative 2,negative regulation of cell cycle process,GO:0010948,19
+Proliferative 2,translesion synthesis,GO:0019985,20
+Proliferative 2,DNA synthesis involved in DNA repair,GO:0000731,21
+Proliferative 2,nucleotide-excision repair,GO:0006289,22
+Proliferative 2,protein-DNA complex assembly,GO:0065004,23
+Proliferative 2,double-strand break repair via break-induced replication,GO:0000727,24
+Proliferative 2,recombinational repair,GO:0000725,25
+Proliferative 2,regulation of signal transduction by p53 class mediator,GO:1901796,26
+Proliferative 2,G1/S transition of mitotic cell cycle,GO:0000082,27
+Proliferative 2,chromatin remodeling at centromere,GO:0031055,28
+Proliferative 2,DNA replication,,29
+Proliferative 2,synthesis of RNA primer,GO:0006269,30
+Proliferative 2,centromere complex assembly,GO:0034508,31
+Proliferative 2,DNA strand elongation,GO:0022616,32
+Proliferative 2,DNA replication-independent nucleosome assembly,GO:0006336,33
+Proliferative 2,replication fork processing,GO:0031297,34
+Proliferative 2,error-prone translesion synthesis,GO:0042276,35
+Proliferative 2,regulation of double-strand break repair via homologous recombination,GO:0010569,36
+Proliferative 2,pre-replicative complex assembly involved in nuclear cell cycle DNA replication,GO:0006267,37
+Proliferative 2,nucleotide-excision repair,,38
+Proliferative 2,DNA gap filling,GO:0006297,39
+Proliferative 2,regulation of DNA-directed DNA polymerase activity,GO:1900262,40
+Proliferative 2,positive regulation of DNA-directed DNA polymerase activity,GO:1900264,41
+Proliferative 2,signal transduction in response to DNA damage,GO:0042770,42
+Proliferative 2,DNA replication-dependent nucleosome assembly,GO:0006335,43
+Proliferative 2,DNA replication-dependent nucleosome organization,GO:0034723,44
+Proliferative 2,mismatch repair,GO:0006298,45
+Proliferative 2,nuclear DNA replication,GO:0033260,46
+Proliferative 2,CENP-A containing chromatin organization,GO:0061641,47
+Proliferative 2,CENP-A containing nucleosome assembly,GO:0034080,48
+Proliferative 2,mitotic DNA damage checkpoint signaling,GO:0044773,49
+Proliferative 2,negative regulation of cell division,GO:0051782,50
+Proliferative 2,regulation of intracellular signal transduction,GO:1902531,51
+Proliferative 2,DNA damage checkpoint signaling,GO:0000077,52
+Proliferative 2,mitotic G2 DNA damage checkpoint signaling,GO:0007095,53
+Proliferative 2,pre-replicative complex assembly,GO:0036388,54
+Proliferative 2,base-excision repair,,55
+Proliferative 2,gap-filling,GO:0006287,56
+Proliferative 2,nucleotide-excision repair,,57
+Proliferative 2,DNA incision,,58
+Proliferative 2,5'-to lesion,GO:0006296,59
+Proliferative 2,negative regulation of G0 to G1 transition,GO:0070317,60
+Proliferative 2,histone exchange,GO:0043486,61
+Proliferative 2,nucleotide-excision repair,,62
+Proliferative 2,DNA incision,GO:0033683,63
+Proliferative 2,nucleic acid phosphodiester bond hydrolysis,GO:0090305,64
+Proliferative 2,regulation of G0 to G1 transition,GO:0070316,65
+Proliferative 2,DNA replication checkpoint signaling,GO:0000076,66
+Proliferative 2,negative regulation of double-strand break repair via homologous recombination,GO:2000042,67
+Proliferative 2,mitotic G2/M transition checkpoint,GO:0044818,68
+Proliferative 2,de novo centriole assembly,GO:0097742,69
+Proliferative 2,de novo centriole assembly involved in multi-ciliated epithelial cell differentiation,GO:0098535,70
+Proliferative 2,medium-chain fatty acid catabolic process,GO:0051793,71
+Proliferative 2,trophoblast giant cell differentiation,GO:0060707,72
+Proliferative 2,error-free translesion synthesis,GO:0070987,73
+Proliferative 2,phosphorylation,GO:0016310,74
+Proliferative 2,response to UV,GO:0009411,75
+Proliferative 2,negative regulation of cytokinesis,GO:0032466,76
+Proliferative 2,nuclear cell cycle DNA replication initiation,GO:1902315,77
+Proliferative 2,regulation of superoxide metabolic process,GO:0090322,78
+Proliferative 2,histone-serine phosphorylation,GO:0035404,79
+Proliferative 2,maintenance of DNA methylation,GO:0010216,80
+Proliferative 2,mitotic DNA replication initiation,GO:1902975,81
+Proliferative 2,mitotic cell cycle phase transition,GO:0044772,82
+Proliferative 2,nucleosome assembly,GO:0006334,83
+Proliferative 2,protein phosphorylation,GO:0006468,84
+Proliferative 2,positive regulation of DNA biosynthetic process,GO:2000573,85
+Proliferative 2,double-strand break repair via nonhomologous end joining,GO:0006303,86
+Proliferative 2,protein autoubiquitination,GO:0051865,87
+Proliferative 2,regulation of cell cycle,GO:0051726,88
+Proliferative 2,multi-ciliated epithelial cell differentiation,GO:1903251,89
+Proliferative 2,negative regulation of double-strand break repair,GO:2000780,90
+Proliferative 2,RNA biosynthetic process,GO:0032774,91
+Proliferative 2,sister chromatid segregation,GO:0000819,92
+Proliferative 2,transcription-coupled nucleotide-excision repair,GO:0006283,93
+Proliferative 2,DNA damage response,,94
+Proliferative 2,signal transduction by p53 class mediator,GO:0030330,95
+Proliferative 2,cellular response to UV,GO:0034644,96
+Proliferative 2,G2/M transition of mitotic cell cycle,GO:0000086,97
+Proliferative 2,cell cycle G2/M phase transition,GO:0044839,98
+Proliferative 2,regulation of histone H3-K9 acetylation,GO:2000615,99
+Proliferative 2,formation of extrachromosomal circular DNA,GO:0001325,100
+Proliferative 2,t-circle formation,GO:0090656,101
+Proliferative 2,telomere maintenance via telomere trimming,GO:0090737,102
+Proliferative 2,V(D)J recombination,GO:0033151,103
+Proliferative 2,protein monoubiquitination,GO:0006513,104
+Proliferative 2,DNA recombination,GO:0006310,105
+Proliferative 2,positive regulation of double-strand break repair,GO:2000781,106
+Proliferative 2,chromatin assembly or disassembly,GO:0006333,107
+Proliferative 2,regulation of double-strand break repair,GO:2000779,108
+Proliferative 2,UV-damage excision repair,GO:0070914,109
+Proliferative 2,positive regulation of nucleic acid-templated transcription,GO:1903508,110
+Proliferative 2,covalent chromatin modification,GO:0016569,111
+Proliferative 2,positive regulation of DNA repair,GO:0045739,112
+Proliferative 2,positive regulation of double-strand break repair via homologous recombination,GO:1905168,113
+Proliferative 2,medium-chain fatty acid metabolic process,GO:0051791,114
+Proliferative 2,regulation of chromatin silencing,GO:0031935,115
+Proliferative 2,DNA unwinding involved in DNA replication,GO:0006268,116
+Proliferative 2,response to organophosphorus,GO:0046683,117
+Proliferative 2,DNA duplex unwinding,GO:0032508,118
+Proliferative 2,intrinsic apoptotic signaling pathway in response to DNA damage,GO:0008630,119
+Proliferative 2,protein autophosphorylation,GO:0046777,120
+Proliferative 2,nucleus,GO:0005634,121
+Proliferative 2,intracellular membrane-bounded organelle,GO:0043231,122
+Proliferative 2,CMG complex,GO:0071162,123
+Proliferative 2,alpha DNA polymerase:primase complex,GO:0005658,124
+Proliferative 2,nuclear chromosome,GO:0000228,125
+Proliferative 2,deuterosome,GO:0098536,126
+Proliferative 2,Cul4B-RING E3 ubiquitin ligase complex,GO:0031465,127
+Proliferative 2,condensed chromosome,GO:0000793,128
+Proliferative 2,mitotic spindle,GO:0072686,129
+Proliferative 2,spindle,GO:0005819,130
+Proliferative 2,intracellular non-membrane-bounded organelle,GO:0043232,131
+Proliferative 2,chromosome,GO:0005694,132
+Proliferative 2,nucleolus,GO:0005730,133
+Proliferative 2,nuclear lumen,GO:0031981,134
+Proliferative 2,spindle microtubule,GO:0005876,135
+Proliferative 2,DNA replication,,136
+Proliferative 2,Cell cycle,,137
+Proliferative 2,Fanconi anemia pathway,,138
+Proliferative 2,Mismatch repair,,139
+Proliferative 2,Nucleotide excision repair,,140
+Proliferative 2,Homologous recombination,,141
+Proliferative 2,Base excision repair,,142
+Proliferative 2,p53 signaling pathway,,143
+AC-gliosis-like 2,regulation of neuronal synaptic plasticity,GO:0048168,1
+AC-gliosis-like 2,extracellular structure organization,GO:0043062,2
+AC-gliosis-like 2,external encapsulating structure organization,GO:0045229,3
+AC-gliosis-like 2,negative regulation of Ras protein signal transduction,GO:0046580,4
+AC-gliosis-like 2,negative regulation of fibroblast growth factor receptor signaling pathway,GO:0040037,5
+AC-gliosis-like 2,extracellular matrix organization,GO:0030198,6
+AC-gliosis-like 2,collagen fibril organization,GO:0030199,7
+AC-gliosis-like 2,regulation of fibroblast growth factor receptor signaling pathway,GO:0040036,8
+AC-gliosis-like 2,negative regulation of small GTPase mediated signal transduction,GO:0051058,9
+AC-gliosis-like 2,regulation of MAP kinase activity,GO:0043405,10
+AC-gliosis-like 2,regulation of neurotransmitter receptor activity,GO:0099601,11
+AC-gliosis-like 2,negative regulation of lens fiber cell differentiation,GO:1902747,12
+AC-gliosis-like 2,negative regulation of endothelial cell apoptotic process,GO:2000352,13
+AC-gliosis-like 2,angiotensin-activated signaling pathway,GO:0038166,14
+AC-gliosis-like 2,regulation of lens fiber cell differentiation,GO:1902746,15
+AC-gliosis-like 2,negative regulation of cell-matrix adhesion,GO:0001953,16
+AC-gliosis-like 2,cellular response to angiotensin,GO:1904385,17
+AC-gliosis-like 2,collagen-containing extracellular matrix,GO:0062023,18
+AC-gliosis-like 2,integral component of plasma membrane,GO:0005887,19
+AC-gliosis-like 2,synaptic membrane,GO:0097060,20
+AC-gliosis-like 2,dendritic spine membrane,GO:0032591,21
+AC-gliosis-like 2,endoplasmic reticulum lumen,GO:0005788,22
+AC-gliosis-like 2,exocytic vesicle membrane,GO:0099501,23
+AC-gliosis-like 2,synaptic vesicle membrane,GO:0030672,24
+AC-gliosis-like 2,spanning component of plasma membrane,GO:0044214,25
+AC-gliosis-like 2,Protein digestion and absorption,,26
+OPC-like 1,oligodendrocyte differentiation,GO:0048709,1
+OPC-like 1,extracellular structure organization,GO:0043062,2
+OPC-like 1,external encapsulating structure organization,GO:0045229,3
+OPC-like 1,extracellular matrix organization,GO:0030198,4
+OPC-like 1,galactolipid biosynthetic process,GO:0019375,5
+OPC-like 1,galactosylceramide biosynthetic process,GO:0006682,6
+OPC-like 1,glial cell differentiation,GO:0010001,7
+OPC-like 1,glycosylceramide biosynthetic process,GO:0046476,8
+OPC-like 1,marginal zone B cell differentiation,GO:0002315,9
+OPC-like 1,central nervous system development,GO:0007417,10
+OPC-like 1,galactosylceramide metabolic process,GO:0006681,11
+OPC-like 1,axon extension involved in axon guidance,GO:0048846,12
+OPC-like 1,neuron projection extension involved in neuron projection guidance,GO:1902284,13
+OPC-like 1,collagen type IV trimer,GO:0005587,14
+OPC-like 1,basolateral plasma membrane,GO:0016323,15
+OPC-like 1,integral component of postsynaptic density membrane,GO:0099061,16
+OPC-like 1,intrinsic component of postsynaptic density membrane,GO:0099146,17
+OPC-like 1,basement membrane,GO:0005604,18
+OPC-like 1,integral component of postsynaptic specialization membrane,GO:0099060,19
+OPC-like 1,ECM-receptor interaction,,20
+OPC-like 1,PI3K-Akt signaling pathway,,21
+OPC-like 1,Focal adhesion,,22
+NPC-neuronal-like 3,axonogenesis,GO:0007409,1
+NPC-neuronal-like 3,axon guidance,GO:0007411,2
+NPC-neuronal-like 3,cell-cell adhesion via plasma-membrane adhesion molecules,GO:0098742,3
+NPC-neuronal-like 3,neuron projection,GO:0043005,4
+NPC-neuronal-like 3,exocytic vesicle membrane,GO:0099501,5
+NPC-neuronal-like 3,synaptic vesicle membrane,GO:0030672,6
+NPC-neuronal-like 3,catenin complex,GO:0016342,7
+NPC-neuronal-like 3,clathrin-sculpted monoamine transport vesicle,GO:0070081,8
+NPC-neuronal-like 3,clathrin-sculpted monoamine transport vesicle membrane,GO:0070083,9
+NPC-neuronal-like 3,excitatory synapse,GO:0060076,10
+NPC-neuronal-like 3,axon,GO:0030424,11
+NPC-neuronal-like 3,secretory vesicle,GO:0099503,12
+NPC-neuronal-like 3,exocytic vesicle,GO:0070382,13
+NPC-neuronal-like 3,integral component of synaptic vesicle membrane,GO:0030285,14
+NPC-neuronal-like 3,Axon guidance,,15
+NPC-neuronal-like 3,Nicotine addiction,,16
+NPC-neuronal-like 3,Gastric acid secretion,,17
+NPC-neuronal-like 3,Morphine addiction,,18
+NPC-neuronal-like 3,Retrograde endocannabinoid signaling,,19
+OPC-like 2,myelination,GO:0042552,1
+OPC-like 2,central nervous system myelination,GO:0022010,2
+OPC-like 2,oligodendrocyte development,GO:0014003,3
+OPC-like 2,central nervous system development,GO:0007417,4
+OPC-like 2,axon ensheathment in central nervous system,GO:0032291,5
+OPC-like 2,oligodendrocyte differentiation,GO:0048709,6
+OPC-like 2,peripheral nervous system development,GO:0007422,7
+OPC-like 2,extracellular matrix organization,GO:0030198,8
+OPC-like 2,regulation of ion transport,GO:0043269,9
+OPC-like 2,ameboidal-type cell migration,GO:0001667,10
+OPC-like 2,glial cell differentiation,GO:0010001,11
+OPC-like 2,negative regulation of axon extension,GO:0030517,12
+OPC-like 2,negative regulation of chemotaxis,GO:0050922,13
+OPC-like 2,regulation of sodium ion transport,GO:0002028,14
+OPC-like 2,neural crest cell migration,GO:0001755,15
+OPC-like 2,cell junction organization,GO:0034330,16
+OPC-like 2,extracellular structure organization,GO:0043062,17
+OPC-like 2,external encapsulating structure organization,GO:0045229,18
+OPC-like 2,neural crest cell development,GO:0014032,19
+OPC-like 2,negative regulation of axon extension involved in axon guidance,GO:0048843,20
+OPC-like 2,cell-cell junction organization,GO:0045216,21
+OPC-like 2,cell-cell junction,GO:0005911,22
+OPC-like 2,Calcium signaling pathway,,23

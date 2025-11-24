@@ -1,0 +1,515 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "LINC01727",
+    "AC117464.1",
+    "XYLT1",
+    "MMD2",
+    "EEPD1",
+    "AC013265.1",
+    "MYO5B",
+    "PLA2G4A",
+    "KCNIP1",
+    "ITGB4",
+    "AC019068.1",
+    "UNC5D",
+    "MIR3681HG",
+    "LINC02125",
+    "LINC02246",
+    "LRRC4C",
+    "LUCAT1",
+    "MDGA2",
+    "AC077690.1",
+    "CTXND1",
+    "AL353138.1",
+    "CDH18",
+    "MN1",
+    "AL356737.2",
+    "NKAIN3",
+    "CD44",
+    "NLRC5",
+    "LINC01776",
+    "LINC01117",
+    "DAB1",
+    "GFAP",
+    "DCHS2",
+    "DIPK1C",
+    "COL20A1",
+    "ELMOD1",
+    "ERICH3",
+    "ADAMTS5",
+    "GPC5",
+    "CHST8",
+    "AC233296.1",
+    "AC124254.2",
+    "NPR3",
+    "HRH1",
+    "INPP4B",
+    "AL159156.1",
+    "LINC02328",
+    "ARC",
+    "PDZRN4",
+    "AC007344.1",
+    "RGMA",
+    "PPARGC1A",
+    "TNR",
+    "ST8SIA5",
+    "ST8SIA1",
+    "SLC7A11"
+  ],
+  "programs": [
+    {
+      "program_name": "Mesenchymal Invasion and ECM Remodeling",
+      "description": "Co-activation of genes encoding ECM receptors and remodeling proteins (CD44, ITGB4, ADAMTS5, PLA2G4A, COL20A1, CHST8, XYLT1, GPC5, TNR) promote invasive, mesenchymal state and facilitate glioblastoma cell migration through the brain parenchyma. Many are upregulated in GBM with mesenchymal phenotype, linked to recurrent tumors and poor prognosis.",
+      "atomic_biological_processes": [
+        {
+          "name": "ECM remodeling and invasion",
+          "citation": [
+            {
+              "url": "https://www.mdpi.com/1422-0067/24/5/4891",
+              "source_id": "17",
+              "notes": "Systematic review of glioblastoma ECM modification and invasion."
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/37784103",
+              "source_id": "162",
+              "notes": "CD44-driven GBM invasion."
+            }
+          ],
+          "genes": [
+            "CD44",
+            "ITGB4",
+            "PLA2G4A",
+            "COL20A1",
+            "CHST8",
+            "XYLT1",
+            "GPC5",
+            "TNR",
+            "ADAMTS5"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Extracellular matrix, focal adhesion, invadopodia",
+          "citation": [
+            {
+              "url": "https://www.mdpi.com/1422-0067/24/5/4891",
+              "source_id": "17",
+              "notes": "Detailed structure of ECM in glioblastoma."
+            }
+          ],
+          "genes": [
+            "CD44",
+            "ITGB4",
+            "TNR",
+            "COL20A1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced migratory capacity and brain infiltration",
+        "Therapy resistance via ECM protection",
+        "Recurrence after surgical resection"
+      ],
+      "evidence_summary": "Combinatorial upregulation of ECM modifying enzymes and receptors closely correlates with highly invasive glioblastoma subtypes and correlates with poor patient outcomes.",
+      "significance_score": 0.98,
+      "citations": [
+        {
+          "url": "https://www.mdpi.com/1422-0067/24/5/4891",
+          "source_id": "17",
+          "notes": "Comprehensive review evidencing ECM gene upregulation in GBM."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37784103",
+          "source_id": "162",
+          "notes": "CD44 role in GBM invasion and recurrence."
+        }
+      ],
+      "supporting_genes": [
+        "CD44",
+        "ITGB4",
+        "PLA2G4A",
+        "ADAMTS5",
+        "COL20A1",
+        "CHST8",
+        "XYLT1",
+        "GPC5",
+        "TNR"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MMP2",
+          "MMP9",
+          "Hyaluronan synthases"
+        ],
+        "citations": [
+          {
+            "url": "https://www.mdpi.com/1422-0067/24/5/4891",
+            "source_id": "17",
+            "notes": "Matrix metalloproteinases are classical ECM modulators critical for GBM invasion."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Cancer Stemness, Plasticity, and Therapy Resistance",
+      "description": "Markers of stem cell phenotype (GFAP, CD44, SLC7A11, GPC5, LUCAT1, PPARGC1A) and key regulatory lncRNAs enable glioblastoma cells to maintain stem-like state, resist differentiation, and survive stressors including hypoxia and chemotherapy.",
+      "atomic_biological_processes": [
+        {
+          "name": "Stem cell maintenance and chemoresistance",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC9481599/",
+              "source_id": "6",
+              "notes": "Glioma stem cell involvement in therapy resistance."
+            }
+          ],
+          "genes": [
+            "GFAP",
+            "CD44",
+            "SLC7A11",
+            "PPARGC1A"
+          ]
+        },
+        {
+          "name": "Hypoxia-responsive regulation",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11001947/",
+              "source_id": "151",
+              "notes": "LUCAT1 and hypoxia response in GBM."
+            }
+          ],
+          "genes": [
+            "LUCAT1",
+            "PPARGC1A"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Cancer stem cell niche",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC9481599/",
+              "source_id": "6",
+              "notes": "GBM stem cell niche and therapy resistance."
+            }
+          ],
+          "genes": [
+            "GFAP",
+            "CD44"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Maintains cell population capable of recurrence after therapy",
+        "Resistance to chemoradiation",
+        "Adaptation to hypoxic, nutrient-poor microenvironments"
+      ],
+      "evidence_summary": "Stem cell features in GBM are driven by combined action of key protein and lncRNA markers, with strong experimental evidence linking their expression to therapy failure, recurrence, and poor survival.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC9481599/",
+          "source_id": "6",
+          "notes": "Role of stem cells in GBM therapy resistance."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11001947/",
+          "source_id": "151",
+          "notes": "LUCAT1 function in hypoxia response in glioblastoma."
+        }
+      ],
+      "supporting_genes": [
+        "GFAP",
+        "CD44",
+        "SLC7A11",
+        "GPC5",
+        "LUCAT1",
+        "PPARGC1A"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "NES",
+          "OLIG2",
+          "CD133"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC9481599/",
+            "source_id": "6",
+            "notes": "Classical cancer stem cell markers for glioblastoma stemness."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Immune Evasion and Immune Microenvironment Interaction",
+      "description": "NLRC5, SLC7A11, and lncRNAs interact to modulate antigen presentation and redox state in glioblastoma, facilitating immune escape. Additional ECM\u2013related genes assist in constructing immunosuppressive niches.",
+      "atomic_biological_processes": [
+        {
+          "name": "MHC class I antigen presentation",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2919433/",
+              "source_id": "34",
+              "notes": "NLRC5 function as MHC class I transactivator."
+            }
+          ],
+          "genes": [
+            "NLRC5"
+          ]
+        },
+        {
+          "name": "Suppression of ferroptosis and redox modulation",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7484322/",
+              "source_id": "13",
+              "notes": "SLC7A11 as ferroptosis inhibitor in cancer, including GBM."
+            }
+          ],
+          "genes": [
+            "SLC7A11"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Immune suppressive microenvironment",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6684490/",
+              "source_id": "41",
+              "notes": "Epigenetic and metabolic barriers to immune attack in GBM."
+            }
+          ],
+          "genes": [
+            "NLRC5",
+            "SLC7A11"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Evades T cell recognition",
+        "Promotes redox homeostasis and resistance to immune cell mediated killing",
+        "Maintains local immunosuppressive microenvironment"
+      ],
+      "evidence_summary": "GBM exploits regulatory networks (e.g., NLRC5-mediated antigen presentation and SLC7A11-driven ferroptosis suppression) to diminish immune cell killing and minimize antitumor responses.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2919433/",
+          "source_id": "34",
+          "notes": "NLRC5 as central regulator of MHC class I."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7484322/",
+          "source_id": "13",
+          "notes": "SLC7A11 axes and ferroptosis\u2013immune crosstalk in GBM."
+        }
+      ],
+      "supporting_genes": [
+        "NLRC5",
+        "SLC7A11"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "PD-L1",
+          "IDH1",
+          "MGMT",
+          "CD274"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6684490/",
+            "source_id": "41",
+            "notes": "Immune checkpoints integrated in GBM immune evasion programs."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Proliferation and Aberrant Cell Cycle Regulation",
+      "description": "PPARGC1A, KCNIP1, INPP4B, PLA2G4A, CD44, and specific lncRNAs (e.g., LUCAT1) coordinate metabolic and cell cycle programs to support high proliferative rates of glioblastoma cells.",
+      "atomic_biological_processes": [
+        {
+          "name": "Mitochondrial biogenesis and metabolism",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4920288/",
+              "source_id": "191",
+              "notes": "PGC1\u03b1 drives OXPHOS and metabolic adaptation in invasive and metastatic cancer."
+            }
+          ],
+          "genes": [
+            "PPARGC1A"
+          ]
+        },
+        {
+          "name": "PI3K/AKT signaling modulation",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35330704",
+              "source_id": "127",
+              "notes": "INPP4B tumor suppressor role, inhibits GBM cell proliferation via PI3K/AKT axis."
+            }
+          ],
+          "genes": [
+            "INPP4B"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Mitochondria, cytoplasm",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4920288/",
+              "source_id": "191",
+              "notes": "PGC1\u03b1 required for metastatic phenotype via mitochondrial adaptation."
+            }
+          ],
+          "genes": [
+            "PPARGC1A"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Increased proliferation and metabolic flexibility",
+        "Survival under nutrient and hypoxia stress",
+        "Therapy resistance through metabolic adaptation"
+      ],
+      "evidence_summary": "GBM cells combine multiple metabolic, signaling, and lncRNA-mediated programs to facilitate rapid growth and evade cell death.",
+      "significance_score": 0.93,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4920288/",
+          "source_id": "191",
+          "notes": "PGC1\u03b1 and metabolic adaptation in cancer invasion."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35330704",
+          "source_id": "127",
+          "notes": "PI3K/AKT pathway regulation by INPP4B in GBM."
+        }
+      ],
+      "supporting_genes": [
+        "PPARGC1A",
+        "KCNIP1",
+        "INPP4B",
+        "PLA2G4A",
+        "CD44",
+        "LUCAT1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "EGFR",
+          "PI3KCA",
+          "PDGFRA"
+        ],
+        "citations": [
+          {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35330704",
+            "source_id": "127",
+            "notes": "Receptor tyrosine kinases as classical GBM proliferation drivers."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Aberrant Neural and Synaptic Programs",
+      "description": "Genes encoding cell adhesion molecules, synaptic scaffolding proteins, and neural developmental regulators (UNC5D, LRRC4C, MDGA2, ARC, KCNIP1, ST8SIA1, ST8SIA5) are often upregulated in glioblastoma, supporting tumor-neuronal communication, invasion, and plasticity.",
+      "atomic_biological_processes": [
+        {
+          "name": "Neuronal\u2013glioma synaptic remodeling",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10611371/",
+              "source_id": "170",
+              "notes": "Glioma synapses and adaptive plasticity mechanisms in GBM."
+            }
+          ],
+          "genes": [
+            "ARC",
+            "ST8SIA1",
+            "ST8SIA5",
+            "UNC5D",
+            "MDGA2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Synaptic junctions, neural cell adhesion complexes",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10611371/",
+              "source_id": "170",
+              "notes": "Synaptic network architecture in glioma."
+            }
+          ],
+          "genes": [
+            "ARC",
+            "MDGA2",
+            "ST8SIA1",
+            "ST8SIA5",
+            "UNC5D"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced tumor\u2013neuron electrical coupling",
+        "Network remodeling favoring tumor invasion",
+        "Synaptic plasticity supporting proliferation and migration"
+      ],
+      "evidence_summary": "Glioblastoma cells hijack neural developmental and synaptic mechanisms to interact with surrounding neural circuits, fostering malignant phenotypes.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10611371/",
+          "source_id": "170",
+          "notes": "Role of glioma synapses in cell network remodeling."
+        }
+      ],
+      "supporting_genes": [
+        "ARC",
+        "MDGA2",
+        "ST8SIA1",
+        "ST8SIA5",
+        "UNC5D"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "NRXN1",
+          "NLGN1",
+          "SHANK3"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10611371/",
+            "source_id": "170",
+            "notes": "Key synaptic network molecules in brain tumor neural crosstalk."
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "Pathway databases",
+      "Co-citation in glioblastoma literature",
+      "Gene co-expression evidence",
+      "Protein\u2013protein interaction and network analysis"
+    ],
+    "notes": "Program clusters supported by convergent literature, multi-gene co-expression, PPI, and functional redundancy; prioritization based on presence of multiple required pathway components and links to malignant cell states."
+  },
+  "version": "2025-11-14"
+}

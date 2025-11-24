@@ -1,0 +1,730 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "ADAM28",
+    "LINC02615",
+    "POT1-AS1",
+    "MET",
+    "HILPDA",
+    "LUCAT1",
+    "PTGS2",
+    "RUNX2",
+    "SPNS2",
+    "PHLDB2",
+    "LINC01705",
+    "FAM160A1",
+    "ERRFI1",
+    "FAT4",
+    "TNNI3K",
+    "TRIB3",
+    "NDRG1",
+    "AC051619.5",
+    "AC083837.1",
+    "PRKCH",
+    "PPP1R3C",
+    "MGAM",
+    "ANGPTL4",
+    "COL13A1",
+    "CHSY3",
+    "AP001528.1",
+    "CDON",
+    "CAV1",
+    "SHISA6",
+    "SLC39A14",
+    "C21orf62-AS1",
+    "HMOX1",
+    "BNIP3L",
+    "LINC01376",
+    "ABI3BP",
+    "VLDLR-AS1",
+    "OLFM1",
+    "LTBP2",
+    "AHNAK2",
+    "NOX4",
+    "AC092944.1",
+    "COL5A1",
+    "PLAG1",
+    "GCNT1",
+    "AC099681.1",
+    "CFAP61",
+    "RPL34-AS1",
+    "OSMR-AS1",
+    "AMPD3",
+    "EHHADH",
+    "COL24A1",
+    "RNF217-AS1",
+    "AP006545.3",
+    "EPHA1-AS1",
+    "EPHA3",
+    "ZNF385B",
+    "LINC02340",
+    "LVRN",
+    "PDE4C",
+    "GPC5",
+    "RCAN2",
+    "EPSTI1",
+    "AC008014.1",
+    "LINC00240",
+    "AL158064.1",
+    "AL390957.1",
+    "MX2",
+    "C4orf47",
+    "ABLIM3",
+    "ITGB3",
+    "SCN9A",
+    "C9orf153",
+    "SLC6A6",
+    "NECTIN3-AS1",
+    "CALN1",
+    "GRK5",
+    "CPEB1",
+    "CPA4",
+    "UNC5C"
+  ],
+  "programs": [
+    {
+      "program_name": "Mesenchymal transition & Invasion",
+      "description": "Collective dysregulation of several input genes (RUNX2, ITGB3, CAV1, COL5A1, NOX4, OSMR, TRIB3, EPHA3, LTBP2, CAV1) is tightly linked to the acquisition of mesenchymal states, increased motility, invasiveness, and therapy resistance in glioblastoma through signaling pathways like TGF-beta/NOX4, integrin-ECM adhesion, focal adhesion remodeling, and reorganization of ECM components.",
+      "atomic_biological_processes": [
+        {
+          "name": "Epithelial-mesenchymal transition",
+          "genes": [
+            "RUNX2",
+            "NOX4",
+            "OSMR",
+            "ITGB3",
+            "CAV1",
+            "COL5A1",
+            "LTBP2"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4817503/",
+              "source_id": "",
+              "notes": "RUNX2 as regulator of EMT and mesenchymal transition in cancer"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8920105/",
+              "source_id": "",
+              "notes": "NOX4 regulates EMT via ROS in glioblastoma stem cells"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4817503/",
+              "source_id": "",
+              "notes": "RUNX2 involvement in multiple EMT pathways"
+            }
+          ]
+        },
+        {
+          "name": "ECM remodeling and invasion",
+          "genes": [
+            "COL5A1",
+            "CAV1",
+            "ITGB3",
+            "LTBP2"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8889927/",
+              "source_id": "",
+              "notes": "COL5A1 mediates ECM remodeling and invasion in GBM"
+            },
+            {
+              "url": "https://www.mdpi.com/2072-6694/15/1/50",
+              "source_id": "",
+              "notes": "ECM-related genes and invasion in glioblastoma"
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Focal adhesion complex",
+          "genes": [
+            "ITGB3",
+            "CAV1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4707512/",
+              "source_id": "",
+              "notes": "ITGB3 forms complexes that drive invasion and migration"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8709765/",
+              "source_id": "",
+              "notes": "CAV1 pathway in invasion and transition"
+            }
+          ]
+        },
+        {
+          "name": "Extracellular matrix (ECM)",
+          "genes": [
+            "COL5A1",
+            "LTBP2",
+            "COL13A1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8889927/",
+              "source_id": "",
+              "notes": "COL5A1 role in ECM remodeling"
+            },
+            {
+              "url": "https://www.mdpi.com/2072-6694/15/1/50",
+              "source_id": "",
+              "notes": "ECM modification drives glioma progression"
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Increased cell migration and invasion",
+        "Therapy resistance",
+        "Stem-like program enrichment",
+        "Aberrant ECM deposition and reorganization"
+      ],
+      "evidence_summary": "Runx2, COL5A1, NOX4, ITGB3, OSMR, TRIB3, and CAV1 are key mediators of mesenchymal phenotypes and invasion in glioblastoma, supported by multiple functional studies. COL5A1/NOX4 interaction boosts mesenchymal state; OSMR/STAT3, RUNX2/NOX4, and integrins and ECM genes act synergistically.",
+      "significance_score": 0.97,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4817503/",
+          "source_id": "",
+          "notes": "RUNX2 as regulator of EMT"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8920105/",
+          "source_id": "",
+          "notes": "TGFbeta/NOX4/EMT"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8709765/",
+          "source_id": "",
+          "notes": "CAV1 invasion, ECM, mesenchymal transition"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8889927/",
+          "source_id": "",
+          "notes": "COL5A1 ECM remodeling"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4707512/",
+          "source_id": "",
+          "notes": "ITGB3/EGFRVIII promotes migration"
+        }
+      ],
+      "supporting_genes": [
+        "RUNX2",
+        "NOX4",
+        "COL5A1",
+        "OSMR",
+        "ITGB3",
+        "CAV1",
+        "TRIB3",
+        "LTBP2",
+        "EPHA3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "ZEB1",
+          "SNAI1",
+          "TWIST1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7708780/",
+            "source_id": "",
+            "notes": "Canonical EMT regulators"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Hypoxia and metabolic reprogramming",
+      "description": "Major input genes (HILPDA, BNIP3L, NDRG1, NOX4, HMOX1, ANGPTL4, COL24A1, COL5A1, EPSTI1, LUCAT1) are strongly induced by hypoxia in malignant glioblastoma; these drive adaptation to low oxygen, oxidative stress resistance, altered glycolysis/fatty acid metabolism, and angiogenesis.",
+      "atomic_biological_processes": [
+        {
+          "name": "Hypoxia response",
+          "genes": [
+            "HILPDA",
+            "BNIP3L",
+            "NDRG1",
+            "NOX4",
+            "HMOX1",
+            "ANGPTL4"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8920105/",
+              "source_id": "",
+              "notes": "Hypoxic induction of NOX4 and related oxidative stress genes"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8797630/",
+              "source_id": "",
+              "notes": "Hypoxia induced NDRG1 suppresses GBM proliferation"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6512888/",
+              "source_id": "",
+              "notes": "BNIP3L and hypoxia-induced autophagy"
+            }
+          ]
+        },
+        {
+          "name": "Metabolic reprogramming",
+          "genes": [
+            "NOX4",
+            "COL5A1",
+            "ANGPTL4",
+            "EPSTI1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4642562/",
+              "source_id": "",
+              "notes": "NOX4 mediates EMT and metabolism"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8797630/",
+              "source_id": "",
+              "notes": "NDRG1 modulates metabolic adaptation"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8291344/",
+              "source_id": "",
+              "notes": "NOX4/FOXM1 in glycolysis"
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Mitochondrion",
+          "genes": [
+            "BNIP3L",
+            "HMOX1",
+            "EHHADH"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6512888/",
+              "source_id": "",
+              "notes": "BNIP3L, apoptosis/hypoxia"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10428075/",
+              "source_id": "",
+              "notes": "Oxidative stress in hypoxic glioblastoma"
+            }
+          ]
+        },
+        {
+          "name": "Peroxisome",
+          "genes": [
+            "EHHADH"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383272/",
+              "source_id": "",
+              "notes": "Ehhadh in peroxisomal beta-oxidation"
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced survival in low oxygen",
+        "Oxidative stress resistance",
+        "Metabolic flexibility",
+        "Angiogenesis induction"
+      ],
+      "evidence_summary": "Hypoxia-related adaptation in glioblastoma is supported by experimental data on HILPDA, NOX4, NDRG1, BNIP3L, ANGPTL4. These genes mediate metabolic reprogramming and stress resistance, with NOX4 and COL5A1 bridging hypoxia and invasion programs. BNIP3L promotes survival in hypoxic zones through autophagy.",
+      "significance_score": 0.93,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8797630/",
+          "source_id": "",
+          "notes": "NDRG1 in hypoxia"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4642562/",
+          "source_id": "",
+          "notes": "NOX4 TGF-beta EMT hypoxia"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6512888/",
+          "source_id": "",
+          "notes": "BNIP3L-driven autophagy under hypoxia"
+        }
+      ],
+      "supporting_genes": [
+        "HILPDA",
+        "NOX4",
+        "COL5A1",
+        "NDRG1",
+        "BNIP3L",
+        "HMOX1",
+        "ANGPTL4",
+        "EPSTI1",
+        "EHHADH"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "HIF1A",
+          "VEGFA"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6512888/",
+            "source_id": "",
+            "notes": "VEGF as canonical hypoxia response"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Growth factor & receptor tyrosine signaling",
+      "description": "Joint upregulation of MET, EPHA3, OSMR, ERRFI1, PRKCH, FAT4, CDON, SHISA6, EPHA1-AS1, and integrin ITGB3 conveys amplified growth signaling via receptor tyrosine kinases, EGFR pathway feedback loops, JAK-STAT, and Hippo pathway alterations in glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "Receptor tyrosine kinase signaling",
+          "genes": [
+            "MET",
+            "EPHA3",
+            "PRKCH",
+            "OSMR",
+            "ERRFI1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685832/",
+              "source_id": "",
+              "notes": "EPHA3 RTK in GBM"
+            },
+            {
+              "url": "https://febs.onlinelibrary.wiley.com/doi/full/10.1111/febs.17195",
+              "source_id": "",
+              "notes": "ERRFI1 negative regulator of EGFR"
+            }
+          ]
+        },
+        {
+          "name": "JAK-STAT signaling",
+          "genes": [
+            "OSMR",
+            "EPHA3"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8889927/",
+              "source_id": "",
+              "notes": "Feed-forward MAPK via OSMR"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8870327/",
+              "source_id": "",
+              "notes": "Oncostatin-M/OSMR/STAT3 mesenchymal reprogramming"
+            }
+          ]
+        },
+        {
+          "name": "Hippo/Wnt signaling",
+          "genes": [
+            "FAT4"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4101387/",
+              "source_id": "",
+              "notes": "FAT4, Hippo, and Wnt pathways in cancer"
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Cell membrane receptor complexes",
+          "genes": [
+            "EPHA3",
+            "MET",
+            "OSMR"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685832/",
+              "source_id": "",
+              "notes": "EphA3 receptor in GBM"
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Amplified proliferation signaling",
+        "Resistance to EGFR inhibition",
+        "Mesenchymal program induction"
+      ],
+      "evidence_summary": "Key RTKs and feedback regulators (MET, EPHA3, ERRFI1, OSMR, ITGB3) interact in core networks driving glioblastoma growth, therapy resistance, and mesenchymal shift. FAT4 loss disrupts Hippo/Wnt suppression.",
+      "significance_score": 0.91,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685832/",
+          "source_id": "",
+          "notes": "EPHA3 in GBM"
+        },
+        {
+          "url": "https://febs.onlinelibrary.wiley.com/doi/full/10.1111/febs.17195",
+          "source_id": "",
+          "notes": "ERRFI1 inhibits EGFR"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8889927/",
+          "source_id": "",
+          "notes": "OSMR/STAT3 signaling"
+        }
+      ],
+      "supporting_genes": [
+        "MET",
+        "EPHA3",
+        "ERRFI1",
+        "OSMR",
+        "PRKCH",
+        "FAT4",
+        "CDON",
+        "ITGB3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "EGFR",
+          "PDGFRA"
+        ],
+        "citations": [
+          {
+            "url": "https://febs.onlinelibrary.wiley.com/doi/full/10.1111/febs.17195",
+            "source_id": "",
+            "notes": "EGFR core to pathway"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Purine and fatty acid metabolism",
+      "description": "Increased expression of nucleotide (AMPD3) and fatty acid metabolism genes (EHHADH, COL5A1, COL24A1, ANGPTL4, NOX4, SLC39A14) supports glioblastoma cell bioenergetics and survival in nutrient-poor microenvironment.",
+      "atomic_biological_processes": [
+        {
+          "name": "Purine nucleotide metabolism",
+          "genes": [
+            "AMPD3"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6507917/",
+              "source_id": "",
+              "notes": "AMPD family involved in cancer growth via metabolic supply"
+            }
+          ]
+        },
+        {
+          "name": "Fatty acid beta-oxidation",
+          "genes": [
+            "EHHADH",
+            "ANGPTL4",
+            "NOX4"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383272/",
+              "source_id": "",
+              "notes": "EHHADH essential for beta-oxidation"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/27298284/",
+              "source_id": "",
+              "notes": "FAO is crucial for glioma growth"
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Peroxisome",
+          "genes": [
+            "EHHADH"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383272/",
+              "source_id": "",
+              "notes": "EHHADH role in peroxisomal beta-oxidation"
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced nucleotide supply for proliferation",
+        "FAO-driven survival in nutrient stress",
+        "Chemoresistance"
+      ],
+      "evidence_summary": "Purine metabolism (AMPD3) and FAO (EHHADH) gene cluster enhances metabolic flexibility in malignant glioblastoma, providing energy for aggressiveness and stress resistance.",
+      "significance_score": 0.88,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6507917/",
+          "source_id": "",
+          "notes": "AMPD in metabolic support"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27298284/",
+          "source_id": "",
+          "notes": "FAO in glioma"
+        }
+      ],
+      "supporting_genes": [
+        "AMPD3",
+        "EHHADH",
+        "NOX4",
+        "COL5A1",
+        "COL24A1",
+        "ANGPTL4",
+        "SLC39A14"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "CPT1A"
+        ],
+        "citations": [
+          {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27298284/",
+            "source_id": "",
+            "notes": "CPT1A as canonical FAO gene"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Cell stress and apoptosis regulation",
+      "description": "BNIP3L, UNC5C, HMOX1, TRIB3, NDRG1, CAV1 coordinate stress and apoptotic/survival pathways, impacting glioblastoma therapy resistance and stemness. BNIP3L, NDRG1 mediate hypoxia-induced autophagy; UNC5C as dependence receptor induces apoptosis in absence of ligand; TRIB3 regulates autophagy and ER stress.",
+      "atomic_biological_processes": [
+        {
+          "name": "Hypoxia-induced autophagy",
+          "genes": [
+            "BNIP3L",
+            "NDRG1",
+            "HMOX1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8797630/",
+              "source_id": "",
+              "notes": "NDRG1, hypoxia-induced autophagy"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6512888/",
+              "source_id": "",
+              "notes": "BNIP3L and autophagy in hypoxia"
+            }
+          ]
+        },
+        {
+          "name": "Dependence receptor-induced apoptosis",
+          "genes": [
+            "UNC5C"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC151032/",
+              "source_id": "",
+              "notes": "UNC5C induces apoptosis in absence of netrin"
+            }
+          ]
+        },
+        {
+          "name": "Autophagy and ER stress",
+          "genes": [
+            "TRIB3"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7675557/",
+              "source_id": "",
+              "notes": "TRIB3 regulates autophagy and ER stress"
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Mitochondrion",
+          "genes": [
+            "BNIP3L",
+            "HMOX1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6512888/",
+              "source_id": "",
+              "notes": "BNIP3L, mitochondria, autophagy"
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Therapy resistance via stress adaptation",
+        "Increased survival under apoptosis-inducing cues",
+        "Stem-like phenotype maintenance"
+      ],
+      "evidence_summary": "BNIP3L, NDRG1, TRIB3, UNC5C act on autophagy, apoptosis, and ER stress, regulating survival and stemness in glioblastoma.",
+      "significance_score": 0.82,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6512888/",
+          "source_id": "",
+          "notes": "BNIP3L autophagy"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC151032/",
+          "source_id": "",
+          "notes": "UNC5C dependence receptor"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7675557/",
+          "source_id": "",
+          "notes": "TRIB3 autophagy, ER stress"
+        }
+      ],
+      "supporting_genes": [
+        "BNIP3L",
+        "TRIB3",
+        "NDRG1",
+        "HMOX1",
+        "UNC5C",
+        "CAV1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "BECN1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6512888/",
+            "source_id": "",
+            "notes": "BECN1 canonical for autophagy"
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "co-citation",
+      "pathway databases (KEGG, Reactome)",
+      "co-expression in glioblastoma transcriptomes"
+    ],
+    "notes": "Clusters were mapped by integrating multiple glioblastoma gene expression and pathway analyses with protein-protein interaction and experimental citation enrichment."
+  },
+  "version": "2025-11-17"
+}

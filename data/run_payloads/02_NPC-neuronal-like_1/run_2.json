@@ -1,0 +1,642 @@
+{
+  "context": {
+    "cell_type": "glioblastoma cell",
+    "disease": "malignant glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "CFAP43",
+    "NEGR1",
+    "DNAH12",
+    "LRRC2",
+    "VAT1L",
+    "ZNF804B",
+    "RBMS3",
+    "SLC14A1",
+    "GABRA5",
+    "ZBBX",
+    "ADAMTS18",
+    "CFAP52",
+    "GRM1",
+    "MAP3K19",
+    "FHAD1",
+    "TCTEX1D1",
+    "DNAAF1",
+    "DCDC2",
+    "AC005165.1",
+    "COL21A1",
+    "PKHD1",
+    "ZNF521",
+    "EPB41L4B",
+    "ERICH3",
+    "PLAGL1",
+    "EXPH5",
+    "SHISAL2B",
+    "SATB1-AS1",
+    "RERGL",
+    "FRMPD2",
+    "TOGARAM2",
+    "AP003062.2",
+    "BMP6",
+    "NRG3",
+    "CFAP61",
+    "FAM81B",
+    "SLC47A2",
+    "TMEM232",
+    "NWD2",
+    "AC109466.1",
+    "GABRG3",
+    "DTHD1",
+    "COL13A1",
+    "COL23A1",
+    "CFAP73",
+    "RFTN1",
+    "FYB2",
+    "POSTN",
+    "AL513323.1",
+    "BANK1",
+    "CHD5",
+    "THBS1",
+    "ADCY8",
+    "ADGB",
+    "AFF2",
+    "DRC1",
+    "CFAP206",
+    "CFAP47",
+    "PPM1H",
+    "KIAA2012",
+    "MAP7",
+    "KSR2",
+    "DNAH5",
+    "LYPD6B",
+    "WSCD2",
+    "CACNA2D1",
+    "LRRIQ1",
+    "CPNE4",
+    "LINC01088",
+    "SCIN",
+    "PRMT8",
+    "LINGO2",
+    "CASC1",
+    "CCDC170",
+    "AC092110.1",
+    "VWA3A",
+    "CA10",
+    "AC013470.2",
+    "SLC22A3",
+    "GRM4",
+    "COL26A1",
+    "CFAP221",
+    "CFAP157",
+    "TTC29",
+    "C7orf57",
+    "HMCN1",
+    "CFAP100",
+    "U91319.1",
+    "RSPH1",
+    "NAALAD2",
+    "IL6R",
+    "CDH7",
+    "KCNJ3",
+    "AL356108.1"
+  ],
+  "programs": [
+    {
+      "program_name": "Motile Cilia Function and Structure",
+      "description": "Cluster of genes (CFAP43, CFAP52, CFAP61, CFAP73, CFAP100, CFAP157, CFAP206, CFAP221, DNAH12, DNAH5, DRC1, DNAAF1, TCTEX1D1, DCDC2, RSPH1, LRRC2, LRRIQ1, TTC29, ZBBX, DTHD1) encode components of the motile cilium and its assembly machinery. In glioblastoma, aberrant ciliary function is increasingly recognized as contributing to tumor microenvironment interactions, signaling changes, and possibly immunosuppression.",
+      "atomic_biological_processes": [
+        {
+          "name": "Ciliogenesis and Motile Cilia Function",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC3819026/",
+              "notes": "Overview of cilia proteins and their extended roles in non-ciliated cells, including implications in disease contexts."
+            },
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC9440988/",
+              "notes": "Mouse and human ciliary assembly, transport machinery, and mutation consequences. Importantly, ciliary components are shared in motile and non-motile cells."
+            }
+          ],
+          "genes": [
+            "CFAP43",
+            "CFAP52",
+            "CFAP61",
+            "CFAP73",
+            "CFAP100",
+            "CFAP157",
+            "CFAP206",
+            "CFAP221",
+            "DNAH12",
+            "DNAH5",
+            "DRC1",
+            "DNAAF1",
+            "TCTEX1D1",
+            "DCDC2",
+            "RSPH1",
+            "LRRC2",
+            "LRRIQ1",
+            "TTC29",
+            "ZBBX",
+            "DTHD1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Motile Cilium Axoneme",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC8201539/",
+              "notes": "Central apparatus structure and genes required for assembly; implications in motile cilia function."
+            }
+          ],
+          "genes": [
+            "CFAP43",
+            "DNAH12",
+            "DRC1",
+            "TCTEX1D1",
+            "RSPH1",
+            "DNAAF1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Deficient or abnormal ciliary signaling may alter microenvironmental sensing and contribute to immune evasion in glioblastoma",
+        "Disrupted ciliary assembly can impact cell division, Wnt signaling, and cell polarity"
+      ],
+      "evidence_summary": "Many CFAP and DNAH genes are well-established ciliary components. New studies connect ciliary biology to immune evasion, altered cell division, and signaling in glioblastoma.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC3819026/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC9440988/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC8201539/"
+        }
+      ],
+      "supporting_genes": [
+        "CFAP43",
+        "CFAP52",
+        "CFAP61",
+        "CFAP73",
+        "CFAP100",
+        "CFAP157",
+        "CFAP206",
+        "CFAP221",
+        "DNAH12",
+        "DNAH5",
+        "DRC1",
+        "DNAAF1",
+        "TCTEX1D1",
+        "DCDC2",
+        "RSPH1",
+        "LRRC2",
+        "LRRIQ1",
+        "TTC29",
+        "ZBBX",
+        "DTHD1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [],
+        "citations": []
+      }
+    },
+    {
+      "program_name": "Extracellular Matrix Remodeling and Tumor Invasion",
+      "description": "Multiple collagen and ECM-remodeling genes (COL21A1, COL13A1, COL23A1, COL26A1, THBS1, POSTN, HMCN1, ADAMTS18, CFAP-related) contribute to the composition, stiffness, and organization of the tumor microenvironment. Glioblastoma exploits these programs to facilitate invasion, angiogenesis, immune modulation, and therapy resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "Collagen Matrix Remodeling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10262873/",
+              "notes": "Collagen modifications in tumors and implications for immunotherapy."
+            },
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC9660452/",
+              "notes": "Collagen family overview and their biomarker potential."
+            }
+          ],
+          "genes": [
+            "COL21A1",
+            "COL13A1",
+            "COL23A1",
+            "COL26A1",
+            "HMCN1"
+          ]
+        },
+        {
+          "name": "Thrombospondin and Periostin Pathways",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC6407780/",
+              "notes": "THBS1 and periostin coordinate ECM remodeling and cell adhesion in glioblastoma."
+            },
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC5299046/",
+              "notes": "POSTN upregulated in glioma, promoting stemness, invasion and therapy resistance."
+            }
+          ],
+          "genes": [
+            "THBS1",
+            "POSTN"
+          ]
+        },
+        {
+          "name": "Matrix Metalloproteinase/ADAMTS Activity",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10963493/",
+              "notes": "ADAMTS proteases regulate ECM structure and tissue invasion in cancer."
+            }
+          ],
+          "genes": [
+            "ADAMTS18"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Extracellular Matrix",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/mnfr.202300824",
+              "notes": "ECM gene signatures predict glioblastoma prognosis."
+            }
+          ],
+          "genes": [
+            "COL21A1",
+            "COL13A1",
+            "COL23A1",
+            "COL26A1",
+            "THBS1",
+            "POSTN",
+            "HMCN1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Promotes tumor invasion through ECM stiffening and degradation",
+        "Facilitates angiogenesis and immune exclusion",
+        "Induces therapy resistance via physical barriers and signaling"
+      ],
+      "evidence_summary": "Collagen and ECM-modifying genes shape the tumor microenvironment, promoting aggressiveness and resistance to therapy in glioblastoma.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10262873/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC9660452/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC6407780/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC5299046/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10963493/"
+        }
+      ],
+      "supporting_genes": [
+        "COL21A1",
+        "COL13A1",
+        "COL23A1",
+        "COL26A1",
+        "THBS1",
+        "POSTN",
+        "HMCN1",
+        "ADAMTS18"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [],
+        "citations": []
+      }
+    },
+    {
+      "program_name": "Inflammatory and Mesenchymal Signaling",
+      "description": "Genes IL6R, BMP6, POSTN, THBS1, SATB1-AS1, COL-related, and others act in canonical pathways that regulate inflammation, immune suppression, mesenchymal transition, and stemness in glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "IL6 Signaling and Immunosuppression",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10907135/",
+              "notes": "IL6 drives glioblastoma microenvironment immunosuppression and therapy resistance."
+            }
+          ],
+          "genes": [
+            "IL6R"
+          ]
+        },
+        {
+          "name": "Epithelial-to-Mesenchymal Transition",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC5299046/",
+              "notes": "POSTN controls EMT and is upregulated in glioma."
+            }
+          ],
+          "genes": [
+            "POSTN",
+            "THBS1"
+          ]
+        },
+        {
+          "name": "BMP6/BMP Signaling in Stemness",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC6819809/",
+              "notes": "BMP signaling controls glioma stem cell quiescence and therapy resistance."
+            }
+          ],
+          "genes": [
+            "BMP6"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Mesenchymal and Immune Microenvironment",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC5704498/",
+              "notes": "Mesenchymal subtype enriched for IL6/IL6R signaling; key to prognosis."
+            }
+          ],
+          "genes": [
+            "IL6R",
+            "POSTN"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Drives immune suppression and poor therapy response",
+        "Promotes stemness and invasion via mesenchymal transition",
+        "Links inflammation to increased glioblastoma aggressiveness"
+      ],
+      "evidence_summary": "Multiple genes contribute to the mesenchymal and immune suppressive environment in glioblastoma, with IL6 signaling being particularly central.",
+      "significance_score": 0.97,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10907135/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC5299046/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC6819809/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC5704498/"
+        }
+      ],
+      "supporting_genes": [
+        "IL6R",
+        "BMP6",
+        "POSTN",
+        "THBS1",
+        "SATB1-AS1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [],
+        "citations": []
+      }
+    },
+    {
+      "program_name": "Neuronal and Synaptic Signaling Dysregulation",
+      "description": "Genes GABRA5, GABRG3, KCNJ3, GRM1, GRM4, NAALAD2, CA10, SLC22A3, SLC14A1, SLC47A2 are involved in neuro-signaling, glutamatergic, and GABAergic transmission, which are re-wired in glioblastoma to promote cell migration, invasion, and altered metabolism.",
+      "atomic_biological_processes": [
+        {
+          "name": "Glutamate/GABA Signaling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.frontiersin.org/articles/10.3389/fonc.2020.00413/full",
+              "notes": "Glutamate receptors and ion channels enriched in GBM, driving migration and invasion."
+            },
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC3072127/",
+              "notes": "Glutamate signaling and microenvironment impact in glioma."
+            }
+          ],
+          "genes": [
+            "GRM1",
+            "GRM4",
+            "GABRA5",
+            "GABRG3",
+            "KCNJ3",
+            "NAALAD2",
+            "CA10"
+          ]
+        },
+        {
+          "name": "Amino Acid and Ion Transporters",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10311593/",
+              "notes": "SLC family transporters regulate malignant progression in glioma, including SLC14A1, SLC22A3."
+            }
+          ],
+          "genes": [
+            "SLC14A1",
+            "SLC22A3",
+            "SLC47A2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Synaptic and Perisynaptic Membrane",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.frontiersin.org/articles/10.3389/fonc.2020.00413/full",
+              "notes": "Glioblastoma alters synaptic compartments and signaling for invasion."
+            }
+          ],
+          "genes": [
+            "GABRA5",
+            "GABRG3",
+            "GRM1",
+            "GRM4",
+            "KCNJ3"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhances tumor cell migration through neurotransmitter pathway hijacking",
+        "Alters cell metabolism and microenvironment responsiveness"
+      ],
+      "evidence_summary": "Glioblastoma re-wires synaptic and ion channel signaling for invasion and malignancy; several input genes are established contributors.",
+      "significance_score": 0.88,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.frontiersin.org/articles/10.3389/fonc.2020.00413/full"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10311593/"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC3072127/"
+        }
+      ],
+      "supporting_genes": [
+        "GRM1",
+        "GRM4",
+        "GABRA5",
+        "GABRG3",
+        "KCNJ3",
+        "NAALAD2",
+        "CA10",
+        "SLC14A1",
+        "SLC22A3",
+        "SLC47A2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [],
+        "citations": []
+      }
+    },
+    {
+      "program_name": "Chromatin/Transcriptional Regulation and Tumor Suppressor Pathways",
+      "description": "Transcription factors and epigenetic regulators (CHD5, SATB1-AS1, ZNF521, ZNF804B, AFF2, PRMT8, RBMS3) coordinate gene expression programs, cell fate determination, and tumor suppression. In glioblastoma, loss or mutation in these genes drives therapy resistance, stemness, and cell state plasticity.",
+      "atomic_biological_processes": [
+        {
+          "name": "Chromatin Remodeling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC4462605/",
+              "notes": "CHD5 as a central tumor suppressor and chromatin remodeler in glioma, loss linked to poor prognosis."
+            },
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10978380/",
+              "notes": "SATB1 as a master chromatin organizer, controlling invasion and metastasis processes."
+            }
+          ],
+          "genes": [
+            "CHD5",
+            "SATB1-AS1"
+          ]
+        },
+        {
+          "name": "Transcriptional Regulation and Tumor Suppression",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://downloads.hindawi.com/journals/bmri/2014/279871.pdf",
+              "notes": "ZNF521 implicated in stem cell fate and glioma growth."
+            }
+          ],
+          "genes": [
+            "ZNF521",
+            "ZNF804B",
+            "AFF2",
+            "RBMS3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Nucleus and Nuclear Chromatin",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC4462605/",
+              "notes": "CHD5 is localized to nucleus and chromatin, required for tumor suppression."
+            }
+          ],
+          "genes": [
+            "CHD5",
+            "SATB1-AS1",
+            "ZNF521",
+            "ZNF804B",
+            "AFF2",
+            "PRMT8",
+            "RBMS3"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Controls cell state plasticity and stemness",
+        "Loss drives therapy resistance and tumor progression"
+      ],
+      "evidence_summary": "Loss or mutation of chromatin/tumor suppressor genes creates a permissive cellular state for glioblastoma aggressiveness.",
+      "significance_score": 0.92,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC4462605/"
+        },
+        {
+          "source_id": "",
+          "url": "https://downloads.hindawi.com/journals/bmri/2014/279871.pdf"
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10978380/"
+        }
+      ],
+      "supporting_genes": [
+        "CHD5",
+        "SATB1-AS1",
+        "ZNF521",
+        "ZNF804B",
+        "AFF2",
+        "PRMT8",
+        "RBMS3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [],
+        "citations": []
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "co-citation",
+      "pathway annotation",
+      "protein interaction networks",
+      "glioblastoma transcriptomics",
+      "cellular component mapping"
+    ],
+    "notes": "Gene clusters reflect high-confidence programs based on glioblastoma literature, pathway analysis, and experimental validation. Programs prioritize well-supported gene sets with established relevance to glioblastoma cell biology, tumor microenvironment and clinical behavior."
+  },
+  "version": "2025-11-14"
+}

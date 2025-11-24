@@ -1,0 +1,550 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "POSTN",
+    "KIAA1211L",
+    "CPNE4",
+    "HMGA2",
+    "TRPM8",
+    "CYTOR",
+    "RGS6",
+    "RPH3A",
+    "CCN4",
+    "ADAMTS9-AS1",
+    "SPRY1",
+    "LEF1",
+    "VAT1L",
+    "COL22A1",
+    "MIR4435-2HG",
+    "AC000065.1",
+    "CPED1",
+    "ARHGAP6",
+    "TRPM3",
+    "ANGPT1",
+    "ALK",
+    "CA2",
+    "SERPINE1",
+    "CHRM3-AS2",
+    "ITGA3",
+    "KIRREL3",
+    "RUBCNL",
+    "SLA",
+    "CCDC175",
+    "SHISA6",
+    "AC064875.1",
+    "SNED1",
+    "SPRY4",
+    "RBPMS",
+    "EMP1",
+    "LINC02832",
+    "LINC02742",
+    "HOPX",
+    "IQGAP2",
+    "GDF15",
+    "IRAK2",
+    "ST8SIA5",
+    "HIVEP3",
+    "TMEM154",
+    "COL19A1",
+    "TFCP2L1",
+    "GRM7",
+    "PLAT",
+    "GLRA2",
+    "FHL2",
+    "TENT5A",
+    "ANXA2",
+    "FSIP1",
+    "SYNJ2",
+    "SYT6",
+    "CLMN",
+    "PDGFD",
+    "CHST8",
+    "CHL1",
+    "PCSK5",
+    "GALR1",
+    "GABBR2",
+    "CNTNAP5",
+    "ARHGAP26",
+    "CA10",
+    "SLC18A1",
+    "SHISA9",
+    "SLC24A2",
+    "COL23A1",
+    "COL25A1",
+    "COL27A1",
+    "RHOJ",
+    "CAMK2B",
+    "CAMK2A",
+    "SLC4A4",
+    "RGS20",
+    "RCAN1",
+    "ESR2",
+    "C6orf141",
+    "CDH4",
+    "SLCO2B1",
+    "BNC2",
+    "AL050403.2",
+    "DNAH9",
+    "SOX1-OT",
+    "EGR1",
+    "SPRY2",
+    "EPHA3",
+    "PPP1R1C",
+    "AL121917.1",
+    "SCG2",
+    "AC090791.1",
+    "WNT16",
+    "IL27RA",
+    "MBNL3",
+    "ADAM19",
+    "IL1RAP",
+    "AC004828.2",
+    "AC011287.1",
+    "WIPF3",
+    "LINC01776",
+    "HS3ST5",
+    "INSYN2A",
+    "JAG1",
+    "NPR3",
+    "AC124254.2",
+    "NPY1R",
+    "TRIB3",
+    "UNC13C",
+    "METTL7B",
+    "AC002454.1",
+    "VAV3",
+    "NTSR1",
+    "TSPAN18",
+    "TPRG1",
+    "KLHL29",
+    "VSNL1",
+    "LINC01949"
+  ],
+  "programs": [
+    {
+      "program_name": "Mesenchymal Invasion & EMT",
+      "description": "Genes such as POSTN, HMGA2, ITGA3, SERPINE1, EMP1, ANXA2 drive extracellular matrix remodeling, loss of adhesion, invasion and mesenchymal transition in glioblastoma. POSTN/EMP1/ANXA2 anchor mesenchymal subtypes and promote integrin-mediated invasion. HMGA2 supports EMT transcriptional programs. SERPINE1 enhances invasion and correlates with poor-prognosis, acting together with EMT and migration genes.",
+      "atomic_biological_processes": [
+        {
+          "name": "epithelial-mesenchymal transition (EMT)",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC4916976/",
+              "source_id": "2",
+              "notes": "POSTN, HMGA2, and ANXA2 drive EMT and invasion in glioblastoma"
+            }
+          ],
+          "genes": [
+            "POSTN",
+            "HMGA2",
+            "ANXA2"
+          ]
+        },
+        {
+          "name": "integrin-mediated cell invasion",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC4916976/",
+              "source_id": "2",
+              "notes": "POSTN activates integrin-dependent migration/invasion"
+            }
+          ],
+          "genes": [
+            "POSTN",
+            "ITGA3",
+            "ANXA2"
+          ]
+        },
+        {
+          "name": "plasminogen activation and matrix degradation",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC6829177/",
+              "source_id": "42",
+              "notes": "SERPINE1 is a regulator of glioblastoma cell dispersal and invasion"
+            }
+          ],
+          "genes": [
+            "SERPINE1",
+            "ANXA2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "extracellular matrix",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC6829177/",
+              "source_id": "42",
+              "notes": "EMP1 and ANXA2 localize to the ECM and membrane, regulating invasion"
+            }
+          ],
+          "genes": [
+            "EMP1",
+            "ANXA2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increased invasion and migration",
+        "promotion of mesenchymal phenotype",
+        "therapy resistance due to enhanced motility"
+      ],
+      "evidence_summary": "Extensive functional and transcriptomic evidence confirms these genes are core components of mesenchymal transition and migratory states in glioblastoma. They modify the ECM and cell adhesion to promote dissemination, a hallmark of high-grade gliomas.",
+      "significance_score": 1.0,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC4916976/",
+          "source_id": "2",
+          "notes": "Comprehensive review of POSTN/EMT in glioblastoma"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC6829177/",
+          "source_id": "42",
+          "notes": "Empirical data on SERPINE1 role in GBM cell invasion"
+        }
+      ],
+      "supporting_genes": [
+        "POSTN",
+        "HMGA2",
+        "SERPINE1",
+        "ITGA3",
+        "EMP1",
+        "ANXA2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MMP2",
+          "VIM",
+          "FN1"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC4916976/",
+            "source_id": "2",
+            "notes": "MMP2 and VIM are canonical effectors in EMT and matrix invasion in GBM"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Stemness & WNT-Driven Maintenance",
+      "description": "LEF1, WNT16, and HMGA2 are central to maintaining glioblastoma stemness and proliferation through canonical and non-canonical WNT pathways. LEF1 is a transcriptional mediator of WNT signaling, required for stem cell traits and proliferation.",
+      "atomic_biological_processes": [
+        {
+          "name": "WNT signaling pathway",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC5503702/",
+              "source_id": "19",
+              "notes": "WNT/LEF1 pathway central to glioblastoma stem cells"
+            }
+          ],
+          "genes": [
+            "LEF1",
+            "WNT16",
+            "HMGA2"
+          ]
+        },
+        {
+          "name": "maintenance of glioblastoma stem cells",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC5503702/",
+              "source_id": "19",
+              "notes": "LEF1 and HMGA2 upregulate stemness factors in GBM"
+            }
+          ],
+          "genes": [
+            "LEF1",
+            "HMGA2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "nucleus",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC5503702/",
+              "source_id": "19",
+              "notes": "LEF1 nuclear localization for WNT-driven gene activation"
+            }
+          ],
+          "genes": [
+            "LEF1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increased self-renewal of tumor stem cells",
+        "enhanced tumor proliferation and resistance"
+      ],
+      "evidence_summary": "These genes have well-established roles in maintaining GSC populations, driving proliferation and resisting differentiation, which underlies tumor recurrence and treatment resistance.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC5503702/",
+          "source_id": "19",
+          "notes": "Summary of WNT/LEF1/GBM stemness axis"
+        }
+      ],
+      "supporting_genes": [
+        "LEF1",
+        "WNT16",
+        "HMGA2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "OLIG2"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC5503702/",
+            "source_id": "19",
+            "notes": "SOX2 and OLIG2 are canonical stemness markers often co-expressed"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Angiogenesis & Microenvironment Interaction",
+      "description": "ANGPT1, ALK, PDGFD, POSTN, COL22A1, COL23A1, COL25A1, COL27A1 and ANXA2, TMEM154 drive angiogenic and microenvironmental cues in glioblastoma. VEGFA-independent mechanisms are engaged by ANGPT1, POSTN and PDGFD.",
+      "atomic_biological_processes": [
+        {
+          "name": "angiogenesis",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC7398665/",
+              "source_id": "39",
+              "notes": "Angiopoietins and PDGF regulate vessel growth in GBM"
+            }
+          ],
+          "genes": [
+            "ANGPT1",
+            "PDGFD",
+            "POSTN"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "vascular niche",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC7398665/",
+              "source_id": "39",
+              "notes": "ANGPT1 and COL genes shape vascular niches for tumor cells"
+            }
+          ],
+          "genes": [
+            "ANGPT1",
+            "COL22A1",
+            "COL23A1",
+            "COL25A1",
+            "COL27A1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "promoted tumor vascularization",
+        "microenvironment remodeling",
+        "increased resistance to anti-angiogenic therapies"
+      ],
+      "evidence_summary": "Combinatorial expression of these genes strongly predicts angiogenic capacity and microenvironment formation, supporting tumor growth and therapy resistance.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC7398665/",
+          "source_id": "39",
+          "notes": "Review of vascular niche and angiogenesis drivers in GBM"
+        }
+      ],
+      "supporting_genes": [
+        "ANGPT1",
+        "PDGFD",
+        "POSTN",
+        "COL22A1",
+        "COL23A1",
+        "COL25A1",
+        "COL27A1",
+        "ANXA2",
+        "TMEM154"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "VEGFA",
+          "EGFR"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC7398665/",
+            "source_id": "39",
+            "notes": "VEGFA/EGFR classically drive angiogenesis and are often co-expressed"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Neuronal-Synaptic & Neurotransmitter Modulation",
+      "description": "Genes such as GRM7, GABBR2, SLC18A1, NTSR1, CAMK2A/2B, and RGS20 modulate neurotransmitter signaling, neuron-glia synaptic interaction, and excitatory/inhibitory balance in glioblastoma. AMPA and GABAergic interactions enable bidirectional synaptic communication influencing proliferation and invasion.",
+      "atomic_biological_processes": [
+        {
+          "name": "neuron-to-glioma synapse formation",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC6127277/",
+              "source_id": "186",
+              "notes": "Neuron-glioma AMPAR-dependent synapses promote glioma growth"
+            }
+          ],
+          "genes": [
+            "GRM7",
+            "GABBR2",
+            "CAMK2A",
+            "CAMK2B"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "synaptic membrane",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC6127277/",
+              "source_id": "186",
+              "notes": "Synaptic AMPAR/GABA receptor assembly"
+            }
+          ],
+          "genes": [
+            "GRM7",
+            "GABBR2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increased responsiveness to neuronal activity",
+        "modulation of proliferation and invasion via synaptic transmission"
+      ],
+      "evidence_summary": "These genes anchor a recently recognized program: neuronal-dependent glioma growth, exploiting synaptic interplay and neurotransmitter release to drive tumor invasion and alter the microenvironment.",
+      "significance_score": 0.88,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC6127277/",
+          "source_id": "186",
+          "notes": "Glioma-neuron synapse function in tumor progression"
+        }
+      ],
+      "supporting_genes": [
+        "GRM7",
+        "GABBR2",
+        "CAMK2A",
+        "CAMK2B",
+        "SLC18A1",
+        "NTSR1",
+        "RGS20"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "NLGN3",
+          "BDNF"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC6127277/",
+            "source_id": "186",
+            "notes": "NLGN3/BDNF as upstream factors in neuron-glioma synapse formation"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Hypoxia/Metabolic Stress Adaptation",
+      "description": "Genes such as CA2, GDF15, EGR1, TRIB3, RCAN1, and SLC4A4 modulate metabolic adaptation to hypoxia and cellular stress. Carbonic anhydrases and GDF15 regulate pH and apoptosis, EGR1 controls hypoxic gene expression. TRIB3 and RCAN1 contribute to autophagic and stress resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "response to hypoxia and metabolic stress",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC4916944/",
+              "source_id": "133",
+              "notes": "CA2/GDF15-GBM metabolic stress roles"
+            }
+          ],
+          "genes": [
+            "CA2",
+            "GDF15",
+            "TRIB3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "mitochondrion",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC4916944/",
+              "source_id": "133",
+              "notes": "Metabolic shifts coordinate with mitochondrial function in GBM"
+            }
+          ],
+          "genes": [
+            "GDF15",
+            "TRIB3"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enhanced cell survival under hypoxia",
+        "increased resistance to metabolic stress and therapeutic intervention"
+      ],
+      "evidence_summary": "These genes support adaptation to tumor hypoxia and metabolic stress, with significant roles in resistance to apoptosis and environmental fluctuations within the tumor mass.",
+      "significance_score": 0.83,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC4916944/",
+          "source_id": "133",
+          "notes": "Metabolic stress, hypoxia and GBM cellular adaptation"
+        }
+      ],
+      "supporting_genes": [
+        "CA2",
+        "GDF15",
+        "EGR1",
+        "TRIB3",
+        "RCAN1",
+        "SLC4A4"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "HIF1A",
+          "LDHA"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/pmc/articles/PMC4916944/",
+            "source_id": "133",
+            "notes": "HIF1A and LDHA are canonical metabolic/hypoxia effectors"
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "pathway databases",
+      "literature co-citations",
+      "protein-protein interaction",
+      "single-cell data",
+      "mesenchymal vs proneural subtype analysis"
+    ],
+    "notes": "Gene programs were assembled by integrating recent literature and pathway databases, cross-validating clusters by co-citation and molecular interaction mapping."
+  },
+  "version": "2025-11-17"
+}

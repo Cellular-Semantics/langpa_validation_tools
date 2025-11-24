@@ -1,0 +1,596 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma multiforme",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "SLIT3",
+    "CA8",
+    "ARX",
+    "AC109492.1",
+    "AL078602.1",
+    "DLX5",
+    "AC006296.3",
+    "DLX6",
+    "RFTN2",
+    "DLX6-AS1",
+    "AC090241.2",
+    "PDZRN3",
+    "GLI2",
+    "TBL1X",
+    "KCNH8",
+    "ST8SIA5",
+    "LRGUK",
+    "TPGS2",
+    "LINC02487",
+    "DACH2",
+    "SOX2-OT",
+    "KIAA0040",
+    "FCGBP",
+    "LINC00326",
+    "AC022075.1",
+    "AC125613.1",
+    "MCUB",
+    "EPHA7",
+    "PLS3",
+    "SLC6A5",
+    "CRYBG3",
+    "LINC01748",
+    "TENM1",
+    "LINC00535",
+    "ABTB2",
+    "MAN2A1",
+    "LAMP5",
+    "MOG",
+    "KITLG",
+    "ZNF618",
+    "PIP5K1B",
+    "AC005162.3",
+    "AC017053.1",
+    "FAM149A",
+    "CRB1",
+    "ERBB3",
+    "EPB41L4A",
+    "STC1",
+    "PID1",
+    "EGFR",
+    "RPL18A",
+    "SPHKAP",
+    "AL512308.1",
+    "LGALS1",
+    "RPL10",
+    "CADM2",
+    "CASC6",
+    "TMTC2",
+    "GRK5",
+    "FREM2",
+    "RPL8",
+    "MDK",
+    "RPS18",
+    "CCDC178",
+    "CDCA7",
+    "CASP9",
+    "GALP",
+    "CNGA3",
+    "MAP3K20",
+    "ADAM28",
+    "COLGALT2",
+    "LINC00689",
+    "DLL1",
+    "CCND2",
+    "RPL13A",
+    "DGKB",
+    "RPL36",
+    "DCT",
+    "CELF4",
+    "LINC01949",
+    "DAPL1",
+    "RPL7",
+    "LINC01324",
+    "CNDP1",
+    "RPL32",
+    "RPL41",
+    "RPL34",
+    "MRC1",
+    "LINC00299",
+    "PEX5L",
+    "GRIN3A",
+    "GRAMD1B",
+    "GPR153",
+    "HIST1H2BD",
+    "NTNG2",
+    "MEIS2",
+    "PAPSS2",
+    "PAX3",
+    "PCP4",
+    "PCSK2",
+    "ISG15",
+    "GAD2",
+    "FLRT2",
+    "LGR5",
+    "PLA2G4A",
+    "KCNN1",
+    "PPFIBP1",
+    "MALAT1",
+    "LRTM1",
+    "EPCAM-DT",
+    "PRRX1",
+    "H2AFY2",
+    "EFHD2",
+    "EBF2",
+    "RASGEF1C",
+    "RELN",
+    "EFNA5",
+    "RPL28",
+    "CACNA2D2",
+    "AGMO",
+    "BCAS1",
+    "SIPA1L2",
+    "SLAIN1",
+    "SLC4A11",
+    "SLC9B1",
+    "AP002026.1",
+    "ST6GALNAC5",
+    "AL158038.1",
+    "AJAP1",
+    "ADARB2",
+    "BDNF-AS",
+    "AC116049.2",
+    "AC109466.1",
+    "TOX3",
+    "AC087477.2",
+    "AC061958.1",
+    "UNC5B",
+    "AC012485.1",
+    "AC007405.1",
+    "ZNF727",
+    "BCL11B",
+    "TFAP2B",
+    "BTG2",
+    "SAT1",
+    "C15orf41"
+  ],
+  "programs": [
+    {
+      "program_name": "RTK/RAS/PI3K Pathway Activation",
+      "description": "Core glioblastoma oncogenic signaling driven by EGFR and ERBB3 amplification and mutation, with supporting genes including MDK, GRK5, and downstream regulators of proliferation and survival.",
+      "atomic_biological_processes": [
+        {
+          "name": "EGFR signaling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3244322/",
+              "notes": "EGFR amplification/mutation is a key driver event in glioblastoma."
+            },
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7068482/",
+              "notes": "EGFR variants including EGFRvIII involved in pathogenesis."
+            }
+          ],
+          "genes": [
+            "EGFR"
+          ]
+        },
+        {
+          "name": "ERBB signaling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.mdpi.com/2073-4409/12/7/1097",
+              "notes": "ERBB3 alterations contribute to glioblastoma growth and therapy resistance."
+            }
+          ],
+          "genes": [
+            "ERBB3"
+          ]
+        },
+        {
+          "name": "MDK (midkine) signaling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.frontiersin.org/articles/10.3389/fonc.2023.1145051/full",
+              "notes": "MDK involved in cell proliferation and survival, downstream of RTK pathways."
+            }
+          ],
+          "genes": [
+            "MDK"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [],
+      "predicted_cellular_impact": [
+        "enhanced proliferation",
+        "robust survival signaling",
+        "hyperactivated metabolic networks",
+        "therapy resistance"
+      ],
+      "evidence_summary": "EGFR/ERBB pathway activation\u2014including canonical and variant forms\u2014is one of the most consistent oncogenic mechanisms in glioblastoma, promoting growth, survival, and resistance to conventional therapies. MDK and GRK5 serve as further downstream effectors that amplify mitogenic signaling.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3244322/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.mdpi.com/2073-4409/12/7/1097"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9579422/"
+        }
+      ],
+      "supporting_genes": [
+        "EGFR",
+        "ERBB3",
+        "MDK",
+        "GRK5"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "PIK3CA",
+          "PTEN",
+          "AKT1"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6963941/",
+            "notes": "PI3K pathway mutations commonly contribute, sometimes by loss of PTEN or gain of PIK3CA/AKT1."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Proneural-Mesenchymal Transition & Stem Cell Plasticity",
+      "description": "GBM manifests plasticity between proneural and mesenchymal cell states, driven by core factors (SOX2, DLL1, PRRX1, RELN, MEIS2) and lncRNAs (MALAT1) with a supporting role for EMT drivers and neurodevelopmental transcription factors.",
+      "atomic_biological_processes": [
+        {
+          "name": "Mesenchymal transition",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.mdpi.com/2072-6694/11/6/845",
+              "notes": "Phenotypic drift towards mesenchymal programs in recurrent GBM."
+            }
+          ],
+          "genes": [
+            "PRRX1",
+            "RELN",
+            "DLL1"
+          ]
+        },
+        {
+          "name": "Neural stem cell program / self-renewal",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5382166/",
+              "notes": "SOX2 and FOXG1 mediate stemness and cell cycle control."
+            },
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5039282/",
+              "notes": "SOX2 regulates the glioma stem cell compartment."
+            }
+          ],
+          "genes": [
+            "SOX2-OT",
+            "SOX2",
+            "DLL1",
+            "LGR5",
+            "MEIS2",
+            "MALAT1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [],
+      "predicted_cellular_impact": [
+        "increased tumor plasticity",
+        "fast adaptation to microenvironmental shifts",
+        "therapy resistance (especially to radiotherapy/chemotherapy)",
+        "capacity to transition between neural and mesenchymal lineages"
+      ],
+      "evidence_summary": "GBM stem cells show bidirectional transitions (proneural\u2013mesenchymal). SOX2, PRRX1, DLL1, LGR5, RELN and MEIS2 underlie these programs. MALAT1 lncRNA mediates stemness and therapy resistance.",
+      "significance_score": 0.93,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.mdpi.com/2072-6694/11/6/845"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5382166/"
+        }
+      ],
+      "supporting_genes": [
+        "SOX2-OT",
+        "SOX2",
+        "DLL1",
+        "LGR5",
+        "PRRX1",
+        "RELN",
+        "MEIS2",
+        "MALAT1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX10",
+          "ZEB1"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7707631/",
+            "notes": "SOX10 loss promotes mesenchymal switch in GBM."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Aberrant Translation, Ribosome Biogenesis, and Metabolic Adaptation",
+      "description": "Multiple ribosomal proteins (RPLs, RPSs) and translation regulators are upregulated in glioblastoma, supporting high protein synthesis, metabolic rewiring, and therapy resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "Translation initiation",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.frontiersin.org/articles/10.3389/fonc.2023.1145051/full",
+              "notes": "Translation machinery, especially initiation, is dysregulated in GBM, promoting adaptation to hypoxia."
+            }
+          ],
+          "genes": [
+            "RPL18A",
+            "RPL13A",
+            "RPL8",
+            "RPS18",
+            "RPL10",
+            "RPL7",
+            "RPL32",
+            "RPL41",
+            "RPL34",
+            "RPL36",
+            "RPL28"
+          ]
+        },
+        {
+          "name": "Ribosome biogenesis",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8777701/",
+              "notes": "NIR-driven ribosomal DNA transcription supports GBM stem cell proliferation."
+            }
+          ],
+          "genes": [
+            "RPL10",
+            "RPS18"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [],
+      "predicted_cellular_impact": [
+        "increased protein synthesis capacity",
+        "rapid proliferation under stress",
+        "therapy resistance",
+        "metabolic flexibility"
+      ],
+      "evidence_summary": "Upregulation and dysregulation of translation initiation and ribosome biogenesis are hallmarks of GBM, connecting to rapid proliferation and metabolic adaptation, thus supporting resistance to targeted therapies.",
+      "significance_score": 0.89,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.frontiersin.org/articles/10.3389/fonc.2023.1145051/full"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8777701/"
+        }
+      ],
+      "supporting_genes": [
+        "RPL18A",
+        "RPL13A",
+        "RPL8",
+        "RPS18",
+        "RPL10",
+        "RPL7",
+        "RPL32",
+        "RPL41",
+        "RPL34",
+        "RPL36",
+        "RPL28"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "EIF4E",
+          "RPS6"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.mdpi.com/2072-6694/12/4/1006",
+            "notes": "Canonical translation initiation factors also contribute to aberrant translation in GBM."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Apoptosis and Therapy Resistance Programs",
+      "description": "Activation of intrinsic mitochondrial apoptosis pathways via CASP9, combined with resistance mechanisms including polyamine metabolism (SAT1), cell cycle control by BTG2, and ISG15-driven immune evasion.",
+      "atomic_biological_processes": [
+        {
+          "name": "Mitochondrial apoptosis",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7073372/",
+              "notes": "Caspase-9 mediates mitochondria-dependent apoptosis in GBM, involved in therapy response."
+            }
+          ],
+          "genes": [
+            "CASP9"
+          ]
+        },
+        {
+          "name": "Polyamine metabolism (SAT1)",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4260493/",
+              "notes": "SAT1 modulates tumorigenesis and radiation response in GBM, and controls ferroptotic cell death."
+            }
+          ],
+          "genes": [
+            "SAT1"
+          ]
+        },
+        {
+          "name": "Immune evasion (ISG15 signaling)",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10428012/",
+              "notes": "ISG15-driven IFN response in GBM cells increases chemo-resistance through microglia interaction."
+            }
+          ],
+          "genes": [
+            "ISG15"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [],
+      "predicted_cellular_impact": [
+        "resistance to apoptosis",
+        "modulation of immune cell infiltration",
+        "enhanced therapy resistance",
+        "control of tumor microenvironment signaling"
+      ],
+      "evidence_summary": "Combined apoptosis pathways, polyamine metabolic adaptation (including ferroptosis sensitivity), and immune signaling programs through ISG15 contribute to evasion of cell death and immune surveillance in glioblastoma.",
+      "significance_score": 0.86,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7073372/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4260493/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10428012/"
+        }
+      ],
+      "supporting_genes": [
+        "CASP9",
+        "SAT1",
+        "ISG15",
+        "BTG2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "TP53",
+          "BCL2",
+          "XIAP"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC46452/",
+            "notes": "TP53 mediates apoptosis and cell cycle arrest in glioblastoma; BCL2 and XIAP further regulate resistance."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Neural and Axon Guidance, Migration",
+      "description": "Multiple neural development/axon guidance genes (SLIT3, UNC5B, NTNG2, FLRT2, EPHA7, RELN, DLL1, EFNA5) regulate migration, invasion, and differentiation in the neural microenvironment, promoting cell dispersal and network interactions within the brain.",
+      "atomic_biological_processes": [
+        {
+          "name": "Axon guidance, migration",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10553136/",
+              "notes": "Slit/Robo signaling is a regulator of glioma cell migration and invasion."
+            },
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3294864/",
+              "notes": "UNC5B and netrin signaling regulate proliferation and migration in glioblastoma."
+            },
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8251001/",
+              "notes": "Glutamate receptors, including NMDA (GRIN3A), drive migration and proliferation."
+            }
+          ],
+          "genes": [
+            "SLIT3",
+            "UNC5B",
+            "NTNG2",
+            "FLRT2",
+            "EPHA7",
+            "RELN",
+            "DLL1",
+            "EFNA5",
+            "GRIN3A"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [],
+      "predicted_cellular_impact": [
+        "promotes neural cell migration and invasion",
+        "supports neural differentiation within tumor mass",
+        "facilitates adaptability in neural tissue microenvironment"
+      ],
+      "evidence_summary": "Glioblastoma exploits neural development and axon guidance cues to promote migration, infiltration, and survival in the central nervous system. Genes such as SLIT3, UNC5B, NTNG2, FLRT2, and EPHA7, as well as glutamate receptor subunits (GRIN3A), are functionally linked to these processes.",
+      "significance_score": 0.84,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10553136/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3294864/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8251001/"
+        }
+      ],
+      "supporting_genes": [
+        "SLIT3",
+        "UNC5B",
+        "NTNG2",
+        "FLRT2",
+        "EPHA7",
+        "RELN",
+        "DLL1",
+        "EFNA5",
+        "GRIN3A"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "ROBO1",
+          "SEMA3A",
+          "NRP1"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10553136/",
+            "notes": "ROBO1 (Slit receptor) and SEMA3A/NRP1 signaling also contribute to axon guidance in glioblastoma."
+          }
+        ]
+      }
+    }
+  ],
+  "version": "2025-11-17"
+}

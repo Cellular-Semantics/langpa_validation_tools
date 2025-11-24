@@ -1,0 +1,608 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "GRIN3A",
+    "CUX2",
+    "LINC02144",
+    "LINC00639",
+    "CACNA2D3",
+    "DLX6-AS1",
+    "SYT1",
+    "OLFM3",
+    "TOX",
+    "THRB",
+    "SLAIN1",
+    "GABRB2",
+    "PLCB1",
+    "HRK",
+    "NYAP2",
+    "LINC00581",
+    "AL009178.3",
+    "MAML3",
+    "SLC17A6",
+    "LYPD6B",
+    "LRTM1",
+    "CARMIL1",
+    "CNTN2",
+    "EBF3",
+    "INSYN2B",
+    "NSG2",
+    "GRK5",
+    "FRAS1",
+    "KITLG",
+    "B3GAT2",
+    "MEIS2",
+    "SYNPR",
+    "ZNF618",
+    "CDH12",
+    "SPOCK1",
+    "SRRM4",
+    "SVEP1",
+    "AC006296.3",
+    "PCP4",
+    "LEMD1",
+    "CEMIP2",
+    "NXPH1",
+    "KLHL35",
+    "UNCX",
+    "ABTB2",
+    "MDGA2",
+    "AP003464.1",
+    "ROBO3",
+    "CNTNAP5",
+    "ERBB4",
+    "AC017053.1",
+    "SOX1-OT",
+    "AC022075.1",
+    "EPHA3",
+    "CRIM1",
+    "CRABP1",
+    "ARX",
+    "RBFOX3",
+    "RMST",
+    "ARHGAP18",
+    "FLRT2",
+    "AL392023.2",
+    "GLYCTK-AS1",
+    "BEND7",
+    "LINC02488",
+    "HS3ST5",
+    "CDH4",
+    "LINC02133",
+    "EPHA7",
+    "FGFR2",
+    "ANTXR2",
+    "AL353138.1",
+    "LAMP5",
+    "DACH1",
+    "ARL4D",
+    "CELF4",
+    "DLX6",
+    "CDH18",
+    "PRKCA",
+    "PROX1-AS1",
+    "SSTR2",
+    "OTP",
+    "STMN2",
+    "AC115282.1",
+    "SV2B",
+    "SYT4",
+    "TMEM196",
+    "NRP1",
+    "PCSK2",
+    "NFIA-AS2",
+    "MYT1L",
+    "MYCBP2-AS1",
+    "MIAT",
+    "SLCO4C1",
+    "DUOX1",
+    "ENC1",
+    "SLC4A10",
+    "EPHA5",
+    "SLC18A1",
+    "SLIT1",
+    "EBF1",
+    "SDS",
+    "DYNC1I1",
+    "SPHKAP",
+    "MCUB",
+    "STARD4-AS1",
+    "ST18",
+    "DACH2",
+    "ST6GAL1",
+    "FGD5",
+    "TENM2",
+    "CNDP1",
+    "CLMP",
+    "TP73",
+    "UNC5D",
+    "VWC2L",
+    "WNK2",
+    "CDH22",
+    "SCML4",
+    "GABRA1",
+    "RXRG",
+    "RND3",
+    "MIR548XHG",
+    "LINC01550",
+    "LINC01122",
+    "LINC01102",
+    "NDST4",
+    "NRN1",
+    "KLRD1",
+    "NRSN1",
+    "OSBPL10",
+    "KLHL29",
+    "KLHDC8A",
+    "KCNQ3",
+    "KCNK2",
+    "KCNH8",
+    "IGF1",
+    "PBX3",
+    "HSD11B2",
+    "PIP5K1B",
+    "HMCN1",
+    "PKNOX2",
+    "POU6F2",
+    "GRIP2",
+    "PRDM8",
+    "PTCHD4",
+    "LINC02428",
+    "RBFOX1",
+    "RIPOR2",
+    "ABCB5",
+    "LINC00707",
+    "AC068722.1",
+    "B3GLCT",
+    "AL445623.2",
+    "ADCY8",
+    "BPIFC",
+    "CASC15",
+    "ADAMTS9-AS2",
+    "AC090403.1"
+  ],
+  "programs": [
+    {
+      "program_name": "Glutamatergic Signaling & Excitotoxicity",
+      "description": "Includes NMDA receptor signaling (GRIN3A), glutamate transport (SLC17A6), synaptic vesicle cycling (SYT1, SV2B, SYNPR), glutamate release and reuptake, contributing to neural excitability and tumor-associated seizures in glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "NMDA receptor signaling",
+          "genes": [
+            "GRIN3A"
+          ],
+          "citation": [
+            {
+              "url": "https://www.mdpi.com/2072-6694/11/4/523",
+              "notes": "GRIN3A as an NMDA receptor subunit expressed in glioblastoma, promotes cell survival and therapy resistance "
+            }
+          ]
+        },
+        {
+          "name": "Glutamate vesicular transport",
+          "genes": [
+            "SLC17A6"
+          ],
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/20107057/",
+              "notes": "VGLUT2 essential for glutamate exocytosis "
+            }
+          ]
+        },
+        {
+          "name": "Synaptic vesicle cycling",
+          "genes": [
+            "SYT1",
+            "SV2B",
+            "SYNPR"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2816987/",
+              "notes": "SYT1 and SV2B regulate vesicle exocytosis and recycling "
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Excitatory synaptic terminal",
+          "genes": [
+            "GRIN3A",
+            "SYT1",
+            "SLC17A6",
+            "SV2B",
+            "SYNPR"
+          ],
+          "citation": [
+            {
+              "url": "https://www.mdpi.com/2072-6694/11/4/523",
+              "notes": "NMDA receptor and vesicular proteins localize to excitatory synapses in glioblastoma "
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced synaptogenic and excitatory signaling capacity",
+        "Increased susceptibility to tumor-associated hyperexcitability and seizures",
+        "Augmented resistance to radiotherapy via NMDA-dependent pathways"
+      ],
+      "evidence_summary": "Strong literature support for glutamate-mediated signaling as a hallmark of glioblastoma, contributing to synaptic remodeling, excitotoxicity, and therapy resistance.",
+      "significance_score": 1.0,
+      "citations": [
+        {
+          "url": "https://www.mdpi.com/2072-6694/11/4/523",
+          "notes": "NMDA receptor role in glioblastoma survival and resistance "
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2816987/",
+          "notes": "Gene expression profiling in GBM "
+        }
+      ],
+      "supporting_genes": [
+        "GRIN3A",
+        "SLC17A6",
+        "SYT1",
+        "SV2B",
+        "SYNPR"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SLC17A7",
+          "GLS",
+          "GLUL"
+        ],
+        "citations": [
+          {
+            "url": "https://www.mdpi.com/2072-6694/11/4/523",
+            "notes": "SLC17A7 (VGLUT1) is also relevant for glutamate handling."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "GABAergic and Neuronal Differentiation",
+      "description": "Markers and regulators of interneuron fate and synaptic inhibition, including GABA-A receptor subunits (GABRA1, GABRB2), classic interneuron fate determinants (DLX6, ARX, LAMP5), and interneuron differentiation regulators (SRRM4, RBFOX3).",
+      "atomic_biological_processes": [
+        {
+          "name": "GABA-A receptor activity",
+          "genes": [
+            "GABRA1",
+            "GABRB2"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3135370/",
+              "notes": "GABAergic transmission is critical for inhibitory tone in the brain and is altered in glioblastoma "
+            }
+          ]
+        },
+        {
+          "name": "Interneuron differentiation",
+          "genes": [
+            "DLX6",
+            "ARX",
+            "SRRM4",
+            "LAMP5"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2832889/",
+              "notes": "Interneuron subtype genes drive GABAergic specification "
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Inhibitory synapse",
+          "genes": [
+            "GABRA1",
+            "GABRB2",
+            "LAMP5"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2682304/",
+              "notes": "LAMP5 and GABA-A subunits in presynaptic and postsynaptic inhibitory terminals "
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Impaired inhibitory synaptic control in glioblastoma microenvironment",
+        "Potential for tumor-associated epileptiform activity",
+        "Presence of neuron-like gene signatures indicating partial differentiation"
+      ],
+      "evidence_summary": "Multiple interneuron lineage and inhibitory synapse genes are aberrantly expressed in GBM, reflecting neuronal mimicry and disruption of inhibitory control.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3135370/",
+          "notes": "GABAergic regulation in glioblastoma "
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2682304/",
+          "notes": "LAMP5 and inhibitory circuits "
+        }
+      ],
+      "supporting_genes": [
+        "GABRA1",
+        "GABRB2",
+        "DLX6",
+        "ARX",
+        "SRRM4",
+        "RBFOX3",
+        "LAMP5"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "GAD1",
+          "GAD2"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3135370/",
+            "notes": "Glutamic acid decarboxylase for GABA synthesis"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Neural Cell Adhesion & Migration",
+      "description": "Cadherins, contactins, and ephrin/ROBO/SLIT pathway molecules (CDH4, CDH12, CDH18, CNTN2, CNTNAP5, EPHA3, EPHA5, EPHA7, ROBO3, SLIT1, FLRT2, NXPH1, CRIM1) regulate cell adhesion, migration, and axon guidance\u2014a core mechanism underlying glioblastoma invasiveness.",
+      "atomic_biological_processes": [
+        {
+          "name": "Cell-cell adhesion",
+          "genes": [
+            "CDH4",
+            "CDH12",
+            "CDH18"
+          ],
+          "citation": [
+            {
+              "url": "https://www.mdpi.com/2072-6694/11/4/523",
+              "notes": "Cadherins promote cell contact and GBM infiltration "
+            }
+          ]
+        },
+        {
+          "name": "Axon guidance",
+          "genes": [
+            "EPHA3",
+            "EPHA5",
+            "ROBO3",
+            "SLIT1",
+            "FLRT2"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4742991/",
+              "notes": "Eph/ephrin and ROBO/SLIT pathways in neuronal migration and tumor cell invasion "
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Neural cell adhesion complexes",
+          "genes": [
+            "CDH4",
+            "CDH12",
+            "CDH18",
+            "CNTN2",
+            "CNTNAP5"
+          ],
+          "citation": [
+            {
+              "url": "https://www.mdpi.com/2072-6694/11/4/523",
+              "notes": "Contactin and cadherin protein complexes in cell migration "
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Augmented glioblastoma migration, infiltration, and invasion",
+        "Potential hijacking of axon guidance cues for tumor dispersal"
+      ],
+      "evidence_summary": "Strong evidence implicates these gene sets in tumor infiltration and brain parenchyma invasion, key to glioblastoma's malignancy.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "url": "https://www.mdpi.com/2072-6694/11/4/523",
+          "notes": "Cadherin and axon guidance gene roles in GBM "
+        }
+      ],
+      "supporting_genes": [
+        "CDH4",
+        "CDH12",
+        "CDH18",
+        "CNTN2",
+        "CNTNAP5",
+        "EPHA3",
+        "EPHA5",
+        "EPHA7",
+        "ROBO3",
+        "SLIT1",
+        "FLRT2",
+        "NXPH1",
+        "CRIM1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "NCAM1",
+          "L1CAM"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4742991/",
+            "notes": "NCAM1 is a key cell migration regulator in glioblastoma"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Calcium Signaling and Ion Homeostasis",
+      "description": "Encompasses genes for calcium channels (CACNA2D3), phospholipase C signaling (PLCB1), potassium channels (KCNQ3, KCNK2, KCNH8), ion cotransporters (SLC4A10), and associated effectors (PRKCA, ADCY8). Core program for proliferation, migration, and apoptosis resistance in glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "Calcium influx signaling",
+          "genes": [
+            "CACNA2D3",
+            "PLCB1",
+            "PRKCA"
+          ],
+          "citation": [
+            {
+              "url": "https://www.mdpi.com/2072-6694/11/4/523",
+              "notes": "Calcium regulatory pathways in proliferation and stemness "
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Calcium channel complex",
+          "genes": [
+            "CACNA2D3"
+          ],
+          "citation": [
+            {
+              "url": "https://www.mdpi.com/2072-6694/11/4/523",
+              "notes": "Calcium channel subunit controls glioblastoma cell stemness "
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Proliferation, survival, and resistance to apoptosis",
+        "Modulation of migration/invasion via ionic signaling"
+      ],
+      "evidence_summary": "Multiple studies demonstrate critical roles for ion channels and calcium signaling in glioblastoma growth and therapy resistance.",
+      "significance_score": 0.85,
+      "citations": [
+        {
+          "url": "https://www.mdpi.com/2072-6694/11/4/523",
+          "notes": "Calcium/ion signaling, invasion, and GBM stem cell maintenance "
+        }
+      ],
+      "supporting_genes": [
+        "CACNA2D3",
+        "PLCB1",
+        "KCNQ3",
+        "KCNK2",
+        "KCNH8",
+        "SLC4A10",
+        "PRKCA",
+        "ADCY8"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "ORAI1",
+          "STIM1",
+          "CACNA1C"
+        ],
+        "citations": [
+          {
+            "url": "https://www.mdpi.com/2072-6694/11/4/523",
+            "notes": "ORAI1 and STIM1 essential for SOCE in glioblastoma"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Transcriptional and Epigenetic Reprogramming",
+      "description": "Transcription factors (MEIS2, ARX, DLX6, EBF3, MYT1L, PBX3, THRB, CUX2, TP73), chromatin remodelers, and splicing regulators (SRRM4, RBFOX3) contribute to cell fate plasticity, maintenance of stemness, and tumor cell adaptation.",
+      "atomic_biological_processes": [
+        {
+          "name": "Transcriptional regulation",
+          "genes": [
+            "MEIS2",
+            "ARX",
+            "DLX6",
+            "EBF3",
+            "MYT1L",
+            "PBX3",
+            "THRB",
+            "TP73"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9630130/",
+              "notes": "Glioblastoma stem cell and proneural identity regulatory TFs "
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Transcriptional complex",
+          "genes": [
+            "MEIS2",
+            "ARX",
+            "DLX6",
+            "EPHA3"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9630130/",
+              "notes": "Complex TF regulatory networks in GBM "
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Maintenance of stem cell\u2013like state in subpopulations",
+        "Plasticity and resistance to differentiation therapies"
+      ],
+      "evidence_summary": "Well-supported by recent analyses of GBM stem cell transcriptomics and developmental reprogramming.",
+      "significance_score": 0.8,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9630130/",
+          "notes": "TFs drive GBM stemness and plasticity "
+        }
+      ],
+      "supporting_genes": [
+        "MEIS2",
+        "ARX",
+        "DLX6",
+        "EBF3",
+        "MYT1L",
+        "PBX3",
+        "THRB",
+        "CUX2",
+        "TP73",
+        "SRRM4",
+        "RBFOX3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "OLIG2",
+          "ASCL1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9630130/",
+            "notes": "GBM state-defining TFs"
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "functional pathway annotation",
+      "co-expression in GBM single-cell studies",
+      "reviewed pathway and protein complex relationships"
+    ],
+    "notes": "Gene programs defined by intersecting canonical brain biology, glioblastoma transcriptomic signatures, and cell state/pathway literature. Multi-member, high-confidence clusters are prioritized as core programs."
+  },
+  "version": "2025-11-17"
+}

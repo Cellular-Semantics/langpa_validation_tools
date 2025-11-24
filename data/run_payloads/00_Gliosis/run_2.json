@@ -1,0 +1,673 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "SERPINE1",
+    "EMP1",
+    "SPOCD1",
+    "ARHGAP29",
+    "IL1R1",
+    "COL6A2",
+    "MYOF",
+    "F13A1",
+    "CXCL10",
+    "CHI3L1",
+    "MET",
+    "IL6",
+    "SAA2",
+    "BIRC3",
+    "MCTP2",
+    "ANGPTL4",
+    "ICAM1",
+    "CCN1",
+    "CAV1",
+    "APLN",
+    "FOSL1",
+    "SNTG2-AS1",
+    "TPD52L1",
+    "SAA4",
+    "KRT75",
+    "NFATC2",
+    "COL5A1",
+    "AC243829.2",
+    "CLCF1",
+    "ARSJ",
+    "PLA2G2A",
+    "HMGA2",
+    "PTX3",
+    "TLR2",
+    "LINC00698",
+    "ALPK2",
+    "TNFAIP3",
+    "TNFAIP2",
+    "NDRG1",
+    "SMOC2",
+    "ADGRL2",
+    "KANK4",
+    "GEM",
+    "FAS",
+    "CXCL8",
+    "CFH",
+    "ABCC3",
+    "CXCL14",
+    "ZFP36",
+    "RCAN2",
+    "GADD45A",
+    "COL1A2",
+    "LTF",
+    "DHRS3",
+    "IDO1",
+    "HAP1",
+    "AXL",
+    "ATP6V0D2",
+    "KLF5",
+    "ST6GALNAC5",
+    "GPD1",
+    "PAPPA2",
+    "BAG3",
+    "MYBPH",
+    "MYBPC1",
+    "MX2",
+    "APBB1IP",
+    "ANPEP",
+    "ALPL",
+    "GPRC5A",
+    "SPP1",
+    "CXCL2",
+    "GPC5",
+    "RRAD",
+    "LIF",
+    "CHRNA9",
+    "IL4R",
+    "NPNT",
+    "SAA1",
+    "NPR3",
+    "PROM1",
+    "SLIT3",
+    "ITGBL1",
+    "MYO5B",
+    "RPS5",
+    "RPS27",
+    "ETS2",
+    "PTGS2",
+    "RPS18",
+    "BNC2",
+    "CPA4",
+    "NPAS2",
+    "CD274",
+    "SLC10A6",
+    "LRAT",
+    "LINC01993",
+    "LINC02832",
+    "LINC02821",
+    "GBP5",
+    "AC021851.2",
+    "AKAP12",
+    "LINC02154",
+    "FN1",
+    "MIR222HG",
+    "VEGFA",
+    "GBP2",
+    "ZNF735",
+    "TSHZ2",
+    "TRPM2",
+    "LUCAT1",
+    "PI3"
+  ],
+  "programs": [
+    {
+      "program_name": "Mesenchymal Transition & Invasion",
+      "description": "This program assembles genes regulating key drivers of mesenchymal transition, cellular motility, matrix remodeling, tumor infiltration, and invasion through both transcriptional reprogramming and effector proteins. FOSL1/AP-1, CHI3L1, SPP1, SERPINE1, CAV1, MET, AXL, FN1, COL5A1, and COL6A2 are prominent in driving or supporting mesenchymal phenotype and cellular invasion processes in glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "epithelial-to-mesenchymal transition",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8916548/",
+              "notes": "FOSL1/AP-1 as a master regulator of mesenchymal shift and invasion in glioblastoma stem cells."
+            },
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10699000/",
+              "notes": "FN1 supports CAF-driven GBM migration & invasion."
+            }
+          ],
+          "genes": [
+            "FOSL1",
+            "CHI3L1",
+            "SERPINE1",
+            "SPP1"
+          ]
+        },
+        {
+          "name": "cell migration",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8916548/",
+              "notes": "AP1-driven transcription, MET/AXL crosstalk, and CAV1 all potentiate migration."
+            }
+          ],
+          "genes": [
+            "MET",
+            "AXL",
+            "FOSL1",
+            "CAV1"
+          ]
+        },
+        {
+          "name": "extracellular matrix remodeling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.mdpi.com/2072-6694/15/5/1451",
+              "notes": "ECM and collagens COL5A1, COL6A2, FN1, and SPP1 modify tumor microenvironment and invasiveness."
+            }
+          ],
+          "genes": [
+            "FN1",
+            "COL1A2",
+            "COL5A1",
+            "COL6A2",
+            "SPP1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "extracellular matrix",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.mdpi.com/2072-6694/15/5/1451",
+              "notes": "Collagens and fibronectin as core ECM regulators in glioblastoma."
+            }
+          ],
+          "genes": [
+            "COL1A2",
+            "COL5A1",
+            "COL6A2",
+            "FN1",
+            "SPP1"
+          ]
+        },
+        {
+          "name": "focal adhesion",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8916548/",
+              "notes": "FOSL1 targets adhesion molecules and modulates cytoskeletal organization."
+            }
+          ],
+          "genes": [
+            "FOSL1",
+            "CAV1",
+            "MET"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "promotes mesenchymal shift and invasion",
+        "enhances cell migration and ECM degradation",
+        "supports CAF-like microenvironment"
+      ],
+      "evidence_summary": "Strongly supported by transcriptomic, functional, and clinical datasets associating mesenchymal signature genes with poor prognosis, rapid tumor infiltration, and therapy-resistant GBM.",
+      "significance_score": 0.98,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8916548/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10699000/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.mdpi.com/2072-6694/15/5/1451"
+        }
+      ],
+      "supporting_genes": [
+        "FOSL1",
+        "CHI3L1",
+        "SERPINE1",
+        "SPP1",
+        "FN1",
+        "CAV1",
+        "MET",
+        "AXL",
+        "COL1A2",
+        "COL5A1",
+        "COL6A2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MMP2",
+          "VIM",
+          "ZEB1"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8916548/",
+            "notes": "Canonical MES signature\u2014core invasion factors."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Immune Modulation and Inflammation",
+      "description": "Cluster of genes representing cytokine/chemokine signaling, inflammatory response, and immune evasion mechanisms. Includes proinflammatory cytokines (IL6, IL1R1), acute phase reactants (SAA1/2/4), chemokines (CXCL8, CXCL10, CXCL14), and immune regulatory checkpoints (CD274), emphasizing the immunosuppressive and inflammatory tumor microenvironment in GBM.",
+      "atomic_biological_processes": [
+        {
+          "name": "cytokine-mediated signaling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9055064/",
+              "notes": "IL6 and IL1R1 are hubs of inflammatory cytokine pathways in GBM."
+            }
+          ],
+          "genes": [
+            "IL6",
+            "IL1R1"
+          ]
+        },
+        {
+          "name": "chemokine activity",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3087854/",
+              "notes": "CXCL8, CXCL10 upregulated in hypoxic, inflammatory GBM microenvironments."
+            }
+          ],
+          "genes": [
+            "CXCL8",
+            "CXCL10",
+            "CXCL14",
+            "CXCL2"
+          ]
+        },
+        {
+          "name": "acute phase response",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7973823/",
+              "notes": "SAA1/SAA2/SAA4 and CRP-related systemic and local inflammatory signals in GBM."
+            }
+          ],
+          "genes": [
+            "SAA1",
+            "SAA2",
+            "SAA4"
+          ]
+        },
+        {
+          "name": "immune checkpoint signaling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6862926/",
+              "notes": "IDO1 and CD274 (PD-L1) are immunoregulatory in glioblastoma."
+            }
+          ],
+          "genes": [
+            "IDO1",
+            "CD274"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "immune synapse",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6862926/",
+              "notes": "PD-L1/PD-1 checkpoint operates at the immune interface."
+            }
+          ],
+          "genes": [
+            "CD274"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "drives immunosuppressive microenvironment",
+        "sustains chronic inflammation and paracrine tumor support",
+        "facilitates immune escape"
+      ],
+      "evidence_summary": "Multiple GBM studies confirm robust activation of cytokine/chemokine pathways with immune checkpoint regulation; SAA proteins are linked to higher apoptosis resistance.",
+      "significance_score": 0.93,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9055064/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6862926/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7973823/"
+        }
+      ],
+      "supporting_genes": [
+        "IL6",
+        "IL1R1",
+        "SAA1",
+        "SAA2",
+        "SAA4",
+        "CXCL8",
+        "CXCL10",
+        "CXCL14",
+        "IDO1",
+        "CD274"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "PDCD1",
+          "CD8A"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6862926/",
+            "notes": "Immune setpoint in GBM."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Stemness and Therapy Resistance",
+      "description": "Genes maintaining glioblastoma stem-like cell (GSC) identity, pluripotency, and resistance to therapy, such as PROM1 (CD133), HMGA2, LIF, and BAG3. Markers here also impact tumor recurrence, plasticity, and response to stress.",
+      "atomic_biological_processes": [
+        {
+          "name": "stem cell maintenance",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9985426/",
+              "notes": "PROM1 (CD133) as a functional and controversial GSC marker in GBM."
+            }
+          ],
+          "genes": [
+            "PROM1",
+            "HMGA2",
+            "LIF"
+          ]
+        },
+        {
+          "name": "transcriptional regulation of pluripotency",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4932936/",
+              "notes": "HMGA2, LIF and supporting evidence for stemness and recurrence in GBM."
+            }
+          ],
+          "genes": [
+            "HMGA2",
+            "LIF"
+          ]
+        },
+        {
+          "name": "autophagy",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4372074/",
+              "notes": "BAG3 upregulates autophagy for GBM survival and chemoresistance."
+            }
+          ],
+          "genes": [
+            "BAG3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "perivascular niche",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2760935/",
+              "notes": "Stem-like tumor cells thrive in hypoxic niches within GBM."
+            }
+          ],
+          "genes": [
+            "PROM1",
+            "LIF"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "supports GSC identity and heterogeneity",
+        "maintains tumor-initiating potential and recurrence risk",
+        "drives resistance to therapies"
+      ],
+      "evidence_summary": "PROM1, HMGA2, and LIF together denote stemness; BAG3/autophagy pathway counteracts cell stress, supporting survival under chemo/radiation.",
+      "significance_score": 0.91,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9985426/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4932936/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4372074/"
+        }
+      ],
+      "supporting_genes": [
+        "PROM1",
+        "HMGA2",
+        "LIF",
+        "BAG3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "OLIG2"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9985426/",
+            "notes": "Alternate stemness transcription factors."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Angiogenesis & Hypoxic Response",
+      "description": "Groups angiogenic regulators (VEGFA, ANGPTL4, APLN, MET, COL1A2), hypoxia response elements (NDRG1, PTX3), and matrix modifiers, controlling vascular niche formation and metabolic adaptation.",
+      "atomic_biological_processes": [
+        {
+          "name": "angiogenesis",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6618529/",
+              "notes": "VEGFA, MET, ANGPTL4, and APLN as angiogenesis drivers in GBM."
+            }
+          ],
+          "genes": [
+            "VEGFA",
+            "ANGPTL4",
+            "APLN",
+            "MET"
+          ]
+        },
+        {
+          "name": "hypoxic response",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10400082/",
+              "notes": "NDRG1 and PTX3 linked to hypoxic activation and tumor progression."
+            }
+          ],
+          "genes": [
+            "NDRG1",
+            "PTX3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "vascular niche",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2760935/",
+              "notes": "Perivascular and hypoxic microenvironments sustain stem-like GSCs and angiogenesis."
+            }
+          ],
+          "genes": [
+            "VEGFA",
+            "ANGPTL4",
+            "PTX3"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "promotes neovascularization",
+        "supports metabolic adaptation to hypoxia",
+        "enhances tumor growth and survival"
+      ],
+      "evidence_summary": "Canonical angiogenic genes and hypoxic response elements are well-known GBM determinants, enriching the tumor microenvironment and sustaining stemness.",
+      "significance_score": 0.92,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6618529/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10400082/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2760935/"
+        }
+      ],
+      "supporting_genes": [
+        "VEGFA",
+        "ANGPTL4",
+        "APLN",
+        "MET",
+        "PTX3",
+        "NDRG1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "HIF1A"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2760935/",
+            "notes": "Canonical hypoxic response mediator."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Therapy Resistance and Drug Efflux",
+      "description": "Genes related to apoptosis suppression (BIRC3, TNFAIP3/2), multidrug resistance (ABCC3), and survival pathways. Program involves resistance to cell stress, apoptosis, and ineffective drug penetration.",
+      "atomic_biological_processes": [
+        {
+          "name": "apoptosis suppression",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4780503/",
+              "notes": "BIRC3 as mediator of apoptosis evasion and chemoresistance in GBM."
+            }
+          ],
+          "genes": [
+            "BIRC3",
+            "TNFAIP3",
+            "TNFAIP2"
+          ]
+        },
+        {
+          "name": "drug transport",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9026706/",
+              "notes": "ABCC3 confers chemoresistance via active transport of drug molecules."
+            }
+          ],
+          "genes": [
+            "ABCC3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "multidrug resistance transporter complex",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9026706/",
+              "notes": "Position and function of ABCC3."
+            }
+          ],
+          "genes": [
+            "ABCC3"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increases resistance to chemotherapy",
+        "suppresses apoptosis",
+        "enhances tumor survival"
+      ],
+      "evidence_summary": "BIRC3, TNFAIP3/2 and ABCC3 are upregulated with therapy, promote therapy resistance, and are tied to poor GBM clinical outcomes.",
+      "significance_score": 0.87,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4780503/"
+        },
+        {
+          "source_id": "",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9026706/"
+        }
+      ],
+      "supporting_genes": [
+        "BIRC3",
+        "TNFAIP3",
+        "TNFAIP2",
+        "ABCC3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MGMT"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9026706/",
+            "notes": "Common resistance marker in GBM."
+          }
+        ]
+      }
+    }
+  ],
+  "version": "2025-11-14 GBM Literature Synthesis 1.0"
+}

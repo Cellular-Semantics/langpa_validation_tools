@@ -1,0 +1,782 @@
+[
+  {
+    "ref_id": "1_1",
+    "url": "image.jpg"
+  },
+  {
+    "ref_id": "1_2",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4524166/"
+  },
+  {
+    "ref_id": "1_3",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7286445/"
+  },
+  {
+    "ref_id": "1_4",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10698900/"
+  },
+  {
+    "ref_id": "1_5",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1993862/"
+  },
+  {
+    "ref_id": "1_6",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9454706/"
+  },
+  {
+    "ref_id": "1_7",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11650210/"
+  },
+  {
+    "ref_id": "1_8",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8584308/"
+  },
+  {
+    "ref_id": "1_9",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9744806/"
+  },
+  {
+    "ref_id": "1_10",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10572085/"
+  },
+  {
+    "ref_id": "1_11",
+    "url": "https://www.mdpi.com/2072-6694/15/19/4898/pdf?version=1696850726"
+  },
+  {
+    "ref_id": "1_12",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6254577/"
+  },
+  {
+    "ref_id": "1_13",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11082118/"
+  },
+  {
+    "ref_id": "1_14",
+    "url": "https://downloads.hindawi.com/journals/sci/2018/5387041.pdf"
+  },
+  {
+    "ref_id": "1_15",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10634749/"
+  },
+  {
+    "ref_id": "1_16",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6126065/"
+  },
+  {
+    "ref_id": "1_17",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10897389/"
+  },
+  {
+    "ref_id": "1_18",
+    "url": "https://www.embopress.org/doi/full/10.1038/s44318-023-00016-x"
+  },
+  {
+    "ref_id": "1_19",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3263536/"
+  },
+  {
+    "ref_id": "1_20",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4363268/"
+  },
+  {
+    "ref_id": "1_21",
+    "url": "http://downloads.hindawi.com/archive/2011/590249.pdf"
+  },
+  {
+    "ref_id": "1_22",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2259449/"
+  },
+  {
+    "ref_id": "1_23",
+    "url": "https://www.mdpi.com/2072-6694/15/3/849/pdf?version=1675070833"
+  },
+  {
+    "ref_id": "1_24",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11335651/"
+  },
+  {
+    "ref_id": "1_25",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5689739/"
+  },
+  {
+    "ref_id": "1_26",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9052585/"
+  },
+  {
+    "ref_id": "1_27",
+    "url": "https://res.mdpi.com/d_attachment/ijms/ijms-21-00888/article_deploy/ijms-21-00888-v2.pdf"
+  },
+  {
+    "ref_id": "1_28",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7024642/"
+  },
+  {
+    "ref_id": "1_29",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7875342/"
+  },
+  {
+    "ref_id": "1_30",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4798262/"
+  },
+  {
+    "ref_id": "1_31",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7037280/"
+  },
+  {
+    "ref_id": "1_32",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5352067/"
+  },
+  {
+    "ref_id": "1_33",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11309948/"
+  },
+  {
+    "ref_id": "1_34",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6716524/"
+  },
+  {
+    "ref_id": "1_35",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10448108/"
+  },
+  {
+    "ref_id": "1_36",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4445717/"
+  },
+  {
+    "ref_id": "1_37",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4176217/"
+  },
+  {
+    "ref_id": "1_38",
+    "url": "http://www.jbc.org/content/289/38/26038.full.pdf"
+  },
+  {
+    "ref_id": "1_39",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6006557/"
+  },
+  {
+    "ref_id": "1_40",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8114962/"
+  },
+  {
+    "ref_id": "1_41",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6793111/"
+  },
+  {
+    "ref_id": "1_42",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9536293/"
+  },
+  {
+    "ref_id": "1_43",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3896091/"
+  },
+  {
+    "ref_id": "1_44",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6395056/"
+  },
+  {
+    "ref_id": "1_45",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4177969/"
+  },
+  {
+    "ref_id": "1_46",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7139341/"
+  },
+  {
+    "ref_id": "1_47",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5084181/"
+  },
+  {
+    "ref_id": "1_48",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2633776/"
+  },
+  {
+    "ref_id": "1_49",
+    "url": "https://academic.oup.com/noa/article-pdf/3/1/vdab046/37670468/vdab046.pdf"
+  },
+  {
+    "ref_id": "1_50",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9339490/"
+  },
+  {
+    "ref_id": "1_51",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10418167/"
+  },
+  {
+    "ref_id": "1_52",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4641815/"
+  },
+  {
+    "ref_id": "1_53",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9820922/"
+  },
+  {
+    "ref_id": "1_54",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC31901/"
+  },
+  {
+    "ref_id": "1_55",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6104823/"
+  },
+  {
+    "ref_id": "1_56",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11173095/"
+  },
+  {
+    "ref_id": "1_57",
+    "url": "https://www.mdpi.com/1422-0067/25/11/6118/pdf?version=1717231236"
+  },
+  {
+    "ref_id": "1_58",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3447807/"
+  },
+  {
+    "ref_id": "1_59",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8211614/"
+  },
+  {
+    "ref_id": "1_60",
+    "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cam4.6316"
+  },
+  {
+    "ref_id": "1_61",
+    "url": "https://www.frontiersin.org/articles/10.3389/fcell.2021.716462/pdf"
+  },
+  {
+    "ref_id": "1_62",
+    "url": "https://www.frontiersin.org/articles/10.3389/fnmol.2021.763610/pdf"
+  },
+  {
+    "ref_id": "1_63",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11256543/"
+  },
+  {
+    "ref_id": "1_64",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9606568/"
+  },
+  {
+    "ref_id": "1_65",
+    "url": "https://www.mdpi.com/2072-6694/6/2/723/pdf"
+  },
+  {
+    "ref_id": "1_66",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9363573/"
+  },
+  {
+    "ref_id": "1_67",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5461490/"
+  },
+  {
+    "ref_id": "1_68",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4074800/"
+  },
+  {
+    "ref_id": "1_69",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8363281/"
+  },
+  {
+    "ref_id": "1_70",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/cnr2.70158"
+  },
+  {
+    "ref_id": "1_71",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12048723/"
+  },
+  {
+    "ref_id": "1_72",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10329806/"
+  },
+  {
+    "ref_id": "1_73",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5769378/"
+  },
+  {
+    "ref_id": "1_74",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9856089/"
+  },
+  {
+    "ref_id": "1_75",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9630454/"
+  },
+  {
+    "ref_id": "1_76",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3480225/"
+  },
+  {
+    "ref_id": "1_77",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9100418/"
+  },
+  {
+    "ref_id": "1_78",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11131959/"
+  },
+  {
+    "ref_id": "1_79",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559986/"
+  },
+  {
+    "ref_id": "1_80",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9409650/"
+  },
+  {
+    "ref_id": "1_81",
+    "url": "https://www.mdpi.com/1422-0067/21/3/689/pdf"
+  },
+  {
+    "ref_id": "1_82",
+    "url": "https://www.mdpi.com/1422-0067/22/11/5775/pdf"
+  },
+  {
+    "ref_id": "1_83",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9585054/"
+  },
+  {
+    "ref_id": "1_84",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8084183/"
+  },
+  {
+    "ref_id": "1_85",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10914854/"
+  },
+  {
+    "ref_id": "1_86",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11964880/"
+  },
+  {
+    "ref_id": "1_87",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351133/"
+  },
+  {
+    "ref_id": "1_88",
+    "url": "https://www.oncotarget.com/lookup/doi/10.18632/oncotarget.28691"
+  },
+  {
+    "ref_id": "1_89",
+    "url": "http://www.jbc.org/content/277/16/13787.full.pdf"
+  },
+  {
+    "ref_id": "1_90",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4259441/"
+  },
+  {
+    "ref_id": "1_91",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7308558/"
+  },
+  {
+    "ref_id": "1_92",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2997758/"
+  },
+  {
+    "ref_id": "1_93",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5871595/"
+  },
+  {
+    "ref_id": "1_94",
+    "url": "https://www.frontiersin.org/articles/10.3389/fphys.2020.00661/pdf"
+  },
+  {
+    "ref_id": "1_95",
+    "url": "https://www.cancerbiomed.org/content/cbm/early/2024/05/06/j.issn.2095-3941.2023.0510.full.pdf"
+  },
+  {
+    "ref_id": "1_96",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3170338/"
+  },
+  {
+    "ref_id": "1_97",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7611210/"
+  },
+  {
+    "ref_id": "1_98",
+    "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/1878-0261.12668"
+  },
+  {
+    "ref_id": "1_99",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2818769/"
+  },
+  {
+    "ref_id": "1_100",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5147052/"
+  },
+  {
+    "ref_id": "1_101",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3100315/"
+  },
+  {
+    "ref_id": "1_102",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8421368/"
+  },
+  {
+    "ref_id": "1_103",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7555589/"
+  },
+  {
+    "ref_id": "1_104",
+    "url": "https://www.mdpi.com/2227-9059/8/9/310/pdf"
+  },
+  {
+    "ref_id": "1_105",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9191911/"
+  },
+  {
+    "ref_id": "1_106",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10304768/"
+  },
+  {
+    "ref_id": "1_107",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3177832/"
+  },
+  {
+    "ref_id": "1_108",
+    "url": "https://www.mdpi.com/2072-6694/16/11/2089/pdf?version=1717082982"
+  },
+  {
+    "ref_id": "1_109",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3384275/"
+  },
+  {
+    "ref_id": "1_110",
+    "url": "https://ojs.ptbioch.edu.pl/index.php/abp/article/download/3308/2366"
+  },
+  {
+    "ref_id": "1_111",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3409237/"
+  },
+  {
+    "ref_id": "1_112",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3855314/"
+  },
+  {
+    "ref_id": "1_113",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8703403/"
+  },
+  {
+    "ref_id": "1_114",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4649522/"
+  },
+  {
+    "ref_id": "1_115",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5335262/"
+  },
+  {
+    "ref_id": "1_116",
+    "url": "https://www.mdpi.com/1422-0067/22/24/13211/pdf?version=1638958318"
+  },
+  {
+    "ref_id": "1_117",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3758390/"
+  },
+  {
+    "ref_id": "1_118",
+    "url": "http://downloads.hindawi.com/journals/jo/2012/537861.pdf"
+  },
+  {
+    "ref_id": "1_119",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10911995/"
+  },
+  {
+    "ref_id": "1_120",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8402214/"
+  },
+  {
+    "ref_id": "1_121",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10708933/"
+  },
+  {
+    "ref_id": "1_122",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3528762/"
+  },
+  {
+    "ref_id": "1_123",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1479358/"
+  },
+  {
+    "ref_id": "1_124",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8732344/"
+  },
+  {
+    "ref_id": "1_125",
+    "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/1878-0261.13130"
+  },
+  {
+    "ref_id": "1_126",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8888578/"
+  },
+  {
+    "ref_id": "1_127",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8816813/"
+  },
+  {
+    "ref_id": "1_128",
+    "url": "https://www.mdpi.com/2079-7737/10/8/767/pdf"
+  },
+  {
+    "ref_id": "1_129",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5905293/"
+  },
+  {
+    "ref_id": "1_130",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3973225/"
+  },
+  {
+    "ref_id": "1_131",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC553963/"
+  },
+  {
+    "ref_id": "1_132",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7017254/"
+  },
+  {
+    "ref_id": "1_133",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4484468/"
+  },
+  {
+    "ref_id": "1_134",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6332853/"
+  },
+  {
+    "ref_id": "1_135",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3188988/"
+  },
+  {
+    "ref_id": "1_136",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3797230/"
+  },
+  {
+    "ref_id": "1_137",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11001776/"
+  },
+  {
+    "ref_id": "1_138",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3514661/"
+  },
+  {
+    "ref_id": "1_139",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3188994/"
+  },
+  {
+    "ref_id": "1_140",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5700210/"
+  },
+  {
+    "ref_id": "1_141",
+    "url": "https://www.mdpi.com/1422-0067/24/11/9393"
+  },
+  {
+    "ref_id": "1_142",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3246703/"
+  },
+  {
+    "ref_id": "1_143",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2416439/"
+  },
+  {
+    "ref_id": "1_144",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9179269/"
+  },
+  {
+    "ref_id": "1_145",
+    "url": "https://neuraldevelopment.biomedcentral.com/track/pdf/10.1186/1749-8104-3-13"
+  },
+  {
+    "ref_id": "1_146",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8186478"
+  },
+  {
+    "ref_id": "1_147",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9189056/"
+  },
+  {
+    "ref_id": "1_148",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11464986/"
+  },
+  {
+    "ref_id": "1_149",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4210043/"
+  },
+  {
+    "ref_id": "1_150",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3927013/"
+  },
+  {
+    "ref_id": "1_151",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10530238/"
+  },
+  {
+    "ref_id": "1_152",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4144547/"
+  },
+  {
+    "ref_id": "1_153",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7170819/"
+  },
+  {
+    "ref_id": "1_154",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5378489/"
+  },
+  {
+    "ref_id": "1_155",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4222419/"
+  },
+  {
+    "ref_id": "1_156",
+    "url": "https://www.rmmj.org.il/userimages/415/1/PublishFiles/441Article.pdf"
+  },
+  {
+    "ref_id": "1_157",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2896491/"
+  },
+  {
+    "ref_id": "1_158",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11558980/"
+  },
+  {
+    "ref_id": "1_159",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9219822/"
+  },
+  {
+    "ref_id": "1_160",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5176357/"
+  },
+  {
+    "ref_id": "1_161",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9604754/"
+  },
+  {
+    "ref_id": "1_162",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6131978/"
+  },
+  {
+    "ref_id": "1_163",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11941181/"
+  },
+  {
+    "ref_id": "1_164",
+    "url": "https://jitc.bmj.com/content/jitc/7/1/58.full.pdf"
+  },
+  {
+    "ref_id": "1_165",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7442334/"
+  },
+  {
+    "ref_id": "1_166",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10439959/"
+  },
+  {
+    "ref_id": "1_167",
+    "url": "https://www.mdpi.com/1422-0067/19/2/436/pdf"
+  },
+  {
+    "ref_id": "1_168",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11657999/"
+  },
+  {
+    "ref_id": "1_169",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11022384/"
+  },
+  {
+    "ref_id": "1_170",
+    "url": "https://www.mdpi.com/2073-4409/10/8/2032"
+  },
+  {
+    "ref_id": "1_171",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10235598/"
+  },
+  {
+    "ref_id": "1_172",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4351301/"
+  },
+  {
+    "ref_id": "1_173",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5369948/"
+  },
+  {
+    "ref_id": "1_174",
+    "url": "https://www.oncotarget.com/lookup/doi/10.18632/oncotarget.15066"
+  },
+  {
+    "ref_id": "1_175",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10337544/"
+  },
+  {
+    "ref_id": "1_176",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8549168/"
+  },
+  {
+    "ref_id": "1_177",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10527478/"
+  },
+  {
+    "ref_id": "1_178",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5509502/"
+  },
+  {
+    "ref_id": "1_179",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7431428/"
+  },
+  {
+    "ref_id": "1_180",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11107780/"
+  },
+  {
+    "ref_id": "1_181",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7595142/"
+  },
+  {
+    "ref_id": "1_182",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10695912/"
+  },
+  {
+    "ref_id": "1_183",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7366490/"
+  },
+  {
+    "ref_id": "1_184",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC312756/"
+  },
+  {
+    "ref_id": "1_185",
+    "url": "https://portlandpress.com/neuronalsignal/article/doi/10.1042/NS20200006/222667/Association-of-distinct-type-1-bone-morphogenetic"
+  },
+  {
+    "ref_id": "1_186",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4035537/"
+  },
+  {
+    "ref_id": "1_187",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10331528/"
+  },
+  {
+    "ref_id": "1_188",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7175268/"
+  },
+  {
+    "ref_id": "1_189",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8577114/"
+  },
+  {
+    "ref_id": "1_190",
+    "url": "https://www.mdpi.com/2218-273X/10/3/403"
+  },
+  {
+    "ref_id": "1_191",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4448532/"
+  },
+  {
+    "ref_id": "1_192",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10710407/"
+  },
+  {
+    "ref_id": "1_193",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9101749/"
+  },
+  {
+    "ref_id": "1_194",
+    "url": "https://www.mdpi.com/2072-6694/4/4/1252/pdf"
+  },
+  {
+    "ref_id": "1_195",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1134762/```"
+  }
+]

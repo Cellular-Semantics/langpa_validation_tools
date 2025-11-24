@@ -1,0 +1,647 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "FAM111B",
+    "MYBL2",
+    "EXO1",
+    "ZNF367",
+    "BRIP1",
+    "CLSPN",
+    "CHAF1A",
+    "DTL",
+    "PCLAF",
+    "CHEK1",
+    "CDC45",
+    "FANCA",
+    "MCM6",
+    "RRM2",
+    "MCM10",
+    "ASF1B",
+    "CENPU",
+    "FANCD2",
+    "POLA2",
+    "MIR924HG",
+    "CCNE2",
+    "WDR76",
+    "ESCO2",
+    "FBLN7",
+    "CENPK",
+    "NXPH2",
+    "MELK",
+    "CHAF1B",
+    "GRM8",
+    "HELLS",
+    "POLE2",
+    "E2F1",
+    "E2F7",
+    "DHFR",
+    "ABHD3",
+    "CDCA7",
+    "ASPN",
+    "FANCI",
+    "RAD18",
+    "XRCC2",
+    "AC008543.1",
+    "GINS1",
+    "AL034348.1",
+    "BRCA1",
+    "BRCA2",
+    "SPC24",
+    "KIF15",
+    "AC011447.3",
+    "VRK1",
+    "WDHD1",
+    "KIF24",
+    "XYLB",
+    "SKA3",
+    "RAB39A",
+    "LRRC63",
+    "RAD54L",
+    "DIAPH3",
+    "CGAS",
+    "CENPP",
+    "SPC25",
+    "CENPI",
+    "PRIM2",
+    "POLQ",
+    "KBTBD12",
+    "RAD51AP1",
+    "AMPH",
+    "LIG1",
+    "AC007681.1",
+    "MCM5",
+    "AC130324.2",
+    "TNFAIP8",
+    "AURKB",
+    "DDX11-AS1",
+    "SIMC1",
+    "MMS22L",
+    "MCM4",
+    "ATAD2",
+    "FANCB",
+    "DNA2",
+    "AC006115.2",
+    "TRPC3",
+    "PLD5",
+    "PLK4",
+    "LIMK2",
+    "ESPL1",
+    "TP73",
+    "ARNTL2",
+    "ZNF90",
+    "MBNL3",
+    "AC004943.2",
+    "KIAA0319",
+    "COL9A1",
+    "MYBL1",
+    "NEIL3",
+    "WDR62",
+    "SDK1",
+    "LAMA1",
+    "CLN6",
+    "PER3",
+    "PCNA",
+    "CCDC138",
+    "ECM2",
+    "CAMK4",
+    "EFNA5",
+    "CD83",
+    "REXO5",
+    "DDB2",
+    "MCM8",
+    "KIFC1",
+    "CEP152",
+    "IQGAP3",
+    "AC104073.4",
+    "DAPK2",
+    "KNTC1",
+    "ZGRF1",
+    "RFC2",
+    "MND1",
+    "UHRF1",
+    "MBOAT1",
+    "SFMBT1",
+    "RFC3",
+    "CKAP2L",
+    "POLA1",
+    "KCTD16",
+    "ARHGAP11B",
+    "BICC1",
+    "SVEP1",
+    "AP002495.1",
+    "FAM189A1",
+    "SYK",
+    "ORC6",
+    "GHR",
+    "FOXM1",
+    "HMGN2",
+    "ZNF730",
+    "GLYATL2",
+    "ARHGAP19",
+    "HMGB2",
+    "HESX1",
+    "AC009630.1",
+    "STAC",
+    "PBK",
+    "TCF19",
+    "MASTL"
+  ],
+  "programs": [
+    {
+      "program_name": "DNA Replication Licensing & Fork Progression",
+      "description": "Includes MCM family (MCM2,4,5,6,10), CDC45, GINS1, WDHD1, ORC6, RFC2/3, POLE2, POLA1/2, PCNA, CLSPN, CHAF1A/B, ASF1B. These genes together constitute key components for origin licensing, replisome assembly, and elongation machinery. Aberrant activity and overexpression drive rapid DNA replication and replicative stress characteristic of glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "Origin licensing (MCM loading)",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/3115219/",
+              "source_id": "11",
+              "notes": "Describes role of MCMs in origin licensing and cancer progression"
+            }
+          ],
+          "genes": [
+            "MCM2",
+            "MCM4",
+            "MCM5",
+            "MCM6",
+            "MCM10",
+            "ORC6"
+          ]
+        },
+        {
+          "name": "Replisome assembly (CMG complex, Fork progression)",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/5479659/",
+              "source_id": "123",
+              "notes": "Explains CMG helicase complex function"
+            }
+          ],
+          "genes": [
+            "CDC45",
+            "GINS1",
+            "MCM2",
+            "MCM4",
+            "MCM5",
+            "MCM6",
+            "MCM10"
+          ]
+        },
+        {
+          "name": "Clamp loading and elongation",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/1866948/",
+              "source_id": "141",
+              "notes": "RFC ensures PCNA loading for replication processivity"
+            }
+          ],
+          "genes": [
+            "RFC2",
+            "RFC3",
+            "PCNA"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Replication fork",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/147/",
+              "source_id": "147",
+              "notes": "Describes WDHD1's function in fork stability"
+            }
+          ],
+          "genes": [
+            "WDHD1",
+            "MCM6",
+            "CDC45",
+            "GINS1",
+            "PCNA"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Permissive replication origin licensing and increased fork firing enable rapid proliferation",
+        "High replicative stress promoting genome instability",
+        "Targets for synthetic lethality in combination therapies"
+      ],
+      "evidence_summary": "MCMs, GINS1, CDC45, ORC6, PCNA, RFCs, WDHD1 are all overexpressed in glioblastoma, supporting aggressive replication. Elevated expression correlates with poor prognosis, guides CDK and checkpoint targeting strategies.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/3115219/",
+          "source_id": "11",
+          "notes": "MCMs role in cancer"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/5479659/",
+          "source_id": "123",
+          "notes": "CMG complex"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/147/",
+          "source_id": "147",
+          "notes": "WDHD1 in fork stability"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/1866948/",
+          "source_id": "141",
+          "notes": "RFCs and clamp loading"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/130/",
+          "source_id": "130",
+          "notes": "ORC6 in glioma"
+        }
+      ],
+      "supporting_genes": [
+        "MCM2",
+        "MCM4",
+        "MCM5",
+        "MCM6",
+        "MCM10",
+        "CDC45",
+        "GINS1",
+        "WDHD1",
+        "ORC6",
+        "RFC2",
+        "RFC3",
+        "PCNA",
+        "ASF1B",
+        "CHAF1A",
+        "CHAF1B",
+        "CLSPN",
+        "POLE2",
+        "POLA1",
+        "POLA2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MCM3",
+          "MCM7"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/3115219/",
+            "source_id": "11",
+            "notes": "MCM2-7 hexamer is required for full helicase activity"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Cell Cycle Regulation & Checkpoint Control",
+      "description": "Genes such as E2F1, E2F7, CCNE2, FOXM1, CHEK1, CLSPN, CDC45 regulate G1/S transition, S phase progression, and checkpoint enforcement. Glioblastoma displays hyperactivation and dysregulation, permitting uncontrolled division and resistance to genotoxic therapy.",
+      "atomic_biological_processes": [
+        {
+          "name": "G1/S phase transition",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/163/",
+              "source_id": "163",
+              "notes": "E2F family function in cell cycle and cancer"
+            }
+          ],
+          "genes": [
+            "CCNE2",
+            "E2F1"
+          ]
+        },
+        {
+          "name": "Checkpoint activation (ATR/CHK1 pathway)",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/109/",
+              "source_id": "109",
+              "notes": "Claspin-CHK1 activation in replication stress"
+            }
+          ],
+          "genes": [
+            "CLSPN",
+            "CHEK1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Centrosome and spindle assembly",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/114/",
+              "source_id": "114",
+              "notes": "WDR62 spindle pole protein in mitosis"
+            }
+          ],
+          "genes": [
+            "WDR62",
+            "SKA3",
+            "KIF15",
+            "KIF24"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Accelerated S phase entry and division",
+        "Checkpoint evasion promotes survival and chromosomal instability",
+        "Potential for synthetic lethality via checkpoint inhibition"
+      ],
+      "evidence_summary": "Cell cycle regulators are frequently overexpressed and mutated in glioblastoma, driving unchecked proliferation and therapy resistance.",
+      "significance_score": 0.87,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/163/",
+          "source_id": "163",
+          "notes": "E2F family in cancer"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/42/",
+          "source_id": "42",
+          "notes": "FOXM1 promotes proliferation"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/109/",
+          "source_id": "109",
+          "notes": "CLSPN in checkpoint"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/110/",
+          "source_id": "110",
+          "notes": "CHK1 as therapy target"
+        }
+      ],
+      "supporting_genes": [
+        "E2F1",
+        "E2F7",
+        "CCNE2",
+        "FOXM1",
+        "CHEK1",
+        "CLSPN",
+        "CDC45",
+        "CDC45",
+        "CDC45",
+        "WDR62",
+        "SKA3",
+        "KIF15",
+        "KIF24"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "CDK1",
+          "CDK2",
+          "CCNB1",
+          "CCND1"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/162/",
+            "source_id": "162",
+            "notes": "Core cell cycle kinases"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "DNA Damage Response & Repair (HR, FA, TLS)",
+      "description": "Fanconi anemia pathway (FANCA, FANCB, FANCI, FANCD2), Homologous recombination (BRCA1/2, RAD51, RAD18, XRCC2, RAD54L, BRIP1), and translesion synthesis (RAD18, POLQ, DNA2, LIG1) genes ensure DNA repair under stress. High expression supports adaptation to genotoxic stress in glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "Interstrand crosslink repair (Fanconi anemia pathway)",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/75/",
+              "source_id": "75",
+              "notes": "FANCD2-FANCI complex in FA repair"
+            }
+          ],
+          "genes": [
+            "FANCA",
+            "FANCB",
+            "FANCI",
+            "FANCD2"
+          ]
+        },
+        {
+          "name": "Homologous recombination (HR)",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/82/",
+              "source_id": "82",
+              "notes": "RAD51 recombinase in HR"
+            }
+          ],
+          "genes": [
+            "RAD51AP1",
+            "RAD51",
+            "BRCA1",
+            "BRCA2",
+            "RAD54L",
+            "XRCC2"
+          ]
+        },
+        {
+          "name": "Translesion synthesis (TLS) at replication forks",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/91/",
+              "source_id": "91",
+              "notes": "CHAF1A promotes RAD18 recruitment for TLS"
+            }
+          ],
+          "genes": [
+            "RAD18",
+            "POLQ",
+            "DNA2",
+            "LIG1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "DNA repair foci (chromatin-bound repair complexes)",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/76/",
+              "source_id": "76",
+              "notes": "FANCD2, BRCA2 at replication foci"
+            }
+          ],
+          "genes": [
+            "FANCD2",
+            "BRCA2",
+            "RAD51"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced DNA repair capacity supports tumor survival under replicative/genotoxic stress",
+        "Facilitates resistance to radiation and chemotherapy",
+        "Potential to target as vulnerabilities in therapy"
+      ],
+      "evidence_summary": "Fanconi pathway, HR, and TLS genes frequently upregulated in glioblastoma, supporting adaptation to replication stress and DNA damage.",
+      "significance_score": 0.88,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/75/",
+          "source_id": "75",
+          "notes": "FA pathway, FANCD2-FANCI"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/82/",
+          "source_id": "82",
+          "notes": "RAD51 in HR"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/91/",
+          "source_id": "91",
+          "notes": "RAD18 TLS"
+        }
+      ],
+      "supporting_genes": [
+        "FANCA",
+        "FANCB",
+        "FANCI",
+        "FANCD2",
+        "BRCA1",
+        "BRCA2",
+        "RAD54L",
+        "RAD51",
+        "RAD51AP1",
+        "XRCC2",
+        "BRIP1",
+        "RAD18",
+        "POLQ",
+        "DNA2",
+        "LIG1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "FANCG",
+          "FANCE"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/75/",
+            "source_id": "75",
+            "notes": "Full FA pathway components"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Chromatin Remodeling & Epigenetic Regulation",
+      "description": "ASF1B, CHAF1A/B, UHRF1, HMGB2, HMGN2, HELLS, ESCO2, ATAD2, DNMT1 and associated factors regulate chromatin structure, histone modification, and DNA methylation. Dysregulation modulates DNA accessibility for replication, transcription, and repair, permitting oncogenic programs.",
+      "atomic_biological_processes": [
+        {
+          "name": "Histone chaperone activity",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/31/",
+              "source_id": "31",
+              "notes": "Histone chaperones in cancer"
+            }
+          ],
+          "genes": [
+            "ASF1B",
+            "CHAF1A",
+            "CHAF1B"
+          ]
+        },
+        {
+          "name": "DNA methylation maintenance",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/34/",
+              "source_id": "34",
+              "notes": "UHRF1 and DNMT1 axis in cancer"
+            }
+          ],
+          "genes": [
+            "UHRF1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Nucleosome",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/30/",
+              "source_id": "30",
+              "notes": "ASF1 complex in chromatin structure"
+            }
+          ],
+          "genes": [
+            "ASF1B",
+            "CHAF1A",
+            "CHAF1B"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Permissive chromatin states increase accessibility for replication and transcription",
+        "Epigenetic silencing of tumor suppressors facilitates glioblastoma progression",
+        "Sensitivity to chromatin structure-targeted therapies"
+      ],
+      "evidence_summary": "Histone chaperones, UHRF1, and methylation regulators are upregulated in glioblastoma and many other cancers; promote proliferation and progression.",
+      "significance_score": 0.78,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/31/",
+          "source_id": "31",
+          "notes": "Chaperones in cancer"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/34/",
+          "source_id": "34",
+          "notes": "UHRF1-DNMT1 axis"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/30/",
+          "source_id": "30",
+          "notes": "ASF1 complex"
+        }
+      ],
+      "supporting_genes": [
+        "ASF1B",
+        "CHAF1A",
+        "CHAF1B",
+        "UHRF1",
+        "HMGB2",
+        "HMGN2",
+        "HELLS",
+        "ESCO2",
+        "ATAD2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "DNMT1",
+          "EZH2"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/34/",
+            "source_id": "34",
+            "notes": "Methylation regulators"
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "GO/KEGG pathway annotations",
+      "co-citation networks from PubMed/PMC",
+      "protein-protein interaction mapping",
+      "co-expression data specific to glioblastoma"
+    ],
+    "notes": "Gene programs were grouped based on functional interdependence and literature network overlap; clusters emphasize joint presence of most required program components in input list, prioritized by cancer-context overexpression."
+  },
+  "version": "2025-11-17"
+}

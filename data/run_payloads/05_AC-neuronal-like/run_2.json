@@ -1,0 +1,786 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "LINC02235",
+    "AC037486.1",
+    "PCDH11X",
+    "LINC01829",
+    "AL591043.2",
+    "ZNF423",
+    "ADAMTS18",
+    "AL133538.1",
+    "DOCK2",
+    "SCN1A-AS1",
+    "AL022068.1",
+    "SEPTIN14",
+    "SGCZ",
+    "ADAM28",
+    "RYR2",
+    "DOCK8",
+    "ACER2",
+    "AC128687.3",
+    "AC120193.1",
+    "OLR1",
+    "AC110296.1",
+    "AC109466.1",
+    "SPOCK3",
+    "ST6GALNAC5",
+    "AL136441.1",
+    "MLIP",
+    "AL158077.2",
+    "AP001021.3",
+    "CCDC85A",
+    "CD96",
+    "NRK",
+    "C8orf37-AS1",
+    "PCDH7",
+    "PLD1",
+    "CHRNA7",
+    "CLRN1",
+    "MYO1D",
+    "RMST",
+    "CNTNAP2",
+    "PURPL",
+    "RALYL",
+    "AL445426.1",
+    "RCAN2",
+    "AL392023.2",
+    "RELN",
+    "AL360091.3",
+    "AC091946.1",
+    "LRRIQ1",
+    "CD163",
+    "SYN3",
+    "IL1RAPL1",
+    "LINC01122",
+    "LINC01091",
+    "AC009126.1",
+    "LINC00944",
+    "LINC01467",
+    "LINC01725",
+    "KCNH7",
+    "AC069228.1",
+    "GNA14-AS1",
+    "KCNIP4",
+    "LINC00504",
+    "AC006299.1",
+    "TPRG1",
+    "AC003092.1",
+    "AC083855.2",
+    "FXYD5",
+    "SYK",
+    "XK",
+    "LINC02006",
+    "KLF5",
+    "WNT16",
+    "NIBAN1",
+    "LINC00355",
+    "LINC01135",
+    "MSR1",
+    "MT2A",
+    "LINC00299",
+    "MX2",
+    "NLGN4X",
+    "LINC00886",
+    "LINC00607",
+    "NHSL2",
+    "MYO1E",
+    "NKAIN2",
+    "NIPAL2",
+    "MYO1F",
+    "LINC01163",
+    "NCMAP",
+    "NHS",
+    "MYRFL",
+    "LINC02234",
+    "LINC01182",
+    "LINC01923",
+    "LINC02246",
+    "LINC02300",
+    "LINC02306",
+    "LINC02378",
+    "LINC02664",
+    "LINC02775",
+    "LINC02798",
+    "LINC02821",
+    "LMNTD1",
+    "LRRTM4",
+    "LURAP1L-AS1",
+    "LINC01934",
+    "LY96",
+    "MAP3K6",
+    "LINC01877",
+    "LINC01208",
+    "LINC01876",
+    "MCTP2",
+    "LINC01842",
+    "LINC01798",
+    "LINC01579",
+    "ME1",
+    "MEGF11",
+    "LINC01357",
+    "MEOX2",
+    "LINC01277",
+    "MGAT4C",
+    "LINC02055",
+    "LINC01241",
+    "MIR548XHG",
+    "MIR222HG",
+    "PTPN14",
+    "OTP",
+    "TAFA2",
+    "TG",
+    "TENT5A",
+    "TENM2",
+    "TEK",
+    "TDO2",
+    "TBX19",
+    "TAPT1-AS1",
+    "SYTL3",
+    "THSD4",
+    "SYT1",
+    "SULF1",
+    "SUCLG2-AS1",
+    "STAT4",
+    "STARD13",
+    "STAC",
+    "SPRY4-AS1",
+    "TGM2",
+    "TLR2",
+    "SPATA48",
+    "VEGFD",
+    "WWTR1",
+    "WIPF1",
+    "WDR49",
+    "VSTM2A-OT1",
+    "VSTM2A",
+    "VSIG4",
+    "VLDLR-AS1",
+    "UTY",
+    "TMEM164",
+    "UNC5C",
+    "UNC13C",
+    "TRPV4",
+    "TRPM8",
+    "TRPM3",
+    "TRIM22",
+    "TMEM63A",
+    "SPINK5",
+    "SPAG17",
+    "PCA3",
+    "POSTN",
+    "RARRES1",
+    "PTPRR",
+    "LINC00158",
+    "PTCHD4",
+    "PTCHD1-AS",
+    "PRSS48",
+    "POU6F2",
+    "PLIN2",
+    "RNF6",
+    "PLAC1",
+    "PKD1L1",
+    "PIP5K1B",
+    "PGLYRP1",
+    "PDE1C",
+    "PCED1B",
+    "PCDH11Y",
+    "RASSF8",
+    "RREB1",
+    "SORCS1",
+    "SLC18A1",
+    "SOCS2-AS1",
+    "SNTG1",
+    "SMOC2",
+    "SLIT2",
+    "SLCO1B1",
+    "SLC35G1",
+    "SLC35E4",
+    "SLC10A6",
+    "RUNX1T1",
+    "SIDT1",
+    "SHOC1",
+    "SAPCD2",
+    "SAMD3",
+    "SAA1",
+    "RYR3",
+    "RXRG",
+    "LINC00278",
+    "AC002074.1",
+    "LGALS1",
+    "AL117329.1",
+    "ADAMTS3",
+    "ADAMTS14",
+    "ACOXL",
+    "AC244472.1",
+    "AC138409.3",
+    "AC124947.1",
+    "AC122697.1",
+    "AC117464.1",
+    "AC114689.3",
+    "AC110023.1",
+    "AC106845.1",
+    "AC097518.2",
+    "AC097462.3",
+    "AC093535.1",
+    "AC093523.1",
+    "AC092958.2",
+    "AC092957.1",
+    "AGMO",
+    "AL121904.2",
+    "AC092131.1",
+    "AL132633.1",
+    "AP000446.1",
+    "ALPK2",
+    "ALDH1A2",
+    "AL732509.1",
+    "AL590608.1",
+    "AL589935.1",
+    "AL512452.1",
+    "AL392086.3",
+    "AL360178.1",
+    "AL354696.2",
+    "AL163636.1",
+    "AL158195.1",
+    "AL158058.1",
+    "AL157911.1",
+    "AL138824.1",
+    "AL137139.2",
+    "AL136038.5",
+    "AC092819.3",
+    "AC091078.1",
+    "AP002495.1",
+    "AC023095.1",
+    "AC022325.2",
+    "AC018616.1",
+    "AC012404.1",
+    "AC012063.1",
+    "AC011246.1",
+    "AC009646.2",
+    "AC008080.4",
+    "AC007681.1",
+    "AC007389.1",
+    "AC007364.1",
+    "AC006994.2",
+    "AC006387.1",
+    "AC006206.2",
+    "AC006041.2",
+    "AC005162.3",
+    "AC004943.2",
+    "AC004879.1",
+    "AC023051.1",
+    "AC024145.1",
+    "AC090578.1",
+    "AC026202.2",
+    "AC090403.1",
+    "AC090337.2",
+    "AC087627.1",
+    "AC087473.1",
+    "AC079950.1",
+    "AC079763.1",
+    "AC079465.1",
+    "AC079298.3",
+    "AC073529.1",
+    "AC073050.1",
+    "AC072062.1",
+    "AC068305.2",
+    "AC067956.1",
+    "AC062022.2",
+    "AC051619.6",
+    "AC040174.1",
+    "AC027097.2",
+    "AP001025.1",
+    "AP002813.1",
+    "LCP2",
+    "GPC3",
+    "GNA14",
+    "GLRA2",
+    "GDNF-AS1",
+    "GCNT2",
+    "FYB1",
+    "FXN",
+    "FRG1-DT",
+    "FRAS1",
+    "FHIT",
+    "FAR2",
+    "FAP",
+    "FAM189A1",
+    "FAAH2",
+    "ERI2",
+    "EPSTI1",
+    "EPHA3",
+    "EPB41L4A",
+    "GNGT1",
+    "GREB1L",
+    "EMILIN2",
+    "GRIN2B",
+    "LANCL3",
+    "KREMEN1",
+    "KCNMB4",
+    "KCNE4",
+    "ITK",
+    "ITGAL",
+    "INPP5D",
+    "IL7",
+    "IL12RB2",
+    "IGSF10",
+    "IAPP",
+    "HS3ST3A1",
+    "HRH1",
+    "AC002429.2",
+    "HMGB2",
+    "HMGA2",
+    "GRIP2",
+    "ENOX2",
+    "ELDR",
+    "AP003066.1",
+    "CFAP77",
+    "CERNA2",
+    "CDH18",
+    "CDH13",
+    "CD247",
+    "CASC9",
+    "C9orf153",
+    "C9orf147",
+    "BX284613.2",
+    "BIRC3",
+    "BEND6",
+    "BCL2L14",
+    "ATP8B4",
+    "ASB18",
+    "ARSJ",
+    "ARRDC3-AS1",
+    "ARHGAP11B",
+    "APBB1IP",
+    "CFAP47",
+    "CFH",
+    "EDN1",
+    "CGNL1",
+    "EBF2",
+    "DOCK5",
+    "DNAH3",
+    "DIPK2A",
+    "DANT2",
+    "CPNE4",
+    "COX8A",
+    "COL4A6",
+    "COL19A1",
+    "COL12A1",
+    "COBLL1",
+    "CNTNAP3B",
+    "CNDP1",
+    "CNBD1",
+    "CHRM3",
+    "CHODL",
+    "CHL1-AS2",
+    "HNF4G"
+  ],
+  "programs": [
+    {
+      "program_name": "Mesenchymal Invasion & EMT",
+      "description": "Coordinated upregulation of ECM-remodeling proteins (POSTN, TNC, COL19A1, ADAMTSs, SPOCK3), cell adhesion molecules (e.g., PCDH7, PCDH11X), and EMT regulators (HMGA2, RELN) highlight a mesenchymal gene program driving glioblastoma cell invasion. Matrix-crosslinking enzymes (TGM2) and pathways supporting cell migration and transition are collectively strengthened.",
+      "atomic_biological_processes": [
+        {
+          "name": "ECM remodeling",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "POSTN regulates ECM, invasion, predicts glioma malignancy"
+            },
+            {
+              "source_id": "",
+              "notes": "Tenascin-C promotes glioblastoma invasion"
+            }
+          ],
+          "genes": [
+            "POSTN",
+            "TNC",
+            "COL19A1",
+            "COL12A1",
+            "ADAMTS18",
+            "SPOCK3"
+          ]
+        },
+        {
+          "name": "Epithelial-mesenchymal transition",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "TGM2 triggers EMT signaling via matrix remodeling"
+            },
+            {
+              "source_id": "",
+              "notes": "HMGA2 sustains self-renewal and mesenchymal phenotype in GBM"
+            }
+          ],
+          "genes": [
+            "TGM2",
+            "HMGA2",
+            "RELN",
+            "POSTN",
+            "TNC"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "extracellular matrix",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "Glioma-induced ECM remodeling as a therapeutic target"
+            }
+          ],
+          "genes": [
+            "COL19A1",
+            "COL12A1",
+            "TNC",
+            "POSTN",
+            "SPOCK3",
+            "ADAMTS18"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced invasion and migration",
+        "Mesenchymal phenotype acquisition",
+        "Resistance to therapy via EMT and ECM remodeling"
+      ],
+      "evidence_summary": "The presence and co-expression of ECM, EMT, and migration regulators highlight a robust mesenchymal invasive program as a hallmark of malignant glioblastoma phenotypes.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "POSTN as a functional/invasive driver"
+        },
+        {
+          "source_id": "",
+          "notes": "Role of tenascin-C in invasion"
+        },
+        {
+          "source_id": "",
+          "notes": "HMGA2 regulates mesenchymal phenotype"
+        }
+      ],
+      "supporting_genes": [
+        "POSTN",
+        "TNC",
+        "COL19A1",
+        "COL12A1",
+        "ADAMTS18",
+        "SPOCK3",
+        "TGM2",
+        "HMGA2",
+        "RELN"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MMP2",
+          "LOX",
+          "FN1"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "Collagen, LOX, FN1 in GBM ECM and invasion"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Immune Evasion & TAM Polarization",
+      "description": "Genes such as MSR1, CD163, ALDH1A2, SULF1, TLR2, OLR1, and others are involved in immunosuppressive microenvironment creation, recruitment/activation of M2-like tumor-associated macrophages (TAMs), and resistance to immune-driven attack.",
+      "atomic_biological_processes": [
+        {
+          "name": "Macrophage polarization and recruitment",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "MSR1 regulates M2-like TAMs in glioma"
+            },
+            {
+              "source_id": "",
+              "notes": "CD163 is a marker of TAMs in glioblastoma"
+            }
+          ],
+          "genes": [
+            "MSR1",
+            "CD163",
+            "ALDH1A2",
+            "SULF1"
+          ]
+        },
+        {
+          "name": "Immunosuppressive signaling",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "OLR1 as driver of immunosuppression in tumor"
+            },
+            {
+              "source_id": "",
+              "notes": "SHIP1/INPP5D in myeloid-driven immunosuppression in GBM"
+            }
+          ],
+          "genes": [
+            "OLR1",
+            "INPP5D"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "tumor-associated macrophage",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "CD163+ macrophages in glioblastoma tumor microenvironment"
+            }
+          ],
+          "genes": [
+            "CD163",
+            "MSR1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Immunosuppressive microenvironment",
+        "Promotion of M2-like TAMs",
+        "Therapy resistance via immune evasion"
+      ],
+      "evidence_summary": "The co-occurrence of TAM polarization and immunosuppressive signaling genes strongly supports the role of these pathways for immune escape in malignant glioblastoma.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "MSR1 drives M2-like TAMs"
+        },
+        {
+          "source_id": "",
+          "notes": "OLR1 and immunosuppression"
+        }
+      ],
+      "supporting_genes": [
+        "MSR1",
+        "CD163",
+        "ALDH1A2",
+        "SULF1",
+        "TLR2",
+        "OLR1",
+        "INPP5D"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "CSF1R",
+          "ARG1",
+          "STAT3"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "CSF1R, STAT3 as major TAM regulation signals"
+          },
+          {
+            "source_id": "",
+            "notes": "ARG1 in M2 TAMs"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Calcium & Glutamate Signaling",
+      "description": "Genes like RYR2, GRIN2B, TRPM8, TRPV4 and related ion channels coordinate calcium and glutamate-dependent signal transduction, which drive tumor cell excitability, migration, self-renewal, and therapy resistance in glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "Calcium signaling",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "SOC and Ca2+ signaling predominate in GSCs"
+            },
+            {
+              "source_id": "",
+              "notes": "NMDAR/GRIN2B drives radioresistance and migration"
+            }
+          ],
+          "genes": [
+            "RYR2",
+            "TRPM8",
+            "TRPV4",
+            "TRPM3",
+            "GRIN2B"
+          ]
+        },
+        {
+          "name": "Glutamate signaling",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "GBM releases glutamate, activates receptors driving excitability and growth"
+            },
+            {
+              "source_id": "",
+              "notes": "Glutamate and Ca2+ signaling promote invasion"
+            }
+          ],
+          "genes": [
+            "GRIN2B",
+            "TRPM8"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "ion channel complex",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "NMDA receptor channel function in GBM"
+            },
+            {
+              "source_id": "",
+              "notes": "Diverse ion channels in GBM"
+            }
+          ],
+          "genes": [
+            "RYR2",
+            "GRIN2B"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced excitability and migration",
+        "Therapy resistance from altered Ca2+/glutamate signaling",
+        "Promotion of stemness via NMDAR"
+      ],
+      "evidence_summary": "Calcium and glutamate channel genes are collectively upregulated in GBM, enabling diverse tumor behaviors including invasion, radioresistance, and stem cell self-renewal.",
+      "significance_score": 0.8,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "Calcium channels drive GSC proliferation"
+        },
+        {
+          "source_id": "",
+          "notes": "NMDAR in GBM therapy resistance"
+        }
+      ],
+      "supporting_genes": [
+        "RYR2",
+        "TRPM8",
+        "TRPV4",
+        "GRIN2B"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "CACNA1C",
+          "SLC17A7"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "SLC17A7, CACNA1C as additional glutamate/Ca2+ pathway genes in GBM"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Stemness & Plasticity Regulation",
+      "description": "Upregulation of HMGA2, ALDH1A2, NLGN4X collectively indicate an epigenetic and cell surface adhesive program promoting glioblastoma stem cell self-renewal and plasticity.",
+      "atomic_biological_processes": [
+        {
+          "name": "Stemness maintenance",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "HMGA2 sustains stemness and tumorigenicity in GBM"
+            },
+            {
+              "source_id": "",
+              "notes": "ALDH1A2 in GBM stem-like cells and microenvironment"
+            }
+          ],
+          "genes": [
+            "HMGA2",
+            "ALDH1A2"
+          ]
+        },
+        {
+          "name": "Synaptic adhesion",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "NLGN4X regulates growth cone and synaptic organization"
+            }
+          ],
+          "genes": [
+            "NLGN4X"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "glioma stem cell niche",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "GBM stem cell hierarchy and niche in resistance"
+            }
+          ],
+          "genes": [
+            "HMGA2",
+            "ALDH1A2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Increased self-renewal/plasticity",
+        "Promotion of resistant, multipotent tumor cells"
+      ],
+      "evidence_summary": "Stemness regulators HMGA2/ALDH1A2 and synaptic cues like NLGN4X are upregulated, driving plasticity and treatment resistance in GBM.",
+      "significance_score": 0.75,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "HMGA2 as GBM stemness regulator"
+        },
+        {
+          "source_id": "",
+          "notes": "ALDH1A2 expression in GSCs"
+        }
+      ],
+      "supporting_genes": [
+        "HMGA2",
+        "ALDH1A2",
+        "NLGN4X"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "PROM1"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "SOX2 as canonical GSC stemness factor"
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "pathway enrichment",
+      "co-citation",
+      "protein-protein interaction",
+      "co-expression analysis",
+      "literature correlation"
+    ],
+    "notes": "Highly cited experimental and review literature was prioritized for functional term assignment; pathway databases corroborated major gene programs and connections. Cross-validation against glioblastoma stem cell, invasion, immune-TAM, and synaptic datasets."
+  },
+  "version": "2025-11-17"
+}

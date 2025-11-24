@@ -1,0 +1,506 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "POSTN",
+    "KIAA1211L",
+    "CPNE4",
+    "HMGA2",
+    "TRPM8",
+    "CYTOR",
+    "RGS6",
+    "RPH3A",
+    "CCN4",
+    "ADAMTS9-AS1",
+    "SPRY1",
+    "LEF1",
+    "VAT1L",
+    "COL22A1",
+    "MIR4435-2HG",
+    "AC000065.1",
+    "CPED1",
+    "ARHGAP6",
+    "TRPM3",
+    "ANGPT1",
+    "ALK",
+    "CA2",
+    "SERPINE1",
+    "CHRM3-AS2",
+    "ITGA3",
+    "KIRREL3",
+    "RUBCNL",
+    "SLA",
+    "CCDC175",
+    "SHISA6",
+    "AC064875.1",
+    "SNED1",
+    "SPRY4",
+    "RBPMS",
+    "EMP1",
+    "LINC02832",
+    "LINC02742",
+    "HOPX",
+    "IQGAP2",
+    "GDF15",
+    "IRAK2",
+    "ST8SIA5",
+    "HIVEP3",
+    "TMEM154",
+    "COL19A1",
+    "TFCP2L1",
+    "GRM7",
+    "PLAT",
+    "GLRA2",
+    "FHL2",
+    "TENT5A",
+    "ANXA2",
+    "FSIP1",
+    "SYNJ2",
+    "SYT6",
+    "CLMN",
+    "PDGFD",
+    "CHST8",
+    "CHL1",
+    "PCSK5",
+    "GALR1",
+    "GABBR2",
+    "CNTNAP5",
+    "ARHGAP26",
+    "CA10",
+    "SLC18A1",
+    "SHISA9",
+    "SLC24A2",
+    "COL23A1",
+    "COL25A1",
+    "COL27A1",
+    "RHOJ",
+    "CAMK2B",
+    "CAMK2A",
+    "SLC4A4",
+    "RGS20",
+    "RCAN1",
+    "ESR2",
+    "C6orf141",
+    "CDH4",
+    "SLCO2B1",
+    "BNC2",
+    "AL050403.2",
+    "DNAH9",
+    "SOX1-OT",
+    "EGR1",
+    "SPRY2",
+    "EPHA3",
+    "PPP1R1C",
+    "AL121917.1",
+    "SCG2",
+    "AC090791.1",
+    "WNT16",
+    "IL27RA",
+    "MBNL3",
+    "ADAM19",
+    "IL1RAP",
+    "AC004828.2",
+    "AC011287.1",
+    "WIPF3",
+    "LINC01776",
+    "HS3ST5",
+    "INSYN2A",
+    "JAG1",
+    "NPR3",
+    "AC124254.2",
+    "NPY1R",
+    "TRIB3",
+    "UNC13C",
+    "METTL7B",
+    "AC002454.1",
+    "VAV3",
+    "NTSR1",
+    "TSPAN18",
+    "TPRG1",
+    "KLHL29",
+    "VSNL1",
+    "LINC01949"
+  ],
+  "programs": [
+    {
+      "program_name": "Invasion and Migration Signaling",
+      "description": "Regulated by POSTN, HMGA2, SERPINE1, ANXA2, TRPM8, SPRY proteins (SPRY1/2/4), ITGA3, and EGR1, whose combined roles drive the invasive phenotype in glioblastoma via extracellular matrix remodeling, epithelial-mesenchymal transition, and enhancement of migration machinery. POSTN, SERPINE1, HMGA2, ANXA2, and ITGA3 collaboratively underpin key steps of invasion; TRPM8 and EGR1 also contribute through regulation of intracellular signaling and adhesion; SPRY genes function as modulators of RTK signaling and EMT.",
+      "atomic_biological_processes": [
+        {
+          "name": "Extracellular matrix remodeling",
+          "genes": [
+            "POSTN",
+            "SERPINE1",
+            "ANXA2",
+            "ITGA3"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4816469/",
+              "notes": "POSTN regulates invasion and ECM interactions in GBM"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6879338/",
+              "notes": "SERPINE1 modulates dispersal and adhesion of GBM cells"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7139473/",
+              "notes": "ANXA2 activates angiogenesis and perivascular invasion; mesenchymal transition"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9041453/",
+              "notes": "ITGA3 and other integrins drive ECM adhesion and migration in glioma"
+            }
+          ]
+        },
+        {
+          "name": "Epithelial-Mesenchymal Transition (EMT)",
+          "genes": [
+            "HMGA2",
+            "SERPINE1",
+            "SPRY1",
+            "SPRY2",
+            "SPRY4"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7014778/",
+              "notes": "HMGA2 promotes EMT and invasion in glioma"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4972289/",
+              "notes": "SERPINE1 upregulated during EMT in GBM"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5806846/",
+              "notes": "SPRY proteins are RTK/EMT suppressors; downregulation removes invasion check"
+            }
+          ]
+        },
+        {
+          "name": "Cell-Matrix Adhesion",
+          "genes": [
+            "ITGA3",
+            "SERPINE1",
+            "POSTN",
+            "ANXA2"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7139473/",
+              "notes": "ITGA3 mediates ECM adhesion in glioma"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6879338/",
+              "notes": "SERPINE1 regulates cell adhesion and dispersal"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4816469/",
+              "notes": "POSTN/Integrin axis drives adhesion"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7139473/",
+              "notes": "ANXA2 promotes perivascular invasion"
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Focal Adhesions",
+          "genes": [
+            "FHL2",
+            "ITGA3",
+            "ANXA2",
+            "SERPINE1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3872320/",
+              "notes": "FHL2 controls adhesion/migration in cancer"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7139473/",
+              "notes": "ITGA3 participates in cell adhesion processes in GBM"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6879338/",
+              "notes": "SERPINE1 in adhesion complexes"
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced extracellular matrix degradation and remodeling",
+        "Upregulated EMT-driven cell migration",
+        "Increased tissue invasion and therapy resistance"
+      ],
+      "evidence_summary": "Multiple genes are functionally interlinked in driving invasion and migration in malignant glioblastoma, supported by strong experimental evidence. POSTN, SERPINE1, HMGA2, ITGA3, ANXA2, SPRY family, and EGR1 are each implicated in invasive transformation, migration machinery, and adhesion, frequently acting together.",
+      "significance_score": 0.98,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4816469/",
+          "notes": "POSTN regulates glioma invasion"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6879338/",
+          "notes": "SERPINE1 promotes dispersal and adhesion"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7014778/",
+          "notes": "HMGA2 drives EMT and invasion"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7139473/",
+          "notes": "ITGA3 role in adhesion"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7139473/",
+          "notes": "ANXA2 in invasion/mesenchymal transition"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4972289/",
+          "notes": "SERPINE1 expression and function in GBM"
+        }
+      ],
+      "supporting_genes": [
+        "POSTN",
+        "SERPINE1",
+        "HMGA2",
+        "ITGA3",
+        "ANXA2",
+        "FHL2",
+        "SPRY1",
+        "SPRY2",
+        "SPRY4",
+        "EGR1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "CD44",
+          "MMP2",
+          "MMP9",
+          "VIM",
+          "TWIST1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6977243/",
+            "notes": "CD44, MMPs, VIM, TWIST1 as canonical invasion/EMT regulators"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Angiogenesis and Neovascularization",
+      "description": "ANGPT1, VEGFA-pathway genes, POSTN, FHL2, GDF15, ALK, and EPHA3 contribute to pro-angiogenic programs in malignant glioblastoma, facilitating abnormal vessel formation and maintenance. GDF15 and POSTN secreted by tumor or stromal cells stimulate proliferation, survival, and promote neovascularization in hypoxic tumor regions. ALK and EPHA3 pathways enhance vessel stability and tumor expansion via paracrine and autocrine signaling.",
+      "atomic_biological_processes": [
+        {
+          "name": "Angiogenesis",
+          "genes": [
+            "ANGPT1",
+            "POSTN",
+            "ALK",
+            "GDF15",
+            "EPHA3"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1476717/",
+              "notes": "ANGPT1/Tie2 axis induces vascularization in GBM"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6600696/",
+              "notes": "POSTN in neovascularization and anti-VEGF resistance"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4545799/",
+              "notes": "ALK stimulates angiogenesis, vessel stability in GBM"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4707513/",
+              "notes": "GDF15 mediates radiation-induced and baseline angiogenesis"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6178228/",
+              "notes": "EPHA3 highly expressed in neovasculature niches"
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Vascular Endothelium",
+          "genes": [
+            "ANGPT1",
+            "POSTN",
+            "EPHA3",
+            "GDF15"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1476717/",
+              "notes": "Endothelial ANGPT1 effect"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6178228/",
+              "notes": "EPHA3 marks tumor endothelium, niche"
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Accelerated neovascularization in hypoxic tumor regions",
+        "Enhanced vessel permeability and stability",
+        "Therapy resistance due to abnormal vascular architecture"
+      ],
+      "evidence_summary": "Core pro-angiogenic genes (ANGPT1, POSTN, ALK, GDF15, EPHA3) all appear in the input list and have robust, interconnected roles in driving angiogenesis and vascularization in GBM, as shown by literature.",
+      "significance_score": 0.94,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6600696/",
+          "notes": "POSTN neovascularization"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1476717/",
+          "notes": "ANGPT1/TIE2 axis"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4545799/",
+          "notes": "ALK pro-angiogenic activity"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4707513/",
+          "notes": "GDF15 pro-angiogenic fibroblast-tumor cross-talk"
+        }
+      ],
+      "supporting_genes": [
+        "ANGPT1",
+        "POSTN",
+        "FHL2",
+        "ALK",
+        "GDF15",
+        "EPHA3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "VEGFA",
+          "VEGFB",
+          "VEGFR2",
+          "ANGPT2"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6178228/",
+            "notes": "VEGF/ANGPT axes central to GBM angiogenesis"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "WNT/Stemness Signaling",
+      "description": "LEF1, WNT16, SPRY, FHL2, and HOPX, with supporting lncRNA and homeodomain regulators, interact to promote WNT pathway activation, stem-cell maintenance, and tumor propagation. LEF1 and WNT pathway genes drive self-renewal capability and resistance, particularly in stem-like and mesenchymal GBM. FHL2 further activates \u03b2-catenin/WNT signaling.",
+      "atomic_biological_processes": [
+        {
+          "name": "WNT Signaling",
+          "genes": [
+            "LEF1",
+            "WNT16",
+            "FHL2",
+            "SPRY2",
+            "HOPX"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6782348/",
+              "notes": "LEF1 regulates WNT-driven invasion"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8204772/",
+              "notes": "WNT pathway as stemness regulator in GBM"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8638688/",
+              "notes": "FHL2 activates \u03b2-catenin complex"
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Stem Cell Niche",
+          "genes": [
+            "LEF1",
+            "WNT16",
+            "HOPX",
+            "FHL2"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6782348/",
+              "notes": "LEF1 and stem cell signatures"
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8204772/",
+              "notes": "WNT-driven stem cell maintenance"
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Promotion of glioblastoma stem cell self-renewal",
+        "Enhanced therapy resistance",
+        "Propagation of heterogeneity and tumor growth"
+      ],
+      "evidence_summary": "LEF1 and WNT pathway genes are central to GBM stem cell maintenance, invasiveness and cell fate. FHL2 boosts \u03b2-catenin signaling, with SPRY and HOPX providing regulatory input.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6782348/",
+          "notes": "LEF1 and stemness in GBM"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8204772/",
+          "notes": "WNT pathway stem cell regulation"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8638688/",
+          "notes": "FHL2/WNT signaling cooperativity"
+        }
+      ],
+      "supporting_genes": [
+        "LEF1",
+        "WNT16",
+        "FHL2",
+        "SPRY2",
+        "HOPX"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "CTNNB1",
+          "AXIN2",
+          "TCF7"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6782348/",
+            "notes": "\u03b2-catenin complex mediators required for canonical WNT"
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "pathway databases",
+      "co-citation",
+      "co-expression analysis",
+      "protein-protein interaction mapping"
+    ],
+    "notes": "Programs were derived by integrating literature and database-level evidence, pathway and co-expression signatures among input genes with a priority for high-confidence, widely supported functional modules relevant to glioblastoma biology."
+  },
+  "version": "2025-11-17"
+}
