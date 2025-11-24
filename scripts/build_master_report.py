@@ -59,6 +59,8 @@ def main() -> None:
         DATA_DIR / "deepsearch_programs.csv",
         usecols=["folder", "run_index", "program_index", "program_name", "supporting_genes"],
     )
+    component_map = pd.read_csv(DATA_DIR / "component_mapping.csv")
+    component_matches = pd.read_csv(DATA_DIR / "component_program_matches.csv")
 
     def parse_genes(cell: str):
         if isinstance(cell, float) and pd.isna(cell):
@@ -213,6 +215,46 @@ def main() -> None:
                 for row in table_rows:
                     content.append(
                         f"| {row['small_name']} | {row['other_name']} | {row['overlap']} | {row['gene']} | {row['name']} | {row['combined']} |"
+                    )
+                content.append("")
+
+            comp_subset = component_map[component_map["folder"] == folder.name].sort_values(
+                ["component_order", "component_token"]
+            )
+            if not comp_subset.empty:
+                comp_matches = component_matches[component_matches["folder"] == folder.name]
+
+                def format_matches(component_key: str, run_idx: int) -> tuple[str, str]:
+                    rows = (
+                        comp_matches[
+                            (comp_matches["component_key"] == component_key)
+                            & (comp_matches["run_index"] == run_idx)
+                        ]
+                        .sort_values("match_rank")
+                        .iloc[:2]
+                    )
+                    if rows.empty:
+                        return "-", "-"
+                    first = rows.iloc[0]
+                    first_str = f"{first['program_name']} ({first['similarity']:.2f})"
+                    if len(rows) > 1:
+                        second = rows.iloc[1]
+                        second_str = f"{second['program_name']} ({second['similarity']:.2f})"
+                    else:
+                        second_str = "-"
+                    return first_str, second_str
+
+                content.append("### Component–program alignment")
+                content.append("")
+                content.append(
+                    "| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |"
+                )
+                content.append("| --- | --- | --- | --- | --- | --- |")
+                for comp_row in comp_subset.itertuples(index=False):
+                    run1_best, run1_second = format_matches(comp_row.component_key, 1)
+                    run2_best, run2_second = format_matches(comp_row.component_key, 2)
+                    content.append(
+                        f"| {comp_row.component_token} | {comp_row.expanded_name} | {run1_best} | {run1_second} | {run2_best} | {run2_second} |"
                     )
                 content.append("")
         

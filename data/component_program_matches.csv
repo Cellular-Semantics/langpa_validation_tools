@@ -1,0 +1,93 @@
+annotation,folder,component_token,component_key,expanded_name,run_index,match_rank,program_index,program_name,similarity
+Gliosis,00_Gliosis,Gliosis,gliosis,Reactive gliosis and inflammatory response,1,1,2,Immunosuppression & Inflammation,0.3741893458365573
+Gliosis,00_Gliosis,Gliosis,gliosis,Reactive gliosis and inflammatory response,1,2,1,Hypoxia Response & Angiogenesis,0.3118144012054465
+Gliosis,00_Gliosis,Gliosis,gliosis,Reactive gliosis and inflammatory response,2,1,1,Immune Modulation and Inflammation,0.4057276715722407
+Gliosis,00_Gliosis,Gliosis,gliosis,Reactive gliosis and inflammatory response,2,2,3,Angiogenesis & Hypoxic Response,0.3207293562265444
+OPC-AC-like 1,01_OPC-AC-like_1,OPC,opc,Oligodendrocyte precursor-like malignant program,1,1,0,Glial/astrocyte differentiation and tumor plasticity,0.49764473212388316
+OPC-AC-like 1,01_OPC-AC-like_1,OPC,opc,Oligodendrocyte precursor-like malignant program,1,2,1,Mesenchymal invasion and matrix remodeling,0.3766306169032144
+OPC-AC-like 1,01_OPC-AC-like_1,OPC,opc,Oligodendrocyte precursor-like malignant program,2,1,4,Aberrant Neural and Synaptic Programs,0.5278067764372512
+OPC-AC-like 1,01_OPC-AC-like_1,OPC,opc,Oligodendrocyte precursor-like malignant program,2,2,3,Proliferation and Aberrant Cell Cycle Regulation,0.41606055378528395
+OPC-AC-like 1,01_OPC-AC-like_1,AC,ac,Astrocyte-like malignant program,1,1,0,Glial/astrocyte differentiation and tumor plasticity,0.6194467103775809
+OPC-AC-like 1,01_OPC-AC-like_1,AC,ac,Astrocyte-like malignant program,1,2,1,Mesenchymal invasion and matrix remodeling,0.3619395296619664
+OPC-AC-like 1,01_OPC-AC-like_1,AC,ac,Astrocyte-like malignant program,2,1,4,Aberrant Neural and Synaptic Programs,0.5592559838654494
+OPC-AC-like 1,01_OPC-AC-like_1,AC,ac,Astrocyte-like malignant program,2,2,3,Proliferation and Aberrant Cell Cycle Regulation,0.4177364512522177
+NPC-neuronal-like 1,02_NPC-neuronal-like_1,NPC,npc,Neural progenitor-like proliferative program,1,1,5,Neuregulin-BMP Signaling,0.4394912795122731
+NPC-neuronal-like 1,02_NPC-neuronal-like_1,NPC,npc,Neural progenitor-like proliferative program,1,2,2,GABAergic Neurotransmission,0.33689350449948524
+NPC-neuronal-like 1,02_NPC-neuronal-like_1,NPC,npc,Neural progenitor-like proliferative program,2,1,2,Inflammatory and Mesenchymal Signaling,0.381590543798608
+NPC-neuronal-like 1,02_NPC-neuronal-like_1,NPC,npc,Neural progenitor-like proliferative program,2,2,4,Chromatin/Transcriptional Regulation and Tumor Suppressor Pathways,0.36026504008816135
+NPC-neuronal-like 1,02_NPC-neuronal-like_1,neuronal,neuronal,Neuronal differentiation and signaling program,1,1,5,Neuregulin-BMP Signaling,0.5049883719435628
+NPC-neuronal-like 1,02_NPC-neuronal-like_1,neuronal,neuronal,Neuronal differentiation and signaling program,1,2,2,GABAergic Neurotransmission,0.4828472741284208
+NPC-neuronal-like 1,02_NPC-neuronal-like_1,neuronal,neuronal,Neuronal differentiation and signaling program,2,1,3,Neuronal and Synaptic Signaling Dysregulation,0.4739461405642593
+NPC-neuronal-like 1,02_NPC-neuronal-like_1,neuronal,neuronal,Neuronal differentiation and signaling program,2,2,2,Inflammatory and Mesenchymal Signaling,0.4224423888406268
+NPC-neuronal-like 2,03_NPC-neuronal-like_2,NPC,npc,Neural progenitor-like proliferative program,1,1,3,Transcriptional & Epigenetic Reprogramming,0.4375392584241865
+NPC-neuronal-like 2,03_NPC-neuronal-like_2,NPC,npc,Neural progenitor-like proliferative program,1,2,1,Glutamatergic & Synaptic Signaling Deregulation,0.3273566212990624
+NPC-neuronal-like 2,03_NPC-neuronal-like_2,NPC,npc,Neural progenitor-like proliferative program,2,1,2,Glioma Stem Cell Maintenance and Therapy Resistance,0.5146697507730915
+NPC-neuronal-like 2,03_NPC-neuronal-like_2,NPC,npc,Neural progenitor-like proliferative program,2,2,1,Glutamatergic Excitotoxicity and Synapse Dynamics,0.28956524639969033
+NPC-neuronal-like 2,03_NPC-neuronal-like_2,neuronal,neuronal,Neuronal differentiation and signaling program,1,1,1,Glutamatergic & Synaptic Signaling Deregulation,0.4661360426464796
+NPC-neuronal-like 2,03_NPC-neuronal-like_2,neuronal,neuronal,Neuronal differentiation and signaling program,1,2,2,Axon Guidance & Cell Migration,0.4523282607857134
+NPC-neuronal-like 2,03_NPC-neuronal-like_2,neuronal,neuronal,Neuronal differentiation and signaling program,2,1,2,Glioma Stem Cell Maintenance and Therapy Resistance,0.44557531761415614
+NPC-neuronal-like 2,03_NPC-neuronal-like_2,neuronal,neuronal,Neuronal differentiation and signaling program,2,2,1,Glutamatergic Excitotoxicity and Synapse Dynamics,0.43627113407450663
+AC-gliosis-like 1,04_AC-gliosis-like_1,AC,ac,Astrocyte-like malignant program,1,1,3,Stem-like state and plasticity signaling,0.5077639930171761
+AC-gliosis-like 1,04_AC-gliosis-like_1,AC,ac,Astrocyte-like malignant program,1,2,0,Aquaporin/ion channel invasion,0.4001366055828455
+AC-gliosis-like 1,04_AC-gliosis-like_1,AC,ac,Astrocyte-like malignant program,2,1,1,Reactive Astrocyte-Like State and Stemness,0.6192840233970818
+AC-gliosis-like 1,04_AC-gliosis-like_1,AC,ac,Astrocyte-like malignant program,2,2,6,Mesenchymal State Induction via Cytokine Receptors,0.39067735501446327
+AC-gliosis-like 1,04_AC-gliosis-like_1,gliosis,gliosis,Reactive gliosis and inflammatory response,1,1,3,Stem-like state and plasticity signaling,0.39278819505938206
+AC-gliosis-like 1,04_AC-gliosis-like_1,gliosis,gliosis,Reactive gliosis and inflammatory response,1,2,2,Immune/Inflammatory microenvironment regulation,0.36885689992177356
+AC-gliosis-like 1,04_AC-gliosis-like_1,gliosis,gliosis,Reactive gliosis and inflammatory response,2,1,1,Reactive Astrocyte-Like State and Stemness,0.6039703468565406
+AC-gliosis-like 1,04_AC-gliosis-like_1,gliosis,gliosis,Reactive gliosis and inflammatory response,2,2,4,"Immunomodulation, Hypoxia, and Inflammation",0.37800382323813236
+AC-neuronal-like,05_AC-neuronal-like,AC,ac,Astrocyte-like malignant program,1,1,3,Glioblastoma Angiogenesis & Hypoxic Adaptation,0.5216560565865426
+AC-neuronal-like,05_AC-neuronal-like,AC,ac,Astrocyte-like malignant program,1,2,0,Glioblastoma Invasion & Migration,0.5045524319426435
+AC-neuronal-like,05_AC-neuronal-like,AC,ac,Astrocyte-like malignant program,2,1,3,Stemness & Plasticity Regulation,0.4761844157387708
+AC-neuronal-like,05_AC-neuronal-like,AC,ac,Astrocyte-like malignant program,2,2,1,Immune Evasion & TAM Polarization,0.39189434055719596
+AC-neuronal-like,05_AC-neuronal-like,neuronal,neuronal,Neuronal differentiation and signaling program,1,1,0,Glioblastoma Invasion & Migration,0.45591383023052373
+AC-neuronal-like,05_AC-neuronal-like,neuronal,neuronal,Neuronal differentiation and signaling program,1,2,2,Glioblastoma Stem Cell Maintenance & Therapy Resistance,0.45032890612159965
+AC-neuronal-like,05_AC-neuronal-like,neuronal,neuronal,Neuronal differentiation and signaling program,2,1,3,Stemness & Plasticity Regulation,0.46347888022223077
+AC-neuronal-like,05_AC-neuronal-like,neuronal,neuronal,Neuronal differentiation and signaling program,2,2,2,Calcium & Glutamate Signaling,0.4421526128206047
+OPC-NPC-like,06_OPC-NPC-like,OPC,opc,Oligodendrocyte precursor-like malignant program,1,1,3,Stemness and Dedifferentiation Program,0.49031967968075835
+OPC-NPC-like,06_OPC-NPC-like,OPC,opc,Oligodendrocyte precursor-like malignant program,1,2,4,Mesenchymal Transition & Invasion,0.3718253023204231
+OPC-NPC-like,06_OPC-NPC-like,OPC,opc,Oligodendrocyte precursor-like malignant program,2,1,1,Proneural-Mesenchymal Transition & Stem Cell Plasticity,0.5396144494583379
+OPC-NPC-like,06_OPC-NPC-like,OPC,opc,Oligodendrocyte precursor-like malignant program,2,2,3,Apoptosis and Therapy Resistance Programs,0.39583257927559706
+OPC-NPC-like,06_OPC-NPC-like,NPC,npc,Neural progenitor-like proliferative program,1,1,3,Stemness and Dedifferentiation Program,0.6378009219485308
+OPC-NPC-like,06_OPC-NPC-like,NPC,npc,Neural progenitor-like proliferative program,1,2,0,Sonic Hedgehog and GLI Signaling,0.39430394053259177
+OPC-NPC-like,06_OPC-NPC-like,NPC,npc,Neural progenitor-like proliferative program,2,1,1,Proneural-Mesenchymal Transition & Stem Cell Plasticity,0.6307053917442806
+OPC-NPC-like,06_OPC-NPC-like,NPC,npc,Neural progenitor-like proliferative program,2,2,4,"Neural and Axon Guidance, Migration",0.39104352429291
+Proliferative,07_Proliferative,Proliferative,proliferative,Proliferative cycling and mitotic program,1,1,3,Transcriptional Cell Cycle Regulation,0.5148946267196873
+Proliferative,07_Proliferative,Proliferative,proliferative,Proliferative cycling and mitotic program,1,2,0,Cell Cycle Checkpoint Control,0.4963565324912808
+Proliferative,07_Proliferative,Proliferative,proliferative,Proliferative cycling and mitotic program,2,1,0,Mitotic Cell Division Promotion,0.48677498571295724
+Proliferative,07_Proliferative,Proliferative,proliferative,Proliferative cycling and mitotic program,2,2,1,Cell Cycle Progression and DNA Replication,0.4834935896993838
+Gliosis-hypoxia,08_Gliosis-hypoxia,Gliosis,gliosis,Reactive gliosis and inflammatory response,1,1,0,Hypoxia Response & Survival,0.36792171170310595
+Gliosis-hypoxia,08_Gliosis-hypoxia,Gliosis,gliosis,Reactive gliosis and inflammatory response,1,2,1,Mesenchymal Transition & Invasion,0.26289559366848797
+Gliosis-hypoxia,08_Gliosis-hypoxia,Gliosis,gliosis,Reactive gliosis and inflammatory response,2,1,1,Hypoxia and metabolic reprogramming,0.3453397180319983
+Gliosis-hypoxia,08_Gliosis-hypoxia,Gliosis,gliosis,Reactive gliosis and inflammatory response,2,2,4,Cell stress and apoptosis regulation,0.3213616947109919
+Gliosis-hypoxia,08_Gliosis-hypoxia,hypoxia,hypoxia,Hypoxic and angiogenic adaptation program,1,1,0,Hypoxia Response & Survival,0.6962074178079461
+Gliosis-hypoxia,08_Gliosis-hypoxia,hypoxia,hypoxia,Hypoxic and angiogenic adaptation program,1,2,2,Angiogenesis & Vascular Niche,0.5224457033021241
+Gliosis-hypoxia,08_Gliosis-hypoxia,hypoxia,hypoxia,Hypoxic and angiogenic adaptation program,2,1,1,Hypoxia and metabolic reprogramming,0.5984386862835775
+Gliosis-hypoxia,08_Gliosis-hypoxia,hypoxia,hypoxia,Hypoxic and angiogenic adaptation program,2,2,4,Cell stress and apoptosis regulation,0.46588348760610804
+Proliferative 2,09_Proliferative_2,Proliferative,proliferative,Proliferative cycling and mitotic program,1,1,1,Cell Cycle Regulation & Checkpoint Control,0.4825477614701222
+Proliferative 2,09_Proliferative_2,Proliferative,proliferative,Proliferative cycling and mitotic program,1,2,0,DNA Replication Licensing & Fork Progression,0.39297346297241065
+Proliferative 2,09_Proliferative_2,Proliferative,proliferative,Proliferative cycling and mitotic program,2,1,3,Cell Cycle Transcriptional Regulation,0.5448945582588502
+Proliferative 2,09_Proliferative_2,Proliferative,proliferative,Proliferative cycling and mitotic program,2,2,2,Mitotic Regulation and Chromosome Segregation,0.4456697490604225
+AC-gliosis-like 2,10_AC-gliosis-like_2,AC,ac,Astrocyte-like malignant program,1,1,3,Neuronal-Synaptic & Neurotransmitter Modulation,0.47622420316546676
+AC-gliosis-like 2,10_AC-gliosis-like_2,AC,ac,Astrocyte-like malignant program,1,2,1,Stemness & WNT-Driven Maintenance,0.4303344203095654
+AC-gliosis-like 2,10_AC-gliosis-like_2,AC,ac,Astrocyte-like malignant program,2,1,0,Invasion and Migration Signaling,0.32660098799753096
+AC-gliosis-like 2,10_AC-gliosis-like_2,AC,ac,Astrocyte-like malignant program,2,2,1,Angiogenesis and Neovascularization,0.3005199933887946
+AC-gliosis-like 2,10_AC-gliosis-like_2,gliosis,gliosis,Reactive gliosis and inflammatory response,1,1,3,Neuronal-Synaptic & Neurotransmitter Modulation,0.432217248345544
+AC-gliosis-like 2,10_AC-gliosis-like_2,gliosis,gliosis,Reactive gliosis and inflammatory response,1,2,4,Hypoxia/Metabolic Stress Adaptation,0.34638963003004564
+AC-gliosis-like 2,10_AC-gliosis-like_2,gliosis,gliosis,Reactive gliosis and inflammatory response,2,1,0,Invasion and Migration Signaling,0.27247848581491885
+AC-gliosis-like 2,10_AC-gliosis-like_2,gliosis,gliosis,Reactive gliosis and inflammatory response,2,2,1,Angiogenesis and Neovascularization,0.27178168485643345
+OPC-like 1,11_OPC-like_1,OPC,opc,Oligodendrocyte precursor-like malignant program,1,1,1,Oligodendrocyte/Stem-like Myelination Program,0.6427536008031172
+OPC-like 1,11_OPC-like_1,OPC,opc,Oligodendrocyte precursor-like malignant program,1,2,3,Angiogenesis and Vascular Remodeling,0.31705181884660616
+OPC-like 1,11_OPC-like_1,OPC,opc,Oligodendrocyte precursor-like malignant program,2,1,0,Oligodendrocyte Differentiation & Myelin Formation,0.5298822714510224
+OPC-like 1,11_OPC-like_1,OPC,opc,Oligodendrocyte precursor-like malignant program,2,2,8,Cancer Stem Cell Maintenance & Plasticity,0.4344123993016477
+NPC-neuronal-like 3,12_NPC-neuronal-like_3,NPC,npc,Neural progenitor-like proliferative program,1,1,1,GABAergic and Neuronal Differentiation,0.4115533937418441
+NPC-neuronal-like 3,12_NPC-neuronal-like_3,NPC,npc,Neural progenitor-like proliferative program,1,2,2,Neural Cell Adhesion & Migration,0.39685278635264326
+NPC-neuronal-like 3,12_NPC-neuronal-like_3,NPC,npc,Neural progenitor-like proliferative program,2,1,1,GABAergic and Neuronal Differentiation,0.41153409873221597
+NPC-neuronal-like 3,12_NPC-neuronal-like_3,NPC,npc,Neural progenitor-like proliferative program,2,2,2,Neural Cell Adhesion & Migration,0.3968185465946391
+NPC-neuronal-like 3,12_NPC-neuronal-like_3,neuronal,neuronal,Neuronal differentiation and signaling program,1,1,1,GABAergic and Neuronal Differentiation,0.5869257466174848
+NPC-neuronal-like 3,12_NPC-neuronal-like_3,neuronal,neuronal,Neuronal differentiation and signaling program,1,2,2,Neural Cell Adhesion & Migration,0.4986350765880412
+NPC-neuronal-like 3,12_NPC-neuronal-like_3,neuronal,neuronal,Neuronal differentiation and signaling program,2,1,1,GABAergic and Neuronal Differentiation,0.5868920118304068
+NPC-neuronal-like 3,12_NPC-neuronal-like_3,neuronal,neuronal,Neuronal differentiation and signaling program,2,2,2,Neural Cell Adhesion & Migration,0.49881728172446027
+OPC-like 2,13_OPC-like_2,OPC,opc,Oligodendrocyte precursor-like malignant program,1,1,0,Oligodendrocyte myelin transcriptional control,0.5361203902618852
+OPC-like 2,13_OPC-like_2,OPC,opc,Oligodendrocyte precursor-like malignant program,1,2,2,ECM proteolysis and glioma invasion,0.4238994577154475
+OPC-like 2,13_OPC-like_2,OPC,opc,Oligodendrocyte precursor-like malignant program,2,1,0,Oligodendrocyte Lineage Programming,0.6368500386912564
+OPC-like 2,13_OPC-like_2,OPC,opc,Oligodendrocyte precursor-like malignant program,2,2,4,Neural Stem Cell Maintenance and Pluripotency,0.4384969474045584
