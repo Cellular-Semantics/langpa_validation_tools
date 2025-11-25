@@ -2,6 +2,8 @@
 
 Pipeline for parsing Perplexity DeepSearch outputs, comparing pseudo-enrichment programs to GO results, and generating figures/reports per project. The current default project is `glioblastoma_perplexity_manual`, but the layout supports multiple projects via per-project subdirectories.
 
+![coverage](https://img.shields.io/badge/coverage-local--run-orange)
+
 ## Layout
 - `projects/<project>/`: mapping files (`geneset_folder_mapping.csv`, `run_file_mapping.csv`), source spreadsheet (e.g., `media-3 (2).xlsx`), `description.md`.
 - Inputs: `deepsearch/<project>/run_*.md`, `Comparisons/<project>/comparison geneset_*.md`, `schemas/<project>/` (placeholder).
