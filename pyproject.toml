@@ -10,3 +10,16 @@ dependencies = [
     "openai>=1.0.0",
     "python-dotenv",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+omit = ["src/embed_*", "src/build_master_report.py" ]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

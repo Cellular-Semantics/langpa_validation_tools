@@ -6,6 +6,7 @@ XDG_CACHE_HOME ?= $(PWD)/.cache
 ENV_VARS = MPLCONFIGDIR=$(MPLCONFIGDIR) XDG_CACHE_HOME=$(XDG_CACHE_HOME)
 
 CACHE_DIRS = $(MPLCONFIGDIR) $(XDG_CACHE_HOME)/fontconfig
+TEST_PYTHON ?= $(PYTHON)
 
 all: cache_dirs data comparisons figures heatmaps run_reports master_report
 
@@ -36,3 +37,11 @@ run_reports: data cache_dirs
 .PHONY: master_report
 master_report: figures heatmaps run_reports cache_dirs
 	$(ENV_VARS) $(PYTHON) -m src.build_master_report --project $(PROJECT)
+
+.PHONY: test
+test: cache_dirs
+	$(ENV_VARS) $(TEST_PYTHON) -m pytest
+
+.PHONY: coverage
+coverage: cache_dirs
+	$(ENV_VARS) $(TEST_PYTHON) -m pytest --cov=src --cov-report=term-missing

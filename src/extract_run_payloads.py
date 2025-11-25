@@ -11,7 +11,6 @@ from .process_deepsearch import parse_run
 from .project_paths import add_project_argument, resolve_paths
 
 
-
 def extract_citations(text: str) -> list[dict]:
     citations: list[dict] = []
     pattern = re.compile(r"^\[\^([^\]]+)\]:\s*(\S+)", re.MULTILINE)
@@ -20,7 +19,6 @@ def extract_citations(text: str) -> list[dict]:
     return citations
 
 
-def main() -> None:
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Extract DeepSearch payloads and citation footnotes for a project.")
     add_project_argument(parser)
@@ -42,13 +40,13 @@ def main(argv: list[str] | None = None) -> None:
             payload = parse_run(run_file)
 
             rel_folder = payload_dir / folder.name
-            rel_folder.mkdir(exist_ok=True)
+            rel_folder.mkdir(parents=True, exist_ok=True)
             payload_path = rel_folder / f"{run_name}.json"
             payload_path.write_text(json.dumps(payload, indent=2))
 
             citations = extract_citations(text)
             cite_folder = citation_dir / folder.name
-            cite_folder.mkdir(exist_ok=True)
+            cite_folder.mkdir(parents=True, exist_ok=True)
             citation_path = cite_folder / f"{run_name}_citations.json"
             citation_path.write_text(json.dumps(citations, indent=2))
 
