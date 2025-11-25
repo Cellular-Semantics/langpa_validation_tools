@@ -1,0 +1,3 @@
+metamodule,annotation,folder,source_file,program_name,similar_terms_raw,novel_aspects,matched_term_count,supporting_gene_count
+0,Test,00_Test,comparison geneset_1.md,---,---,---,0,
+0,Test,00_Test,comparison geneset_1.md,Prog A,term one (GO:12345),n,1,0.0

@@ -1,0 +1,3 @@
+run_id,metamodule,annotation,folder,run_index,program_index,program_name,description,supporting_genes,supporting_gene_count,significance_score,predicted_impacts
+00_Test_run1,0,Test,00_Test,1,0,A,,"[""G1""]",1,,[]
+00_Test_run2,0,Test,00_Test,2,0,B,,"[""G1"", ""G2""]",2,,[]

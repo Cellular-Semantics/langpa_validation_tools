@@ -1,0 +1,2 @@
+metamodule,annotation,folder,source_file,program_name,gsea_term
+0,Test,00_Test,comparison geneset_1.md,Prog A,term one (GO:12345)

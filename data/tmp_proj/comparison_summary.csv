@@ -1,0 +1,2 @@
+metamodule,annotation,folder,source_file,total_gsea_terms,unmatched_go_terms_reported,unmatched_go_terms_listed,matched_go_terms_estimated,programs_total,programs_without_go_match
+0,Test,00_Test,comparison geneset_1.md,2,0,0,2,2,1

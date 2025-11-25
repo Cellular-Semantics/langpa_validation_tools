@@ -1,0 +1,2 @@
+run_a_id,run_b_id,program_a_index,program_b_index,program_a_name,program_b_name,gene_jaccard,name_similarity,combined_similarity,folder,metamodule,annotation
+00_Test_run1,00_Test_run2,0,0,A,B,0.5,0.0,0.25,00_Test,0,Test
