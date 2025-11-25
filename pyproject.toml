@@ -18,7 +18,7 @@ addopts = "--strict-markers"
 [tool.coverage.run]
 source = ["src"]
 branch = true
-omit = ["src/embed_*" ]
+omit = ["src/embed_*", "src/build_master_report.py" ]
 
 [tool.coverage.report]
 show_missing = true

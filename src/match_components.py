@@ -17,10 +17,10 @@ def normalize(vectors: np.ndarray) -> np.ndarray:
     return vectors / norms
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Match component embeddings to program embeddings for a project.")
     add_project_argument(parser)
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     paths = resolve_paths(args.project)
     paths.ensure_output_dirs()
     data_dir = paths.data_dir

@@ -58,11 +58,11 @@ def test_generate_reports_and_master(tmp_path, monkeypatch):
     # minimal CSVs for master report
     pd.DataFrame(
         {
-            "folder": ["00_Test"],
-            "annotation": ["Test"],
-            "run_index": [1],
-            "program_signature": ["sig"],
-            "program_count": [1],
+            "folder": ["00_Test", "00_Test"],
+            "annotation": ["Test", "Test"],
+            "run_index": [1, 2],
+            "program_signature": ["sig1", "sig2"],
+            "program_count": [1, 2],
         }
     ).to_csv(data_dir / "deepsearch_runs.csv", index=False)
     pd.DataFrame(
@@ -95,6 +95,9 @@ def test_generate_reports_and_master(tmp_path, monkeypatch):
     )
     pd.DataFrame({"folder": ["00_Test"], "component_token": ["tok"], "program_name": ["Prog1"]}).to_csv(
         data_dir / "component_program_matches.csv", index=False
+    )
+    pd.DataFrame({"folder": ["00_Test"], "annotation": ["Test"], "duplicate": [True]}).to_csv(
+        data_dir / "deepsearch_duplicate_runs.csv", index=False
     )
     (paths.analysis_dir / "confusion_heatmaps").mkdir(parents=True, exist_ok=True)
     bubble = paths.analysis_dir / "confusion_heatmaps" / "00_Test_bubble.png"

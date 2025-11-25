@@ -9,6 +9,8 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -27,4 +29,14 @@ jobs:
           XDG_CACHE_HOME: ${{ github.workspace }}/.cache
         run: |
           mkdir -p "$MPLCONFIGDIR" "$XDG_CACHE_HOME"/fontconfig
-          pytest --cov=src --cov-report=term-missing
+          pytest --cov=src --cov-report=term-missing --cov-report=xml
+      - name: Generate coverage badge
+        run: |
+          mkdir -p badges
+          coverage-badge -o badges/coverage.svg -f
+      - name: Commit coverage badge (main branch only)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update coverage badge"
+          branch: main

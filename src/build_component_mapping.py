@@ -57,10 +57,10 @@ def tokenize(annotation: str) -> list[str]:
     return cleaned
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Build component token mapping for a project.")
     add_project_argument(parser)
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     paths = resolve_paths(args.project)
     paths.ensure_output_dirs()
     if not paths.s10_file.exists():
