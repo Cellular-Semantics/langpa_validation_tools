@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -220,10 +221,10 @@ def main(argv=None) -> None:
                     ]["program_name"].unique()
                     programs_str = ", ".join(matched_programs) if len(matched_programs) else "(none)"
                     content.append(f"- {comp_row['component_token']}: {programs_str}")
-                content.append("")
+        content.append("")
 
         if bubble.exists():
-            rel_path = bubble.relative_to(master_report.parent)
+            rel_path = Path(os.path.relpath(bubble, master_report.parent))
             content.append(f"![Program similarity bubble plot]({rel_path.as_posix()})")
             content.append("")
         if run_links:

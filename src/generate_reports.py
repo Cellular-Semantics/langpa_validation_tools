@@ -183,11 +183,11 @@ def generate_reports(project: str) -> None:
                 lines.append("")
             lines.append("## References")
             for cid in sorted(citation_map):
-                        entry = citation_map[cid]
-                        notes = entry["notes"]
-                        url = entry["url"]
-                        parts = []
-                        if url:
+                entry = citation_map[cid]
+                notes = entry["notes"]
+                url = entry["url"]
+                parts = []
+                if url:
                     parts.append(url)
                 if notes:
                     parts.append("Notes: " + " | ".join(notes))

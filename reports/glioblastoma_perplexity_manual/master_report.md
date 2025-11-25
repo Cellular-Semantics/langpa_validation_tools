@@ -46,253 +46,114 @@ Ranked by the number of supporting genes (DeepSearch run 1).
 - NPC-neuronal-like 3 (12_NPC-neuronal-like_3): DeepSearch runs are identical; only run_1 is shown.
 - OPC-AC-like 2 (14_OPC-AC-like_2): DeepSearch runs are identical; only run_1 is shown.
 
-## 00_Gliosis
-
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
-| --- | --- | --- | --- | --- | --- |
-| Mesenchymal Transition & Invasion | Mesenchymal Transition & Invasion | 11 | 0.79 | 0.82 | 0.80 |
-| Immunosuppression & Inflammation | Immune Modulation and Inflammation | 10 | 0.62 | 0.79 | 0.71 |
-| Stem Cell Maintenance & Therapy Resistance | Stemness and Therapy Resistance | 3 | 0.38 | 0.80 | 0.59 |
-| Hypoxia Response & Angiogenesis | Angiogenesis & Hypoxic Response | 5 | 0.45 | 0.71 | 0.58 |
-
-### Component–program alignment
-
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| Gliosis | Reactive gliosis and inflammatory response | Immunosuppression & Inflammation (0.37) | Hypoxia Response & Angiogenesis (0.31) | Immune Modulation and Inflammation (0.41) | Angiogenesis & Hypoxic Response (0.32) |
-
-![00_Gliosis overlap plot](../analysis/confusion_heatmaps/00_Gliosis_bubble.png)
-
 ## 01_OPC-AC-like_1
 
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
+| Smaller set | Matched set | Gene overlap | Gene Jaccard | Name sim | Combined |
 | --- | --- | --- | --- | --- | --- |
 | Mesenchymal invasion and matrix remodeling | Mesenchymal Invasion and ECM Remodeling | 6 | 0.67 | 0.72 | 0.70 |
 | Immune evasion: MHC class I downregulation | Immune Evasion and Immune Microenvironment Interaction | 1 | 0.50 | 0.55 | 0.53 |
 | Glial/astrocyte differentiation and tumor plasticity | Aberrant Neural and Synaptic Programs | 1 | 0.14 | 0.43 | 0.29 |
 | Redox and ferroptosis resistance | Cancer Stemness, Plasticity, and Therapy Resistance | 2 | 0.33 | 0.24 | 0.29 |
 
-### Component–program alignment
+**Component coverage:**
+- OPC: Glial/astrocyte differentiation and tumor plasticity, Mesenchymal invasion and matrix remodeling, Aberrant Neural and Synaptic Programs, Proliferation and Aberrant Cell Cycle Regulation
+- AC: Glial/astrocyte differentiation and tumor plasticity, Mesenchymal invasion and matrix remodeling, Aberrant Neural and Synaptic Programs, Proliferation and Aberrant Cell Cycle Regulation
 
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| OPC | Oligodendrocyte precursor-like malignant program | Glial/astrocyte differentiation and tumor plasticity (0.50) | Mesenchymal invasion and matrix remodeling (0.38) | Aberrant Neural and Synaptic Programs (0.53) | Proliferation and Aberrant Cell Cycle Regulation (0.42) |
-| AC | Astrocyte-like malignant program | Glial/astrocyte differentiation and tumor plasticity (0.62) | Mesenchymal invasion and matrix remodeling (0.36) | Aberrant Neural and Synaptic Programs (0.56) | Proliferation and Aberrant Cell Cycle Regulation (0.42) |
+![Program similarity bubble plot](../../analysis/glioblastoma_perplexity_manual/confusion_heatmaps/01_OPC-AC-like_1_bubble.png)
 
-![01_OPC-AC-like_1 overlap plot](../analysis/confusion_heatmaps/01_OPC-AC-like_1_bubble.png)
-
-Reports: [Run 1](01_OPC-AC-like_1/run_1.md) | [Run 2](01_OPC-AC-like_1/run_2.md)
-
-## 02_NPC-neuronal-like_1
-
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
-| --- | --- | --- | --- | --- | --- |
-| Extracellular Matrix Remodeling and Tumor Invasion | Extracellular Matrix Remodeling | 7 | 0.88 | 0.71 | 0.79 |
-| Chromatin/Transcriptional Regulation and Tumor Suppressor Pathways | Transcriptional Regulation and Chromatin Remodeling | 6 | 0.75 | 0.64 | 0.70 |
-| Motile Cilia Function and Structure | Motile Ciliary Axoneme | 16 | 0.70 | 0.67 | 0.68 |
-| Neuronal and Synaptic Signaling Dysregulation | GABAergic Neurotransmission | 5 | 0.50 | 0.52 | 0.51 |
-| Inflammatory and Mesenchymal Signaling | Neuregulin-BMP Signaling | 1 | 0.17 | 0.44 | 0.31 |
-
-### Component–program alignment
-
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| NPC | Neural progenitor-like proliferative program | Neuregulin-BMP Signaling (0.44) | GABAergic Neurotransmission (0.34) | Inflammatory and Mesenchymal Signaling (0.38) | Chromatin/Transcriptional Regulation and Tumor Suppressor Pathways (0.36) |
-| neuronal | Neuronal differentiation and signaling program | Neuregulin-BMP Signaling (0.50) | GABAergic Neurotransmission (0.48) | Neuronal and Synaptic Signaling Dysregulation (0.47) | Inflammatory and Mesenchymal Signaling (0.42) |
-
-![02_NPC-neuronal-like_1 overlap plot](../analysis/confusion_heatmaps/02_NPC-neuronal-like_1_bubble.png)
+Runs: [Run 1](01_OPC-AC-like_1/run_1.md) | [Run 2](01_OPC-AC-like_1/run_2.md)
 
 ## 03_NPC-neuronal-like_2
 
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
+| Smaller set | Matched set | Gene overlap | Gene Jaccard | Name sim | Combined |
 | --- | --- | --- | --- | --- | --- |
 | Extracellular Matrix and Invasion | Extracellular Matrix Remodeling & Invasion | 4 | 0.50 | 0.79 | 0.65 |
 | Glutamatergic Excitotoxicity and Synapse Dynamics | Glutamatergic & Synaptic Signaling Deregulation | 4 | 0.50 | 0.57 | 0.54 |
 | Glioma Stem Cell Maintenance and Therapy Resistance | Transcriptional & Epigenetic Reprogramming | 4 | 0.33 | 0.34 | 0.34 |
 
-### Component–program alignment
+**Component coverage:**
+- NPC: Transcriptional & Epigenetic Reprogramming, Glutamatergic & Synaptic Signaling Deregulation, Glioma Stem Cell Maintenance and Therapy Resistance, Glutamatergic Excitotoxicity and Synapse Dynamics
+- neuronal: Glutamatergic & Synaptic Signaling Deregulation, Axon Guidance & Cell Migration, Glioma Stem Cell Maintenance and Therapy Resistance, Glutamatergic Excitotoxicity and Synapse Dynamics
 
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| NPC | Neural progenitor-like proliferative program | Transcriptional & Epigenetic Reprogramming (0.44) | Glutamatergic & Synaptic Signaling Deregulation (0.33) | Glioma Stem Cell Maintenance and Therapy Resistance (0.51) | Glutamatergic Excitotoxicity and Synapse Dynamics (0.29) |
-| neuronal | Neuronal differentiation and signaling program | Glutamatergic & Synaptic Signaling Deregulation (0.47) | Axon Guidance & Cell Migration (0.45) | Glioma Stem Cell Maintenance and Therapy Resistance (0.45) | Glutamatergic Excitotoxicity and Synapse Dynamics (0.44) |
+![Program similarity bubble plot](../../analysis/glioblastoma_perplexity_manual/confusion_heatmaps/03_NPC-neuronal-like_2_bubble.png)
 
-![03_NPC-neuronal-like_2 overlap plot](../analysis/confusion_heatmaps/03_NPC-neuronal-like_2_bubble.png)
-
-Reports: [Run 1](03_NPC-neuronal-like_2/run_1.md) | [Run 2](03_NPC-neuronal-like_2/run_2.md)
-
-## 04_AC-gliosis-like_1
-
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
-| --- | --- | --- | --- | --- | --- |
-| Hypoxia/glycolytic metabolic adaptation | Metabolic Adaptation and Glycolysis | 1 | 1.00 | 0.65 | 0.82 |
-| Aquaporin/ion channel invasion | Aquaporin/Ion Channel-Driven Migration | 3 | 0.60 | 0.73 | 0.67 |
-| Mesenchymal transition and ECM remodeling | ECM Remodeling and Cell-Cell Adhesion | 7 | 0.64 | 0.67 | 0.65 |
-| Angiogenesis and vascular niche formation | Angiogenesis and Vascular Remodeling | 4 | 0.57 | 0.63 | 0.60 |
-| Immune/Inflammatory microenvironment regulation | Immunomodulation, Hypoxia, and Inflammation | 3 | 0.43 | 0.67 | 0.55 |
-| Stem-like state and plasticity signaling | Reactive Astrocyte-Like State and Stemness | 2 | 0.20 | 0.48 | 0.34 |
-
-### Component–program alignment
-
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| AC | Astrocyte-like malignant program | Stem-like state and plasticity signaling (0.51) | Aquaporin/ion channel invasion (0.40) | Reactive Astrocyte-Like State and Stemness (0.62) | Mesenchymal State Induction via Cytokine Receptors (0.39) |
-| gliosis | Reactive gliosis and inflammatory response | Stem-like state and plasticity signaling (0.39) | Immune/Inflammatory microenvironment regulation (0.37) | Reactive Astrocyte-Like State and Stemness (0.60) | Immunomodulation, Hypoxia, and Inflammation (0.38) |
-
-![04_AC-gliosis-like_1 overlap plot](../analysis/confusion_heatmaps/04_AC-gliosis-like_1_bubble.png)
+Runs: [Run 1](03_NPC-neuronal-like_2/run_1.md) | [Run 2](03_NPC-neuronal-like_2/run_2.md)
 
 ## 05_AC-neuronal-like
 
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
+| Smaller set | Matched set | Gene overlap | Gene Jaccard | Name sim | Combined |
 | --- | --- | --- | --- | --- | --- |
 | Glioblastoma Stem Cell Maintenance & Therapy Resistance | Stemness & Plasticity Regulation | 2 | 0.33 | 0.66 | 0.50 |
 | Glioblastoma Immune Suppression | Immune Evasion & TAM Polarization | 3 | 0.30 | 0.67 | 0.48 |
 | Glioblastoma Invasion & Migration | Mesenchymal Invasion & EMT | 5 | 0.31 | 0.59 | 0.45 |
 | Glioblastoma Angiogenesis & Hypoxic Adaptation | (no match) | - | - | - | - |
 
-### Component–program alignment
+**Component coverage:**
+- AC: Glioblastoma Angiogenesis & Hypoxic Adaptation, Glioblastoma Invasion & Migration, Stemness & Plasticity Regulation, Immune Evasion & TAM Polarization
+- neuronal: Glioblastoma Invasion & Migration, Glioblastoma Stem Cell Maintenance & Therapy Resistance, Stemness & Plasticity Regulation, Calcium & Glutamate Signaling
 
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| AC | Astrocyte-like malignant program | Glioblastoma Angiogenesis & Hypoxic Adaptation (0.52) | Glioblastoma Invasion & Migration (0.50) | Stemness & Plasticity Regulation (0.48) | Immune Evasion & TAM Polarization (0.39) |
-| neuronal | Neuronal differentiation and signaling program | Glioblastoma Invasion & Migration (0.46) | Glioblastoma Stem Cell Maintenance & Therapy Resistance (0.45) | Stemness & Plasticity Regulation (0.46) | Calcium & Glutamate Signaling (0.44) |
+![Program similarity bubble plot](../../analysis/glioblastoma_perplexity_manual/confusion_heatmaps/05_AC-neuronal-like_bubble.png)
 
-![05_AC-neuronal-like overlap plot](../analysis/confusion_heatmaps/05_AC-neuronal-like_bubble.png)
-
-Reports: [Run 1](05_AC-neuronal-like/run_1.md)
-
-## 06_OPC-NPC-like
-
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
-| --- | --- | --- | --- | --- | --- |
-| RTK/RAS/PI3K Pathway Activation | EGFR/ERBB Family Signaling | 2 | 0.50 | 0.54 | 0.52 |
-| Proneural-Mesenchymal Transition & Stem Cell Plasticity | Stemness and Dedifferentiation Program | 2 | 0.22 | 0.55 | 0.39 |
-| Apoptosis and Therapy Resistance Programs | Immunosuppression | 1 | 0.20 | 0.36 | 0.28 |
-| Neural and Axon Guidance, Migration | Mesenchymal Transition & Invasion | 1 | 0.08 | 0.23 | 0.15 |
-| Aberrant Translation, Ribosome Biogenesis, and Metabolic Adaptation | (no match) | - | - | - | - |
-
-### Component–program alignment
-
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| OPC | Oligodendrocyte precursor-like malignant program | Stemness and Dedifferentiation Program (0.49) | Mesenchymal Transition & Invasion (0.37) | Proneural-Mesenchymal Transition & Stem Cell Plasticity (0.54) | Apoptosis and Therapy Resistance Programs (0.40) |
-| NPC | Neural progenitor-like proliferative program | Stemness and Dedifferentiation Program (0.64) | Sonic Hedgehog and GLI Signaling (0.39) | Proneural-Mesenchymal Transition & Stem Cell Plasticity (0.63) | Neural and Axon Guidance, Migration (0.39) |
-
-![06_OPC-NPC-like overlap plot](../analysis/confusion_heatmaps/06_OPC-NPC-like_bubble.png)
+Runs: [Run 1](05_AC-neuronal-like/run_1.md)
 
 ## 07_Proliferative
 
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
+| Smaller set | Matched set | Gene overlap | Gene Jaccard | Name sim | Combined |
 | --- | --- | --- | --- | --- | --- |
 | Mitotic Cell Division Promotion | Spindle Assembly Checkpoint | 10 | 0.32 | 0.60 | 0.46 |
 | Cell Cycle Progression and DNA Replication | DNA Replication and S-Phase Progression | 5 | 0.29 | 0.58 | 0.44 |
 | Stemness and Tumorigenicity Drivers | Apoptosis Inhibition and Cell Survival | 2 | 0.25 | 0.18 | 0.22 |
 
-### Component–program alignment
+**Component coverage:**
+- Proliferative: Transcriptional Cell Cycle Regulation, Cell Cycle Checkpoint Control, Mitotic Cell Division Promotion, Cell Cycle Progression and DNA Replication
 
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| Proliferative | Proliferative cycling and mitotic program | Transcriptional Cell Cycle Regulation (0.51) | Cell Cycle Checkpoint Control (0.50) | Mitotic Cell Division Promotion (0.49) | Cell Cycle Progression and DNA Replication (0.48) |
+![Program similarity bubble plot](../../analysis/glioblastoma_perplexity_manual/confusion_heatmaps/07_Proliferative_bubble.png)
 
-![07_Proliferative overlap plot](../analysis/confusion_heatmaps/07_Proliferative_bubble.png)
-
-Reports: [Run 1](07_Proliferative/run_1.md)
-
-## 08_Gliosis-hypoxia
-
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
-| --- | --- | --- | --- | --- | --- |
-| Mesenchymal Transition & Invasion | Mesenchymal transition & Invasion | 4 | 0.31 | 0.91 | 0.61 |
-| Hypoxia Response & Survival | Hypoxia and metabolic reprogramming | 4 | 0.36 | 0.48 | 0.42 |
-| EGFR-MET Oncogenic Signaling & Feedback | Growth factor & receptor tyrosine signaling | 2 | 0.22 | 0.56 | 0.39 |
-| Angiogenesis & Vascular Niche | (no match) | - | - | - | - |
-
-### Component–program alignment
-
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| Gliosis | Reactive gliosis and inflammatory response | Hypoxia Response & Survival (0.37) | Mesenchymal Transition & Invasion (0.26) | Hypoxia and metabolic reprogramming (0.35) | Cell stress and apoptosis regulation (0.32) |
-| hypoxia | Hypoxic and angiogenic adaptation program | Hypoxia Response & Survival (0.70) | Angiogenesis & Vascular Niche (0.52) | Hypoxia and metabolic reprogramming (0.60) | Cell stress and apoptosis regulation (0.47) |
-
-![08_Gliosis-hypoxia overlap plot](../analysis/confusion_heatmaps/08_Gliosis-hypoxia_bubble.png)
+Runs: [Run 1](07_Proliferative/run_1.md)
 
 ## 09_Proliferative_2
 
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
+| Smaller set | Matched set | Gene overlap | Gene Jaccard | Name sim | Combined |
 | --- | --- | --- | --- | --- | --- |
 | Chromatin Remodeling & Epigenetic Regulation | Epigenetic Regulation and Chromatin Remodeling | 6 | 0.67 | 0.79 | 0.73 |
 | DNA Replication Licensing & Fork Progression | DNA Replication Licensing and Progression | 12 | 0.57 | 0.85 | 0.71 |
 | DNA Damage Response & Repair (HR, FA, TLS) | Homologous Recombination and DNA Damage Response | 10 | 0.56 | 0.80 | 0.68 |
 | Cell Cycle Regulation & Checkpoint Control | Cell Cycle Transcriptional Regulation | 4 | 0.29 | 0.51 | 0.40 |
 
-### Component–program alignment
+**Component coverage:**
+- Proliferative: Cell Cycle Regulation & Checkpoint Control, DNA Replication Licensing & Fork Progression, Cell Cycle Transcriptional Regulation, Mitotic Regulation and Chromosome Segregation
 
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| Proliferative | Proliferative cycling and mitotic program | Cell Cycle Regulation & Checkpoint Control (0.48) | DNA Replication Licensing & Fork Progression (0.39) | Cell Cycle Transcriptional Regulation (0.54) | Mitotic Regulation and Chromosome Segregation (0.45) |
+![Program similarity bubble plot](../../analysis/glioblastoma_perplexity_manual/confusion_heatmaps/09_Proliferative_2_bubble.png)
 
-![09_Proliferative_2 overlap plot](../analysis/confusion_heatmaps/09_Proliferative_2_bubble.png)
-
-Reports: [Run 1](09_Proliferative_2/run_1.md)
+Runs: [Run 1](09_Proliferative_2/run_1.md)
 
 ## 10_AC-gliosis-like_2
 
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
+| Smaller set | Matched set | Gene overlap | Gene Jaccard | Name sim | Combined |
 | --- | --- | --- | --- | --- | --- |
 | Invasion and Migration Signaling | Mesenchymal Invasion & EMT | 5 | 0.45 | 0.70 | 0.58 |
 | WNT/Stemness Signaling | Stemness & WNT-Driven Maintenance | 2 | 0.33 | 0.62 | 0.48 |
 | Angiogenesis and Neovascularization | Angiogenesis & Microenvironment Interaction | 2 | 0.15 | 0.59 | 0.37 |
 
-### Component–program alignment
+**Component coverage:**
+- AC: Neuronal-Synaptic & Neurotransmitter Modulation, Stemness & WNT-Driven Maintenance, Invasion and Migration Signaling, Angiogenesis and Neovascularization
+- gliosis: Neuronal-Synaptic & Neurotransmitter Modulation, Hypoxia/Metabolic Stress Adaptation, Invasion and Migration Signaling, Angiogenesis and Neovascularization
 
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| AC | Astrocyte-like malignant program | Neuronal-Synaptic & Neurotransmitter Modulation (0.48) | Stemness & WNT-Driven Maintenance (0.43) | Invasion and Migration Signaling (0.33) | Angiogenesis and Neovascularization (0.30) |
-| gliosis | Reactive gliosis and inflammatory response | Neuronal-Synaptic & Neurotransmitter Modulation (0.43) | Hypoxia/Metabolic Stress Adaptation (0.35) | Invasion and Migration Signaling (0.27) | Angiogenesis and Neovascularization (0.27) |
+![Program similarity bubble plot](../../analysis/glioblastoma_perplexity_manual/confusion_heatmaps/10_AC-gliosis-like_2_bubble.png)
 
-![10_AC-gliosis-like_2 overlap plot](../analysis/confusion_heatmaps/10_AC-gliosis-like_2_bubble.png)
-
-Reports: [Run 1](10_AC-gliosis-like_2/run_1.md)
-
-## 11_OPC-like_1
-
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
-| --- | --- | --- | --- | --- | --- |
-| Oligodendrocyte/Stem-like Myelination Program | Oligodendrocyte Differentiation & Myelin Formation | 6 | 0.55 | 0.66 | 0.60 |
-| Calcium, Ion Channel, and Synaptic Pathway | Calcium Signaling & Ion Channel Activity | 6 | 0.38 | 0.55 | 0.46 |
-| Cell Migration and Invasion | Extracellular Matrix & Basement Membrane Organization | 7 | 0.39 | 0.50 | 0.44 |
-| Angiogenesis and Vascular Remodeling | Hypoxia Response & Angiogenic Signaling | 0 | 0.00 | 0.37 | 0.18 |
-
-### Component–program alignment
-
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| OPC | Oligodendrocyte precursor-like malignant program | Oligodendrocyte/Stem-like Myelination Program (0.64) | Angiogenesis and Vascular Remodeling (0.32) | Oligodendrocyte Differentiation & Myelin Formation (0.53) | Cancer Stem Cell Maintenance & Plasticity (0.43) |
-
-![11_OPC-like_1 overlap plot](../analysis/confusion_heatmaps/11_OPC-like_1_bubble.png)
-
-## 12_NPC-neuronal-like_3
-
-_Duplicate run outputs; see run_1 report only._
-
-Top matches: _skipped due to duplicate runs_
-
-![12_NPC-neuronal-like_3 overlap plot](../analysis/confusion_heatmaps/12_NPC-neuronal-like_3_bubble.png)
+Runs: [Run 1](10_AC-gliosis-like_2/run_1.md)
 
 ## 13_OPC-like_2
 
-| Run 1 program | Run 2 program | Overlap genes | Gene Jaccard | Name overlap | Combined |
+| Smaller set | Matched set | Gene overlap | Gene Jaccard | Name sim | Combined |
 | --- | --- | --- | --- | --- | --- |
 | Oligodendrocyte myelin transcriptional control | Oligodendrocyte Lineage Programming | 10 | 0.62 | 0.70 | 0.66 |
 | ECM proteolysis and glioma invasion | Extracellular Matrix Remodeling and Invasion | 12 | 0.67 | 0.64 | 0.65 |
 | Myelin lipid synthesis and homeostasis | Lipid Metabolism and Membrane Remodeling | 4 | 0.31 | 0.58 | 0.44 |
 
-### Component–program alignment
+**Component coverage:**
+- OPC: Oligodendrocyte myelin transcriptional control, ECM proteolysis and glioma invasion, Oligodendrocyte Lineage Programming, Neural Stem Cell Maintenance and Pluripotency
 
-| Component | Expanded name | Run 1 best | Run 1 next | Run 2 best | Run 2 next |
-| --- | --- | --- | --- | --- | --- |
-| OPC | Oligodendrocyte precursor-like malignant program | Oligodendrocyte myelin transcriptional control (0.54) | ECM proteolysis and glioma invasion (0.42) | Oligodendrocyte Lineage Programming (0.64) | Neural Stem Cell Maintenance and Pluripotency (0.44) |
+![Program similarity bubble plot](../../analysis/glioblastoma_perplexity_manual/confusion_heatmaps/13_OPC-like_2_bubble.png)
 
-![13_OPC-like_2 overlap plot](../analysis/confusion_heatmaps/13_OPC-like_2_bubble.png)
-
-Reports: [Run 2](13_OPC-like_2/run_2.md)
+Runs: [Run 2](13_OPC-like_2/run_2.md)
