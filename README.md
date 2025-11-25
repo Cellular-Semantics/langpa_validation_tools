@@ -3,7 +3,7 @@
 Pipeline for parsing Perplexity DeepSearch outputs, comparing pseudo-enrichment programs to GO results, and generating figures/reports per project. The current default project is `glioblastoma_perplexity_manual`, but the layout supports multiple projects via per-project subdirectories.
 
 [![Tests](https://github.com/Cellular-Semantics/langpa_validation_tools/actions/workflows/tests.yml/badge.svg)](https://github.com/Cellular-Semantics/langpa_validation_tools/actions/workflows/tests.yml)
-![coverage](https://img.shields.io/badge/coverage-71%25-orange)
+![coverage](https://raw.githubusercontent.com/Cellular-Semantics/langpa_validation_tools/main/badges/coverage.svg)
 
 ## Layout
 - `projects/<project>/`: mapping files (`geneset_folder_mapping.csv`, `run_file_mapping.csv`), source spreadsheet (e.g., `media-3 (2).xlsx`), `description.md`.
