@@ -2,7 +2,8 @@
 
 Pipeline for parsing Perplexity DeepSearch outputs, comparing pseudo-enrichment programs to GO results, and generating figures/reports per project. The current default project is `glioblastoma_perplexity_manual`, but the layout supports multiple projects via per-project subdirectories.
 
-![coverage](https://img.shields.io/badge/coverage-local--run-orange)
+[![Tests](https://github.com/Cellular-Semantics/langpa_validation_tools/actions/workflows/tests.yml/badge.svg)](https://github.com/Cellular-Semantics/langpa_validation_tools/actions/workflows/tests.yml)
+![coverage](https://img.shields.io/badge/coverage-71%25-orange)
 
 ## Layout
 - `projects/<project>/`: mapping files (`geneset_folder_mapping.csv`, `run_file_mapping.csv`), source spreadsheet (e.g., `media-3 (2).xlsx`), `description.md`.
@@ -14,6 +15,8 @@ Pipeline for parsing Perplexity DeepSearch outputs, comparing pseudo-enrichment 
 ```bash
 # activate your venv first (requires pandas, numpy, matplotlib, etc.)
 PROJECT=glioblastoma_perplexity_manual make master_report
+make test         # run pytest
+make coverage     # pytest with coverage report
 ```
 Targets: `data` (parse runs), `comparisons` (parse GO tables), `figures`, `heatmaps`, `run_reports`, `master_report`. Environment variables `MPLCONFIGDIR` and `XDG_CACHE_HOME` default to repo-local caches.
 
