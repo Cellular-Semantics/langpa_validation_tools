@@ -5,16 +5,13 @@ Reports include program summaries, citations, and GO comparison tables.
 """
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 from typing import Dict, List
 
 import pandas as pd
-from process_deepsearch import parse_run  # type: ignore
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-RUN_ROOT = BASE_DIR / "deepsearch"
-REPORT_DIR = BASE_DIR / "reports"
-REPORT_DIR.mkdir(exist_ok=True)
+from .process_deepsearch import parse_run  # type: ignore
+from .project_paths import add_project_argument, resolve_paths
 
 
 def load_run_markdown(run_file: Path) -> Dict:
@@ -110,9 +107,9 @@ def render_program(program: Dict) -> str:
     return "\n".join(lines)
 
 
-def load_go_tables() -> Dict[str, Dict]:
-    table_rows = pd.read_csv(BASE_DIR / "data" / "comparison_table_rows.csv")
-    unmatched_path = BASE_DIR / "data" / "comparison_unmatched_go_terms.csv"
+def load_go_tables(data_dir: Path) -> Dict[str, Dict]:
+    table_rows = pd.read_csv(data_dir / "comparison_table_rows.csv")
+    unmatched_path = data_dir / "comparison_unmatched_go_terms.csv"
     if unmatched_path.exists() and unmatched_path.stat().st_size > 0:
         try:
             unmatched = pd.read_csv(unmatched_path)
@@ -120,7 +117,7 @@ def load_go_tables() -> Dict[str, Dict]:
             unmatched = pd.DataFrame(columns=["folder", "gsea_term"])
     else:
         unmatched = pd.DataFrame(columns=["folder", "gsea_term"])
-    go_map = {}
+    go_map: Dict[str, Dict] = {}
     for folder, group in table_rows.groupby("folder"):
         go_map.setdefault(folder, {})
         go_map[folder]["table"] = group
@@ -130,12 +127,14 @@ def load_go_tables() -> Dict[str, Dict]:
     return go_map
 
 
-def generate_reports() -> None:
-    go_tables = load_go_tables()
-    mapping = pd.read_csv(BASE_DIR / "geneset_folder_mapping.csv")
+def generate_reports(project: str) -> None:
+    paths = resolve_paths(project)
+    paths.ensure_output_dirs()
+    go_tables = load_go_tables(paths.data_dir)
+    mapping = pd.read_csv(paths.mapping_file)
 
     for _, row in mapping.iterrows():
-        folder = RUN_ROOT / row["new_folder"]
+        folder = paths.deepsearch_dir / row["new_folder"]
         run_files = sorted(folder.glob("*.md"))
         if len(run_files) != 2:
             continue
@@ -146,7 +145,7 @@ def generate_reports() -> None:
             if not citation_map:
                 print(f"Skipping {run_file} due to missing citation source_ids.")
                 continue
-            folder_out = REPORT_DIR / folder.name
+            folder_out = paths.reports_dir / folder.name
             folder_out.mkdir(parents=True, exist_ok=True)
             out_file = folder_out / f"{run_file.stem}.md"
             ctx = data.get("context", {})
@@ -195,8 +194,11 @@ def generate_reports() -> None:
                 reference_line = f"- [{cid}] " + "; ".join(parts)
                 lines.append(reference_line.strip())
             out_file.write_text("\n".join(lines).strip() + "\n")
-            print(f"Wrote {out_file.relative_to(BASE_DIR)}")
+            print(f"Wrote {out_file.relative_to(paths.base_dir)}")
 
 
 if __name__ == "__main__":
-    generate_reports()
+    parser = argparse.ArgumentParser(description="Generate per-run reports for a project.")
+    add_project_argument(parser)
+    args = parser.parse_args()
+    generate_reports(args.project)

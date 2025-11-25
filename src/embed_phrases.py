@@ -2,10 +2,10 @@
 """Embed a set of test phrases to inspect cosine similarity distribution."""
 from __future__ import annotations
 
+import argparse
 import json
 import os
 from bisect import bisect_left
-from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -18,10 +18,8 @@ try:
 except ImportError as exc:  # pragma: no cover
     raise SystemExit("openai package is required. Install it in .venv") from exc
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-OUTPUT_DIR = BASE_DIR / "analysis"
-OUTPUT_DIR.mkdir(exist_ok=True)
-STATS_PATH = OUTPUT_DIR / "embedding_calibration_stats.json"
+from .project_paths import add_project_argument, resolve_paths
+
 TEST_PHRASES = [
     "angiogenesis signaling",
     "synaptic vesicle fusion",
@@ -53,6 +51,14 @@ BATCH_SIZE = 16
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Embed calibration phrases and compute similarity stats for a project.")
+    add_project_argument(parser)
+    args = parser.parse_args()
+    paths = resolve_paths(args.project)
+    OUTPUT_DIR = paths.analysis_dir
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    STATS_PATH = OUTPUT_DIR / "embedding_calibration_stats.json"
+
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
@@ -194,7 +200,7 @@ def main() -> None:
 
         write_side_table("Pairs Around Mean Cosine", mean_below, mean_above, mean_cosine, "mean")
         write_side_table("Pairs Around Median Cosine", median_below, median_above, median_cosine, "median")
-        fh.write(f"\nConfusion matrix saved to `{matrix_path.relative_to(BASE_DIR)}`\n")
+        fh.write(f"\nConfusion matrix saved to `{matrix_path.relative_to(paths.base_dir)}`\n")
         heatmap_relative = heatmap_path.relative_to(md_path.parent)
         fh.write(f"\n![Cosine similarity heatmap]({heatmap_relative})\n")
 

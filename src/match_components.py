@@ -2,19 +2,13 @@
 """Match component embeddings to program embeddings for each run."""
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
-COMPONENT_MAP = DATA_DIR / "component_mapping.csv"
-COMP_INDEX = DATA_DIR / "component_embeddings_index.csv"
-COMP_VECTORS = DATA_DIR / "component_embeddings.npy"
-PROG_INDEX = DATA_DIR / "embeddings_index.csv"
-PROG_VECTORS = DATA_DIR / "embeddings_name.npy"
-OUTPUT = DATA_DIR / "component_program_matches.csv"
+from .project_paths import add_project_argument, resolve_paths
 
 
 def normalize(vectors: np.ndarray) -> np.ndarray:
@@ -24,15 +18,20 @@ def normalize(vectors: np.ndarray) -> np.ndarray:
 
 
 def main() -> None:
-    comp_map = pd.read_csv(COMPONENT_MAP)
-    comp_index = pd.read_csv(COMP_INDEX)
-    comp_vectors = normalize(np.load(COMP_VECTORS))
-    comp_vec_map = {
-        row.component_key: comp_vectors[idx] for idx, row in comp_index.iterrows()
-    }
+    parser = argparse.ArgumentParser(description="Match component embeddings to program embeddings for a project.")
+    add_project_argument(parser)
+    args = parser.parse_args()
+    paths = resolve_paths(args.project)
+    paths.ensure_output_dirs()
+    data_dir = paths.data_dir
 
-    prog_index = pd.read_csv(PROG_INDEX)
-    prog_vectors = normalize(np.load(PROG_VECTORS))
+    comp_map = pd.read_csv(data_dir / "component_mapping.csv")
+    comp_index = pd.read_csv(data_dir / "component_embeddings_index.csv")
+    comp_vectors = normalize(np.load(data_dir / "component_embeddings.npy"))
+    comp_vec_map = {row.component_key: comp_vectors[idx] for idx, row in comp_index.iterrows()}
+
+    prog_index = pd.read_csv(data_dir / "embeddings_index.csv")
+    prog_vectors = normalize(np.load(data_dir / "embeddings_name.npy"))
 
     rows: list[dict] = []
     for comp in comp_map.itertuples(index=False):
@@ -63,8 +62,9 @@ def main() -> None:
                     }
                 )
     output_df = pd.DataFrame(rows)
-    output_df.to_csv(OUTPUT, index=False)
-    print(f"Wrote component-program matches to {OUTPUT}")
+    output_path = data_dir / "component_program_matches.csv"
+    output_df.to_csv(output_path, index=False)
+    print(f"Wrote component-program matches to {output_path}")
 
 
 if __name__ == "__main__":

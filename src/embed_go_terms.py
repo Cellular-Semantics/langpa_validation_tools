@@ -2,6 +2,7 @@
 """Embed canonical GO terms from Table S10."""
 from __future__ import annotations
 
+import argparse
 import os
 from pathlib import Path
 
@@ -14,32 +15,36 @@ try:
 except ImportError as exc:  # pragma: no cover
     raise SystemExit("openai package is required. Install it in .venv") from exc
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
-SOURCE = DATA_DIR / "go_terms.csv"
-INDEX_PATH = DATA_DIR / "go_embeddings_index.csv"
-VECTOR_PATH = DATA_DIR / "go_embeddings.npy"
+from .project_paths import add_project_argument, resolve_paths
+
 MODEL_NAME = "text-embedding-3-large"
 BATCH_SIZE = 32
 
 
-def load_existing() -> tuple[pd.DataFrame, np.ndarray]:
-    if INDEX_PATH.exists() and VECTOR_PATH.exists():
-        return pd.read_csv(INDEX_PATH), np.load(VECTOR_PATH)
+def load_existing(index_path: Path, vector_path: Path) -> tuple[pd.DataFrame, np.ndarray]:
+    if index_path.exists() and vector_path.exists():
+        return pd.read_csv(index_path), np.load(vector_path)
     return pd.DataFrame(columns=["annotation", "go_id", "go_term"]), np.zeros((0, 1), dtype=float)
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Embed canonical GO terms for a project.")
+    add_project_argument(parser)
+    args = parser.parse_args()
+    paths = resolve_paths(args.project)
+    paths.ensure_output_dirs()
+    data_dir = paths.data_dir
+
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise SystemExit("OPENAI_API_KEY not set")
     client = OpenAI(api_key=api_key)
 
-    go_terms = pd.read_csv(SOURCE)
+    go_terms = pd.read_csv(data_dir / "go_terms.csv")
     base_df = go_terms[["annotation", "go_id", "go_term"]].drop_duplicates()
 
-    index_df, vectors = load_existing()
+    index_df, vectors = load_existing(data_dir / "go_embeddings_index.csv", data_dir / "go_embeddings.npy")
     existing = set(zip(index_df["annotation"], index_df["go_term"]))
     pending = base_df[
         ~base_df.apply(lambda row: (row["annotation"], row["go_term"]) in existing, axis=1)
@@ -68,8 +73,8 @@ def main() -> None:
     new_matrix = np.array(new_vectors, dtype=float)
     combined_vectors = new_matrix if vectors.size == 0 else np.vstack([vectors, new_matrix])
     combined_index = pd.concat([index_df, pd.DataFrame(new_rows)], ignore_index=True)
-    np.save(VECTOR_PATH, combined_vectors)
-    combined_index.to_csv(INDEX_PATH, index=False)
+    np.save(data_dir / "go_embeddings.npy", combined_vectors)
+    combined_index.to_csv(data_dir / "go_embeddings_index.csv", index=False)
     print(f"Stored embeddings for {len(new_rows)} GO terms. Total cached: {combined_index.shape[0]}")
 
 

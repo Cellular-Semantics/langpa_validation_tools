@@ -2,6 +2,7 @@
 """Generate summary figures for run consistency and GO coverage."""
 from __future__ import annotations
 
+import argparse
 import os
 from pathlib import Path
 
@@ -13,15 +14,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
-OUT_DIR = BASE_DIR / "analysis"
-OUT_DIR.mkdir(exist_ok=True)
+from .project_paths import add_project_argument, resolve_paths
 
 
-def plot_run_consistency() -> None:
-    matches = pd.read_csv(DATA_DIR / "deepsearch_program_matches.csv")
-    dup_path = DATA_DIR / "deepsearch_duplicate_runs.csv"
+def plot_run_consistency(data_dir: Path, out_dir: Path) -> None:
+    matches = pd.read_csv(data_dir / "deepsearch_program_matches.csv")
+    dup_path = data_dir / "deepsearch_duplicate_runs.csv"
     duplicate_annotations: set[str] = set()
     if dup_path.exists():
         dup_df = pd.read_csv(dup_path)
@@ -54,12 +52,12 @@ def plot_run_consistency() -> None:
     ax.set_title("Run-to-run similarity by metric")
     ax.legend()
     fig.tight_layout()
-    fig.savefig(OUT_DIR / "run_consistency.svg")
+    fig.savefig(out_dir / "run_consistency.svg")
     plt.close(fig)
 
 
-def plot_go_coverage() -> None:
-    summary = pd.read_csv(DATA_DIR / "comparison_summary.csv")
+def plot_go_coverage(data_dir: Path, out_dir: Path) -> None:
+    summary = pd.read_csv(data_dir / "comparison_summary.csv")
     summary["go_match_pct"] = (
         summary["matched_go_terms_estimated"] / summary["total_gsea_terms"] * 100
     )
@@ -72,13 +70,18 @@ def plot_go_coverage() -> None:
     ax.set_title("GO coverage reported in comparison files")
     ax.tick_params(axis="x", rotation=45)
     fig.tight_layout()
-    fig.savefig(OUT_DIR / "go_coverage.svg")
+    fig.savefig(out_dir / "go_coverage.svg")
     plt.close(fig)
 
 
 def main() -> None:
-    plot_run_consistency()
-    plot_go_coverage()
+    parser = argparse.ArgumentParser(description="Generate summary figures for a project.")
+    add_project_argument(parser)
+    args = parser.parse_args()
+    paths = resolve_paths(args.project)
+    paths.ensure_output_dirs()
+    plot_run_consistency(paths.data_dir, paths.analysis_dir)
+    plot_go_coverage(paths.data_dir, paths.analysis_dir)
 
 
 if __name__ == "__main__":
