@@ -1,28 +1,29 @@
 PYTHON ?= .venv/bin/python
 SYSTEM_PYTHON ?= python3
+PROJECT ?= glioblastoma_perplexity_manual
 
 all: data comparisons figures heatmaps run_reports master_report
 
 .PHONY: data
 data:
-	$(PYTHON) scripts/process_deepsearch.py
+	$(PYTHON) -m src.process_deepsearch --project $(PROJECT)
 
 .PHONY: comparisons
-comparisons:
-	$(PYTHON) scripts/process_comparisons.py
+comparisons: data
+	$(PYTHON) -m src.process_comparisons --project $(PROJECT)
 
 .PHONY: heatmaps
 heatmaps: data figures
-	$(PYTHON) scripts/generate_heatmaps.py
+	$(PYTHON) -m src.generate_heatmaps --project $(PROJECT)
 
 .PHONY: figures
 figures: data comparisons
-	$(PYTHON) scripts/generate_summary_figures.py
+	$(PYTHON) -m src.generate_summary_figures --project $(PROJECT)
 
 .PHONY: run_reports
 run_reports: data
-	$(PYTHON) scripts/generate_reports.py
+	$(PYTHON) -m src.generate_reports --project $(PROJECT)
 
 .PHONY: master_report
 master_report: figures heatmaps run_reports
-	$(PYTHON) scripts/build_master_report.py
+	$(PYTHON) -m src.build_master_report --project $(PROJECT)

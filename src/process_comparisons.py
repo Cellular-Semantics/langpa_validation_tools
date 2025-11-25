@@ -5,21 +5,15 @@ Generates structured CSVs capturing program-level mappings and coverage summarie
 """
 from __future__ import annotations
 
+import argparse
 import re
-import sys
 from pathlib import Path
 from typing import Dict, List, Tuple
 
 import pandas as pd
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
-COMPARISON_DIR = BASE_DIR / "Comparisons"
-MAPPING_FILE = BASE_DIR / "geneset_folder_mapping.csv"
-S10_FILE = BASE_DIR / "media-3 (2).xlsx"
-
-sys.path.append(str(Path(__file__).resolve().parent))
-from process_deepsearch import parse_run  # noqa: E402
+from .process_deepsearch import parse_run  # noqa: E402
+from .project_paths import add_project_argument, resolve_paths
 
 GO_REGEX = re.compile(r"[^,;]+?\(GO:\d+\)")
 
@@ -239,10 +233,28 @@ def ingest_file(
     }
 
 
-def main() -> None:
-    DATA_DIR.mkdir(exist_ok=True)
-    mapping = pd.read_csv(MAPPING_FILE)
-    table_s10 = pd.read_excel(S10_FILE, sheet_name="Table S10")
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Process comparison markdown files for a project."
+    )
+    add_project_argument(parser)
+    return parser
+
+
+def main(argv: List[str] | None = None) -> None:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    paths = resolve_paths(args.project)
+    paths.ensure_output_dirs()
+    if not paths.mapping_file.exists():
+        raise FileNotFoundError(f"Mapping file not found for project '{paths.project}': {paths.mapping_file}")
+    if not paths.s10_file.exists():
+        raise FileNotFoundError(f"Project S10 spreadsheet not found: {paths.s10_file}")
+    if not paths.comparisons_dir.exists():
+        raise FileNotFoundError(f"Comparison directory not found for project '{paths.project}': {paths.comparisons_dir}")
+
+    mapping = pd.read_csv(paths.mapping_file)
+    table_s10 = pd.read_excel(paths.s10_file, sheet_name="Table S10")
 
     all_table_rows: List[Dict] = []
     all_program_terms: List[Dict] = []
@@ -250,7 +262,7 @@ def main() -> None:
     all_unmatched_go_terms: List[Dict] = []
     summary_rows: List[Dict] = []
 
-    for file in sorted(COMPARISON_DIR.glob("comparison geneset_*.md")):
+    for file in sorted(paths.comparisons_dir.glob("comparison geneset_*.md")):
         gene_set_id = split_gene_set_id(file.name)
         metamodule = gene_set_id - 1
         mapping_row = mapping[mapping["metamodule"] == metamodule].iloc[0]
@@ -267,18 +279,18 @@ def main() -> None:
         all_unmatched_go_terms.extend(records["unmatched_go_terms"])
         summary_rows.append(records["summary"])
 
-    pd.DataFrame(all_table_rows).to_csv(DATA_DIR / "comparison_table_rows.csv", index=False)
+    pd.DataFrame(all_table_rows).to_csv(paths.data_dir / "comparison_table_rows.csv", index=False)
     pd.DataFrame(all_program_terms).to_csv(
-        DATA_DIR / "comparison_program_term_matches.csv", index=False
+        paths.data_dir / "comparison_program_term_matches.csv", index=False
     )
     pd.DataFrame(all_unmatched_programs).to_csv(
-        DATA_DIR / "comparison_novel_programs.csv", index=False
+        paths.data_dir / "comparison_novel_programs.csv", index=False
     )
     pd.DataFrame(all_unmatched_go_terms).to_csv(
-        DATA_DIR / "comparison_unmatched_go_terms.csv", index=False
+        paths.data_dir / "comparison_unmatched_go_terms.csv", index=False
     )
-    pd.DataFrame(summary_rows).to_csv(DATA_DIR / "comparison_summary.csv", index=False)
-    print("Parsed comparison markdown files.")
+    pd.DataFrame(summary_rows).to_csv(paths.data_dir / "comparison_summary.csv", index=False)
+    print(f"Parsed comparison markdown files for project '{paths.project}'.")
 
 
 if __name__ == "__main__":

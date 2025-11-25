@@ -2,14 +2,13 @@
 """Extract GO terms from Table S10."""
 from __future__ import annotations
 
+import argparse
 import re
 from pathlib import Path
 
 import pandas as pd
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-S10_FILE = BASE_DIR / "media-3 (2).xlsx"
-OUTPUT = BASE_DIR / "data" / "go_terms.csv"
+from .project_paths import add_project_argument, resolve_paths
 
 
 def parse_terms(raw: str) -> list[tuple[str, str]]:
@@ -28,7 +27,14 @@ def parse_terms(raw: str) -> list[tuple[str, str]]:
 
 
 def main() -> None:
-    table = pd.read_excel(S10_FILE, sheet_name="Table S10")
+    parser = argparse.ArgumentParser(description="Extract GO terms from Table S10 for a project.")
+    add_project_argument(parser)
+    args = parser.parse_args()
+    paths = resolve_paths(args.project)
+    paths.ensure_output_dirs()
+    if not paths.s10_file.exists():
+        raise FileNotFoundError(f"Project spreadsheet not found: {paths.s10_file}")
+    table = pd.read_excel(paths.s10_file, sheet_name="Table S10")
     rows = []
     for annotation, raw in zip(table["annotation"], table["Enriched Pathways"]):
         if not isinstance(raw, str):
@@ -43,8 +49,9 @@ def main() -> None:
                 }
             )
     df = pd.DataFrame(rows)
-    df.to_csv(OUTPUT, index=False)
-    print(f"Wrote GO terms to {OUTPUT}")
+    output = paths.data_dir / "go_terms.csv"
+    df.to_csv(output, index=False)
+    print(f"Wrote GO terms to {output}")
 
 
 if __name__ == "__main__":

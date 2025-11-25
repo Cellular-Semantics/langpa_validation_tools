@@ -6,16 +6,27 @@ Writes a CSV mapping original filenames to new names.
 from __future__ import annotations
 
 import csv
+import argparse
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-RUN_ROOT = BASE_DIR / "deepsearch"
-MAPPING_FILE = BASE_DIR / "run_file_mapping.csv"
+from .project_paths import add_project_argument, resolve_paths
 
 
-def rename_runs() -> None:
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Normalize DeepSearch run filenames for a project.")
+    add_project_argument(parser)
+    return parser
+
+
+def rename_runs(project: str) -> Path:
+    paths = resolve_paths(project)
+    run_root = paths.deepsearch_dir
+    mapping_file = paths.run_file_mapping
+    if not run_root.exists():
+        raise FileNotFoundError(f"DeepSearch directory not found for project '{project}': {run_root}")
+
     records = []
-    for folder in sorted(RUN_ROOT.glob("[0-9][0-9]_*/")):
+    for folder in sorted(run_root.glob("[0-9][0-9]_*/")):
         run_files = sorted(folder.glob("*.md"))
         if len(run_files) != 2:
             print(f"Skipping {folder} (expected 2 .md files, found {len(run_files)})")
@@ -31,15 +42,17 @@ def rename_runs() -> None:
                 raise FileExistsError(f"Target {new_name} already exists")
             run_file.rename(new_name)
             print(f"Renamed {run_file} -> {new_name}")
-            records.append(
-                {"folder": folder.name, "old_name": run_file.name, "new_name": new_name.name}
-            )
-    with MAPPING_FILE.open("w", newline="") as fh:
+            records.append({"folder": folder.name, "old_name": run_file.name, "new_name": new_name.name})
+    mapping_file.parent.mkdir(parents=True, exist_ok=True)
+    with mapping_file.open("w", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=["folder", "old_name", "new_name"])
         writer.writeheader()
         writer.writerows(records)
-    print(f"Mapping written to {MAPPING_FILE}")
+    print(f"Mapping written to {mapping_file}")
+    return mapping_file
 
 
 if __name__ == "__main__":
-    rename_runs()
+    parser = build_parser()
+    args = parser.parse_args()
+    rename_runs(args.project)

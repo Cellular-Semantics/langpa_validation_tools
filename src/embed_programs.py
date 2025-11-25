@@ -2,6 +2,7 @@
 """Generate and cache embeddings for DeepSearch programs."""
 from __future__ import annotations
 
+import argparse
 import os
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -15,21 +16,17 @@ try:
 except ImportError as exc:  # pragma: no cover
     raise SystemExit("openai package is required. Install it in .venv") from exc
 
-from process_deepsearch import parse_run  # type: ignore
+from .process_deepsearch import parse_run  # type: ignore
+from .project_paths import add_project_argument, resolve_paths
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
-RUN_ROOT = BASE_DIR / "deepsearch"
-INDEX_PATH = DATA_DIR / "embeddings_index.csv"
-VECTOR_PATH = DATA_DIR / "embeddings_name.npy"
 MODEL_NAME = "text-embedding-3-large"
 BATCH_SIZE = 32
 
 
-def load_existing() -> Tuple[pd.DataFrame, np.ndarray]:
-    if INDEX_PATH.exists() and VECTOR_PATH.exists():
-        index_df = pd.read_csv(INDEX_PATH)
-        vectors = np.load(VECTOR_PATH)
+def load_existing(index_path: Path, vector_path: Path) -> Tuple[pd.DataFrame, np.ndarray]:
+    if index_path.exists() and vector_path.exists():
+        index_df = pd.read_csv(index_path)
+        vectors = np.load(vector_path)
     else:
         index_df = pd.DataFrame(columns=["folder", "run_index", "program_index", "program_name"])
         vectors = np.zeros((0, 1), dtype=float)
@@ -40,8 +37,8 @@ def build_text(program: Dict) -> str:
     return program.get("program_name", "") or ""
 
 
-def gather_programs() -> List[Tuple[str, int, int, str, str]]:
-    programs_df = pd.read_csv(DATA_DIR / "deepsearch_programs.csv")
+def gather_programs(data_dir: Path, run_root: Path) -> List[Tuple[str, int, int, str, str]]:
+    programs_df = pd.read_csv(data_dir / "deepsearch_programs.csv")
     entries: List[Tuple[str, int, int, str, str]] = []
     cache: Dict[Tuple[str, int], Dict] = {}
     for row in programs_df.itertuples(index=False):
@@ -50,7 +47,7 @@ def gather_programs() -> List[Tuple[str, int, int, str, str]]:
         program_index = int(row.program_index)
         key = (folder, run_index)
         if key not in cache:
-            run_path = RUN_ROOT / folder / f"run_{run_index}.md"
+            run_path = run_root / folder / f"run_{run_index}.md"
             cache[key] = parse_run(run_path)
         program = cache[key]["programs"][program_index]
         text = build_text(program)
@@ -59,19 +56,30 @@ def gather_programs() -> List[Tuple[str, int, int, str, str]]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Generate embeddings for DeepSearch programs for a project.")
+    add_project_argument(parser)
+    args = parser.parse_args()
+    paths = resolve_paths(args.project)
+    paths.ensure_output_dirs()
+
+    data_dir = paths.data_dir
+    run_root = paths.deepsearch_dir
+    index_path = data_dir / "embeddings_index.csv"
+    vector_path = data_dir / "embeddings_name.npy"
+
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise SystemExit("OPENAI_API_KEY not set in environment or .env")
     client = OpenAI(api_key=api_key)
 
-    index_df, vectors = load_existing()
+    index_df, vectors = load_existing(index_path, vector_path)
     existing_keys = set(
         zip(index_df["folder"], index_df["run_index"], index_df["program_index"])
     )
 
     pending: List[Tuple[str, int, int, str, str]] = []
-    for folder, run_idx, prog_idx, prog_name, text in gather_programs():
+    for folder, run_idx, prog_idx, prog_name, text in gather_programs(data_dir, run_root):
         key = (folder, run_idx, prog_idx)
         if key in existing_keys or not text:
             continue
@@ -107,8 +115,8 @@ def main() -> None:
         combined = np.vstack([vectors, new_matrix])
     combined_df = pd.concat([index_df, pd.DataFrame(new_rows)], ignore_index=True)
 
-    np.save(VECTOR_PATH, combined)
-    combined_df.to_csv(INDEX_PATH, index=False)
+    np.save(vector_path, combined)
+    combined_df.to_csv(index_path, index=False)
     print(f"Stored embeddings for {len(new_rows)} programs. Total cached: {combined_df.shape[0]}")
 
 

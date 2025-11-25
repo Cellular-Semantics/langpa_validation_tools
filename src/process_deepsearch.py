@@ -5,6 +5,7 @@ and compute similarity scores between paired runs for each metamodel.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from dataclasses import dataclass
@@ -17,14 +18,8 @@ import os
 import numpy as np
 import pandas as pd
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-RUN_ROOT = BASE_DIR / "deepsearch"
-MAPPING_FILE = BASE_DIR / "geneset_folder_mapping.csv"
-DATA_DIR = BASE_DIR / "data"
-DATA_DIR.mkdir(exist_ok=True)
-EMBED_INDEX = DATA_DIR / "embeddings_index.csv"
-EMBED_VECTORS = DATA_DIR / "embeddings_name.npy"
-CALIBRATION_STATS = BASE_DIR / "analysis" / "embedding_calibration_stats.json"
+from .project_paths import add_project_argument, resolve_paths
+
 USE_EMBEDDINGS = os.getenv("USE_EMBEDDINGS", "1") not in {"0", "false", "False"}
 
 
@@ -33,11 +28,11 @@ def compute_signature(programs: List[Dict]) -> str:
     return hashlib.md5(canonical.encode("utf-8")).hexdigest()
 
 
-def load_embeddings() -> Dict[Tuple[str, int, int], np.ndarray]:
-    if not USE_EMBEDDINGS or not EMBED_INDEX.exists() or not EMBED_VECTORS.exists():
+def load_embeddings(index_path: Path, vector_path: Path, use_embeddings: bool) -> Dict[Tuple[str, int, int], np.ndarray]:
+    if not use_embeddings or not index_path.exists() or not vector_path.exists():
         return {}
-    index_df = pd.read_csv(EMBED_INDEX)
-    vectors = np.load(EMBED_VECTORS)
+    index_df = pd.read_csv(index_path)
+    vectors = np.load(vector_path)
     if len(index_df) != len(vectors):
         print("Embedding index and vector count mismatch; ignoring embeddings.")
         return {}
@@ -53,13 +48,13 @@ def load_embeddings() -> Dict[Tuple[str, int, int], np.ndarray]:
     return mapping
 
 
-def load_name_similarity_baseline() -> Optional[float]:
-    if not CALIBRATION_STATS.exists():
+def load_name_similarity_baseline(calibration_path: Path) -> Optional[float]:
+    if not calibration_path.exists():
         return None
     try:
-        data = json.loads(CALIBRATION_STATS.read_text())
+        data = json.loads(calibration_path.read_text())
     except Exception as exc:  # noqa: BLE001
-        print(f"Failed to read {CALIBRATION_STATS}: {exc}")
+        print(f"Failed to read {calibration_path}: {exc}")
         return None
     mean_value = data.get("mean")
     try:
@@ -178,17 +173,37 @@ class ProgramRef:
     program_idx: int
 
 
-def main() -> None:
-    embeddings = load_embeddings()
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Process DeepSearch runs for a project and compute run-pair similarities."
+    )
+    add_project_argument(parser)
+    return parser
+
+
+def main(argv: Optional[List[str]] = None) -> None:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    paths = resolve_paths(args.project)
+    paths.ensure_output_dirs()
+    if not paths.mapping_file.exists():
+        raise FileNotFoundError(f"Mapping file not found for project '{paths.project}': {paths.mapping_file}")
+    if not paths.deepsearch_dir.exists():
+        raise FileNotFoundError(f"DeepSearch directory not found for project '{paths.project}': {paths.deepsearch_dir}")
+
+    embed_index = paths.data_dir / "embeddings_index.csv"
+    embed_vectors = paths.data_dir / "embeddings_name.npy"
+    calibration_stats = paths.analysis_dir / "embedding_calibration_stats.json"
+
+    embeddings = load_embeddings(embed_index, embed_vectors, USE_EMBEDDINGS)
     if USE_EMBEDDINGS and not embeddings:
         print("Embedding files not found or invalid; falling back to name token similarity.")
-    name_baseline = load_name_similarity_baseline()
+    name_baseline = load_name_similarity_baseline(calibration_stats)
     if name_baseline is None:
         print("Embedding calibration stats missing; name similarity will not be rescaled.")
     else:
         print(f"Using embedding baseline mean {name_baseline:.3f} for name similarity rescaling.")
-    DATA_DIR.mkdir(exist_ok=True)
-    mapping = pd.read_csv(MAPPING_FILE)
+    mapping = pd.read_csv(paths.mapping_file)
 
     run_records: List[Dict] = []
     program_rows: List[Dict] = []
@@ -198,7 +213,7 @@ def main() -> None:
     duplicate_rows: List[Dict] = []
 
     for _, row in mapping.iterrows():
-        folder = RUN_ROOT / row["new_folder"]
+        folder = paths.deepsearch_dir / row["new_folder"]
         meta = int(row["metamodule"])
         annotation = row["annotation"]
         run_files = sorted(folder.glob("*.md"))
@@ -357,18 +372,18 @@ def main() -> None:
                     }
                 )
 
-    pd.DataFrame(run_records).to_csv(DATA_DIR / "deepsearch_runs.csv", index=False)
-    pd.DataFrame(program_rows).to_csv(DATA_DIR / "deepsearch_programs.csv", index=False)
-    pd.DataFrame(match_rows).to_csv(DATA_DIR / "deepsearch_program_matches.csv", index=False)
-    pd.DataFrame(unmatched_rows).to_csv(DATA_DIR / "deepsearch_unmatched_programs.csv", index=False)
+    pd.DataFrame(run_records).to_csv(paths.data_dir / "deepsearch_runs.csv", index=False)
+    pd.DataFrame(program_rows).to_csv(paths.data_dir / "deepsearch_programs.csv", index=False)
+    pd.DataFrame(match_rows).to_csv(paths.data_dir / "deepsearch_program_matches.csv", index=False)
+    pd.DataFrame(unmatched_rows).to_csv(paths.data_dir / "deepsearch_unmatched_programs.csv", index=False)
     if invalid_program_rows:
         pd.DataFrame(invalid_program_rows).to_csv(
-            DATA_DIR / "deepsearch_invalid_program_entries.csv", index=False
+            paths.data_dir / "deepsearch_invalid_program_entries.csv", index=False
         )
     pd.DataFrame(duplicate_rows).to_csv(
-        DATA_DIR / "deepsearch_duplicate_runs.csv", index=False
+        paths.data_dir / "deepsearch_duplicate_runs.csv", index=False
     )
-    print("Processed DeepSearch runs and wrote CSV outputs in data/.")
+    print(f"Processed DeepSearch runs for project '{paths.project}' and wrote CSV outputs in {paths.data_dir}.")
 
 
 if __name__ == "__main__":
