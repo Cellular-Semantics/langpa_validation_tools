@@ -1,0 +1,830 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cells; oligodendrocyte progenitor cells (OPCs) in tumor microenvironment",
+    "disease": "malignant glioblastoma multiforme (IDH-wildtype)",
+    "tissue": "central nervous system (brain)"
+  },
+  "input_genes": [
+    "AFAP1L2",
+    "COL4A3",
+    "FERMT1",
+    "VIPR2",
+    "AL512308.1",
+    "CALCRL",
+    "REPS2",
+    "FGF12",
+    "CCDC26",
+    "OTOGL",
+    "ELMO1",
+    "PCDH15",
+    "COL4A4",
+    "THSD4",
+    "FA2H",
+    "LRRC7",
+    "PLPP4",
+    "PLA2G4A",
+    "AR",
+    "LINC00689",
+    "TNS3",
+    "BCAS1",
+    "DLL3",
+    "KCNIP3",
+    "MIR503HG",
+    "ANO3",
+    "PLAAT1",
+    "MEGF11",
+    "GSG1L",
+    "UGT8",
+    "COL20A1",
+    "ALCAM",
+    "C2orf27A",
+    "LHFPL3-AS1",
+    "CA10",
+    "SLC5A4",
+    "ADAMTS17",
+    "DCT",
+    "CHST9",
+    "NRSN1",
+    "AC110285.1",
+    "CCND1",
+    "TRPC4",
+    "TACR1",
+    "TNR",
+    "SOX6",
+    "PDE4A",
+    "GPR17",
+    "ARPP21",
+    "MYRF",
+    "PRKG2",
+    "LINC01268",
+    "LINC01322",
+    "AC023282.1",
+    "EYA1",
+    "ERBB3",
+    "LRRC3B",
+    "DISC1",
+    "BRINP1",
+    "SLC8A3",
+    "SLIT1",
+    "ATP13A5",
+    "LINC00320",
+    "SMOC1",
+    "LIN28B",
+    "CACNA1E",
+    "OMG",
+    "LAMB4",
+    "SLC26A7",
+    "GFPT2",
+    "PDE7B",
+    "FRG1-DT",
+    "PODN",
+    "PCSK2",
+    "FAM160A1",
+    "PRSS12",
+    "HS6ST2",
+    "PAPPA",
+    "DOCK10",
+    "ITGA9",
+    "DLL1",
+    "DGKB",
+    "OR4N2",
+    "CSMD3",
+    "CRYBG3",
+    "MDGA2",
+    "SEMA3E",
+    "CLDN11",
+    "KIF21B",
+    "NKD1",
+    "AQP4",
+    "GHR",
+    "AGMO",
+    "AC068308.1",
+    "MOG",
+    "TMPRSS9",
+    "USP43",
+    "MIR217HG",
+    "LRFN5",
+    "UGDH",
+    "AL139231.1",
+    "AL136114.1",
+    "AC005909.2",
+    "MYRIP",
+    "ANO4",
+    "TMEM132C",
+    "AC077690.1",
+    "AL031293.1",
+    "AC104051.2"
+  ],
+  "programs": [
+    {
+      "program_name": "Oligodendrocyte Differentiation & Myelin Formation",
+      "description": "This program encompasses genes essential for terminal oligodendrocyte differentiation, myelination gene expression, and mature oligodendrocyte identity. The genes coordinate myelin-specific transcriptional networks critical for CNS myelination and are aberrantly expressed in glioblastoma, potentially reflecting transdifferentiation capacity or tumor-promoting influences from OPCs in the microenvironment.",
+      "atomic_biological_processes": [
+        {
+          "name": "myelin gene transcriptional activation",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/21195721",
+              "notes": "MYRF acts as a critical transcriptional regulator required for CNS myelination"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/23984373",
+              "notes": "Sox10 and Myrf define regulatory network in oligodendrocytes"
+            }
+          ],
+          "genes": [
+            "MYRF",
+            "SOX6"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "myelin sheath structure",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/25681782",
+              "notes": "Myelin is multilayer lipid membrane wrapping axons"
+            }
+          ],
+          "genes": [
+            "CLDN11",
+            "OMG",
+            "MOG",
+            "MYRF"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced oligodendrocytic differentiation capacity in tumor cells",
+        "Transdifferentiation of glioblastoma cells toward oligodendrocyte lineage",
+        "Aberrant myelin gene program activation contributing to tumor heterogeneity",
+        "Interference with normal OPC function through paracrine signaling"
+      ],
+      "evidence_summary": "MYRF, SOX6, and CLDN11 constitute core transcriptional networks for oligodendrocyte differentiation. In glioblastoma, this program reflects either developmental plasticity enabling oligodendrocytic transdifferentiation or response to instructive signals from OPCs enriched at glioma borders, which create stem cell niches promoting glioma stemness and therapy resistance.",
+      "significance_score": 0.92,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21195721"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23984373"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29467605"
+        }
+      ],
+      "supporting_genes": [
+        "MYRF",
+        "SOX6",
+        "CLDN11",
+        "OMG",
+        "MOG",
+        "UGT8",
+        "BCAS1",
+        "FA2H",
+        "PLPP4",
+        "LRRC7",
+        "LRRC3B"
+      ]
+    },
+    {
+      "program_name": "Extracellular Matrix & Basement Membrane Organization",
+      "description": "Comprehensive ECM remodeling program involving collagen IV chains, adhesion molecules, proteoglycans, and proteases. This program supports tumor invasiveness, vascular permeability, and tissue remodeling characteristic of glioblastoma progression and angiogenesis.",
+      "atomic_biological_processes": [
+        {
+          "name": "basement membrane assembly",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/37880325",
+              "notes": "Collagen IV major component of basement membranes"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/21606171",
+              "notes": "BM dynamics provide mechanical properties stabilizing tissue"
+            }
+          ],
+          "genes": [
+            "COL4A3",
+            "COL4A4",
+            "COL20A1",
+            "LAMB4",
+            "HS6ST2",
+            "PAPPA"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "focal adhesion complexes",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/28764606"
+            }
+          ],
+          "genes": [
+            "FERMT1",
+            "ITGA9",
+            "TNS3",
+            "LRRC3B"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced basement membrane degradation promoting tumor invasiveness",
+        "Increased ECM turnover supporting angiogenesis and vascular remodeling",
+        "Enhanced integrin signaling promoting glioma cell migration",
+        "Altered tissue architecture facilitating perivascular invasion"
+      ],
+      "evidence_summary": "Collagen IV family and laminins form structural scaffolds of CNS basement membranes. ADAMTS17, PRSS12, and PAPPA facilitate ECM proteolysis. FERMT1 activates integrins essential for cell-ECM adhesion and migration. This program drives hallmark glioblastoma phenotypes: enhanced invasiveness, vascular permeability, and migratory capacity.",
+      "significance_score": 0.88,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37880325"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23734296"
+        }
+      ],
+      "supporting_genes": [
+        "COL4A3",
+        "COL4A4",
+        "COL20A1",
+        "LAMB4",
+        "ADAMTS17",
+        "PAPPA",
+        "PRSS12",
+        "FERMT1",
+        "ITGA9",
+        "ALCAM",
+        "PCDH15",
+        "MDGA2",
+        "TNS3",
+        "HS6ST2",
+        "CHST9"
+      ]
+    },
+    {
+      "program_name": "Neuregulin-ErbB Receptor Signaling & Growth Promotion",
+      "description": "Ligand-receptor signaling through neuregulin-dependent ErbB activation promoting tumor cell survival, growth, and stemness. ERBB3 is frequently dysregulated in glioblastoma subsets and drives metabolic dependency.",
+      "atomic_biological_processes": [
+        {
+          "name": "ErbB receptor activation and signaling",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34561169",
+              "notes": "ERBB3 overexpression in glioblastoma"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/15970318",
+              "notes": "Neuregulin-1 activation enhances glioma cell survival"
+            }
+          ],
+          "genes": [
+            "ERBB3",
+            "VIPR2",
+            "CALCRL",
+            "FGF12"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "cell surface receptors",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34561169"
+            }
+          ],
+          "genes": [
+            "ERBB3",
+            "VIPR2",
+            "CALCRL"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced survival through ErbB-PI3K-AKT signaling",
+        "Metabolic rewiring dependent on ERBB3 activation",
+        "Increased stemness and self-renewal",
+        "Resistance to conventional therapies"
+      ],
+      "evidence_summary": "ERBB3 functions as efficient phosphotyrosine scaffold upon heterodimer formation. In glioblastoma, ERBB3 overexpression drives survival through PI3K-AKT signaling. VIPR2 and CALCRL mediate neuropeptide signaling with growth-promoting effects.",
+      "significance_score": 0.78,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34561169"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15970318"
+        }
+      ],
+      "supporting_genes": [
+        "ERBB3",
+        "VIPR2",
+        "CALCRL",
+        "FGF12",
+        "PDE4A",
+        "TRPC4",
+        "CACNA1E"
+      ]
+    },
+    {
+      "program_name": "Calcium Signaling & Ion Channel Activity",
+      "description": "Coordinated calcium and cation homeostasis regulating neuronal-like excitability, synaptic plasticity, and transcriptional responses critical for glioma cell behavior.",
+      "atomic_biological_processes": [
+        {
+          "name": "calcium-dependent gene regulation",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/19732029",
+              "notes": "Nuclear calcium controls gene expression"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/11544536"
+            }
+          ],
+          "genes": [
+            "CACNA1E",
+            "TRPC4",
+            "SLC8A3",
+            "SLC26A7",
+            "KCNIP3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "ion channels and transporters",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/26868069"
+            }
+          ],
+          "genes": [
+            "CACNA1E",
+            "TRPC4",
+            "SLC8A3",
+            "SLC26A7",
+            "KCNIP3",
+            "ANO3",
+            "ANO4"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced neuronal-like electrophysiological properties",
+        "Calcium-dependent activation of stemness programs",
+        "Regulation of glioma cell motility and invasion",
+        "Integration into neural circuits"
+      ],
+      "evidence_summary": "Calcium signaling serves as master regulator in neurons and glioma cells. CACNA1E and TRPC4 mediate calcium entry; SLC transporters maintain homeostasis. This program reflects glioma cells' neuronal-like signaling enabling integration into existing neural circuits.",
+      "significance_score": 0.85,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19732029"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26868069"
+        }
+      ],
+      "supporting_genes": [
+        "CACNA1E",
+        "TRPC4",
+        "SLC8A3",
+        "SLC26A7",
+        "KCNIP3",
+        "PDE4A",
+        "PDE7B",
+        "PRKG2",
+        "ANO3",
+        "ANO4",
+        "GSG1L",
+        "LRRC7",
+        "MDGA2",
+        "TACR1"
+      ]
+    },
+    {
+      "program_name": "Cell Cycle Progression & Proliferation Control",
+      "description": "G1/S checkpoint regulation through cyclin-CDK complexes. CCND1 drives G1-S transition, frequently dysregulated in glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "G1 to S phase transition",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/10079155",
+              "notes": "Cyclin D1 drives G1/S transition"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/30718074"
+            }
+          ],
+          "genes": [
+            "CCND1",
+            "DLL3",
+            "DLL1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "cyclin-CDK complexes",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/10079155"
+            }
+          ],
+          "genes": [
+            "CCND1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Uncontrolled G1/S progression enabling continuous proliferation",
+        "Bypass of retinoblastoma checkpoint",
+        "Maintenance of GSC stemness through Notch-DLL signaling",
+        "Resistance to differentiation-inducing therapies"
+      ],
+      "evidence_summary": "CCND1 amplification is frequent in glioblastoma. DLL3 and DLL1 Notch ligands maintain stem cell pools through differentiation suppression. TP53-ARF-MDM2 pathway is deregulated in 84% of GBM.",
+      "significance_score": 0.82,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10079155"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28768145"
+        }
+      ],
+      "supporting_genes": [
+        "CCND1",
+        "DLL3",
+        "DLL1"
+      ]
+    },
+    {
+      "program_name": "Epithelial-Mesenchymal Transition & Invasion",
+      "description": "EMT-like processes enabling enhanced migratory and invasive phenotypes through altered adhesion, mesenchymal characteristics, and enhanced motility.",
+      "atomic_biological_processes": [
+        {
+          "name": "cell migration and invasion",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/25381331"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/30728008"
+            }
+          ],
+          "genes": [
+            "FERMT1",
+            "DOCK10",
+            "ADAMTS17",
+            "SLIT1",
+            "SEMA3E",
+            "TNS3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "focal adhesions and mechanotransduction",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/30728008"
+            }
+          ],
+          "genes": [
+            "FERMT1",
+            "TNS3",
+            "ITGA9",
+            "LRRC3B"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced migratory capacity enabling infiltrative brain invasion",
+        "Increased invasiveness and escape from primary tumor",
+        "Therapy-resistant phenotypes through stemness acquisition",
+        "Enhanced mechanosensing enabling tissue adaptation"
+      ],
+      "evidence_summary": "EMT-like processes promote migration through altered adhesion and migratory machinery. SLIT1 and SEMA3E are repulsive guidance molecules. FERMT1, TNS3, LRRC3B regulate focal adhesions essential for migration. DOCK10 promotes lamellipodia formation. This program captures plasticity enabling therapeutic resistance.",
+      "significance_score": 0.87,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25381331"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30728008"
+        }
+      ],
+      "supporting_genes": [
+        "SLIT1",
+        "SEMA3E",
+        "ALCAM",
+        "PCDH15",
+        "TNR",
+        "FERMT1",
+        "DOCK10",
+        "ADAMTS17",
+        "TNS3",
+        "LRRC3B",
+        "LRRC7",
+        "BRINP1",
+        "DISC1",
+        "ITGA9"
+      ]
+    },
+    {
+      "program_name": "Lipid Metabolism & Bioenergetics Rewiring",
+      "description": "Dysregulated lipid biosynthesis and storage supporting rapid tumor growth. GBM exhibits SREBP-1-driven lipid accumulation.",
+      "atomic_biological_processes": [
+        {
+          "name": "de novo lipid biosynthesis",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35961471"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/32847325"
+            }
+          ],
+          "genes": [
+            "PLPP4",
+            "PLA2G4A",
+            "FA2H",
+            "GFPT2",
+            "UGDH"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "lipid droplets",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34919093"
+            }
+          ],
+          "genes": [
+            "PLPP4",
+            "PLA2G4A",
+            "MYRIP",
+            "ATP13A5"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Rapid cell growth through enhanced membrane synthesis",
+        "Ferroptosis resistance through lipid droplet sequestration",
+        "Metabolic flexibility and nutritional adaptation",
+        "Chemotherapy survival through altered membrane composition"
+      ],
+      "evidence_summary": "GBM activates SREBP-1 coordinating lipid synthesis genes. PLPP4 and PLA2G4A regulate phospholipid remodeling. Lipid droplets accumulate in GBM tumors protected by MYRIP. This explains metabolic flexibility and therapeutic resistance.",
+      "significance_score": 0.84,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35961471"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34919093"
+        }
+      ],
+      "supporting_genes": [
+        "PLPP4",
+        "PLA2G4A",
+        "FA2H",
+        "GFPT2",
+        "UGDH",
+        "PLAAT1",
+        "UGT8",
+        "MYRIP",
+        "ATP13A5"
+      ]
+    },
+    {
+      "program_name": "Hypoxia Response & Angiogenic Signaling",
+      "description": "Adaptive responses to hypoxic microenvironment through HIF-1\u03b1 stabilization and pro-angiogenic pathway activation.",
+      "atomic_biological_processes": [
+        {
+          "name": "HIF-1\u03b1 stabilization and transcriptional activation",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/15758173"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/31886436"
+            }
+          ],
+          "genes": [
+            "CA10",
+            "CALCRL",
+            "VIPR2",
+            "ADAMTS17",
+            "GFPT2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "hypoxia-responsive transcriptional complexes",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/15758173"
+            }
+          ],
+          "genes": [
+            "CA10",
+            "ADAMTS17",
+            "GFPT2",
+            "CALCRL"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced survival under hypoxic stress",
+        "Activation of pro-angiogenic programs",
+        "Metabolic flexibility adapting to hypoxia",
+        "Increased stemness and therapeutic resistance"
+      ],
+      "evidence_summary": "HIF-1\u03b1 stabilization under hypoxia drives transcription of VEGF and angiogenic factors. CA10 regulates pH adaptation. CALCRL and VIPR2 mediate pro-angiogenic signaling. This program explains hallmark angiogenic and necrotic GBM phenotypes.",
+      "significance_score": 0.83,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15758173"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31886436"
+        }
+      ],
+      "supporting_genes": [
+        "CA10",
+        "CALCRL",
+        "VIPR2",
+        "ADAMTS17",
+        "GFPT2",
+        "UGDH",
+        "FGF12",
+        "PDE4A",
+        "PLPP4"
+      ]
+    },
+    {
+      "program_name": "Cancer Stem Cell Maintenance & Plasticity",
+      "description": "Self-renewal and multi-lineage differentiation of glioma stem cells. LIN28B maintains developmental plasticity through let-7 miRNA suppression.",
+      "atomic_biological_processes": [
+        {
+          "name": "pluripotency and stemness maintenance",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/26819000"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/27956702"
+            }
+          ],
+          "genes": [
+            "SOX6",
+            "LIN28B",
+            "DLL3",
+            "DLL1",
+            "EYA1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "transcriptional regulatory networks",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/26819000"
+            }
+          ],
+          "genes": [
+            "SOX6",
+            "EYA1",
+            "DLL3",
+            "DLL1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Unlimited self-renewal enabling tumor re-initiation",
+        "Multi-lineage differentiation potential",
+        "Resistance to differentiation-based therapies",
+        "Phenotypic plasticity enabling microenvironmental adaptation"
+      ],
+      "evidence_summary": "GSCs express pluripotency factors enabling self-renewal. LIN28B suppresses let-7 miRNAs maintaining developmental plasticity. SOX6 regulates OPC fate enabling oligodendroglial differentiation. This program identifies GSCs as source of recurrent tumors.",
+      "significance_score": 0.86,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26819000"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22454293"
+        }
+      ],
+      "supporting_genes": [
+        "SOX6",
+        "LIN28B",
+        "DLL3",
+        "DLL1",
+        "EYA1",
+        "MIR503HG",
+        "MIR217HG",
+        "ERBB3",
+        "DISC1"
+      ]
+    },
+    {
+      "program_name": "Long Non-Coding RNA Regulatory Networks",
+      "description": "lncRNA-mediated gene regulation affecting GBM progression, therapy resistance, and cellular plasticity.",
+      "atomic_biological_processes": [
+        {
+          "name": "miRNA and competing endogenous RNA networks",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/31202227"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/30293485"
+            }
+          ],
+          "genes": [
+            "LINC00689",
+            "LINC01268",
+            "LINC01322",
+            "MIR503HG",
+            "MIR217HG",
+            "LINC00320"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "RNA-protein complexes",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/30293485"
+            }
+          ],
+          "genes": [
+            "LINC00689",
+            "LINC01268",
+            "LINC01322",
+            "MIR503HG"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Fine-tuning of oncogenic pathway activation",
+        "Enhanced multidrug resistance",
+        "Altered differentiation and stemness",
+        "Tumor-promoting transcriptional programs"
+      ],
+      "evidence_summary": "lncRNAs regulate GBM pathogenesis through competing endogenous RNA effects and chromatin remodeling. LINC00689, LINC01268, LINC01322 represent dysregulated GBM lncRNAs. Known GBM-promoting lncRNAs include MALAT1, H19, CRNDE regulating multidrug resistance and invasiveness.",
+      "significance_score": 0.76,
+      "citations": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31202227"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30293485"
+        }
+      ],
+      "supporting_genes": [
+        "LINC00689",
+        "LINC01268",
+        "LINC01322",
+        "LINC00320",
+        "MIR503HG",
+        "MIR217HG",
+        "FRG1-DT",
+        "AC110285.1",
+        "AC023282.1",
+        "AC068308.1",
+        "AC077690.1",
+        "AL031293.1",
+        "AC104051.2",
+        "AL139231.1",
+        "AL136114.1",
+        "AC005909.2",
+        "AL512308.1",
+        "C2orf27A",
+        "LHFPL3-AS1"
+      ]
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "Pathway database literature (KEGG, Reactome, STRING)",
+      "Co-expression analysis in glioblastoma datasets (TCGA, GEO)",
+      "Protein-protein interaction networks",
+      "Known functional annotations",
+      "Cell type-specific expression patterns",
+      "Shared biological processes"
+    ],
+    "notes": "Analysis prioritized genes with strong literature support in glioblastoma and oligodendrocyte biology. The oligodendrocyte differentiation program is particularly prominent, reflecting developmental origin hypothesis and documented role of OPCs in glioma microenvironment-mediated stemness and therapy resistance."
+  },
+  "version": "1.0"
+}

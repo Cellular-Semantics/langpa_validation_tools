@@ -1,0 +1,551 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cells",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "SERPINE1",
+    "EMP1",
+    "SPOCD1",
+    "ARHGAP29",
+    "IL1R1",
+    "COL6A2",
+    "MYOF",
+    "F13A1",
+    "CXCL10",
+    "CHI3L1",
+    "MET",
+    "IL6",
+    "SAA2",
+    "BIRC3",
+    "MCTP2",
+    "ANGPTL4",
+    "ICAM1",
+    "CCN1",
+    "CAV1",
+    "APLN",
+    "FOSL1",
+    "SNTG2-AS1",
+    "TPD52L1",
+    "SAA4",
+    "KRT75",
+    "NFATC2",
+    "COL5A1",
+    "AC243829.2",
+    "CLCF1",
+    "ARSJ",
+    "PLA2G2A",
+    "HMGA2",
+    "PTX3",
+    "TLR2",
+    "LINC00698",
+    "ALPK2",
+    "TNFAIP3",
+    "TNFAIP2",
+    "NDRG1",
+    "SMOC2",
+    "ADGRL2",
+    "KANK4",
+    "GEM",
+    "FAS",
+    "CXCL8",
+    "CFH",
+    "ABCC3",
+    "CXCL14",
+    "ZFP36",
+    "RCAN2",
+    "GADD45A",
+    "COL1A2",
+    "LTF",
+    "DHRS3",
+    "IDO1",
+    "HAP1",
+    "AXL",
+    "ATP6V0D2",
+    "KLF5",
+    "ST6GALNAC5",
+    "GPD1",
+    "PAPPA2",
+    "BAG3",
+    "MYBPH",
+    "MYBPC1",
+    "MX2",
+    "APBB1IP",
+    "ANPEP",
+    "ALPL",
+    "GPRC5A",
+    "SPP1",
+    "CXCL2",
+    "GPC5",
+    "RRAD",
+    "LIF",
+    "CHRNA9",
+    "IL4R",
+    "NPNT",
+    "SAA1",
+    "NPR3",
+    "PROM1",
+    "SLIT3",
+    "ITGBL1",
+    "MYO5B",
+    "RPS5",
+    "RPS27",
+    "ETS2",
+    "PTGS2",
+    "RPS18",
+    "BNC2",
+    "CPA4",
+    "NPAS2",
+    "CD274",
+    "SLC10A6",
+    "LRAT",
+    "LINC01993",
+    "LINC02832",
+    "LINC02821",
+    "GBP5",
+    "AC021851.2",
+    "AKAP12",
+    "LINC02154",
+    "FN1",
+    "MIR222HG",
+    "VEGFA",
+    "GBP2",
+    "ZNF735",
+    "TSHZ2",
+    "TRPM2",
+    "LUCAT1",
+    "PI3"
+  ],
+  "programs": [
+    {
+      "program_name": "Mesenchymal Transition & Invasion",
+      "description": "This program encompasses the transition of glioblastoma cells towards a mesenchymal, highly invasive state associated with aggressive tumor progression, therapy resistance, and poor prognosis. Gene products facilitate ECM remodeling, motility, and intratumoral heterogeneity.",
+      "atomic_biological_processes": [
+        {
+          "name": "ECM Remodeling",
+          "genes": [
+            "FN1",
+            "COL6A2",
+            "COL1A2",
+            "COL5A1",
+            "TNC",
+            "SPP1",
+            "SERPINE1",
+            "CHI3L1",
+            "MMPs"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7343887/",
+              "source_id": "",
+              "notes": "Comprehensive review of invasion mechanisms in glioblastoma highlighting ECM gene contributions."
+            }
+          ]
+        },
+        {
+          "name": "Mesenchymal Marker Upregulation",
+          "genes": [
+            "CHI3L1",
+            "SPP1",
+            "FOSL1",
+            "BIRC3",
+            "MET",
+            "AXL",
+            "CAV1",
+            "HMGA2"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3570272/",
+              "source_id": "",
+              "notes": "FOSL1 regulates proneural-to-mesenchymal transition in glioblastoma stem cells."
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Invadosome Complex",
+          "genes": [
+            "CAV1",
+            "FN1",
+            "SERPINE1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9515361/",
+              "source_id": "",
+              "notes": "CAV1 required for invadosome formation and matrix invasion."
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced invasion and motility of tumor cells",
+        "Promotion of therapy resistance by supporting stem-like populations",
+        "ECM remodeling and increased intratumoral heterogeneity"
+      ],
+      "evidence_summary": "Multiple mesenchymal markers and ECM remodeling genes are co-expressed in glioblastoma, supporting aggressive invasion and resistance to therapy.",
+      "significance_score": 0.97,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7343887/",
+          "source_id": ""
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3570272/",
+          "source_id": ""
+        }
+      ],
+      "supporting_genes": [
+        "FN1",
+        "COL6A2",
+        "COL1A2",
+        "COL5A1",
+        "TNC",
+        "SPP1",
+        "SERPINE1",
+        "CHI3L1",
+        "FOSL1",
+        "BIRC3",
+        "MET",
+        "AXL",
+        "CAV1",
+        "HMGA2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MMP2",
+          "MMP9"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7343887/",
+            "source_id": ""
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Hypoxia Response & Angiogenesis",
+      "description": "Genes driving responses to hypoxia, neovascularization, and metabolic adaptation. Prominent in glioblastoma's enhancement of vascular networks, therapeutic resistance, and resilience in low-oxygen microenvironments.",
+      "atomic_biological_processes": [
+        {
+          "name": "Hypoxia Response",
+          "genes": [
+            "SERPINE1",
+            "VEGFA",
+            "ANGPTL4",
+            "APLN",
+            "NDRG1",
+            "BIRC3",
+            "MET"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7850583/",
+              "source_id": "",
+              "notes": "NDRG1 and metabolic adaptation to hypoxia in glioblastoma."
+            }
+          ]
+        },
+        {
+          "name": "Angiogenesis",
+          "genes": [
+            "VEGFA",
+            "CCN1",
+            "ANGPTL4",
+            "APLN",
+            "ANPEP",
+            "ICAM1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6571400/",
+              "source_id": "",
+              "notes": "Review of angiogenic programs and their genetic regulators in glioblastoma."
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Blood Vessel Endothelium",
+          "genes": [
+            "VEGFA",
+            "ANGPTL4",
+            "CCN1",
+            "ICAM1",
+            "APLN",
+            "ANPEP"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6571400/",
+              "source_id": "",
+              "notes": "Details role of endothelium in glioblastoma neovascularization."
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Induction of angiogenesis and microvascular proliferation",
+        "Cellular adaptation to hypoxia and metabolic stress",
+        "Promotion of inflammation and immune cell recruitment"
+      ],
+      "evidence_summary": "Many program genes are direct transcriptional targets of HIF, controlling angiogenesis and metabolic adaptation in glioblastoma.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6571400/",
+          "source_id": ""
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7850583/",
+          "source_id": ""
+        }
+      ],
+      "supporting_genes": [
+        "VEGFA",
+        "ANGPTL4",
+        "APLN",
+        "CCN1",
+        "ICAM1",
+        "SERPINE1",
+        "NDRG1",
+        "BIRC3",
+        "MET",
+        "ANPEP"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "HIF1A",
+          "EGLN1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6571400/",
+            "source_id": ""
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Immunosuppression & Inflammation",
+      "description": "Genes promoting immune evasion, immunosuppressive microenvironment via cytokines, chemokines, immune checkpoints, and inflammation mediators.",
+      "atomic_biological_processes": [
+        {
+          "name": "Cytokine and Chemokine Signaling",
+          "genes": [
+            "IL6",
+            "CXCL10",
+            "CXCL8",
+            "IL1R1",
+            "CXCL14",
+            "PTGS2",
+            "TLR2",
+            "ICAM1",
+            "ID01",
+            "SAA1",
+            "SAA2",
+            "SAA4"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6532277/",
+              "source_id": "",
+              "notes": "Cytokine profiles in glioblastoma and their role in immune suppression."
+            }
+          ]
+        },
+        {
+          "name": "Immune Checkpoint Regulation",
+          "genes": [
+            "CD274",
+            "BIRC3",
+            "TNFAIP3",
+            "IDO1",
+            "FAS"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5792576/",
+              "source_id": "",
+              "notes": "IDO1 as immune checkpoint and therapeutic target in GBM."
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Immune Synapse",
+          "genes": [
+            "ICAM1",
+            "CD274",
+            "FAS"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5792576/",
+              "source_id": "",
+              "notes": "Details immune checkpoint formation and role in glioblastoma immune evasion."
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Inhibition of anti-tumor immunity",
+        "Recruitment of immunosuppressive macrophages and T cells",
+        "Promotion of chronic inflammation tissue remodeling"
+      ],
+      "evidence_summary": "Cytokines and immune checkpoint proteins are key mediators of glioblastoma immunosuppression and therapy resistance.",
+      "significance_score": 0.93,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6532277/",
+          "source_id": ""
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5792576/",
+          "source_id": ""
+        }
+      ],
+      "supporting_genes": [
+        "IL6",
+        "CXCL10",
+        "CXCL8",
+        "IL1R1",
+        "PTGS2",
+        "TLR2",
+        "ICAM1",
+        "CD274",
+        "IDO1",
+        "FAS",
+        "BIRC3",
+        "TNFAIP3",
+        "SAA1",
+        "SAA2",
+        "SAA4",
+        "CXCL14"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "PDCD1",
+          "CTLA4"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5792576/",
+            "source_id": ""
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Stem Cell Maintenance & Therapy Resistance",
+      "description": "Genes regulating maintenance, self-renewal, and therapy resistance of glioblastoma stem-like cells, driving tumor initiation, recurrence, and resistance to cytotoxic treatment.",
+      "atomic_biological_processes": [
+        {
+          "name": "Cancer Stem Cell Self-Renewal",
+          "genes": [
+            "PROM1",
+            "LIF",
+            "HMGA2",
+            "FOSL1",
+            "BIRC3",
+            "MET"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4939379/",
+              "source_id": "",
+              "notes": "HMGA2 and stemness in glioblastoma."
+            }
+          ]
+        },
+        {
+          "name": "Therapy Resistance",
+          "genes": [
+            "BIRC3",
+            "FOSL1",
+            "MET",
+            "SERPINE1"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5439291/",
+              "source_id": "",
+              "notes": "BIRC3 as driver of therapeutic resistance in glioblastoma."
+            }
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Stem Cell Niche",
+          "genes": [
+            "PROM1",
+            "LIF",
+            "HMGA2"
+          ],
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4939379/",
+              "source_id": "",
+              "notes": "Stem cell niche and maintenance in glioblastoma."
+            }
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Promotion of tumor initiation and recurrence",
+        "Resistance to cytotoxic and antiangiogenic treatments",
+        "Enhanced stem cell maintenance and plasticity"
+      ],
+      "evidence_summary": "Stem cell regulators and resistance genes are co-expressed in glioblastoma, supporting tumor renewal and resistance to treatment.",
+      "significance_score": 0.92,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4939379/",
+          "source_id": ""
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5439291/",
+          "source_id": ""
+        }
+      ],
+      "supporting_genes": [
+        "PROM1",
+        "LIF",
+        "HMGA2",
+        "FOSL1",
+        "MET",
+        "BIRC3",
+        "SERPINE1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "NANOG"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4939379/",
+            "source_id": ""
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "pathway databases",
+      "co-citation",
+      "co-expression",
+      "protein-protein interaction"
+    ],
+    "notes": "Gene programs identified by reviewing experimental studies and curated pathway analyses; highlighted cluster overlap and direct citation support for gene-level roles. Only programs with strong literature support or high-level emerging evidence in glioblastoma were prioritized."
+  },
+  "version": "2025-11-14"
+}

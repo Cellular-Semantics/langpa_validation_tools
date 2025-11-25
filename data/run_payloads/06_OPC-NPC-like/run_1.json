@@ -1,0 +1,620 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma multiforme",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "SLIT3",
+    "CA8",
+    "ARX",
+    "AC109492.1",
+    "AL078602.1",
+    "DLX5",
+    "AC006296.3",
+    "DLX6",
+    "RFTN2",
+    "DLX6-AS1",
+    "AC090241.2",
+    "PDZRN3",
+    "GLI2",
+    "TBL1X",
+    "KCNH8",
+    "ST8SIA5",
+    "LRGUK",
+    "TPGS2",
+    "LINC02487",
+    "DACH2",
+    "SOX2-OT",
+    "KIAA0040",
+    "FCGBP",
+    "LINC00326",
+    "AC022075.1",
+    "AC125613.1",
+    "MCUB",
+    "EPHA7",
+    "PLS3",
+    "SLC6A5",
+    "CRYBG3",
+    "LINC01748",
+    "TENM1",
+    "LINC00535",
+    "ABTB2",
+    "MAN2A1",
+    "LAMP5",
+    "MOG",
+    "KITLG",
+    "ZNF618",
+    "PIP5K1B",
+    "AC005162.3",
+    "AC017053.1",
+    "FAM149A",
+    "CRB1",
+    "ERBB3",
+    "EPB41L4A",
+    "STC1",
+    "PID1",
+    "EGFR",
+    "RPL18A",
+    "SPHKAP",
+    "AL512308.1",
+    "LGALS1",
+    "RPL10",
+    "CADM2",
+    "CASC6",
+    "TMTC2",
+    "GRK5",
+    "FREM2",
+    "RPL8",
+    "MDK",
+    "RPS18",
+    "CCDC178",
+    "CDCA7",
+    "CASP9",
+    "GALP",
+    "CNGA3",
+    "MAP3K20",
+    "ADAM28",
+    "COLGALT2",
+    "LINC00689",
+    "DLL1",
+    "CCND2",
+    "RPL13A",
+    "DGKB",
+    "RPL36",
+    "DCT",
+    "CELF4",
+    "LINC01949",
+    "DAPL1",
+    "RPL7",
+    "LINC01324",
+    "CNDP1",
+    "RPL32",
+    "RPL41",
+    "RPL34",
+    "MRC1",
+    "LINC00299",
+    "PEX5L",
+    "GRIN3A",
+    "GRAMD1B",
+    "GPR153",
+    "HIST1H2BD",
+    "NTNG2",
+    "MEIS2",
+    "PAPSS2",
+    "PAX3",
+    "PCP4",
+    "PCSK2",
+    "ISG15",
+    "GAD2",
+    "FLRT2",
+    "LGR5",
+    "PLA2G4A",
+    "KCNN1",
+    "PPFIBP1",
+    "MALAT1",
+    "LRTM1",
+    "EPCAM-DT",
+    "PRRX1",
+    "H2AFY2",
+    "EFHD2",
+    "EBF2",
+    "RASGEF1C",
+    "RELN",
+    "EFNA5",
+    "RPL28",
+    "CACNA2D2",
+    "AGMO",
+    "BCAS1",
+    "SIPA1L2",
+    "SLAIN1",
+    "SLC4A11",
+    "SLC9B1",
+    "AP002026.1",
+    "ST6GALNAC5",
+    "AL158038.1",
+    "AJAP1",
+    "ADARB2",
+    "BDNF-AS",
+    "AC116049.2",
+    "AC109466.1",
+    "TOX3",
+    "AC087477.2",
+    "AC061958.1",
+    "UNC5B",
+    "AC012485.1",
+    "AC007405.1",
+    "ZNF727",
+    "BCL11B",
+    "TFAP2B",
+    "BTG2",
+    "SAT1",
+    "C15orf41"
+  ],
+  "programs": [
+    {
+      "program_name": "Sonic Hedgehog and GLI Signaling",
+      "description": "Central to glioblastoma stemness, proliferation, and invasion. GLI2 and SHH pathway components are highly active and drive tumor progression, acting through regulatory networks that also support resistance and plasticity.",
+      "atomic_biological_processes": [
+        {
+          "name": "transcriptional activation via Hedgehog-GLI2 axis",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201456/",
+              "source_id": "",
+              "notes": "Direct evidence of GLI2 role in glioblastoma proliferation/migration."
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6839884/",
+              "source_id": "",
+              "notes": "Reviews Hedgehog signaling's role in GBM."
+            }
+          ],
+          "genes": [
+            "GLI2",
+            "EGFR",
+            "DLX5",
+            "DLX6"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "nucleus (transcription factor activity)",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201456/",
+              "source_id": "",
+              "notes": "GLI2 as nuclear transcription factor regulating gene expression."
+            }
+          ],
+          "genes": [
+            "GLI2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enhanced proliferation and migration",
+        "maintenance of cancer stem cell properties",
+        "resistance to differentiation and therapy"
+      ],
+      "evidence_summary": "Multiple studies report key roles for Hedgehog/GLI axis in GBM proliferation, stemness, and therapy resistance.",
+      "significance_score": 0.92,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6201456/",
+          "source_id": "",
+          "notes": "GLI2 regulates ARHGEF16, driving migration/proliferation."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6839884/",
+          "source_id": "",
+          "notes": "Hedgehog signaling essential for GBM development/treatment."
+        }
+      ],
+      "supporting_genes": [
+        "GLI2",
+        "EGFR",
+        "DLX5",
+        "DLX6"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SHH",
+          "PTCH1",
+          "SMO"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6839884/",
+            "source_id": "",
+            "notes": "Canonical Hedgehog pathway components required for full activity."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Notch Signaling",
+      "description": "Key regulator of glioblastoma stem cell maintenance, proliferation, apoptosis resistance and therapy resistance. DLL1 and NOTCH axis are hyperactive in GBM.",
+      "atomic_biological_processes": [
+        {
+          "name": "Notch receptor activation by Delta-like ligand",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6389141/",
+              "source_id": "",
+              "notes": "Notch1\u20134 and DLL1\u20134, JAGGED1\u20132 drive GBM progression."
+            }
+          ],
+          "genes": [
+            "DLL1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "membrane-bound receptor complex",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6389141/",
+              "source_id": "",
+              "notes": "Notch signaling involves membrane receptors/ligands."
+            }
+          ],
+          "genes": [
+            "DLL1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "cancer stem cell maintenance",
+        "apoptosis resistance",
+        "poor response to standard therapies"
+      ],
+      "evidence_summary": "Extensive experimental validation of Notch pathway promoting GBM stemness, recurrence, and resistance.",
+      "significance_score": 0.88,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6389141/",
+          "source_id": "",
+          "notes": "Comprehensive review of Notch signaling in glioblastoma."
+        }
+      ],
+      "supporting_genes": [
+        "DLL1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "NOTCH1",
+          "JAG1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6389141/",
+            "source_id": "",
+            "notes": "Canonical Notch signaling partners."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "EGFR/ERBB Family Signaling",
+      "description": "EGFR and ERBB3 jointly drive growth, survival, invasion, and resistance in GBM. EGFR amplification, mutation, and ERBB compensation are classic mechanisms of targeted therapy resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "tyrosine kinase signaling cascade",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4131500/",
+              "source_id": "",
+              "notes": "Canonical EGFR/ERBB pathway in glioblastoma therapy resistance."
+            }
+          ],
+          "genes": [
+            "EGFR",
+            "ERBB3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "plasma membrane receptor",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4131500/",
+              "source_id": "",
+              "notes": "EGFR/ERBB receptors localized to membrane."
+            }
+          ],
+          "genes": [
+            "EGFR",
+            "ERBB3"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "sustained proliferation",
+        "evasion of apoptosis",
+        "enhanced invasion and therapy resistance"
+      ],
+      "evidence_summary": "EGFR and ERBB signaling are the most studied oncogenic mechanisms in GBM with clear roles in resistance and poor prognosis.",
+      "significance_score": 0.94,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4131500/",
+          "source_id": "",
+          "notes": "EGFR/EGFRvIII drive GBM proliferation, survival, resistance."
+        }
+      ],
+      "supporting_genes": [
+        "EGFR",
+        "ERBB3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "ERBB2",
+          "EGF"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4131500/",
+            "source_id": "",
+            "notes": "Other ERBB family members and ligands amplify pathway effect."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Stemness and Dedifferentiation Program",
+      "description": "SOX2, LGR5 and GLI2 promote stem-like properties, therapy resistance, and tumor recurrence in GBM. This state serves as a reservoir for relapse.",
+      "atomic_biological_processes": [
+        {
+          "name": "maintenance of undifferentiated neural stem cell-like state",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5389812/",
+              "source_id": "",
+              "notes": "SOX2 maintains glioma stem cell state."
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6215278/",
+              "source_id": "",
+              "notes": "LGR5 marks glioma stem-like cells and promotes EMT."
+            }
+          ],
+          "genes": [
+            "SOX2-OT",
+            "LGR5",
+            "GLI2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "nucleus (stem cell transcriptional network)",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5389812/",
+              "source_id": "",
+              "notes": "SOX2 transcriptional targets."
+            }
+          ],
+          "genes": [
+            "SOX2-OT"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enforced stemness and therapy resistance",
+        "tumor recurrence from stem cell pool",
+        "de-differentiation of progenitors"
+      ],
+      "evidence_summary": "Combined SOX2, LGR5, and GLI2 activity well-established in promoting GBM stemness and resistance.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5389812/",
+          "source_id": "",
+          "notes": "SOX2 as a marker and driver of GBM stem cells."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6215278/",
+          "source_id": "",
+          "notes": "LGR5-driven stemness and EMT in glioblastoma."
+        }
+      ],
+      "supporting_genes": [
+        "SOX2-OT",
+        "LGR5",
+        "GLI2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "OLIG2"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5389812/",
+            "source_id": "",
+            "notes": "SOX2 transcription factor is the canonical stem cell marker."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Mesenchymal Transition & Invasion",
+      "description": "PRRX1 and RELN promote invasion via EMT-like programs, with supporting roles from extracellular matrix and cell adhesion molecules. This program is central to GBM malignancy and resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "epithelial-mesenchymal transition and matrix remodeling",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8208442/",
+              "source_id": "",
+              "notes": "PRRX1 regulates mesenchymal properties and decreases stemness."
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6138463/",
+              "source_id": "",
+              "notes": "RELN modulates migration and survival in GBM."
+            }
+          ],
+          "genes": [
+            "PRRX1",
+            "RELN",
+            "FREM2",
+            "STC1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "extracellular matrix",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6138463/",
+              "source_id": "",
+              "notes": "RELN as ECM glycoprotein modulating migration/invasion."
+            }
+          ],
+          "genes": [
+            "RELN",
+            "FREM2",
+            "STC1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increased invasion and migration",
+        "therapy resistance",
+        "poor patient survival"
+      ],
+      "evidence_summary": "Mesenchymal transition facilitated by PRRX1 and RELN are recognized markers for aggressive GBM invasion and therapy resistance.",
+      "significance_score": 0.87,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8208442/",
+          "source_id": "",
+          "notes": "PRRX1 BMP-induced mesenchymal regulation in glioma stem cells."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6138463/",
+          "source_id": "",
+          "notes": "Reelin (RELN) regulates migration; higher levels associate with better survival."
+        }
+      ],
+      "supporting_genes": [
+        "PRRX1",
+        "RELN",
+        "FREM2",
+        "STC1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "TWIST1",
+          "ZEB1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8208442/",
+            "source_id": "",
+            "notes": "EMT transcription factors necessary for full phenotype."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Immunosuppression",
+      "description": "LGALS1 and ISG15 mediate immunosuppressive microenvironment in glioblastoma, supporting tumor evasion and resistance to immunotherapy.",
+      "atomic_biological_processes": [
+        {
+          "name": "galectin-mediated T cell suppression",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10110185/",
+              "source_id": "",
+              "notes": "LGALS1 immunomodulates microenvironment."
+            }
+          ],
+          "genes": [
+            "LGALS1"
+          ]
+        },
+        {
+          "name": "interferon signaling and DNA damage modulation",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8399369/",
+              "source_id": "",
+              "notes": "ISG15 modulates immune and DNA damage pathways."
+            }
+          ],
+          "genes": [
+            "ISG15"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "extracellular matrix and immune synapse",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10110185/",
+              "source_id": "",
+              "notes": "LGALS1 modulates immune cell interactions."
+            }
+          ],
+          "genes": [
+            "LGALS1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "strong local and systemic immunosuppression",
+        "evasion of host immune response",
+        "poor response to immunotherapy"
+      ],
+      "evidence_summary": "Galectin-1 and interferon-stimulated genes are major drivers of immunosuppressive microenvironment in GBM.",
+      "significance_score": 0.91,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10110185/",
+          "source_id": "",
+          "notes": "Single-cell profiling: LGALS1 immunomodulatory target."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8399369/",
+          "source_id": "",
+          "notes": "ISG15 role in DNA damage and immune response."
+        }
+      ],
+      "supporting_genes": [
+        "LGALS1",
+        "ISG15"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "LGALS3",
+          "PD-L1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10110185/",
+            "source_id": "",
+            "notes": "Other galectins and PD-L1 amplify immunosuppressive effect."
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "pathway database review",
+      "literature co-citation",
+      "gene ontology and transcriptomic signatures"
+    ],
+    "notes": "Gene programs were defined by systematic thematic analysis of current GBM literature and pathway data. Each program contains multiple input genes with established functional roles and is anchored to biological processes or cellular components supported by experiments."
+  },
+  "version": "2025.11.17"
+}

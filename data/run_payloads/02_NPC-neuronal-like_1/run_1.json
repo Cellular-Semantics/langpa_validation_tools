@@ -1,0 +1,992 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cells",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "CFAP43",
+    "NEGR1",
+    "DNAH12",
+    "LRRC2",
+    "VAT1L",
+    "ZNF804B",
+    "RBMS3",
+    "SLC14A1",
+    "GABRA5",
+    "ZBBX",
+    "ADAMTS18",
+    "CFAP52",
+    "GRM1",
+    "MAP3K19",
+    "FHAD1",
+    "TCTEX1D1",
+    "DNAAF1",
+    "DCDC2",
+    "AC005165.1",
+    "COL21A1",
+    "PKHD1",
+    "ZNF521",
+    "EPB41L4B",
+    "ERICH3",
+    "PLAGL1",
+    "EXPH5",
+    "SHISAL2B",
+    "SATB1-AS1",
+    "RERGL",
+    "FRMPD2",
+    "TOGARAM2",
+    "AP003062.2",
+    "BMP6",
+    "NRG3",
+    "CFAP61",
+    "FAM81B",
+    "SLC47A2",
+    "TMEM232",
+    "NWD2",
+    "AC109466.1",
+    "GABRG3",
+    "DTHD1",
+    "COL13A1",
+    "COL23A1",
+    "CFAP73",
+    "RFTN1",
+    "FYB2",
+    "POSTN",
+    "AL513323.1",
+    "BANK1",
+    "CHD5",
+    "THBS1",
+    "ADCY8",
+    "ADGB",
+    "AFF2",
+    "DRC1",
+    "CFAP206",
+    "CFAP47",
+    "PPM1H",
+    "KIAA2012",
+    "MAP7",
+    "KSR2",
+    "DNAH5",
+    "LYPD6B",
+    "WSCD2",
+    "CACNA2D1",
+    "LRRIQ1",
+    "CPNE4",
+    "LINC01088",
+    "SCIN",
+    "PRMT8",
+    "LINGO2",
+    "CASC1",
+    "CCDC170",
+    "AC092110.1",
+    "VWA3A",
+    "CA10",
+    "AC013470.2",
+    "SLC22A3",
+    "GRM4",
+    "COL26A1",
+    "CFAP221",
+    "CFAP157",
+    "TTC29",
+    "C7orf57",
+    "HMCN1",
+    "CFAP100",
+    "U91319.1",
+    "RSPH1",
+    "NAALAD2",
+    "IL6R",
+    "CDH7",
+    "KCNJ3",
+    "AL356108.1"
+  ],
+  "programs": [
+    {
+      "program_name": "Motile Ciliary Axoneme",
+      "description": "This program represents a large cluster of genes encoding structural and regulatory components of motile cilia axonemes. The genes include multiple CFAP (cilia and flagella associated protein) family members (CFAP43, CFAP52, CFAP61, CFAP73, CFAP206, CFAP47, CFAP221, CFAP157, CFAP100), dynein arm proteins (DNAH12, DNAH5, DRC1, DNAAF1), radial spoke components (RSPH1), and axonemal assembly regulators (TTC29, TOGARAM2, LRRIQ1). These proteins collectively assemble and regulate the 9+2 microtubule structure characteristic of motile cilia. While motile cilia are not typically associated with differentiated glioblastoma cells, primary cilia play critical roles in glioma biology through Hedgehog signaling and other pathways. The aberrant expression of motile ciliary genes may reflect dedifferentiation, stem-like features, or ectopic developmental program activation in malignant glioblastoma.",
+      "atomic_biological_processes": [
+        {
+          "name": "ciliary axoneme assembly",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5027204/",
+              "notes": "CFAP proteins are conserved components involved in axoneme organization and ciliary motility regulation"
+            },
+            {
+              "url": "https://www.nature.com/articles/s41467-022-34317-5",
+              "notes": "CFAP20 and related proteins form the inner junction hub critical for axonemal structure"
+            }
+          ],
+          "genes": [
+            "CFAP43",
+            "CFAP52",
+            "CFAP61",
+            "CFAP73",
+            "CFAP206",
+            "CFAP47",
+            "CFAP221",
+            "CFAP157",
+            "CFAP100"
+          ]
+        },
+        {
+          "name": "dynein arm assembly and function",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5270487/",
+              "notes": "DNAH5 and DNAH12 encode outer dynein arm heavy chains essential for ciliary motility"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4661062/",
+              "notes": "DNAAF1 and DRC1 are dynein assembly factors and regulatory complex components"
+            }
+          ],
+          "genes": [
+            "DNAH12",
+            "DNAH5",
+            "DRC1",
+            "DNAAF1"
+          ]
+        },
+        {
+          "name": "radial spoke structure",
+          "citation": [
+            {
+              "url": "https://academic.oup.com/hmg/article/23/18/4776/2900719",
+              "notes": "RSPH1 encodes radial spoke head protein critical for spoke assembly and ciliary beat regulation"
+            }
+          ],
+          "genes": [
+            "RSPH1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "ciliary axoneme",
+          "citation": [
+            {
+              "url": "https://www.nature.com/articles/s41467-022-34317-5",
+              "notes": "The axonemal inner junction, doublet microtubules, and associated complexes form the structural core of cilia"
+            }
+          ],
+          "genes": [
+            "CFAP43",
+            "CFAP52",
+            "CFAP61",
+            "CFAP73",
+            "CFAP206",
+            "CFAP47",
+            "CFAP221",
+            "CFAP157",
+            "CFAP100",
+            "DNAH12",
+            "DNAH5",
+            "RSPH1",
+            "TTC29",
+            "LRRIQ1"
+          ]
+        },
+        {
+          "name": "primary cilium",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3946037/",
+              "notes": "Primary cilia are detected in glioblastoma and regulate Hedgehog signaling critical for tumor growth"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5859408/",
+              "notes": "Primary cilium dysfunction is implicated in glioblastoma pathogenesis and ciliary proteins regulate tumor cell biology"
+            }
+          ],
+          "genes": [
+            "PKHD1",
+            "DCDC2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Aberrant activation of ciliary developmental programs in dedifferentiated glioblastoma cells",
+        "Potential modulation of Hedgehog and other cilium-dependent signaling pathways",
+        "Reflects stem-like or progenitor cell features in malignant glioma cells"
+      ],
+      "evidence_summary": "The co-expression of numerous ciliary axoneme components is highly unusual in differentiated brain cells but reflects a coordinated developmental program. In glioblastoma, primary cilia regulate Hedgehog signaling and tumor growth. While these specific motile ciliary genes are not typically expressed in adult brain, their presence may indicate ectopic developmental program activation, dedifferentiation toward ciliated progenitor states, or co-option of ciliary machinery for alternative cellular functions.",
+      "significance_score": 0.65,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3946037/",
+          "notes": "Detection of primary cilia in human glioblastoma and their role in tumor biology"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5859408/",
+          "notes": "Primary cilium and glioblastoma - role as critical mediator of GBM development"
+        },
+        {
+          "url": "https://www.biorxiv.org/content/10.1101/2022.01.19.476882v1",
+          "notes": "Cilia regulate Hedgehog signaling and GLI accumulation in glioma"
+        }
+      ],
+      "supporting_genes": [
+        "CFAP43",
+        "CFAP52",
+        "CFAP61",
+        "CFAP73",
+        "CFAP206",
+        "CFAP47",
+        "CFAP221",
+        "CFAP157",
+        "CFAP100",
+        "DNAH12",
+        "DNAH5",
+        "DRC1",
+        "DNAAF1",
+        "RSPH1",
+        "TTC29",
+        "LRRIQ1",
+        "PKHD1",
+        "DCDC2",
+        "TOGARAM2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "KIF3A",
+          "IFT88",
+          "ARL13B"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3946037/",
+            "notes": "KIF3A and IFT88 are essential for ciliogenesis and ciliary function in glioblastoma"
+          },
+          {
+            "url": "https://www.biorxiv.org/content/10.1101/2022.01.19.476882v1",
+            "notes": "ARL13B regulates ciliary SMO and GLI signaling in glioma"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Extracellular Matrix Remodeling",
+      "description": "This program encompasses genes encoding structural collagens (COL21A1, COL13A1, COL23A1, COL26A1), matricellular proteins (THBS1, POSTN), and basement membrane components (HMCN1). Thrombospondin-1 (THBS1) is particularly significant in glioblastoma, where it is upregulated at invasive tumor borders, promotes cell migration and invasion through CD47 interaction, and contributes to resistance to anti-angiogenic therapy. Periostin (POSTN) and collagen genes regulate the immunosuppressive tumor microenvironment and epithelial-mesenchymal transition. HMCN1, a fibulin family member and basement membrane component, is frequently mutated across cancers and may regulate tissue adhesion and invasion.",
+      "atomic_biological_processes": [
+        {
+          "name": "extracellular matrix organization",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6522341/",
+              "notes": "Collagen genes regulate immunosuppressive microenvironment and EMT in glioma"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6407068/",
+              "notes": "THBS1 is upregulated in glioblastoma and regulates ECM organization and tumor invasion"
+            }
+          ],
+          "genes": [
+            "COL21A1",
+            "COL13A1",
+            "COL23A1",
+            "COL26A1",
+            "THBS1",
+            "POSTN",
+            "HMCN1"
+          ]
+        },
+        {
+          "name": "cell migration and invasion",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6407068/",
+              "notes": "THBS1 promotes glioblastoma invasion through CD47 interaction and is highly connected at tumor borders"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/37202862/",
+              "notes": "THBS1 localizes to invadopodia and promotes invasive processes in GBM cells"
+            }
+          ],
+          "genes": [
+            "THBS1",
+            "POSTN"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "extracellular matrix",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7191449/",
+              "notes": "Hemicentin-1 (HMCN1) assembles into extracellular tracks and regulates tissue adhesion"
+            }
+          ],
+          "genes": [
+            "COL21A1",
+            "COL13A1",
+            "COL23A1",
+            "COL26A1",
+            "HMCN1"
+          ]
+        },
+        {
+          "name": "basement membrane",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7191449/",
+              "notes": "HMCN1 is a basement membrane component that forms tracks and regulates ECM structure"
+            }
+          ],
+          "genes": [
+            "HMCN1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced glioblastoma cell migration and invasion through ECM remodeling",
+        "Establishment of immunosuppressive tumor microenvironment",
+        "Promotion of mesenchymal phenotype and EMT in glioma cells",
+        "Resistance to anti-angiogenic therapy mediated by THBS1"
+      ],
+      "evidence_summary": "Extensive literature documents THBS1 as a key driver of glioblastoma invasion, particularly at tumor borders, where it shows highest connectivity in gene networks. THBS1 interacts with CD47 to promote invasion and is induced by TGF-beta signaling. Collagen genes including COL1A1, COL3A1, COL4A1, and related family members form an immunosuppressive signature in glioma associated with poor survival. HMCN1 is among the most frequently mutated ECM genes across cancers and may promote metastasis.",
+      "significance_score": 0.85,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6407068/",
+          "notes": "THBS1 is highly connected at invasive tumor borders and promotes GBM invasion via CD47"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6522341/",
+          "notes": "Collagen genes regulate immunosuppressive microenvironment in glioma"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41467-023-43968-1",
+          "notes": "THBS1 is G-alpha-12 regulated and critical for GBM invasion"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7406324/",
+          "notes": "HMCN1 is most frequently mutated core matrisome gene across cancers"
+        }
+      ],
+      "supporting_genes": [
+        "THBS1",
+        "POSTN",
+        "COL21A1",
+        "COL13A1",
+        "COL23A1",
+        "COL26A1",
+        "HMCN1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "COL1A1",
+          "COL4A1",
+          "CD47",
+          "TGFB1"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6407068/",
+            "notes": "CD47 mediates THBS1 effects on invasion; TGF-beta induces THBS1 expression"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "GABAergic Neurotransmission",
+      "description": "This program includes GABA receptor subunits (GABRA5, GABRG3) and metabotropic glutamate receptors (GRM1, GRM4) that mediate inhibitory and excitatory neurotransmitter signaling. In glioblastoma, GABAergic signaling through GABA-A receptors can promote tumor growth through neuronal activity-dependent mechanisms. Glioma cells form functional neuron-glioma synapses and respond to GABAergic input, which can drive proliferation particularly in pediatric diffuse midline gliomas. GRM1 and GRM4 are part of neuroligin-3 and glutamate-mediated signaling that promotes glioma growth through neuronal activity.",
+      "atomic_biological_processes": [
+        {
+          "name": "GABAergic synaptic transmission",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9277880/",
+              "notes": "GABAergic neuron-to-glioma synapses promote tumor growth via GABA-A receptors"
+            },
+            {
+              "url": "https://www.spandidos-publications.com/10.3892/or.2024.8810",
+              "notes": "GABAergic signaling drives glioma proliferation and regulates chloride homeostasis"
+            }
+          ],
+          "genes": [
+            "GABRA5",
+            "GABRG3"
+          ]
+        },
+        {
+          "name": "glutamatergic signaling",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9277880/",
+              "notes": "Glutamate receptors and neuron-glioma synaptic connections regulate glioma growth"
+            }
+          ],
+          "genes": [
+            "GRM1",
+            "GRM4"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "neuron-glioma synapse",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9277880/",
+              "notes": "Functional synapses form between neurons and glioma cells mediating proliferative signals"
+            }
+          ],
+          "genes": [
+            "GABRA5",
+            "GABRG3",
+            "GRM1",
+            "GRM4"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced glioblastoma proliferation through neuronal activity-dependent GABAergic signaling",
+        "Formation of functional neuron-glioma synapses",
+        "Altered chloride homeostasis promoting depolarizing GABA responses",
+        "Integration of neuronal microenvironment signals for tumor growth"
+      ],
+      "evidence_summary": "Recent studies demonstrate that glioma cells form functional synapses with GABAergic interneurons, and that GABAergic input can promote tumor proliferation. GABA-A receptor activation drives proliferation through chloride transporter-mediated depolarization rather than hyperpolarization. Multiple studies show GABA receptors are aberrantly expressed in gliomas and that blocking GABAergic signaling can inhibit tumor growth.",
+      "significance_score": 0.78,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9277880/",
+          "notes": "GABAergic neurons form synapses with glioma cells and promote growth"
+        },
+        {
+          "url": "https://www.spandidos-publications.com/10.3892/or.2024.8810",
+          "notes": "GABAergic signaling and chloride homeostasis in glioma progression"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0161813X22001905",
+          "notes": "Complex molecular epileptogenesis in glioblastoma involves GABAergic dysregulation"
+        }
+      ],
+      "supporting_genes": [
+        "GABRA5",
+        "GABRG3",
+        "GRM1",
+        "GRM4",
+        "KCNJ3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SLC12A5",
+          "SLC12A2",
+          "NLGN3"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9277880/",
+            "notes": "KCC2 and NKCC1 chloride transporters regulate GABAergic signaling in glioma; NLGN3 promotes neuronal activity-dependent glioma growth"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Transcriptional Regulation and Chromatin Remodeling",
+      "description": "This program includes zinc finger transcription factors (ZNF521, ZNF804B, PLAGL1), chromatin remodeling factors (CHD5, SATB1-AS1), and epigenetic regulators (PRMT8, AFF2). ZNF521 synergizes with GLI transcription factors to enhance Hedgehog signaling, which is critical in glioma stem cells. PLAGL1 is a core marker of glioblastoma that drives edge-to-core transition and directly regulates CD109 expression. CHD5 functions as a tumor suppressor in multiple cancers including gliomas. PRMT8 regulates neuronal differentiation and is depleted in glioblastoma. These genes collectively regulate stem cell programs, differentiation, and oncogenic transcription.",
+      "atomic_biological_processes": [
+        {
+          "name": "transcriptional regulation",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6759954/",
+              "notes": "ZNF521 interacts with GLI1/GLI2 to enhance Hedgehog pathway transcriptional activation"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7684919/",
+              "notes": "PLAGL1 drives glioblastoma edge-to-core transition and transcriptionally regulates CD109"
+            }
+          ],
+          "genes": [
+            "ZNF521",
+            "ZNF804B",
+            "PLAGL1"
+          ]
+        },
+        {
+          "name": "chromatin organization",
+          "citation": [
+            {
+              "url": "https://www.nature.com/articles/srep02006",
+              "notes": "SATB1 phosphorylation regulates chromatin organization and is associated with glioma progression"
+            },
+            {
+              "url": "https://tcr.amegroups.com/article/view/49847",
+              "notes": "CHD5 chromatin remodeling suppresses tumor growth in multiple cancer types"
+            }
+          ],
+          "genes": [
+            "CHD5",
+            "SATB1-AS1"
+          ]
+        },
+        {
+          "name": "protein arginine methylation",
+          "citation": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/25801961/",
+              "notes": "PRMT8 regulates neuronal differentiation and is depleted in glioblastoma"
+            }
+          ],
+          "genes": [
+            "PRMT8"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "nucleus",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6759954/",
+              "notes": "ZNF521 and GLI factors act in nucleus to regulate transcription"
+            }
+          ],
+          "genes": [
+            "ZNF521",
+            "PLAGL1",
+            "CHD5",
+            "PRMT8",
+            "AFF2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced Hedgehog signaling through ZNF521-GLI synergy in glioma stem cells",
+        "Promotion of glioblastoma edge-to-core transition and CD109 expression by PLAGL1",
+        "Loss of tumor suppressor function due to CHD5 downregulation",
+        "Disrupted neuronal differentiation programs due to PRMT8 depletion"
+      ],
+      "evidence_summary": "ZNF521 is highly expressed in SHH-subgroup medulloblastoma and synergizes with GLI1/GLI2 through HDAC-dependent mechanisms. PLAGL1 is tightly correlated with core tumor-initiating cell marker CD109 and promotes tumorigenicity. CHD5 acts as tumor suppressor that is frequently silenced in gliomas. PRMT8 is nearly absent in glioblastoma tissues and normally regulates neuronal gene expression. These transcriptional regulators collectively control stem cell programs and differentiation states.",
+      "significance_score": 0.82,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6759954/",
+          "notes": "ZNF521 enhances Hedgehog signaling through interaction with GLI factors and NuRD complex"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7684919/",
+          "notes": "PLAGL1 drives glioblastoma edge-to-core transition and is prognostic marker"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25801961/",
+          "notes": "PRMT8 regulates neuronal differentiation and is depleted in glioblastoma"
+        },
+        {
+          "url": "https://www.nature.com/articles/srep02006",
+          "notes": "Phosphorylated SATB1 associated with glioma progression"
+        }
+      ],
+      "supporting_genes": [
+        "ZNF521",
+        "PLAGL1",
+        "CHD5",
+        "PRMT8",
+        "AFF2",
+        "ZNF804B",
+        "SATB1-AS1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "GLI1",
+          "GLI2",
+          "CD109",
+          "HDAC1"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6759954/",
+            "notes": "GLI1 and GLI2 are direct ZNF521 interaction partners; HDAC1 mediates synergy"
+          },
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7684919/",
+            "notes": "CD109 is direct transcriptional target of PLAGL1"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "cAMP Signaling and Kinase Cascades",
+      "description": "This program includes adenylate cyclase (ADCY8), kinase suppressor of RAS (KSR2), and MAP kinases (MAP3K19, MAP7) that regulate cAMP production and MAPK signaling. ADCY8 polymorphisms are sex-specific modifiers of glioma risk in neurofibromatosis type 1 patients. KSR2 regulates both ERK signaling and AMPK-dependent metabolism, and is essential for tumor cell energy homeostasis and anchorage-independent growth. The cAMP pathway regulates glioma proliferation, and its dysregulation contributes to tumorigenesis in a sexually dimorphic manner.",
+      "atomic_biological_processes": [
+        {
+          "name": "cAMP biosynthesis",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4297607/",
+              "notes": "ADCY8 polymorphisms correlate with glioma risk in sex-specific manner in NF1 patients"
+            },
+            {
+              "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2022.906316/full",
+              "notes": "Adenylate cyclase and cAMP signaling modulate glioma proliferation and chemoresistance"
+            }
+          ],
+          "genes": [
+            "ADCY8"
+          ]
+        },
+        {
+          "name": "MAPK cascade regulation",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3407529/",
+              "notes": "KSR2 regulates ERK signaling and metabolic homeostasis in tumor cells"
+            },
+            {
+              "url": "https://www.biorxiv.org/content/10.1101/2018.04.19.048710v1",
+              "notes": "MAPK pathway activation correlates with proliferation and poor prognosis in GBM"
+            }
+          ],
+          "genes": [
+            "KSR2",
+            "MAP3K19",
+            "MAP7"
+          ]
+        },
+        {
+          "name": "energy metabolism regulation",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3407529/",
+              "notes": "KSR2 coordinates AMPK signaling and is essential for tumor cell metabolic capacity"
+            }
+          ],
+          "genes": [
+            "KSR2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "plasma membrane",
+          "citation": [
+            {
+              "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2022.906316/full",
+              "notes": "ADCY8 localizes to plasma membrane where it catalyzes cAMP production"
+            }
+          ],
+          "genes": [
+            "ADCY8"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Sex-specific modulation of glioma risk through ADCY8 polymorphisms",
+        "Integration of mitogenic and metabolic signaling via KSR2",
+        "Enhanced tumor cell proliferation and anchorage-independent growth",
+        "Modulation of chemotherapy and radiation resistance through cAMP signaling"
+      ],
+      "evidence_summary": "ADCY8 polymorphisms elevate glioma risk in females while reducing risk in males with NF1, demonstrating sexually dimorphic cAMP signaling in gliomagenesis. KSR2 promotes tumor cell proliferation through both ERK-dependent and ERK-independent mechanisms, and is essential for metabolic homeostasis via AMPK. cAMP pathway activation can inhibit glioma growth but is dysregulated in many tumors. MAPK activation is associated with mesenchymal GBM subtype and poor prognosis.",
+      "significance_score": 0.72,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4297607/",
+          "notes": "ADCY8 is sex-specific modifier of glioma risk in NF1 patients"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3407529/",
+          "notes": "KSR2 regulates tumor cell energy homeostasis and metabolic signaling"
+        },
+        {
+          "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2022.906316/full",
+          "notes": "Adenylate cyclase family regulates glioma chemoresistance"
+        }
+      ],
+      "supporting_genes": [
+        "ADCY8",
+        "KSR2",
+        "MAP3K19",
+        "MAP7"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "PRKACA",
+          "CREB1",
+          "AMPK"
+        ],
+        "citations": [
+          {
+            "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2022.906316/full",
+            "notes": "PKA and CREB are downstream effectors of cAMP signaling in glioma"
+          },
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3407529/",
+            "notes": "AMPK is essential for KSR2-mediated metabolic regulation"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Neuregulin-BMP Signaling",
+      "description": "This program includes neuregulin-3 (NRG3) and bone morphogenetic protein 6 (BMP6), which regulate neural development, stem cell differentiation, and tumor cell fate. NRG3 promotes glioma cell migration and invasion through enhanced L1CAM expression and is associated with immune cell infiltration. BMP signaling induces glioma stem cell quiescence and confers resistance to radiation and temozolomide by activating DNA repair machinery. The balance between TGF-beta and BMP signaling defines proliferative versus quiescent glioma stem cell states.",
+      "atomic_biological_processes": [
+        {
+          "name": "cell migration regulation",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8115619/",
+              "notes": "NRG family members regulate glioma cell migration and are associated with tumor microenvironment"
+            },
+            {
+              "url": "https://academic.oup.com/neuro-oncology/article/15/3/269/1029641",
+              "notes": "Neuregulin-1 enhances glioma cell migration via L1CAM upregulation"
+            }
+          ],
+          "genes": [
+            "NRG3"
+          ]
+        },
+        {
+          "name": "stem cell quiescence",
+          "citation": [
+            {
+              "url": "https://www.nature.com/articles/s41467-019-12279-w",
+              "notes": "BMP signaling induces glioma stem cell quiescence and radioresistance"
+            },
+            {
+              "url": "https://www.frontiersin.org/articles/10.3389/fcell.2022.908368/full",
+              "notes": "BMP promotes differentiation and regulates stem cell fate in glioma"
+            }
+          ],
+          "genes": [
+            "BMP6"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "extracellular region",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8115619/",
+              "notes": "NRG3 and BMP6 are secreted factors that act through receptor-mediated signaling"
+            }
+          ],
+          "genes": [
+            "NRG3",
+            "BMP6"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced glioma cell migration and invasion through NRG3-mediated L1CAM expression",
+        "Establishment of quiescent, therapy-resistant glioma stem cell population via BMP signaling",
+        "Modulation of tumor immune microenvironment by NRG3",
+        "Increased DNA repair capacity and radiation resistance in BMP-activated cells"
+      ],
+      "evidence_summary": "NRG1 and NRG3 promote glioma malignancy by upregulating cell adhesion molecules and enhancing motility. NRG3 expression correlates with immune cell infiltration and is a potential prognostic biomarker. BMP treatment of glioma stem cells inhibits proliferation, induces quiescence, and confers resistance to radiation and temozolomide through enhanced MGMT and ATM activation. BMP-positive cells accumulate after chemoradiation and repopulate tumors at recurrence.",
+      "significance_score": 0.76,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8115619/",
+          "notes": "NRG family members correlate with immune infiltration and prognosis in gliomas"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41467-019-12279-w",
+          "notes": "BMP signaling mediates glioma stem cell quiescence and therapy resistance"
+        },
+        {
+          "url": "https://academic.oup.com/neuro-oncology/article/15/3/269/1029641",
+          "notes": "Neuregulin enhances L1 expression and glioma cell migration"
+        }
+      ],
+      "supporting_genes": [
+        "NRG3",
+        "BMP6"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "ERBB4",
+          "BMPR1A",
+          "SMAD1",
+          "ID1"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8115619/",
+            "notes": "ERBB4 is NRG receptor mediating signaling in glioma"
+          },
+          {
+            "url": "https://www.nature.com/articles/s41467-019-12279-w",
+            "notes": "BMPR and SMAD1 mediate BMP signaling; ID1 is downstream effector marking quiescent GSCs"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Solute Carrier Transporters",
+      "description": "This program includes multiple solute carrier family members (SLC14A1, SLC47A2, SLC22A3) that transport urea, organic cations, and drugs across cell membranes. SLC47A1 (homolog of SLC47A2) is highly expressed in glioma stem cells and correlates with malignancy and poor prognosis. SLC22A3 expression is a favorable prognostic biomarker in glioblastoma. These transporters regulate drug uptake, metabolite transport, and may influence chemotherapy sensitivity and tumor metabolism.",
+      "atomic_biological_processes": [
+        {
+          "name": "transmembrane transport",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10507653/",
+              "notes": "SLC47A1 regulates drug efflux and is highly expressed in glioma stem cells"
+            },
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10205849/",
+              "notes": "Solute carriers impact glioma pathology through metabolite and drug transport"
+            }
+          ],
+          "genes": [
+            "SLC14A1",
+            "SLC47A2",
+            "SLC22A3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "plasma membrane",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10205849/",
+              "notes": "SLC transporters localize to plasma membrane to mediate substrate transport"
+            }
+          ],
+          "genes": [
+            "SLC14A1",
+            "SLC47A2",
+            "SLC22A3"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Regulation of temozolomide sensitivity through drug transporter expression",
+        "Modulation of metabolite homeostasis affecting glioma proliferation",
+        "Influence on glioma stem cell sphere-forming ability",
+        "Contribution to chemoresistance phenotypes"
+      ],
+      "evidence_summary": "SLC47A1 is preferentially expressed in glioma stem cells and its inhibition reduces sphere formation and potentiates temozolomide effects. High SLC47A1 expression correlates with malignancy. SLC22A3 is associated with favorable prognosis in glioblastoma. Solute carrier transporters influence various biological processes including proliferation, migration, angiogenesis, and immune response in glioma.",
+      "significance_score": 0.68,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10507653/",
+          "notes": "SLC47A1 highly expressed in GSCs and linked to malignancy and drug resistance"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35611309/",
+          "notes": "SLC22A3 is independent favorable prognostic biomarker in glioblastoma"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10205849/",
+          "notes": "Impact of solute carrier transporters in glioma pathology"
+        }
+      ],
+      "supporting_genes": [
+        "SLC14A1",
+        "SLC47A2",
+        "SLC22A3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SLC7A11",
+          "SLC2A1",
+          "SLC1A5"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10205849/",
+            "notes": "SLC7A11, SLC2A1, and SLC1A5 are key glioma transporters for cystine, glucose, and glutamine"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Immune Cell Markers",
+      "description": "This program includes B-cell marker BANK1, immune adaptor FYB2, and interleukin-6 receptor (IL6R) that reflect immune cell infiltration in the glioblastoma microenvironment. B-cells in glioblastoma can drive response to immune checkpoint blockade, and their infiltration correlates with therapeutic efficacy. IL6R signaling is implicated in glioma progression and immune modulation. The presence of these immune markers may reflect lymphocyte infiltration or expression by tumor cells themselves.",
+      "atomic_biological_processes": [
+        {
+          "name": "B cell activation",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10166449/",
+              "notes": "B-cells drive response to PD-1 blockade in glioblastoma and form TLS structures"
+            }
+          ],
+          "genes": [
+            "BANK1",
+            "FYB2"
+          ]
+        },
+        {
+          "name": "cytokine signaling",
+          "citation": [
+            {
+              "url": "https://www.frontiersin.org/articles/10.3389/fimmu.2022.816808/full",
+              "notes": "IL6-JAK-STAT3 signaling important in glioma immune infiltration"
+            }
+          ],
+          "genes": [
+            "IL6R"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "plasma membrane",
+          "citation": [
+            {
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10166449/",
+              "notes": "IL6R and B-cell receptors localize to plasma membrane"
+            }
+          ],
+          "genes": [
+            "IL6R",
+            "BANK1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Reflects B-cell and lymphocyte infiltration in glioblastoma microenvironment",
+        "Potential modulation of immune checkpoint blockade response",
+        "IL6-mediated tumor-immune cell interactions",
+        "Formation of tertiary lymphoid structures in tumor"
+      ],
+      "evidence_summary": "B-cell infiltration and TLS formation predict response to pembrolizumab in melanoma and other tumors. In glioblastoma, B-cells are activated but express checkpoint molecules including CD22 and CD72. IL6 signaling is important for glioma progression and immune regulation. BANK1 and FYB2 are B-cell and immune cell markers that may reflect tumor immune infiltration.",
+      "significance_score": 0.64,
+      "citations": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10166449/",
+          "notes": "B-cells drive response to PD-1 blockade in glioblastoma"
+        },
+        {
+          "url": "https://www.frontiersin.org/articles/10.3389/fimmu.2022.816808/full",
+          "notes": "Immune cell infiltration and genetic mutations establish tumor immune microenvironment"
+        }
+      ],
+      "supporting_genes": [
+        "BANK1",
+        "FYB2",
+        "IL6R"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "CD19",
+          "CD20",
+          "CD79A"
+        ],
+        "citations": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10166449/",
+            "notes": "CD19 and CD20 are canonical B-cell markers; CD79A is BCR component"
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "literature review",
+      "pathway databases",
+      "co-citation analysis",
+      "functional annotation"
+    ],
+    "notes": "Programs were identified through comprehensive literature analysis of gene functions in glioblastoma context. Genes were clustered based on shared biological processes (ciliary assembly, ECM remodeling, neurotransmission, transcriptional regulation, signaling pathways, transport, immune function). Each program was evaluated for evidence strength, relevance to glioblastoma, and number of supporting genes. Significance scores reflect literature support, number of genes, pathway completeness, and disease relevance."
+  },
+  "version": "1.0"
+}

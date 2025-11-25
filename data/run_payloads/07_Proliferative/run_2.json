@@ -1,0 +1,506 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "DLGAP5",
+    "CKAP2L",
+    "CDCA2",
+    "CDC25C",
+    "TTK",
+    "BUB1",
+    "HMMR",
+    "CDCA8",
+    "TOP2A",
+    "GTSE1",
+    "KIF23",
+    "BUB1B",
+    "ASPM",
+    "AURKA",
+    "KIF14",
+    "CEP55",
+    "KIF18A",
+    "CDK1",
+    "TROAP",
+    "DEPDC1",
+    "CENPE",
+    "TPX2",
+    "KIF2C",
+    "KNL1",
+    "KIF20A",
+    "AURKB",
+    "NEIL3",
+    "CCNB1",
+    "ESPL1",
+    "APOLD1",
+    "HJURP",
+    "PIMREG",
+    "KIF11",
+    "PIF1",
+    "UBE2C",
+    "NDC80",
+    "CDC20",
+    "PBK",
+    "ARHGAP11A",
+    "NUSAP1",
+    "PRR11",
+    "ESCO2",
+    "PTTG1",
+    "MELK",
+    "KIF4A",
+    "CDKN3",
+    "NMU",
+    "BORA",
+    "KIF18B",
+    "KIFC1",
+    "CCNF",
+    "BIRC5",
+    "MKI67",
+    "ARHGAP11B",
+    "IQGAP3",
+    "NCAPG",
+    "SGO1",
+    "SKA3",
+    "GAS2L3",
+    "SGO2",
+    "RRM2",
+    "DIAPH3",
+    "CDCA3",
+    "CENPF",
+    "FAM83D",
+    "NUF2",
+    "POLQ",
+    "RACGAP1",
+    "KPNA2",
+    "MIR924HG",
+    "FBXO43",
+    "TACC3",
+    "WDR62",
+    "E2F7",
+    "PCLAF",
+    "ASF1B",
+    "ECT2",
+    "SHCBP1",
+    "PLK1",
+    "FAM111B",
+    "DEPDC1B",
+    "MXD3",
+    "NCAPH",
+    "PRC1",
+    "EXO1",
+    "KIF15",
+    "FOXM1",
+    "CCNB2",
+    "RTKN2",
+    "NOSTRIN",
+    "AC010173.1",
+    "SPC25",
+    "FOXN4",
+    "HMGB2",
+    "CKS2",
+    "CENPI",
+    "BRIP1",
+    "MYBL2",
+    "LMO7",
+    "KIF24",
+    "AC073529.1",
+    "STIL",
+    "AC090159.1",
+    "PLK4"
+  ],
+  "programs": [
+    {
+      "program_name": "Mitotic Cell Division Promotion",
+      "description": "A large cluster of input genes collectively regulate mitosis in glioblastoma cells including kinetochore-microtubule attachments, spindle assembly, chromosome segregation, and cytokinesis. This program encompasses both normal cell division and the hyperproliferative phenotype in malignancy.",
+      "atomic_biological_processes": [
+        {
+          "name": "Spindle Assembly Checkpoint",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "TTK (MPS1), BUB1, BUB1B, KNL1, and related checkpoint components upregulated in glioblastoma."
+            },
+            {
+              "source_id": "",
+              "notes": "BUB1B is functionally required for glioblastoma proliferation and poor prognosis."
+            }
+          ],
+          "genes": [
+            "TTK",
+            "BUB1",
+            "BUB1B",
+            "KNL1",
+            "CDC20",
+            "CENPE",
+            "NDC80",
+            "SKA3"
+          ]
+        },
+        {
+          "name": "Kinetochore-Microtubule Attachment",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "NDC80, SKA3, CENPF, CENPE required for stable kinetochore attachments implicated in GBM progression."
+            },
+            {
+              "source_id": "",
+              "notes": "NDC80 and SKA components regulate mitosis and cell cycle in glioblastoma."
+            }
+          ],
+          "genes": [
+            "NDC80",
+            "NUF2",
+            "CENPF",
+            "SKA3",
+            "CENPE",
+            "SPC25"
+          ]
+        },
+        {
+          "name": "Chromosome Segregation",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "ESPL1 (separase) and associated proteins trigger chromosome segregation at anaphase."
+            },
+            {
+              "source_id": "",
+              "notes": "Separase activation (ESPL1) cleaves cohesin to allow chromatid separation."
+            }
+          ],
+          "genes": [
+            "ESPL1",
+            "PTTG1",
+            "SGO1",
+            "SGO2"
+          ]
+        },
+        {
+          "name": "Cytokinesis Machinery",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "ECT2, RACGAP1, KIF23, PRC1 coordinate contractile ring formation and midbody assembly."
+            },
+            {
+              "source_id": "",
+              "notes": "KIF14 and PRC1 interaction necessary for cytokinesis efficiency."
+            }
+          ],
+          "genes": [
+            "ECT2",
+            "RACGAP1",
+            "KIF23",
+            "PRC1",
+            "KIF14",
+            "KIF20A",
+            "KIF4A",
+            "ARHGAP11A",
+            "ARHGAP11B",
+            "SHCBP1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Mitotic Spindle",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "Single-cell modeling reveals spindle components critical in glioblastoma cell fate decisions."
+            }
+          ],
+          "genes": [
+            "KIF11",
+            "KIF14",
+            "KIF20A",
+            "KIF4A",
+            "TPX2",
+            "CEP55",
+            "ASPM",
+            "STIL"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Increased mitotic rate and proliferation",
+        "Aneuploidy and chromosome instability",
+        "Enhanced tumor aggressiveness"
+      ],
+      "evidence_summary": "Large-scale studies confirm most of these genes are differentially upregulated and functionally promote both normal mitosis and the malignant proliferative state in glioblastoma cells, with strong genetic and functional validation.",
+      "significance_score": 1.0,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "Hub genes CDK1, BUB1B, NDC80, CCNB1, TOP2A, DLGAP5, ASPM all correlate to glioblastoma progression."
+        },
+        {
+          "source_id": "",
+          "notes": "Bioinformatics and animal models confirm CENPF, PBK, ASPM, KIF2C, KIF20A, CDC20, TOP2A among highest expressed in glioma and associated with cell cycle progression."
+        },
+        {
+          "source_id": "",
+          "notes": "BUB1B required for GBM proliferation and survival; poor prognosis."
+        }
+      ],
+      "supporting_genes": [
+        "TTK",
+        "BUB1",
+        "BUB1B",
+        "KNL1",
+        "CDC20",
+        "CENPE",
+        "NDC80",
+        "SKA3",
+        "NUF2",
+        "CENPF",
+        "SPC25",
+        "ESPL1",
+        "PTTG1",
+        "SGO1",
+        "SGO2",
+        "ECT2",
+        "RACGAP1",
+        "KIF23",
+        "PRC1",
+        "KIF14",
+        "KIF20A",
+        "KIF4A",
+        "ARHGAP11A",
+        "ARHGAP11B",
+        "SHCBP1",
+        "KIF11",
+        "TPX2",
+        "CEP55",
+        "ASPM",
+        "STIL"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MAD2L1",
+          "BUB3",
+          "MCC"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "MAD2, BUB3\u2014core checkpoint components not specified in input but required for spindle checkpoint signaling."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Cell Cycle Progression and DNA Replication",
+      "description": "Cell cycle checkpoint regulators, cyclins, and DNA replication/repair enzymes are highly expressed, ensuring cell cycle entry and DNA synthesis in malignant glioblastoma. Aberrations drive uncontrolled proliferation and therapy resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "Cell Cycle Checkpoint Regulation",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "Cell cycle and apoptosis pathways dysregulated in glioblastoma."
+            }
+          ],
+          "genes": [
+            "CDCA2",
+            "CDC25C",
+            "CDK1",
+            "CCNB1",
+            "CCNB2",
+            "CCNF",
+            "CDKN3",
+            "PBK"
+          ]
+        },
+        {
+          "name": "DNA Replication and Repair",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "RRM2, regulated by BRCA1, protects GBM cells from replication stress, promotes tumorigenicity."
+            },
+            {
+              "source_id": "",
+              "notes": "EXO1 key DNA repair player, critical for genomic stability and tumor evolution."
+            },
+            {
+              "source_id": "",
+              "notes": "BRIP1 (FANCJ) recruitment and regulation of FANCD2 in DNA damage responses; functions in genome maintenance."
+            }
+          ],
+          "genes": [
+            "TOP2A",
+            "RRM2",
+            "BRIP1",
+            "POLQ",
+            "EXO1",
+            "NEIL3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Nucleoplasm",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "DEGs enriched in nucleoplasm, protein binding, ATP binding\u2014core for DNA replication and cell cycle control."
+            }
+          ],
+          "genes": [
+            "CDCA2",
+            "TOP2A",
+            "RRM2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Uncontrolled cell cycle progression",
+        "Resistance to DNA damaging therapies",
+        "Increased genomic instability"
+      ],
+      "evidence_summary": "Meta-analyses and mechanistic studies confirm overexpression of cell cycle and DNA replication/repair genes is necessary for GBM proliferation and associated with poor patient outcome.",
+      "significance_score": 0.98,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "BRCA1-RRM2 axis maintains replication capacity and tumorigenicity in GBM."
+        },
+        {
+          "source_id": "",
+          "notes": "EXO1 DNA repair activity implicated as biomarker and driver of tumor evolution."
+        },
+        {
+          "source_id": "",
+          "notes": "Cell cycle checkpoints key to glioblastoma therapy resistance."
+        }
+      ],
+      "supporting_genes": [
+        "CDCA2",
+        "CDC25C",
+        "CDK1",
+        "CCNB1",
+        "CCNB2",
+        "CCNF",
+        "CDKN3",
+        "PBK",
+        "TOP2A",
+        "RRM2",
+        "BRIP1",
+        "POLQ",
+        "EXO1",
+        "NEIL3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "BRCA1",
+          "FANCD2"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "BRCA1, FANCD2\u2014essential partners with BRIP1 for DNA repair not present in input list."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Stemness and Tumorigenicity Drivers",
+      "description": "Genes such as HMMR, ASPM, MKI67, FOXM1, and MELK maintain the stemness, self-renewal, and tumorigenic capacity of glioblastoma cells, contributing to resistance and recurrence.",
+      "atomic_biological_processes": [
+        {
+          "name": "Maintenance of Stemness",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "HMMR supports self-renewal and tumorigenic potential of glioblastoma stem-like cells."
+            },
+            {
+              "source_id": "",
+              "notes": "FOXM1 promotes proliferation, EMT, invasion, stemness in glioblastoma."
+            },
+            {
+              "source_id": "",
+              "notes": "MELK regulates FOXM1 phosphorylation, essential for glioma stem cell proliferation."
+            }
+          ],
+          "genes": [
+            "HMMR",
+            "ASPM",
+            "MKI67",
+            "FOXM1",
+            "MELK"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Nucleolus",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "Ribosome metabolism supports glioma stem cell properties and tumor proliferation."
+            }
+          ],
+          "genes": [
+            "MKI67",
+            "FOXM1",
+            "HMMR"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Increased tumor initiation, recurrence, and resistance",
+        "Enhanced proliferation and invasiveness",
+        "Maintenance of glioma stem cell populations"
+      ],
+      "evidence_summary": "Functional studies reveal that knockdown of HMMR, ASPM, FOXM1, and MELK impairs tumor growth and stemness; their expression correlates with poor prognosis and resistance.",
+      "significance_score": 0.96,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "HMMR critical in GBM stemness; targeting HMMR impairs self-renewal capacity."
+        },
+        {
+          "source_id": "",
+          "notes": "MELK-FOXM1 axis essential for glioma stem cell proliferation."
+        },
+        {
+          "source_id": "",
+          "notes": "ASPM overexpression in glioma correlates with poor prognosis; regulated by FOXM1."
+        }
+      ],
+      "supporting_genes": [
+        "HMMR",
+        "ASPM",
+        "MKI67",
+        "FOXM1",
+        "MELK"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "SOX2 master stem cell regulator impacted by FOXM1, required for maintenance but not present in input list."
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "Pathway databases (GO, Reactome, KEGG)",
+      "PPI network analysis",
+      "Co-expression in high-grade glioma datasets",
+      "Meta-analyses of prognostic and functional studies"
+    ],
+    "notes": "Programs derived by grouping input genes by their shared involvement in mitosis/cytokinesis, cell cycle, DNA repair, or stemness, then cross-validating these clusters against high-throughput glioblastoma datasets and recent functional genomic studies."
+  },
+  "version": "2025-11-17"
+}

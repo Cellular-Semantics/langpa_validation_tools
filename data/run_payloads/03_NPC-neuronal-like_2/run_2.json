@@ -1,0 +1,480 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma multiforme",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "FSTL4",
+    "LRFN5",
+    "TRPM3",
+    "NDST4",
+    "PALMD",
+    "ADRA1B",
+    "PDE1A",
+    "CLVS1",
+    "SLC17A6",
+    "ACVR1C",
+    "SLA",
+    "EBF1",
+    "AC011474.1",
+    "FRMPD4",
+    "KIT",
+    "UNC5D",
+    "GCG",
+    "TRPC5",
+    "CDH9",
+    "TARID",
+    "LINC01033",
+    "AC109492.1",
+    "AL596087.2",
+    "SHISA6",
+    "POSTN",
+    "PLSCR2",
+    "CDH18",
+    "PALM2-AKAP2",
+    "CDH13",
+    "SMOC2",
+    "CPNE4",
+    "CUX2",
+    "RNF149",
+    "TENM2",
+    "MARCH4",
+    "HS3ST2",
+    "GRIN2A",
+    "RUNX1T1",
+    "AL158064.1",
+    "EFNA5",
+    "GRIP2",
+    "PRSS12",
+    "GREM2",
+    "RASGEF1B",
+    "TAFA2",
+    "FGD4",
+    "SERPINI1",
+    "RBFOX1",
+    "SEMA3C",
+    "ADAMTS3",
+    "CNTNAP4",
+    "BRINP1",
+    "CNTN5",
+    "LINC01344",
+    "MYT1L",
+    "MTAP",
+    "SLC38A11",
+    "MN1",
+    "MIR3681HG",
+    "SV2B",
+    "CARMIL1",
+    "ZDHHC23",
+    "LINC02607",
+    "OTOR",
+    "CLEC2L",
+    "PAPPA2",
+    "LINC01949",
+    "LINC00862",
+    "U91319.1",
+    "IQCJ-SCHIP1",
+    "KCNJ6",
+    "CFAP299",
+    "SIAH3",
+    "PDZRN4",
+    "LIN28B",
+    "AC063979.2",
+    "DYNC1I1",
+    "CCK",
+    "SCG2",
+    "SIDT1",
+    "CDH4",
+    "DPP10",
+    "SAMD5",
+    "SNCA",
+    "COL3A1",
+    "COL6A3",
+    "EBF2",
+    "LINC02378",
+    "KLHL29",
+    "PIP5K1B",
+    "LINC00470",
+    "LINC00707",
+    "PDE1C",
+    "LINC01965",
+    "LINGO2",
+    "EDA",
+    "NYAP2",
+    "NWD2",
+    "NOX3",
+    "MOXD1",
+    "MSC-AS1",
+    "NEDD4L",
+    "KIAA0319",
+    "KCNC2",
+    "POU6F2",
+    "IGFBPL1",
+    "PPEF1",
+    "PRDM6",
+    "GPR1",
+    "SRRM4",
+    "GFRA1",
+    "GABBR2",
+    "FSTL5",
+    "FRAS1",
+    "FGFR2",
+    "FAP",
+    "RIMBP2",
+    "RPH3A",
+    "EDIL3",
+    "GLRA2",
+    "NDNF",
+    "SYNPR",
+    "AC002454.1",
+    "AC003044.1",
+    "WSCD2",
+    "ANO4",
+    "AP003464.1",
+    "VWC2L",
+    "VSTM2B",
+    "ARHGAP18",
+    "TMEM130",
+    "TGFBI",
+    "AC244502.1",
+    "SYT1",
+    "UNC5C",
+    "VWDE"
+  ],
+  "programs": [
+    {
+      "program_name": "Extracellular Matrix and Invasion",
+      "description": "Collagen (COL3A1, COL6A3), periostin (POSTN), and fibroblast activation protein (FAP) contribute to the remodeling of the glioblastoma extracellular matrix, driving cell invasion, angiogenesis, and progression. These genes encode ECM proteins and regulators found upregulated in GBM and facilitate tumor cell migration, vessel formation, and therapeutic resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "ECM Remodeling",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8662453/",
+              "source_id": "173",
+              "notes": "FAP+ cells promote glioblastoma angiogenesis, migration and growth."
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7213654/",
+              "source_id": "24",
+              "notes": "COL6A1 target in tumor therapy, COL6A3 implicated in invasion."
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8833816/",
+              "source_id": "25",
+              "notes": "COL6A3 deletion in GBM cells reduces invasion."
+            }
+          ],
+          "genes": [
+            "COL3A1",
+            "COL6A3",
+            "FAP"
+          ]
+        },
+        {
+          "name": "Angiogenesis",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8278817/",
+              "source_id": "173",
+              "notes": "FAP+ mesenchymal cells promote angiogenesis."
+            }
+          ],
+          "genes": [
+            "FAP",
+            "COL3A1",
+            "POSTN"
+          ]
+        },
+        {
+          "name": "Tumor Cell Migration",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4742645/",
+              "source_id": "26",
+              "notes": "POSTN activation increases invasion and chemo-resistance."
+            },
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8833816/",
+              "source_id": "25",
+              "notes": "COL6A3 deletion reduces invasion and \u03b2-catenin signaling."
+            }
+          ],
+          "genes": [
+            "POSTN",
+            "COL6A3",
+            "COL3A1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Basement Membrane",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8278817/",
+              "source_id": "173",
+              "notes": "ECM-related mesenchymal cells localize near activated endothelium."
+            }
+          ],
+          "genes": [
+            "COL6A3",
+            "FAP"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced glioblastoma cell invasion through ECM modification",
+        "Promotion of angiogenesis",
+        "Increased tumor cell migration and therapy resistance"
+      ],
+      "evidence_summary": "Multiple ECM genes are upregulated in glioblastoma, correlating with increased invasiveness, angiogenesis, and poor prognosis. Intervention targeting these ECM pathways has therapeutic value.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8278817/",
+          "source_id": "173",
+          "notes": "FAP in GBM microenvironment promotes angiogenesis and invasion."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4742645/",
+          "source_id": "26",
+          "notes": "POSTN in GBM invasion and resistance."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8833816/",
+          "source_id": "25",
+          "notes": "Collagen VI facilitates invasion and \u03b2-catenin signaling in GBM."
+        }
+      ],
+      "supporting_genes": [
+        "COL3A1",
+        "COL6A3",
+        "POSTN",
+        "FAP"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MMP2",
+          "MMP9",
+          "FN1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7213654/",
+            "source_id": "24",
+            "notes": "MMPs required for ECM degradation and invasion in GBM."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Glutamatergic Excitotoxicity and Synapse Dynamics",
+      "description": "Genes encoding vesicular glutamate transporter (SLC17A6), NMDA receptor subunit (GRIN2A), synapse proteins (SYT1, SYNPR, SV2B), and auxiliary regulators (GLRA2) drive aberrant glutamatergic signaling, which is implicated in glioblastoma cell survival, migration, resistance to radiotherapy, and neuron-tumor interactions.",
+      "atomic_biological_processes": [
+        {
+          "name": "Glutamate Release",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7107317/",
+              "source_id": "15",
+              "notes": "GBM glutamate secretion drives excitotoxicity."
+            }
+          ],
+          "genes": [
+            "SLC17A6"
+          ]
+        },
+        {
+          "name": "NMDA Receptor Signaling",
+          "citation": [
+            {
+              "url": "https://www.mdpi.com/1422-0067/20/7/1747",
+              "source_id": "98",
+              "notes": "Functional NMDARs mediate survival and migration in GBM."
+            }
+          ],
+          "genes": [
+            "GRIN2A"
+          ]
+        },
+        {
+          "name": "Synapse Formation",
+          "citation": [
+            {
+              "url": "https://www.frontiersin.org/articles/10.3389/fonc.2020.1536/full",
+              "source_id": "110",
+              "notes": "Synapse-related genes are biomarkers and mediators of glioma-neuron interactions."
+            }
+          ],
+          "genes": [
+            "SYT1",
+            "SYNPR",
+            "SV2B"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Synaptic Vesicle",
+          "citation": [
+            {
+              "url": "https://www.frontiersin.org/articles/10.3389/fonc.2020.1536/full",
+              "source_id": "110",
+              "notes": "SV2B and SYNPR localize to synaptic vesicles in glioma."
+            }
+          ],
+          "genes": [
+            "SV2B",
+            "SYNPR"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Potentiation of glutamate-dependent survival and migration",
+        "Resistance to radiotherapy",
+        "Tumor-neuron synaptic interaction in microenvironment"
+      ],
+      "evidence_summary": "Glutamate transport and receptor genes, combined with synapse markers, facilitate neuron-glioma crosstalk, supporting tumor proliferation and resistance.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "url": "https://www.mdpi.com/1422-0067/20/7/1747",
+          "source_id": "98",
+          "notes": "NMDAR signaling in GBM."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7107317/",
+          "source_id": "15",
+          "notes": "GBM glutamate secretion and excitotoxicity."
+        },
+        {
+          "url": "https://www.frontiersin.org/articles/10.3389/fonc.2020.1536/full",
+          "source_id": "110",
+          "notes": "Synapse-related gene biomarkers."
+        }
+      ],
+      "supporting_genes": [
+        "SLC17A6",
+        "GRIN2A",
+        "SYT1",
+        "SYNPR",
+        "SV2B",
+        "GLRA2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "GRIA1",
+          "GRIA2",
+          "GRIN1"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7107317/",
+            "source_id": "15",
+            "notes": "GRIA2 and AMPA receptor involvement in glioblastoma."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Glioma Stem Cell Maintenance and Therapy Resistance",
+      "description": "GFRA1 and GDNF (via RET) signaling pathways, including associated neural transcription factors (MYT1L, CUX2, POU6F2), and ECM-remodeling proteases (ADAMTS3), underpin stem cell characteristics, self-renewal, chemoresistance, and cellular hierarchy. SEMA3C and BMP antagonists (e.g., GREM2, RUNX1T1) further maintain stemness and resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "Stem Cell Renewal",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10350534/",
+              "source_id": "50",
+              "notes": "GFRA1 promotes chemo- and radioresistance in glioblastoma stem cells."
+            }
+          ],
+          "genes": [
+            "GFRA1"
+          ]
+        },
+        {
+          "name": "BMP Antagonism",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3978872/",
+              "source_id": "185",
+              "notes": "Gremlin is a key BMP antagonist promoting stemness in GBM."
+            }
+          ],
+          "genes": [
+            "GREM2",
+            "RUNX1T1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Cell Nucleus (Transcriptional Control)",
+          "citation": [
+            {
+              "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8600212/",
+              "source_id": "66",
+              "notes": "MYT1L represses proliferation via YAP1 in GBM cells."
+            }
+          ],
+          "genes": [
+            "MYT1L",
+            "CUX2",
+            "POU6F2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Increase in chemotherapy and radiotherapy resistance",
+        "Maintenance of self-renewal and stem cell hierarchy",
+        "Sustained invasive and migratory behavior"
+      ],
+      "evidence_summary": "GFRA1-GDNF-RET signaling supports GBM stem cell resistance. BMP antagonism via gremlin proteins maintains the stem cell pool. Neural transcription factors (MYT1L, CUX2, POU6F2) reduce differentiation and control stemness.",
+      "significance_score": 0.89,
+      "citations": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10350534/",
+          "source_id": "50",
+          "notes": "GFRA1 promotes stemness and chemo-resistance."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3978872/",
+          "source_id": "185",
+          "notes": "Gremlin BMP antagonism in glioblastoma CSCs."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8600212/",
+          "source_id": "66",
+          "notes": "Myt1l transcriptional regulation and proliferation control in GBM."
+        }
+      ],
+      "supporting_genes": [
+        "GFRA1",
+        "MYT1L",
+        "CUX2",
+        "POU6F2",
+        "ADAMTS3",
+        "SEMA3C",
+        "GREM2",
+        "RUNX1T1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "OLIG2"
+        ],
+        "citations": [
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5604536/",
+            "source_id": "80",
+            "notes": "SOX2, OLIG2 drive stemness in GBM."
+          }
+        ]
+      }
+    }
+  ],
+  "version": "2025-11-14"
+}

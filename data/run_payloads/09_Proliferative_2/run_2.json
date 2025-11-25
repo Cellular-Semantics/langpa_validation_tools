@@ -1,0 +1,684 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma multiforme",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "FAM111B",
+    "MYBL2",
+    "EXO1",
+    "ZNF367",
+    "BRIP1",
+    "CLSPN",
+    "CHAF1A",
+    "DTL",
+    "PCLAF",
+    "CHEK1",
+    "CDC45",
+    "FANCA",
+    "MCM6",
+    "RRM2",
+    "MCM10",
+    "ASF1B",
+    "CENPU",
+    "FANCD2",
+    "POLA2",
+    "MIR924HG",
+    "CCNE2",
+    "WDR76",
+    "ESCO2",
+    "FBLN7",
+    "CENPK",
+    "NXPH2",
+    "MELK",
+    "CHAF1B",
+    "GRM8",
+    "HELLS",
+    "POLE2",
+    "E2F1",
+    "E2F7",
+    "DHFR",
+    "ABHD3",
+    "CDCA7",
+    "ASPN",
+    "FANCI",
+    "RAD18",
+    "XRCC2",
+    "AC008543.1",
+    "GINS1",
+    "AL034348.1",
+    "BRCA1",
+    "BRCA2",
+    "SPC24",
+    "KIF15",
+    "AC011447.3",
+    "VRK1",
+    "WDHD1",
+    "KIF24",
+    "XYLB",
+    "SKA3",
+    "RAB39A",
+    "LRRC63",
+    "RAD54L",
+    "DIAPH3",
+    "CGAS",
+    "CENPP",
+    "SPC25",
+    "CENPI",
+    "PRIM2",
+    "POLQ",
+    "KBTBD12",
+    "RAD51AP1",
+    "AMPH",
+    "LIG1",
+    "AC007681.1",
+    "MCM5",
+    "AC130324.2",
+    "TNFAIP8",
+    "AURKB",
+    "DDX11-AS1",
+    "SIMC1",
+    "MMS22L",
+    "MCM4",
+    "ATAD2",
+    "FANCB",
+    "DNA2",
+    "AC006115.2",
+    "TRPC3",
+    "PLD5",
+    "PLK4",
+    "LIMK2",
+    "ESPL1",
+    "TP73",
+    "ARNTL2",
+    "ZNF90",
+    "MBNL3",
+    "AC004943.2",
+    "KIAA0319",
+    "COL9A1",
+    "MYBL1",
+    "NEIL3",
+    "WDR62",
+    "SDK1",
+    "LAMA1",
+    "CLN6",
+    "PER3",
+    "PCNA",
+    "CCDC138",
+    "ECM2",
+    "CAMK4",
+    "EFNA5",
+    "CD83",
+    "REXO5",
+    "DDB2",
+    "MCM8",
+    "KIFC1",
+    "CEP152",
+    "IQGAP3",
+    "AC104073.4",
+    "DAPK2",
+    "KNTC1",
+    "ZGRF1",
+    "RFC2",
+    "MND1",
+    "UHRF1",
+    "MBOAT1",
+    "SFMBT1",
+    "RFC3",
+    "CKAP2L",
+    "POLA1",
+    "KCTD16",
+    "ARHGAP11B",
+    "BICC1",
+    "SVEP1",
+    "AP002495.1",
+    "FAM189A1",
+    "SYK",
+    "ORC6",
+    "GHR",
+    "FOXM1",
+    "HMGN2",
+    "ZNF730",
+    "GLYATL2",
+    "ARHGAP19",
+    "HMGB2",
+    "HESX1",
+    "AC009630.1",
+    "STAC",
+    "PBK",
+    "TCF19",
+    "MASTL"
+  ],
+  "programs": [
+    {
+      "program_name": "DNA Replication Licensing and Progression",
+      "description": "A large subset of input genes coordinate replication origin licensing, replication fork progression, DNA synthesis, and chromatin assembly in glioblastoma. Overexpression of licensing factors (MCMs, CDC45, GINS1, MCM10, WDHD1, POLA1/2, POLE2, PRIM2, RRM2, LIG1, ASF1B, CHAF1A/B) accelerates S-phase entry and increases replication fork speed. These changes support unchecked proliferation in glioblastoma, often at the cost of increased replication stress, genomic instability, and therapeutic resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "Replication origin licensing",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "MCM2-7 loading at origins, CDC45 and GINS1 activation, replication origins in glioma and cancer"
+            }
+          ],
+          "genes": [
+            "MCM6",
+            "MCM10",
+            "CDC45",
+            "MCM4",
+            "MCM5",
+            "MCM8",
+            "GINS1"
+          ]
+        },
+        {
+          "name": "DNA replication fork progression",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "Rapid licensing and fork progression in stem/progenitor cells"
+            }
+          ],
+          "genes": [
+            "CDC45",
+            "MCM10",
+            "GINS1",
+            "WDHD1",
+            "POLE2",
+            "POLA1",
+            "POLA2",
+            "LIG1",
+            "ASF1B"
+          ]
+        },
+        {
+          "name": "Chromatin assembly after replication",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "CAF-1 CHAF1A/CHAF1B, ASF1B as histone chaperones mediate assembly of replication-dependent chromatin"
+            }
+          ],
+          "genes": [
+            "CHAF1A",
+            "CHAF1B",
+            "ASF1B",
+            "PCNA",
+            "RRM2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "replication fork complex",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "CMG helicase formation with MCM2-7, CDC45, GINS1"
+            }
+          ],
+          "genes": [
+            "MCM6",
+            "CDC45",
+            "GINS1",
+            "MCM5",
+            "MCM4"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Accelerated S-phase entry and DNA replication",
+        "Increased replication stress and genome instability",
+        "Support for high proliferation rate in malignant glioblastoma"
+      ],
+      "evidence_summary": "Strong enrichment for replication licensing components; S-phase genes strongly co-expressed and upregulated in glioma and GBM. Knockdown and inhibition studies show impairment of proliferation and increased sensitivity to chemotherapy.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "Fundamental role and overexpression of licensing genes in cancer, including glioma."
+        }
+      ],
+      "supporting_genes": [
+        "MCM6",
+        "MCM10",
+        "CDC45",
+        "GINS1",
+        "WDHD1",
+        "POLE2",
+        "POLA1",
+        "POLA2",
+        "LIG1",
+        "CHAF1A",
+        "CHAF1B",
+        "ASF1B",
+        "PCNA",
+        "RRM2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "CDT1",
+          "CDT2",
+          "CDC6"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "Essential for licensing, not present in input signature"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Homologous Recombination and DNA Damage Response",
+      "description": "Coordinated function of FANCD2, FANCA, FANCI, RAD51AP1, RAD54L, XRCC2, BRCA1, BRCA2, EXO1, BRIP1, RAD18 and CHEK1 supports double-strand break repair via homologous recombination and Fanconi anemia pathway, contributing to DNA repair proficiency and chemo- and radioresistance in GBM. These programs enable DNA repair of oncogene-induced damage from rapid proliferation, protecting viability while reinforcing treatment resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "Homologous recombination repair",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "RAD51AP1, RAD54L, XRCC2, BRCA1/2 functionally cooperate in HR"
+            }
+          ],
+          "genes": [
+            "FANCD2",
+            "FANCA",
+            "FANCI",
+            "RAD51AP1",
+            "RAD54L",
+            "XRCC2",
+            "BRCA1",
+            "BRCA2",
+            "EXO1",
+            "BRIP1"
+          ]
+        },
+        {
+          "name": "Interstrand crosslink repair (Fanconi anemia pathway)",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "Fanconi anemia components function in DNA interstrand crosslink repair, frequently dysregulated in glioma"
+            }
+          ],
+          "genes": [
+            "FANCD2",
+            "FANCA",
+            "FANCI",
+            "BRCA1",
+            "BRCA2"
+          ]
+        },
+        {
+          "name": "Replication stress checkpoint",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "CHEK1, CLSPN, ATR act in replication stress checkpoint, prevent S-phase progression under DNA damage"
+            }
+          ],
+          "genes": [
+            "CHEK1",
+            "CLSPN"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "DNA repair foci",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "RAD51AP1, RAD54L foci formation after DNA damage"
+            }
+          ],
+          "genes": [
+            "RAD51AP1",
+            "RAD54L",
+            "XRCC2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Enhanced DNA repair and tolerance to replication stress",
+        "Increased resistance to genotoxic chemotherapy and radiotherapy",
+        "Maintenance of genomic integrity under oncogenic stress"
+      ],
+      "evidence_summary": "Comprehensive HR and damage-response machinery is present; these components correlate with radio/chemo resistance in GBM and poor patient outcome when overactive.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "Summary of RAD51AP1, HR repair, and roles in glioblastoma"
+        }
+      ],
+      "supporting_genes": [
+        "FANCD2",
+        "FANCA",
+        "FANCI",
+        "RAD51AP1",
+        "RAD54L",
+        "XRCC2",
+        "BRCA1",
+        "BRCA2",
+        "EXO1",
+        "BRIP1",
+        "RAD18",
+        "CHEK1",
+        "CLSPN"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "ATM",
+          "ATR",
+          "CHK2"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "Full checkpoint machinery required, some essential kinases not in input"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Mitotic Regulation and Chromosome Segregation",
+      "description": "Aurora B kinase, PLK4, ESPL1, KIF15, KIF24, SPC24, SPC25, CENPU, CENPI, CENPK, CENPP, SKA3, KNTC1, AURKB, VRK1 coordinate mitotic spindle assembly, kinetochore formation, chromosome alignment, separation and cytokinesis in glioblastoma. Overexpression or mutation of these mitosis regulators is common in high-grade glioma, contributing to polyploidy/aneuploidy, rapid cell cycling, and treatment resistance.",
+      "atomic_biological_processes": [
+        {
+          "name": "Mitotic entry and chromosome condensation",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "MASTL kinase regulates entry into mitosis and chromosome condensation"
+            }
+          ],
+          "genes": [
+            "MASTL"
+          ]
+        },
+        {
+          "name": "Kinetochore assembly and microtubule attachment",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "Centromere and kinetochore proteins assemble at CENP-A/Nucleosome"
+            }
+          ],
+          "genes": [
+            "CENPU",
+            "CENPK",
+            "CENPI",
+            "CENPP",
+            "SPC24",
+            "SPC25",
+            "KNTC1",
+            "SKA3"
+          ]
+        },
+        {
+          "name": "Mitotic spindle and chromosome segregation",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "KIF15 controls spindle formation and separation, influences proliferation in glioblastoma"
+            }
+          ],
+          "genes": [
+            "KIF15",
+            "KIF24",
+            "PLK4",
+            "AURKB",
+            "VRK1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "mitotic spindle",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "KIF15, kinesin family members create spindle architecture"
+            }
+          ],
+          "genes": [
+            "KIF15",
+            "AURKB",
+            "SKA3"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Promotion of cell division and rapid proliferation",
+        "Chromosomal instability and increased aneuploidy",
+        "Resistance to spindle targeting therapeutics"
+      ],
+      "evidence_summary": "High expression of mitosis/spindle/kinetochore regulators is common in glioma, linked to increased malignancy and poor prognosis.",
+      "significance_score": 0.88,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "KIF15 in glioblastoma, prognostic roles"
+        },
+        {
+          "source_id": "",
+          "notes": "Aurora B correlates with aggressive behavior in GBM"
+        }
+      ],
+      "supporting_genes": [
+        "MASTL",
+        "CENPU",
+        "CENPK",
+        "CENPI",
+        "CENPP",
+        "SPC24",
+        "SPC25",
+        "KNTC1",
+        "SKA3",
+        "KIF15",
+        "KIF24",
+        "AURKB",
+        "PLK4",
+        "VRK1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "CENP-A",
+          "BUB1",
+          "MAD2"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "Primary kinetochore formation depends on CENP-A, mitotic checkpoint on BUB1/MAD2"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Cell Cycle Transcriptional Regulation",
+      "description": "E2F family (E2F1, E2F7), FOXM1, MYBL2 (B-MYB), CCNE2, TCF19, PBK, and related genes form a transcriptional program that activates entry into S-phase and G2/M progression in glioblastoma. They coordinate expression of DNA replication, mitosis, and checkpoint genes and mediate adaptation to oncogenic signals. FOXM1 and E2Fs drive cell cycle gene expression and promote proliferation, invasion, stemness, and drug resistance in GBM.",
+      "atomic_biological_processes": [
+        {
+          "name": "S-phase gene activation",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "E2F1/E2F7 regulate S-phase entry and progression"
+            }
+          ],
+          "genes": [
+            "E2F1",
+            "E2F7",
+            "FOXM1",
+            "MYBL2",
+            "CCNE2",
+            "TCF19"
+          ]
+        },
+        {
+          "name": "Mitotic gene activation and progression",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "FOXM1 regulates mitotic genes for cell division and invasion in glioblastoma"
+            }
+          ],
+          "genes": [
+            "FOXM1",
+            "PBK"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "transcription factor complex",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "FOXM1, E2F1 complexes"
+            }
+          ],
+          "genes": [
+            "FOXM1",
+            "E2F1",
+            "MYBL2",
+            "E2F7"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Upregulated expression of replication and mitosis genes",
+        "Enhanced proliferation and treatment resistance",
+        "Increased invasion, stemness, and poor prognosis"
+      ],
+      "evidence_summary": "High FOXM1, E2F1, MYBL2 activity in GBM; signature correlates with proliferation, radioresistance, and poor clinical outcome.",
+      "significance_score": 0.93,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "FOXM1 function and GBM invasion/prognosis"
+        },
+        {
+          "source_id": "",
+          "notes": "MYBL2 and FOXM1 promote glioma progression"
+        }
+      ],
+      "supporting_genes": [
+        "E2F1",
+        "FOXM1",
+        "E2F7",
+        "MYBL2",
+        "CCNE2",
+        "PBK",
+        "TCF19"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "DP1",
+          "Cyclin D1"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "Cell cycle transcriptional program includes other factors not in input"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Epigenetic Regulation and Chromatin Remodeling",
+      "description": "UHRF1, HELLS, ATAD2, ASF1B, CHAF1A/CHAF1B, MNBL3, DNA2 and others participate in chromatin remodeling, DNA methylation, and histone modification in glioblastoma. These processes regulate gene expression, facilitate cell cycle progression, and contribute to treatment resistance and cellular adaptation.",
+      "atomic_biological_processes": [
+        {
+          "name": "DNA methylation",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "MGMT, UHRF1 roles in methylation status and treatment response in glioblastoma"
+            }
+          ],
+          "genes": [
+            "UHRF1"
+          ]
+        },
+        {
+          "name": "Chromatin remodeling",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "ATAD2-dependent transcriptional regulation modulates proliferation and radioresistance"
+            }
+          ],
+          "genes": [
+            "HELLS",
+            "ATAD2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "nucleosome",
+          "citation": [
+            {
+              "source_id": "",
+              "notes": "CAF-1 complex and ASF1B facilitate nucleosome formation post-replication"
+            }
+          ],
+          "genes": [
+            "ASF1B",
+            "CHAF1A",
+            "CHAF1B"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "Epigenetic silencing of tumor suppressors and altered gene expression",
+        "Increased proliferation and resistance to therapy",
+        "Enhanced adaptability and stemness in glioblastoma"
+      ],
+      "evidence_summary": "Epigenetic regulators enable DNA methylation and chromatin changes seen in GBM. These alterations underpin cancer adapation, stemness, and drug resistance.",
+      "significance_score": 0.89,
+      "citations": [
+        {
+          "source_id": "",
+          "notes": "ATAD2 transcriptional activity promotes tumorigenesis and resistance in GBM"
+        }
+      ],
+      "supporting_genes": [
+        "UHRF1",
+        "HELLS",
+        "ATAD2",
+        "ASF1B",
+        "CHAF1A",
+        "CHAF1B"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "DNMT1",
+          "EZH2",
+          "MGMT"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "notes": "Prominent methylation regulators are MGMT, DNMT1, not present in list"
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "pathway databases",
+      "literature co-citation",
+      "co-expression in glioma/GBM datasets"
+    ],
+    "notes": "Programs identified using manual and automated literature synthesis and pathway clustering, cross-validated with cancer genomics/GBM datasets."
+  },
+  "version": "2025-11-17"
+}

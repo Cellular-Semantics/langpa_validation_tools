@@ -1,0 +1,584 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "LINC02235",
+    "AC037486.1",
+    "PCDH11X",
+    "LINC01829",
+    "AL591043.2",
+    "ZNF423",
+    "ADAMTS18",
+    "AL133538.1",
+    "DOCK2",
+    "SCN1A-AS1",
+    "AL022068.1",
+    "SEPTIN14",
+    "SGCZ",
+    "ADAM28",
+    "RYR2",
+    "...(truncated for length)",
+    "GPC3",
+    "GNA14",
+    "GLRA2",
+    "GDNF-AS1",
+    "GCNT2",
+    "FYB1",
+    "FXN",
+    "FRG1-DT",
+    "FRAS1",
+    "FHIT",
+    "FAR2",
+    "FAP",
+    "FAM189A1",
+    "FAAH2",
+    "ERI2",
+    "EPSTI1",
+    "EPHA3",
+    "EPB41L4A",
+    "GNGT1",
+    "GREB1L",
+    "EMILIN2",
+    "GRIN2B",
+    "LANCL3",
+    "KREMEN1",
+    "KCNMB4",
+    "KCNE4",
+    "ITK",
+    "ITGAL",
+    "INPP5D",
+    "IL7",
+    "IL12RB2",
+    "IGSF10",
+    "IAPP",
+    "HS3ST3A1",
+    "HRH1",
+    "AC002429.2",
+    "HMGB2",
+    "HMGA2",
+    "GRIP2",
+    "ENOX2",
+    "ELDR",
+    "AP003066.1",
+    "CFAP77"
+  ],
+  "method": {
+    "clustering_basis": [
+      "curated glioblastoma literature",
+      "public pathway databases (KEGG, Reactome)",
+      "co-expression networks",
+      "cell type specific reviews"
+    ],
+    "notes": "Clusters derived via intersection of curated cancer pathway literature, glioblastoma transcriptome analyses, and experimental gene interaction data. Programs prioritized by recurrence in literature and pathway completeness."
+  },
+  "programs": [
+    {
+      "program_name": "Glioblastoma Invasion & Migration",
+      "description": "Key genes drive cytoskeletal remodeling, cell adhesion changes, and matrix degradation for GBM cell invasion. This program integrates ECM proteases (ADAMTS18, ADAM28, TGM2), cytoskeletal regulators (SEPTIN14, TRPV4), cell adhesion molecules (PCDH11X, CNTNAP2, DOCK2), matrix proteins (POSTN, COL12A1, COL19A1), and migration cues (RELN, SLIT2, WNT16). Notably, POSTN promotes macrophage recruitment and invasion, TGM2 is essential for survival and stemness during invasion, and TRPV4 facilitates F-actin dependent protrusions critical for migration.",
+      "atomic_biological_processes": [
+        {
+          "name": "ECM degradation",
+          "citation": [
+            {
+              "source_id": "42",
+              "notes": "POSTN directly promotes invasion via ECM remodeling in GBM"
+            },
+            {
+              "source_id": "47",
+              "notes": "ADAMTS and TGM2 function in ECM breakdown and migration"
+            }
+          ],
+          "genes": [
+            "POSTN",
+            "ADAMTS18",
+            "TGM2",
+            "ADAM28",
+            "COL12A1",
+            "COL19A1"
+          ]
+        },
+        {
+          "name": "Cytoskeletal remodeling",
+          "citation": [
+            {
+              "source_id": "117",
+              "notes": "TRPV4 drives F-actin invadopodia formation and migration"
+            }
+          ],
+          "genes": [
+            "SEPTIN14",
+            "TRPV4"
+          ]
+        },
+        {
+          "name": "Cell adhesion",
+          "citation": [
+            {
+              "source_id": "30",
+              "notes": "Integrins and CD44 mediate motor-clutch migration mode in GBM"
+            }
+          ],
+          "genes": [
+            "PCDH11X",
+            "CNTNAP2",
+            "CD44"
+          ]
+        },
+        {
+          "name": "Neuronal migration cues",
+          "citation": [
+            {
+              "source_id": "27",
+              "notes": "RELN acts as a stop signal in neuronal migration; expression inversely correlates with GBM grade"
+            },
+            {
+              "source_id": "90",
+              "notes": "SLIT2/ROBO pathway promotes immunosuppression and invasion"
+            }
+          ],
+          "genes": [
+            "RELN",
+            "SLIT2",
+            "WNT16"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Focal adhesion",
+          "citation": [
+            {
+              "source_id": "119",
+              "notes": "Voltage-gated ion channels and focal adhesions regulate GBM migration"
+            }
+          ],
+          "genes": [
+            "TRPV4",
+            "KCNH7",
+            "SEPTIN14"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enhanced ECM remodeling and breakdown",
+        "increased cytoskeletal plasticity",
+        "promoted cell migratory behavior",
+        "facilitated immune cell recruitment via POSTN"
+      ],
+      "evidence_summary": "Multiple input genes converge on robust invasion/metastasis pathways (POSTN, ADAMTS, TRPV4, RELN, SLIT2) experimentally validated in glioblastoma and correlate with mesenchymal and invasive phenotypes.",
+      "significance_score": 0.97,
+      "citations": [
+        {
+          "source_id": "42",
+          "notes": "POSTN as an invasion and macrophage chemoattractant in GBM"
+        },
+        {
+          "source_id": "47",
+          "notes": "ECM and cytoskeletal regulation of GBM migration"
+        },
+        {
+          "source_id": "117",
+          "notes": "TRPV4 and actin-dependent protrusion in GBM"
+        },
+        {
+          "source_id": "27",
+          "notes": "RELN as a neuronal migration stop signal inversely correlated with GBM grade"
+        },
+        {
+          "source_id": "90",
+          "notes": "SLIT2 pathway in immunosuppression and migration"
+        }
+      ],
+      "supporting_genes": [
+        "POSTN",
+        "ADAMTS18",
+        "ADAM28",
+        "COL12A1",
+        "COL19A1",
+        "SEPTIN14",
+        "TRPV4",
+        "PCDH11X",
+        "CNTNAP2",
+        "RELN",
+        "SLIT2",
+        "WNT16"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MMP2",
+          "MMP9",
+          "ITGB1",
+          "CD44"
+        ],
+        "citations": [
+          {
+            "source_id": "46",
+            "notes": "Matrix metalloproteinases are critical ECM proteases in GBM not present in input"
+          },
+          {
+            "source_id": "30",
+            "notes": "Integrin beta-1 and CD44 needed for adhesive migration"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Glioblastoma Immune Suppression",
+      "description": "A group of macrophage, microglia, and immunological regulatory genes (CD163, VSIG4, MSR1, INPP5D, IL7, CD96) cooperate in skewing the glioblastoma environment toward immune evasion. CD163, MSR1 and VSIG4 drive M2-like immunosuppressive macrophage phenotypes. INPP5D regulates myeloid cell signaling. CD96 acts as an NK cell/T cell checkpoint, and IL7 stimulation is epigenetically silenced, hampering adaptive immunity.",
+      "atomic_biological_processes": [
+        {
+          "name": "M2 polarization",
+          "citation": [
+            {
+              "source_id": "34",
+              "notes": "CD163 high levels correlate with immunosuppressive phenotype and poor prognosis"
+            },
+            {
+              "source_id": "36",
+              "notes": "CD163 predicts poor survival and associates with immune checkpoints"
+            }
+          ],
+          "genes": [
+            "CD163",
+            "VSIG4",
+            "MSR1"
+          ]
+        },
+        {
+          "name": "Immune checkpoint regulation",
+          "citation": [
+            {
+              "source_id": "63",
+              "notes": "CD96 acts as an immune checkpoint, correlates with infiltrating immune cells"
+            }
+          ],
+          "genes": [
+            "CD96"
+          ]
+        },
+        {
+          "name": "Cytokine signaling blockade",
+          "citation": [
+            {
+              "source_id": "101",
+              "notes": "Epigenetic suppression of IL7 pathway and T cell response in progressive GBM"
+            }
+          ],
+          "genes": [
+            "IL7"
+          ]
+        },
+        {
+          "name": "Myeloid cell regulation",
+          "citation": [
+            {
+              "source_id": "85",
+              "notes": "INPP5D/SHIP1 modulates myeloid cell signaling, expressed in GBM microenvironment"
+            }
+          ],
+          "genes": [
+            "INPP5D"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Tumor-associated macrophage",
+          "citation": [
+            {
+              "source_id": "34",
+              "notes": "CD163 found in intratumoral clusters of macrophages in GBM"
+            }
+          ],
+          "genes": [
+            "CD163",
+            "MSR1",
+            "VSIG4"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "immunosuppressive microenvironment establishment",
+        "reduced lymphocytic infiltration and activity",
+        "enhanced tumor resistance to immunotherapy"
+      ],
+      "evidence_summary": "CD163, VSIG4, and MSR1 coexpression drive immunosuppressive TAMs supported by high-grade glioma analyses; INPP5D and CD96 regulate myeloid and lymphoid checkpoints. IL7 pathway silencing intensifies T cell blockade.",
+      "significance_score": 0.93,
+      "citations": [
+        {
+          "source_id": "34",
+          "notes": "Quantitative profiling of CD163 and immunosuppressive markers"
+        },
+        {
+          "source_id": "36",
+          "notes": "CD163 enrichment predicts poor outcome"
+        },
+        {
+          "source_id": "63",
+          "notes": "CD96 as immune checkpoint in GBM"
+        },
+        {
+          "source_id": "101",
+          "notes": "IL7 pathway epigenetic suppression"
+        },
+        {
+          "source_id": "85",
+          "notes": "INPP5D/SHIP1 role in myeloid signaling"
+        }
+      ],
+      "supporting_genes": [
+        "CD163",
+        "VSIG4",
+        "MSR1",
+        "INPP5D",
+        "CD96",
+        "IL7"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "PD1",
+          "CTLA4",
+          "TIGIT",
+          "PDL1"
+        ],
+        "citations": [
+          {
+            "source_id": "63",
+            "notes": "Other checkpoints act with CD96 to modulate GBM immune response"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Glioblastoma Stem Cell Maintenance & Therapy Resistance",
+      "description": "Genes such as WNT16, ALDH1A2, HMGA2, BIRC3, and TGM2 join with pathways supporting stemness, therapy resistance, and tumor recurrence. WNT signaling drives stem cell self-renewal and radiotherapy resistance. ALDH1A2 and HMGA2 support stemness and expansion. BIRC3 enables apoptosis resistance and is directly tied to therapy adaptation. TGM2 links stemness, survival, and resistance in the mesenchymal GBM subtype.",
+      "atomic_biological_processes": [
+        {
+          "name": "WNT signaling",
+          "citation": [
+            {
+              "source_id": "126",
+              "notes": "WNT/\u03b2-catenin activation enables glioma stem cell proliferation and therapy resistance"
+            },
+            {
+              "source_id": "129",
+              "notes": "WNT as a therapeutic resistance driver in GBM"
+            }
+          ],
+          "genes": [
+            "WNT16",
+            "WNT6",
+            "WNT5A"
+          ]
+        },
+        {
+          "name": "Stemness regulation",
+          "citation": [
+            {
+              "source_id": "55",
+              "notes": "ALDH1A2 upregulated in GBM, drives stem cell and therapy resistant subpopulations"
+            },
+            {
+              "source_id": "138",
+              "notes": "HMGA2 promotes stemness, invasion and GBM tumorigenicity"
+            }
+          ],
+          "genes": [
+            "ALDH1A2",
+            "HMGA2"
+          ]
+        },
+        {
+          "name": "Apoptosis resistance",
+          "citation": [
+            {
+              "source_id": "146",
+              "notes": "BIRC3 as critical resistance factor in GBM apoptosis pathways"
+            }
+          ],
+          "genes": [
+            "BIRC3"
+          ]
+        },
+        {
+          "name": "Mesenchymal transition & invasion",
+          "citation": [
+            {
+              "source_id": "49",
+              "notes": "TGM2 drives mesenchymal transition, stemness and invasion in GBM"
+            }
+          ],
+          "genes": [
+            "TGM2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Cancer stem cell niche",
+          "citation": [
+            {
+              "source_id": "121",
+              "notes": "Calcium channels maintain stem cell niche"
+            }
+          ],
+          "genes": [
+            "WNT16",
+            "ALDH1A2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increased tumor recurrence and therapy resistance",
+        "promotion of glioma stem-like cell self-renewal and proliferation",
+        "mesenchymal transformation supporting invasion"
+      ],
+      "evidence_summary": "ALDH1A2, HMGA2, WNT16, BIRC3, TGM2 have direct functional links to therapy resistance, stemness and tumor recurrence in GBM. Targeting these genes impairs self-renewal and enhances therapy susceptibility.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "source_id": "126",
+          "notes": "WNT/\u03b2-catenin and resistance"
+        },
+        {
+          "source_id": "55",
+          "notes": "Stem cell maintenance by ALDH1A2"
+        },
+        {
+          "source_id": "138",
+          "notes": "HMGA2 as stemness and invasion driver"
+        },
+        {
+          "source_id": "146",
+          "notes": "BIRC3 apoptosis evasion"
+        },
+        {
+          "source_id": "49",
+          "notes": "TGM2 survival/stemness"
+        }
+      ],
+      "supporting_genes": [
+        "WNT16",
+        "ALDH1A2",
+        "HMGA2",
+        "BIRC3",
+        "TGM2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "STAT3",
+          "CD44",
+          "NOTCH1"
+        ],
+        "citations": [
+          {
+            "source_id": "142",
+            "notes": "SOX2 and STAT3 are key GSC regulators"
+          },
+          {
+            "source_id": "53",
+            "notes": "CD44 necessary for TGM2-mediated stemness"
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Glioblastoma Angiogenesis & Hypoxic Adaptation",
+      "description": "Core angiogenic and hypoxia-responsive genes (VEGFD, TEK, FAP, PLIN2) collaborate to drive neovascularization and metabolic reprogramming. VEGFD and TEK (TIE2) are critical endothelial regulators. FAP+ mesenchymal cells cooperate with endothelial cells and support pro-angiogenic microenvironment. PLIN2 and related lipid droplet proteins adapt GBM cells to hypoxic metabolic stress.",
+      "atomic_biological_processes": [
+        {
+          "name": "Angiogenesis signaling",
+          "citation": [
+            {
+              "source_id": "71",
+              "notes": "VEGF pathway as central driver of GBM angiogenesis"
+            }
+          ],
+          "genes": [
+            "VEGFD",
+            "TEK",
+            "FAP"
+          ]
+        },
+        {
+          "name": "Hypoxia-induced metabolic adaptation",
+          "citation": [
+            {
+              "source_id": "164",
+              "notes": "PLIN2 mediates lipid droplet regulation and hypoxia response"
+            }
+          ],
+          "genes": [
+            "PLIN2",
+            "PLIN3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "Perivascular niche",
+          "citation": [
+            {
+              "source_id": "170",
+              "notes": "FAP+ mesenchymal cells promote angiogenesis in GBM"
+            }
+          ],
+          "genes": [
+            "FAP",
+            "TEK",
+            "VEGFD"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enhanced neovascularization for tumor support",
+        "adaptation to hypoxic microenvironments",
+        "potential increased therapy resistance"
+      ],
+      "evidence_summary": "VEGFD, TEK, FAP, and PLIN2 collectively drive angiogenic and metabolic adaptation of GBM, supporting rapid tumor expansion under hypoxic stress. FAP+ mesenchymal cells are a key microenvironment contributor.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "source_id": "71",
+          "notes": "VEGF and angiogenesis in GBM"
+        },
+        {
+          "source_id": "170",
+          "notes": "FAP+ cell role in tumor microenvironment and angiogenesis"
+        },
+        {
+          "source_id": "164",
+          "notes": "PLIN2 and lipid metabolism adaptation"
+        }
+      ],
+      "supporting_genes": [
+        "VEGFD",
+        "TEK",
+        "FAP",
+        "PLIN2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "VEGFA",
+          "ANGPT2",
+          "HILPDA"
+        ],
+        "citations": [
+          {
+            "source_id": "170",
+            "notes": "ANGPT2 is a FAP+ cell product"
+          },
+          {
+            "source_id": "166",
+            "notes": "HILPDA is a hypoxia-induced lipid regulator"
+          }
+        ]
+      }
+    }
+  ],
+  "version": "2025-11-17"
+}

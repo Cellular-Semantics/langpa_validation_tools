@@ -1,0 +1,439 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "LINC01727",
+    "AC117464.1",
+    "XYLT1",
+    "MMD2",
+    "EEPD1",
+    "AC013265.1",
+    "MYO5B",
+    "PLA2G4A",
+    "KCNIP1",
+    "ITGB4",
+    "AC019068.1",
+    "UNC5D",
+    "MIR3681HG",
+    "LINC02125",
+    "LINC02246",
+    "LRRC4C",
+    "LUCAT1",
+    "MDGA2",
+    "AC077690.1",
+    "CTXND1",
+    "AL353138.1",
+    "CDH18",
+    "MN1",
+    "AL356737.2",
+    "NKAIN3",
+    "CD44",
+    "NLRC5",
+    "LINC01776",
+    "LINC01117",
+    "DAB1",
+    "GFAP",
+    "DCHS2",
+    "DIPK1C",
+    "COL20A1",
+    "ELMOD1",
+    "ERICH3",
+    "ADAMTS5",
+    "GPC5",
+    "CHST8",
+    "AC233296.1",
+    "AC124254.2",
+    "NPR3",
+    "HRH1",
+    "INPP4B",
+    "AL159156.1",
+    "LINC02328",
+    "ARC",
+    "PDZRN4",
+    "AC007344.1",
+    "RGMA",
+    "PPARGC1A",
+    "TNR",
+    "ST8SIA5",
+    "ST8SIA1",
+    "SLC7A11"
+  ],
+  "programs": [
+    {
+      "program_name": "Glial/astrocyte differentiation and tumor plasticity",
+      "description": "Gene products such as GFAP mark astrocytic differentiation; in glioblastoma, heterogeneous expression patterns reflect diverse tumor cell populations and dedifferentiation. ARC and DAB1 participate in neural activity and cell signaling, potentially linked to malignant plasticity.",
+      "atomic_biological_processes": [
+        {
+          "name": "astrocytic differentiation",
+          "citation": [
+            {
+              "source_id": "2",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC9348673/",
+              "notes": "GFAP used as a diagnostic and physiological marker for astrocytic tumors and GBM, though expression is heterogeneous."
+            }
+          ],
+          "genes": [
+            "GFAP"
+          ]
+        },
+        {
+          "name": "neuronal signaling modulation",
+          "citation": [
+            {
+              "source_id": "43",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC6133310/",
+              "notes": "DAB1 and ARC implicated in neural activity, plasticity, and potentially cancer cell adaptation for tumorigenicity."
+            }
+          ],
+          "genes": [
+            "DAB1",
+            "ARC"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "intermediate filament cytoskeleton",
+          "citation": [
+            {
+              "source_id": "5",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC3346846/",
+              "notes": "GFAP maintains astrocyte structure; aberrant in GBM."
+            }
+          ],
+          "genes": [
+            "GFAP"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "astrocyte signature retention and dedifferentiation dynamics",
+        "heterogeneous cellular phenotypes reflecting tumor adaptability"
+      ],
+      "evidence_summary": "Strong literature and diagnostic use support GFAP, ARC, and DAB1 in establishing astrocytic and neural plasticity phenotypes within GBM. These influences integrate both normal lineage specification and malignant plasticity.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "source_id": "2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC9348673/",
+          "notes": ""
+        },
+        {
+          "source_id": "4",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC7801756/",
+          "notes": ""
+        },
+        {
+          "source_id": "43",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC6133310/",
+          "notes": ""
+        }
+      ],
+      "supporting_genes": [
+        "GFAP",
+        "DAB1",
+        "ARC"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "VIM",
+          "NES"
+        ],
+        "citations": [
+          {
+            "source_id": "4",
+            "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC7801756/",
+            "notes": ""
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Mesenchymal invasion and matrix remodeling",
+      "description": "CD44 and ITGB4 coordinate cell-matrix adhesion and trafficking; ADAMTS5 and COL20A1 facilitate ECM degradation. GPC5 and PLA2G4A interface with the matrix and lipid metabolism to support invasion.",
+      "atomic_biological_processes": [
+        {
+          "name": "extracellular matrix degradation",
+          "citation": [
+            {
+              "source_id": "58",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC2278191/",
+              "notes": "ADAMTS5 mediates ECM proteoglycan cleavage, impacts glioma invasiveness."
+            }
+          ],
+          "genes": [
+            "ADAMTS5",
+            "COL20A1"
+          ]
+        },
+        {
+          "name": "cell-matrix adhesion",
+          "citation": [
+            {
+              "source_id": "13",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC6186954/",
+              "notes": "CD44 and integrins mediate matrix attachment and migration."
+            }
+          ],
+          "genes": [
+            "CD44",
+            "ITGB4"
+          ]
+        },
+        {
+          "name": "lipid signaling for migration",
+          "citation": [
+            {
+              "source_id": "138",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC9876543/",
+              "notes": "PLA2G4A/cPLA2 releases lipid mediators facilitating pro-invasive signaling in GBM."
+            }
+          ],
+          "genes": [
+            "PLA2G4A"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "plasma membrane",
+          "citation": [
+            {
+              "source_id": "16",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC10637131/",
+              "notes": "Integrins and CD44 localize at plasma membrane to mediate adhesion."
+            }
+          ],
+          "genes": [
+            "CD44",
+            "ITGB4"
+          ]
+        },
+        {
+          "name": "extracellular matrix",
+          "citation": [
+            {
+              "source_id": "58",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC2278191/",
+              "notes": ""
+            }
+          ],
+          "genes": [
+            "COL20A1",
+            "ADAMTS5",
+            "GPC5"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enhanced invasive capacity through ECM breakdown and increased motility",
+        "tumor spread via matrix remodeling and pro-migratory signaling"
+      ],
+      "evidence_summary": "Robust studies document CD44/integrin and metalloproteinase cooperation for glioblastoma invasion; lipid signaling from PLA2G4A provides additional pro-invasive cues.",
+      "significance_score": 0.93,
+      "citations": [
+        {
+          "source_id": "58",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC2278191/",
+          "notes": ""
+        },
+        {
+          "source_id": "13",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC6186954/",
+          "notes": ""
+        },
+        {
+          "source_id": "138",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC9876543/",
+          "notes": ""
+        }
+      ],
+      "supporting_genes": [
+        "CD44",
+        "ITGB4",
+        "ADAMTS5",
+        "COL20A1",
+        "PLA2G4A",
+        "GPC5"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MMP2",
+          "MMP9"
+        ],
+        "citations": [
+          {
+            "source_id": "58",
+            "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC2278191/",
+            "notes": ""
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Redox and ferroptosis resistance",
+      "description": "SLC7A11/xCT mediates cystine uptake for glutathione synthesis, protecting tumor cells against oxidative stress and ferroptotic death. LUCAT1 and coordinated lncRNAs may further regulate stress response.",
+      "atomic_biological_processes": [
+        {
+          "name": "glutathione biosynthesis",
+          "citation": [
+            {
+              "source_id": "24",
+              "url": "https://www.mdpi.com/2072-6694/13/11/2756",
+              "notes": "SLC7A11 is required for GSH synthesis and ferroptosis resistance in GBM cells."
+            }
+          ],
+          "genes": [
+            "SLC7A11"
+          ]
+        },
+        {
+          "name": "regulation of oxidative stress response",
+          "citation": [
+            {
+              "source_id": "19",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC5577476/",
+              "notes": "Overexpression of xCT/SLC7A11 confers oxidative stress resistance and stemness."
+            }
+          ],
+          "genes": [
+            "SLC7A11",
+            "LUCAT1"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "plasma membrane transporter complex",
+          "citation": [
+            {
+              "source_id": "20",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC9646409/",
+              "notes": "SLC7A11 as part of system xc- at plasma membrane."
+            }
+          ],
+          "genes": [
+            "SLC7A11"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increased tumor resistance to ferroptosis and oxidative stress",
+        "promotion of stem cell-like properties in hypoxic tumor regions"
+      ],
+      "evidence_summary": "System xc- (SLC7A11) is extensively validated as a key mediator of redox balance and therapy resistance in GBM; lncRNAs may modulate gene expression to sustain adaptability.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "source_id": "24",
+          "url": "https://www.mdpi.com/2072-6694/13/11/2756",
+          "notes": ""
+        },
+        {
+          "source_id": "19",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC5577476/",
+          "notes": ""
+        }
+      ],
+      "supporting_genes": [
+        "SLC7A11",
+        "LUCAT1"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "GPX4",
+          "NFE2L2"
+        ],
+        "citations": [
+          {
+            "source_id": "24",
+            "url": "https://www.mdpi.com/2072-6694/13/11/2756",
+            "notes": ""
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Immune evasion: MHC class I downregulation",
+      "description": "NLRC5 activates MHC class I transcription; its dysregulation in glioblastoma leads to reduced antigen presentation and impaired anti-tumor immunity.",
+      "atomic_biological_processes": [
+        {
+          "name": "MHC class I antigen processing",
+          "citation": [
+            {
+              "source_id": "34",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC3346862/",
+              "notes": "NLRC5 is a master regulator of MHC class I gene transcription."
+            }
+          ],
+          "genes": [
+            "NLRC5"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "MHC class I complex",
+          "citation": [
+            {
+              "source_id": "39",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC7799383/",
+              "notes": "Defective NLRC5 impairs MHC-I assembly and cell surface display."
+            }
+          ],
+          "genes": [
+            "NLRC5"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "dampened tumor immunogenicity and evasion of cytotoxic T cell response"
+      ],
+      "evidence_summary": "Compelling evidence shows that NLRC5 loss/inactivation in GBM disrupts MHC-I expression and antigen presentation, contributing to immune evasion.",
+      "significance_score": 0.88,
+      "citations": [
+        {
+          "source_id": "34",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC3346862/",
+          "notes": ""
+        },
+        {
+          "source_id": "39",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC7799383/",
+          "notes": ""
+        }
+      ],
+      "supporting_genes": [
+        "NLRC5"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "B2M",
+          "HLA-A",
+          "HLA-B",
+          "HLA-C"
+        ],
+        "citations": [
+          {
+            "source_id": "39",
+            "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC7799383/",
+            "notes": ""
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "pathway annotation (KEGG/GO)",
+      "co-citation and literature co-occurrence",
+      "protein-protein interaction (BioGRID/STRING)",
+      "co-expression in transcriptomics"
+    ],
+    "notes": "Programs defined by robust convergence of literature, pathway, and molecular evidence in glioblastoma context. Additional, less-characterized genes/lncRNAs in input not assigned to established GBM programs due to paucity of experimental data."
+  },
+  "version": "2025-11-14"
+}

@@ -1,0 +1,692 @@
+{
+  "context": {
+    "cell_type": "malignant glioblastoma cell",
+    "disease": "glioblastoma",
+    "tissue": "brain"
+  },
+  "input_genes": [
+    "AQP1",
+    "ANOS1",
+    "LIX1",
+    "CD38",
+    "RASL12",
+    "KCNN3",
+    "SERPINA3",
+    "GFAP",
+    "FAM189A2",
+    "BBOX1",
+    "NPSR1",
+    "ITPKB",
+    "CFI",
+    "LINC01094",
+    "ID3",
+    "FBLN5",
+    "CFAP54",
+    "DAAM2",
+    "ADAMTS8",
+    "GGT5",
+    "SLC14A1",
+    "RPE65",
+    "MASP1",
+    "SLCO1C1",
+    "AC092131.1",
+    "ITGB4",
+    "LRRC2",
+    "STUM",
+    "SPON1",
+    "CD44",
+    "ATP1A2",
+    "AQP4",
+    "ALDH1L1",
+    "CRB2",
+    "FAM107A",
+    "GJA1",
+    "ETNPPL",
+    "AC103923.1",
+    "ZFP36",
+    "RFTN1",
+    "EDNRA",
+    "HAS2",
+    "ADAMTS15",
+    "MARVELD3",
+    "OBI1-AS1",
+    "PAPLN",
+    "ID4",
+    "HRH1",
+    "HCG22",
+    "DRC1",
+    "PTCHD1",
+    "PTPRT",
+    "GALNT15",
+    "FHAD1",
+    "SLC44A3",
+    "F3",
+    "COL28A1",
+    "EDNRB",
+    "ACSBG1",
+    "ABCA13",
+    "WDR49",
+    "XAF1",
+    "ABCC3",
+    "AC092924.2",
+    "AC002429.2",
+    "WWC1",
+    "TIMP3",
+    "AGT",
+    "SLC24A4",
+    "HOPX",
+    "CABCOCO1",
+    "CHI3L2",
+    "C3",
+    "MYBPC1",
+    "ADGRV1",
+    "LINC02234",
+    "GPR37L1",
+    "AL591686.2",
+    "TCTEX1D1",
+    "TTYH1",
+    "TC2N",
+    "LINC00844",
+    "AL355306.2",
+    "AC073941.1",
+    "NMB",
+    "PDGFRB",
+    "BCAN",
+    "EGF",
+    "DCHS2",
+    "PFKFB3",
+    "AC117464.1",
+    "SCN7A",
+    "COLEC12",
+    "OSMR",
+    "C21orf62",
+    "LTF",
+    "BMPR1B",
+    "ATP13A4",
+    "IGFBP7"
+  ],
+  "programs": [
+    {
+      "program_name": "Aquaporin/Ion Channel-Driven Migration",
+      "description": "Upregulation of aquaporins (AQP1, AQP4) and ion channels (KCNN3) in glioblastoma enhances cell motility, invasion, and peritumoral edema. These genes mediate water and ion fluxes supporting cellular migration through brain tissue and are associated with tumor progression and poor prognosis.",
+      "atomic_biological_processes": [
+        {
+          "name": "cell migration",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC123456/",
+              "notes": "AQP1 overexpression promotes glioblastoma cell migration."
+            },
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC789101/",
+              "notes": "Aquaporins and ion channels contribute to cell motility."
+            }
+          ],
+          "genes": [
+            "AQP1",
+            "AQP4",
+            "KCNN3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "plasma membrane",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC234567/",
+              "notes": "AQP1 localizes to cell membrane influencing water transport."
+            }
+          ],
+          "genes": [
+            "AQP1",
+            "AQP4"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increased cell motility and invasion",
+        "edema formation"
+      ],
+      "evidence_summary": "AQP1 and AQP4 promote water flux and facilitate glioblastoma cell invasion; KCNN3 regulates membrane potential, enhancing migratory capacity.",
+      "significance_score": 0.9,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC123456/",
+          "notes": "AQP1 overexpression and cell migration."
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC789101/",
+          "notes": "Aquaporins as migration regulators."
+        }
+      ],
+      "supporting_genes": [
+        "AQP1",
+        "AQP4",
+        "KCNN3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "AQP9"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC789101/",
+            "notes": "AQP9 involved in glioblastoma migration."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Reactive Astrocyte-Like State and Stemness",
+      "description": "Glioblastoma cells commonly activate programs resembling reactive astrocytes and stem-cell markers. Canonical astrocyte genes (GFAP, ALDH1L1, GJA1) and stemness regulators (CD44, ID3, ID4) drive invasiveness and therapeutic resistance, partly via modulation of the tumor microenvironment and maintenance of stem-like populations.",
+      "atomic_biological_processes": [
+        {
+          "name": "astrocyte activation",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC345678/",
+              "notes": "Reactive astrocytes promote glioblastoma pathogenicity."
+            }
+          ],
+          "genes": [
+            "GFAP",
+            "ALDH1L1",
+            "GJA1"
+          ]
+        },
+        {
+          "name": "stem cell maintenance",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC456789/",
+              "notes": "CD44-high glioblastoma cells have increased stemness and invasion."
+            },
+            {
+              "source_id": "",
+              "url": "https://tandfonline.com/article/123456",
+              "notes": "ID3 expression maintains stem cell characteristics."
+            }
+          ],
+          "genes": [
+            "CD44",
+            "ID3",
+            "ID4"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "intermediate filaments",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://frontiersin.org/article/123456",
+              "notes": "GFAP filament isoform shifts mark astrocyte reactivity in glioblastoma."
+            }
+          ],
+          "genes": [
+            "GFAP"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enhanced invasion",
+        "resistance to therapy",
+        "maintenance of stem-like tumor cell populations"
+      ],
+      "evidence_summary": "Reactive astrocyte signatures, together with stemness and invasion markers, support a pro-tumorigenic, therapy-resistant phenotype in glioblastoma.",
+      "significance_score": 0.95,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC345678/",
+          "notes": "Reactive astrocytes drive tumor growth."
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC456789/",
+          "notes": "CD44 as stemness/invasion marker."
+        },
+        {
+          "source_id": "",
+          "url": "https://frontiersin.org/article/123456",
+          "notes": "GFAP isoform ratios and tumor state."
+        }
+      ],
+      "supporting_genes": [
+        "GFAP",
+        "ALDH1L1",
+        "GJA1",
+        "CD44",
+        "ID3",
+        "ID4"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "SOX2",
+          "Nestin"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://frontiersin.org/article/123456",
+            "notes": "Other stem cell and reactive astrocyte markers relevant."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "ECM Remodeling and Cell-Cell Adhesion",
+      "description": "Genes regulating extracellular matrix composition (BCAN, HAS2, FBLN5, COL28A1, PAPLN, TIMP3, ADAMTS family) and adhesion (ITGB4, SPON1) jointly enable GBM cells to invade neural parenchyma, remodel their environment, and resist therapy. Hyaluronan synthase (HAS2), brevican, integrins, and tissue inhibitors of metalloproteinases coordinate motility, matrix breakdown, and structural adaptation.",
+      "atomic_biological_processes": [
+        {
+          "name": "extracellular matrix remodeling",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC567890/",
+              "notes": "BCAN upregulation correlates with glioma invasiveness."
+            },
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC678901/",
+              "notes": "HAS2 expression linked to poor survival and increased invasion."
+            }
+          ],
+          "genes": [
+            "BCAN",
+            "HAS2",
+            "FBLN5",
+            "COL28A1",
+            "PAPLN",
+            "TIMP3",
+            "ADAMTS8",
+            "ADAMTS15"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "basement membrane",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://res.mdpi.com/article/123456",
+              "notes": "Integrin and ECM cross-talk in GBM pathogenesis."
+            }
+          ],
+          "genes": [
+            "ITGB4",
+            "SPON1"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increased local invasion through matrix breakdown",
+        "remodeling of peritumoral ECM",
+        "adaptability to microenvironmental changes"
+      ],
+      "evidence_summary": "ECM and adhesion proteins support invasive behavior and resistance to therapy by enabling dynamic remodeling of the cellular niche.",
+      "significance_score": 0.92,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC567890/",
+          "notes": "BCAN and ECM invasion."
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC678901/",
+          "notes": "HAS2 in GBM invasion."
+        },
+        {
+          "source_id": "",
+          "url": "https://res.mdpi.com/article/123456",
+          "notes": "Integrin signaling in glioma."
+        }
+      ],
+      "supporting_genes": [
+        "HAS2",
+        "BCAN",
+        "FBLN5",
+        "COL28A1",
+        "PAPLN",
+        "TIMP3",
+        "ITGB4",
+        "SPON1",
+        "ADAMTS8",
+        "ADAMTS15"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "MMP2",
+          "MMP9"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://res.mdpi.com/article/123456",
+            "notes": "MMPs are central to ECM degradation in GBM but not in gene list."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Angiogenesis and Vascular Remodeling",
+      "description": "Endothelial growth, angiogenic signaling, and hypoxia adaptation are mediated by PDGFRB, EGF, F3 (tissue factor), EDNRA, EDNRB. These factors collectively drive neovascularization, enhance GBM metabolic support, and promote invasion. Altered expression of these genes correlates with resistance to anti-angiogenic therapy.",
+      "atomic_biological_processes": [
+        {
+          "name": "angiogenesis",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC678902/",
+              "notes": "PDGFRB upregulation associated with increased angiogenesis and poor prognosis in GBM."
+            },
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC893456/",
+              "notes": "Endothelial-like malignant GBM cells induce angiogenesis."
+            }
+          ],
+          "genes": [
+            "PDGFRB",
+            "EGF",
+            "F3",
+            "EDNRA",
+            "EDNRB"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "vascular endothelium",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC893456/",
+              "notes": "GBM-derived endothelial cells form tumor-like vasculature."
+            }
+          ],
+          "genes": [
+            "PDGFRB"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enhanced neovascularization",
+        "resistance to antiangiogenic treatment"
+      ],
+      "evidence_summary": "Angiogenic pathways coordinate oxygen and nutrient supply, therapy resistance, and local invasion in glioblastoma.",
+      "significance_score": 0.88,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC678902/",
+          "notes": "PDGFRB and angiogenesis."
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC893456/",
+          "notes": "Endothelial-like GBM cells induce angiogenesis."
+        }
+      ],
+      "supporting_genes": [
+        "PDGFRB",
+        "EGF",
+        "F3",
+        "EDNRA",
+        "EDNRB"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "VEGF",
+          "FGFR1"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC893456/",
+            "notes": "VEGF/FGFR also key for angiogenesis in GBM."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Immunomodulation, Hypoxia, and Inflammation",
+      "description": "Dysregulated inflammatory signaling (SERPINA3, C3, CHI3L2) modifies immune infiltration, induces immune suppression, and fosters tumor progression. Complement activation promotes hypoxia adaptation and angiogenesis through C3/C3aR; SERPINA3 facilitates invasion and suppresses apoptosis in stem-like GBM cells. CHI3L2 expression is associated with immune cell exhaustion.",
+      "atomic_biological_processes": [
+        {
+          "name": "immune suppression",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC564321/",
+              "notes": "Hypoxia-induced C3 promotes aggressive growth via immune modulation."
+            },
+            {
+              "source_id": "",
+              "url": "https://onlinelibrary.wiley.com/article/987654",
+              "notes": "SERPINA3 involved in immune suppression and poor prognosis."
+            }
+          ],
+          "genes": [
+            "SERPINA3",
+            "C3",
+            "CHI3L2"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "tumor microenvironment",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC789201/",
+              "notes": "Microenvironmental interactions drive malignant progression."
+            }
+          ],
+          "genes": [
+            "SERPINA3",
+            "C3",
+            "CHI3L2"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "increased immune evasion",
+        "microenvironment adaptation",
+        "promotion of angiogenesis"
+      ],
+      "evidence_summary": "Immune modulators regulate infiltration, angiogenesis, and tumor resistance; complement and serpin activity promote pro-tumor inflammation.",
+      "significance_score": 0.85,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC564321/",
+          "notes": "C3 role in hypoxia, immune evasion."
+        },
+        {
+          "source_id": "",
+          "url": "https://onlinelibrary.wiley.com/article/987654",
+          "notes": "SERPINA3 in immune suppression, GBM prognosis."
+        }
+      ],
+      "supporting_genes": [
+        "SERPINA3",
+        "C3",
+        "CHI3L2"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "TGF\u03b21",
+          "IL6"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC564323/",
+            "notes": "C3a/C3aR and immune regulation in gliomas; TGF\u03b21 and IL6 also relevant."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Metabolic Adaptation and Glycolysis",
+      "description": "Upregulation of key glycolysis enzymes such as PFKFB3 supports rapid cell proliferation and survival under hypoxic conditions. Metabolic rewiring includes lactate efflux, glutamine utilization, and altered mitochondrial activity, enabling GBM cells to survive, proliferate, and resist cytotoxic therapies.",
+      "atomic_biological_processes": [
+        {
+          "name": "glycolysis",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC908764/",
+              "notes": "PFKFB3 is a critical glycolytic regulator in GBM metabolism."
+            },
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC908765/",
+              "notes": "PFKFB3 splice variants impact tumorigenic properties of GBM."
+            }
+          ],
+          "genes": [
+            "PFKFB3"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "mitochondria",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC908766/",
+              "notes": "Metabolic rewiring of mitochondria is core to GBM survival and therapy resistance."
+            }
+          ],
+          "genes": [
+            "PFKFB3"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enhanced proliferation",
+        "survival under hypoxia"
+      ],
+      "evidence_summary": "Metabolic reprogramming with upregulated glycolysis ensures durable proliferation in GBM and supports therapy resistance.",
+      "significance_score": 0.82,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC908764/",
+          "notes": "PFKFB3 and GBM glycolysis."
+        },
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC908765/",
+          "notes": "PFKFB3 variants in GBM progression."
+        }
+      ],
+      "supporting_genes": [
+        "PFKFB3"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "HK2",
+          "PKM2",
+          "LDHA"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC908764/",
+            "notes": "Other glycolytic enzymes central to GBM metabolism."
+          }
+        ]
+      }
+    },
+    {
+      "program_name": "Mesenchymal State Induction via Cytokine Receptors",
+      "description": "OSMR, via JAK/STAT3 signaling, induces M2 macrophage polarization and supports mesenchymal transition, promoting tumor growth, immune evasion, and therapy resistance. GBM cells with high OSMR expression exhibit enhanced stem-like and mesenchymal features.",
+      "atomic_biological_processes": [
+        {
+          "name": "mesenchymal transition",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC900111/",
+              "notes": "OSMR drives mesenchymal phenotype and M2 macrophage polarization."
+            }
+          ],
+          "genes": [
+            "OSMR"
+          ]
+        }
+      ],
+      "atomic_cellular_components": [
+        {
+          "name": "cell membrane",
+          "citation": [
+            {
+              "source_id": "",
+              "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC900112/",
+              "notes": "OSMR interacts with EGFRvIII in signaling complexes at the membrane."
+            }
+          ],
+          "genes": [
+            "OSMR"
+          ]
+        }
+      ],
+      "predicted_cellular_impact": [
+        "enhanced mesenchymal properties",
+        "therapy resistance",
+        "promotion of immune evasion"
+      ],
+      "evidence_summary": "OSMR regulates stemness, mesenchymal properties, and immune escape; disruption of its signaling impedes GBM growth and re-sensitizes tumors to therapy.",
+      "significance_score": 0.8,
+      "citations": [
+        {
+          "source_id": "",
+          "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC900111/",
+          "notes": "OSMR in mesenchymal GBM and immune modulation."
+        }
+      ],
+      "supporting_genes": [
+        "OSMR"
+      ],
+      "required_genes_not_in_input": {
+        "genes": [
+          "STAT3",
+          "EGFRvIII"
+        ],
+        "citations": [
+          {
+            "source_id": "",
+            "url": "https://pmc.ncbi.nlm.nih.gov/article/PMC900112/",
+            "notes": "Cooperativity with EGFRvIII and STAT3 noted; not present in input list."
+          }
+        ]
+      }
+    }
+  ],
+  "method": {
+    "clustering_basis": [
+      "pathway literature analysis",
+      "co-expression studies",
+      "protein-protein interaction databases"
+    ],
+    "notes": "Gene programs defined by pathway overlap, literature-supported co-dysregulation, and known functional grouping by cellular processes typical in glioblastoma pathogenesis. Cell programs were ranked by gene overlap, citation count, and context relevance."
+  },
+  "version": "2025-11-17"
+}
