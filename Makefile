@@ -1,4 +1,5 @@
 PYTHON ?= .venv/bin/python
+# override PYTHON to use an active interpreter, e.g. `PYTHON=$(which python) make ...`
 SYSTEM_PYTHON ?= python3
 PROJECT ?= glioblastoma_perplexity_manual
 MPLCONFIGDIR ?= $(PWD)/.mpl-cache

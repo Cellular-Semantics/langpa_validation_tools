@@ -3,9 +3,15 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
-from .project_paths import add_project_argument, resolve_paths
+# Support running as a module (python -m src.init_project) or as a script (python src/init_project.py)
+try:
+    from .project_paths import add_project_argument, resolve_paths  # type: ignore
+except ImportError:  # pragma: no cover
+    sys.path.append(str(Path(__file__).resolve().parent.parent))
+    from src.project_paths import add_project_argument, resolve_paths
 
 TEMPLATE_MAPPING = """metamodule,annotation,original_folder,new_folder
 # edit rows as needed
