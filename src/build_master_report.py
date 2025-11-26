@@ -59,7 +59,10 @@ def main(argv=None) -> None:
     else:
         content.append("<!-- TODO: insert summary by editing reports/summary_intro.md -->")
         content.append("")
-    content.append(load_text(analysis_report).strip())
+    analysis_text = load_text(analysis_report).strip()
+    # rewrite analysis asset paths to include project subdir
+    analysis_text = analysis_text.replace("analysis/", f"analysis/{paths.project}/")
+    content.append(analysis_text)
     content.append("")
     duplicate_rows = load_duplicate_rows(data_dir)
     duplicate_folders = set(duplicate_rows["folder"].tolist())
