@@ -1,0 +1,26 @@
+annotation,folder,component_token,component_key,component_order,expanded_name,source_note
+Gliosis,0_Gliosis,Gliosis,gliosis,1,Reactive gliosis and inflammatory response,Summarizes the reactive gliosis signatures detailed in de Jong et al. 2025
+AC-gliosis-like 2,10_AC_gliosis_like_2,AC,ac,1,Astrocyte-like malignant program,Described as astrocyte lineage mimicry in de Jong et al. 2025
+AC-gliosis-like 2,10_AC_gliosis_like_2,gliosis,gliosis,2,Reactive gliosis and inflammatory response,Summarizes the reactive gliosis signatures detailed in de Jong et al. 2025
+OPC-like 1,11_OPC_like_1,OPC,opc,1,Oligodendrocyte precursor-like malignant program,Matches oligodendrocyte precursor states described in de Jong et al. 2025
+NPC-neuronal-like 3,12_NPC_neuronal_like_3,NPC,npc,1,Neural progenitor-like proliferative program,Reflects neural progenitor-like programs highlighted in de Jong et al. 2025
+NPC-neuronal-like 3,12_NPC_neuronal_like_3,neuronal,neuronal,2,Neuronal differentiation and signaling program,Summarizes neuronal signaling features in de Jong et al. 2025
+OPC-like 2,13_OPC_like_2,OPC,opc,1,Oligodendrocyte precursor-like malignant program,Matches oligodendrocyte precursor states described in de Jong et al. 2025
+OPC-AC-like 2,14_OPC_AC_like_2,OPC,opc,1,Oligodendrocyte precursor-like malignant program,Matches oligodendrocyte precursor states described in de Jong et al. 2025
+OPC-AC-like 2,14_OPC_AC_like_2,AC,ac,2,Astrocyte-like malignant program,Described as astrocyte lineage mimicry in de Jong et al. 2025
+OPC-AC-like 1,1_OPC_AC_like_1,OPC,opc,1,Oligodendrocyte precursor-like malignant program,Matches oligodendrocyte precursor states described in de Jong et al. 2025
+OPC-AC-like 1,1_OPC_AC_like_1,AC,ac,2,Astrocyte-like malignant program,Described as astrocyte lineage mimicry in de Jong et al. 2025
+NPC-neuronal-like 1,2_NPC_neuronal_like_1,NPC,npc,1,Neural progenitor-like proliferative program,Reflects neural progenitor-like programs highlighted in de Jong et al. 2025
+NPC-neuronal-like 1,2_NPC_neuronal_like_1,neuronal,neuronal,2,Neuronal differentiation and signaling program,Summarizes neuronal signaling features in de Jong et al. 2025
+NPC-neuronal-like 2,3_NPC_neuronal_like_2,NPC,npc,1,Neural progenitor-like proliferative program,Reflects neural progenitor-like programs highlighted in de Jong et al. 2025
+NPC-neuronal-like 2,3_NPC_neuronal_like_2,neuronal,neuronal,2,Neuronal differentiation and signaling program,Summarizes neuronal signaling features in de Jong et al. 2025
+AC-gliosis-like 1,4_AC_gliosis_like_1,AC,ac,1,Astrocyte-like malignant program,Described as astrocyte lineage mimicry in de Jong et al. 2025
+AC-gliosis-like 1,4_AC_gliosis_like_1,gliosis,gliosis,2,Reactive gliosis and inflammatory response,Summarizes the reactive gliosis signatures detailed in de Jong et al. 2025
+AC-neuronal-like,5_AC_neuronal_like,AC,ac,1,Astrocyte-like malignant program,Described as astrocyte lineage mimicry in de Jong et al. 2025
+AC-neuronal-like,5_AC_neuronal_like,neuronal,neuronal,2,Neuronal differentiation and signaling program,Summarizes neuronal signaling features in de Jong et al. 2025
+OPC-NPC-like,6_OPC_NPC_like,OPC,opc,1,Oligodendrocyte precursor-like malignant program,Matches oligodendrocyte precursor states described in de Jong et al. 2025
+OPC-NPC-like,6_OPC_NPC_like,NPC,npc,2,Neural progenitor-like proliferative program,Reflects neural progenitor-like programs highlighted in de Jong et al. 2025
+Proliferative,7_Proliferative,Proliferative,proliferative,1,Proliferative cycling and mitotic program,Corresponds to the proliferative trajectories reported in de Jong et al. 2025
+Gliosis-hypoxia,8_Gliosis_hypoxia,Gliosis,gliosis,1,Reactive gliosis and inflammatory response,Summarizes the reactive gliosis signatures detailed in de Jong et al. 2025
+Gliosis-hypoxia,8_Gliosis_hypoxia,hypoxia,hypoxia,2,Hypoxic and angiogenic adaptation program,Captures the hypoxia-driven angiogenic responses described in de Jong et al. 2025
+Proliferative 2,9_Proliferative_2,Proliferative,proliferative,1,Proliferative cycling and mitotic program,Corresponds to the proliferative trajectories reported in de Jong et al. 2025

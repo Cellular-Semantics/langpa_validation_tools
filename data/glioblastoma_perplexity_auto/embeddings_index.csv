@@ -1,0 +1,225 @@
+folder,run_index,program_index,program_name
+0_Gliosis,1,0,EMT-Driven Invasive Dispersal
+0_Gliosis,1,1,Tryptophan-Pathway Immune Evasion
+0_Gliosis,1,2,IL-6/IL-1β-NF-κB/STAT3 Signaling Axis
+0_Gliosis,1,3,VEGFA-Driven Tumor Angiogenesis
+0_Gliosis,1,4,MET-Driven Stemness and Invasiveness
+0_Gliosis,1,5,AXL-Mediated Mesenchymal Programming
+0_Gliosis,1,6,Apoptosis Evasion and Drug Resistance
+0_Gliosis,1,7,Innate Immune Pattern Recognition
+0_Gliosis,1,8,Extracellular Matrix Composition and Immunomodulation
+0_Gliosis,1,9,Stemness Maintenance and Self-Renewal
+0_Gliosis,1,10,Immune Checkpoint and T Cell Suppression
+0_Gliosis,1,11,mRNA-Based Mesenchymal Signaling
+0_Gliosis,2,0,EMT-Driven Invasion Program
+0_Gliosis,2,1,Pro-Inflammatory Cytokine Signaling
+0_Gliosis,2,2,Angiogenesis and Vascular Signaling
+0_Gliosis,2,3,Immune Evasion and Checkpoint Activation
+0_Gliosis,2,4,Extracellular Matrix Proteolysis
+0_Gliosis,2,5,Glioma Stem Cell Maintenance
+0_Gliosis,2,6,Hypoxia Adaptation and Response
+0_Gliosis,2,7,Macrophage/Microglia Reprogramming
+0_Gliosis,2,8,Apoptosis Resistance and Survival Signaling
+0_Gliosis,2,9,Growth Factor and Receptor Signaling
+0_Gliosis,2,10,Transcriptional Master Regulation
+0_Gliosis,2,11,Inflammatory Lipid Mediator Signaling
+0_Gliosis,2,12,Cellularity and Structural Organization
+0_Gliosis,2,13,Metabolic Adaptation and Nutrient Sensing
+0_Gliosis,2,14,DNA Damage Response and Genomic Stability
+1_OPC_AC_like_1,1,0,CD44-mediated Invasive Adhesion
+1_OPC_AC_like_1,1,1,Integrin-mediated Migration and EMT
+1_OPC_AC_like_1,1,2,N-cadherin-dependent Context-specific Migration
+1_OPC_AC_like_1,1,3,Extracellular Matrix Remodeling
+1_OPC_AC_like_1,1,4,Metabolic Reprogramming and Redox Homeostasis
+1_OPC_AC_like_1,1,5,Immune Evasion and Checkpoint Regulation
+1_OPC_AC_like_1,1,6,Ganglioside and Glycosylation-based Signaling
+1_OPC_AC_like_1,1,7,Neural-like Developmental Signaling
+1_OPC_AC_like_1,1,8,GFAP Isoform-dependent Malignancy
+1_OPC_AC_like_1,1,9,Long Non-Coding RNA Regulatory Networks
+1_OPC_AC_like_1,1,10,PI3K/AKT Signaling Modulation
+1_OPC_AC_like_1,1,11,Calcium-dependent Cell Adhesion
+1_OPC_AC_like_1,1,12,Transcriptional Co-regulator Activity
+1_OPC_AC_like_1,1,13,Heparan Sulfate Proteoglycan Signaling
+1_OPC_AC_like_1,1,14,Histamine Receptor Signaling
+2_NPC_neuronal_like_1,1,0,Ciliary Dysfunction and Motility Defects
+2_NPC_neuronal_like_1,1,1,IL-6-Mediated Immunosuppression
+2_NPC_neuronal_like_1,1,2,Tumor-Suppressive Chromatin Remodeling
+2_NPC_neuronal_like_1,1,3,Extracellular Matrix Remodeling and Invasion
+2_NPC_neuronal_like_1,1,4,Metabolic Reprogramming and Energy Homeostasis
+2_NPC_neuronal_like_1,1,5,Neurotransmitter Signaling and Synaptic Communication
+2_NPC_neuronal_like_1,1,6,BMP-Mediated Developmental Signaling
+3_NPC_neuronal_like_2,1,0,Extracellular Matrix Remodeling and Invasion
+3_NPC_neuronal_like_2,1,1,Cell Adhesion and Synaptic-Like Junctions
+3_NPC_neuronal_like_2,1,2,Growth Factor Receptor Signaling
+3_NPC_neuronal_like_2,1,3,Ion Channel-Mediated Cellular Signaling
+3_NPC_neuronal_like_2,1,4,Axon Guidance and Repulsive Signaling
+3_NPC_neuronal_like_2,1,5,RNA Binding and Post-transcriptional Regulation
+3_NPC_neuronal_like_2,1,6,Transcriptional Control of Neural Differentiation
+3_NPC_neuronal_like_2,1,7,Glioma Stem Cell Maintenance and Stemness
+3_NPC_neuronal_like_2,1,8,Spatial Gene Expression Heterogeneity
+3_NPC_neuronal_like_2,1,9,Metabolic Reprogramming and Lipid Synthesis
+3_NPC_neuronal_like_2,2,0,Extracellular Matrix Remodeling
+3_NPC_neuronal_like_2,2,1,Cadherin-Mediated Cell Adhesion
+3_NPC_neuronal_like_2,2,2,Calcium Signaling Through Ion Channels
+3_NPC_neuronal_like_2,2,3,Synaptic Development and Adhesion
+3_NPC_neuronal_like_2,2,4,Receptor Tyrosine Kinase Signaling
+3_NPC_neuronal_like_2,2,5,Transcriptional Repression of Neural Differentiation
+3_NPC_neuronal_like_2,2,6,Neuropeptide and Neurosecretion Pathways
+3_NPC_neuronal_like_2,2,7,Cyclic Nucleotide Signaling and Cell Motility
+3_NPC_neuronal_like_2,2,8,RNA-Binding and Post-Transcriptional Control
+4_AC_gliosis_like_1,1,0,Osmotic Cell Volume Regulation and Migration
+4_AC_gliosis_like_1,1,1,Extracellular Matrix Proteolysis and Invasiveness
+4_AC_gliosis_like_1,1,2,Glioma Stem Cell Identity and State Plasticity
+4_AC_gliosis_like_1,1,3,Endothelin Signaling and Proneural-Mesenchymal Transition
+4_AC_gliosis_like_1,1,4,Glycolytic Metabolism and Warburg Effect
+4_AC_gliosis_like_1,1,5,Complement Cascade Activation and Immune Evasion
+4_AC_gliosis_like_1,1,6,Cell Polarity and Junctional Adhesion
+4_AC_gliosis_like_1,1,7,Renin-Angiotensin System and Vascular Signaling
+4_AC_gliosis_like_1,1,8,Pericyte-Mediated Tumor Angiogenesis and Vascular Remodeling
+4_AC_gliosis_like_1,1,9,Epigenetic and Transcriptional Heterogeneity
+4_AC_gliosis_like_1,1,10,EGF Receptor Signaling and Metastatic Cascade
+4_AC_gliosis_like_1,1,11,Innate Immune Activation and Interferon Response
+4_AC_gliosis_like_1,2,0,Aquaporin-mediated osmotic water transport and migration
+4_AC_gliosis_like_1,2,1,Aerobic glycolysis-dependent nutrient acquisition
+4_AC_gliosis_like_1,2,2,Extracellular matrix remodeling and invasive phenotype
+4_AC_gliosis_like_1,2,3,Complement system activation and immune modulation
+4_AC_gliosis_like_1,2,4,Glioma stem cell self-renewal and maintenance
+4_AC_gliosis_like_1,2,5,Tumor-associated astrocyte and glial cell reprogramming
+4_AC_gliosis_like_1,2,6,Gap junction communication and chemoresistance
+4_AC_gliosis_like_1,2,7,Pericyte recruitment and vascular stability
+4_AC_gliosis_like_1,2,8,Immune cell infiltration and M2 macrophage polarization
+4_AC_gliosis_like_1,2,9,Metabolic reprogramming and hypoxia adaptation
+5_AC_neuronal_like,1,0,Immune Checkpoint Signaling
+5_AC_neuronal_like,1,1,Receptor Tyrosine Kinase Signaling
+5_AC_neuronal_like,1,2,Synaptic Adhesion and Neuronal Communication
+5_AC_neuronal_like,1,3,Ion Channel Dysregulation and Excitotoxicity
+5_AC_neuronal_like,1,4,Extracellular Matrix Remodeling and Invasion
+5_AC_neuronal_like,1,5,Angiogenesis and Vascular Development
+5_AC_neuronal_like,1,6,Wnt/β-Catenin Self-Renewal Signaling
+5_AC_neuronal_like,1,7,Epithelial-Mesenchymal Transition and Invasion
+5_AC_neuronal_like,1,8,Hypoxia-Responsive Transcription
+5_AC_neuronal_like,1,9,Lipid Metabolism and Signaling
+5_AC_neuronal_like,1,10,Tumor-Associated Macrophage Polarization
+5_AC_neuronal_like,1,11,GTPase Activation and Cytoskeletal Remodeling
+5_AC_neuronal_like,2,0,Calcium-mediated cell migration
+5_AC_neuronal_like,2,1,Extracellular matrix degradation and invasion
+5_AC_neuronal_like,2,2,Cell adhesion and synaptic protein scaffolding
+5_AC_neuronal_like,2,3,Tumor-associated macrophage polarization and immune suppression
+5_AC_neuronal_like,2,4,Wnt/β-catenin pathway and stemness maintenance
+5_AC_neuronal_like,2,5,Cholinergic immune modulation
+5_AC_neuronal_like,2,6,DOCK protein-mediated immune synapse formation
+5_AC_neuronal_like,2,7,Long non-coding RNA regulation of GBM processes
+5_AC_neuronal_like,2,8,Neuron-glioma synaptic plasticity
+5_AC_neuronal_like,2,9,Scavenger receptor and pattern recognition signaling
+8_Gliosis_hypoxia,1,0,Hypoxia-Driven Angiogenesis
+8_Gliosis_hypoxia,1,1,Epithelial-Mesenchymal Transition and Invasion
+8_Gliosis_hypoxia,1,2,Aberrant Receptor Tyrosine Kinase Signaling
+8_Gliosis_hypoxia,1,3,Inflammatory Signaling and Immune Evasion
+8_Gliosis_hypoxia,1,4,Autophagy and Cellular Stress Response
+8_Gliosis_hypoxia,1,5,Integrin-Mediated Cell Adhesion and Survival
+8_Gliosis_hypoxia,1,6,Metabolic Enzyme Dysregulation
+8_Gliosis_hypoxia,1,7,Long Non-Coding RNA Regulatory Networks
+8_Gliosis_hypoxia,1,8,Transcriptional Control of Differentiation and Stemness
+8_Gliosis_hypoxia,1,9,Redox Homeostasis and Oxidative Stress Response
+8_Gliosis_hypoxia,1,10,Extracellular Matrix Composition and Immune Targeting
+9_Proliferative_2,2,0,DNA Replication Licensing and Origin Recognition
+9_Proliferative_2,2,1,DNA Polymerase Alpha-Primase Priming
+9_Proliferative_2,2,2,Leading and Lagging Strand DNA Synthesis
+9_Proliferative_2,2,3,Nucleotide Metabolism and dNTP Synthesis
+9_Proliferative_2,2,4,DNA Damage Response and Cell Cycle Checkpoints
+9_Proliferative_2,2,5,Homologous Recombination DNA Repair
+9_Proliferative_2,2,6,Fanconi Anemia Pathway and Interstrand Crosslink Repair
+9_Proliferative_2,2,7,Trans-Lesion Synthesis and Post-Replication Repair
+9_Proliferative_2,2,8,G1/S Cell Cycle Checkpoint and E2F-Dependent Proliferation
+9_Proliferative_2,2,9,FOXM1-ADAM17 Feedback Loop and Epithelial-Mesenchymal Transition
+9_Proliferative_2,2,10,Centrosome Organization and Centriole Duplication
+9_Proliferative_2,2,11,Centromeric and Kinetochore Function
+9_Proliferative_2,2,12,Chromatin Remodeling and Histone Chaperones
+9_Proliferative_2,2,13,Sister Chromatid Cohesion and Separation
+9_Proliferative_2,2,14,Aurora Kinase B and Mitotic Checkpoint Regulation
+9_Proliferative_2,2,15,Epigenetic Modifier Targeting and Cell Cycle Inhibition
+9_Proliferative_2,2,16,Mitotic Spindle Assembly and Checkpoint Control
+9_Proliferative_2,2,17,FAM111B-PI3K/AKT Pathway and Glioma Malignancy
+9_Proliferative_2,2,18,Antigen Presentation and Immunotherapy Response
+10_AC_gliosis_like_2,1,0,Extracellular Matrix Remodeling and Invasion
+10_AC_gliosis_like_2,1,1,RTK/MAPK Signaling Inhibition and Feedback
+10_AC_gliosis_like_2,1,2,Wnt/β-catenin Pathway Activation
+10_AC_gliosis_like_2,1,3,Angiogenesis and Vascular Remodeling
+10_AC_gliosis_like_2,1,4,Glioma Stem Cell Maintenance and Self-Renewal
+10_AC_gliosis_like_2,1,5,Calcium Signaling and Ion Homeostasis
+10_AC_gliosis_like_2,1,6,Mesenchymal Differentiation and Epithelial-Mesenchymal Transition
+10_AC_gliosis_like_2,1,7,Hypoxia Response and Metabolic Adaptation
+10_AC_gliosis_like_2,1,8,Immune Modulation and Inflammatory Signaling
+10_AC_gliosis_like_2,2,0,Epithelial-Mesenchymal Transition
+10_AC_gliosis_like_2,2,1,Calcium-Mediated Proliferation and Survival
+10_AC_gliosis_like_2,2,2,Glioma Stem Cell Maintenance
+10_AC_gliosis_like_2,2,3,Integrin-Mediated Cell Invasion
+10_AC_gliosis_like_2,2,4,Extracellular Matrix Remodeling
+10_AC_gliosis_like_2,2,5,Receptor Tyrosine Kinase Signaling
+10_AC_gliosis_like_2,2,6,Immune Microenvironment Modulation
+10_AC_gliosis_like_2,2,7,Cuproptosis and Metabolic Reprogramming
+10_AC_gliosis_like_2,2,8,Tetraspanin-Mediated Cell Adhesion
+10_AC_gliosis_like_2,2,9,Transcriptional Regulation of Differentiation
+11_OPC_like_1,1,0,Oligodendrocyte differentiation and myelin formation
+11_OPC_like_1,1,1,Notch signaling and neural stem cell maintenance
+11_OPC_like_1,1,2,Synaptic adhesion and neuronal crosstalk
+11_OPC_like_1,1,3,Ion homeostasis and osmotic cell volume regulation
+11_OPC_like_1,1,4,Cell cycle progression and proliferation
+11_OPC_like_1,1,5,Extracellular matrix remodeling and vasculature assembly
+11_OPC_like_1,1,6,Integrin-mediated cell adhesion and migration
+11_OPC_like_1,1,7,Lipid metabolism and myelin-derived nutrient scavenging
+11_OPC_like_1,1,8,Growth factor receptor signaling networks
+11_OPC_like_1,1,9,Lin28-let-7 axis regulating stemness and differentiation
+11_OPC_like_1,1,10,Developmental transcriptional regulation and cell fate specification
+11_OPC_like_1,2,0,Extracellular Matrix Remodeling and Cell Adhesion
+11_OPC_like_1,2,1,Ion Channel-Mediated Cell Motility
+11_OPC_like_1,2,2,Oligodendrocyte Lineage Progenitor Identity
+11_OPC_like_1,2,3,Notch Signaling and Stem Cell Maintenance
+11_OPC_like_1,2,4,Lipid Metabolism and Sphingolipid Remodeling
+11_OPC_like_1,2,5,Cell Migration and Invasion Machinery
+11_OPC_like_1,2,6,Growth Factor Receptor Signaling and Proliferation
+11_OPC_like_1,2,7,Mesenchymal Transition and Invasion Program
+11_OPC_like_1,2,8,Mitochondrial Dynamics and Cellular Metabolism
+11_OPC_like_1,2,9,Proteolytic Processing and Proteasomal Activity
+11_OPC_like_1,2,10,Signal Transduction Modulation and cAMP/Calcium Signaling
+11_OPC_like_1,2,11,Endosomal Recycling and Receptor Trafficking
+12_NPC_neuronal_like_3,1,0,Terminal Neuronal Differentiation Blockade
+12_NPC_neuronal_like_3,1,1,GABAergic Synaptic Tumor Promotion
+12_NPC_neuronal_like_3,1,2,Axon Guidance & Cell Adhesion Dysregulation
+12_NPC_neuronal_like_3,1,3,Vascular Growth Factor Signaling & Angiogenesis
+12_NPC_neuronal_like_3,1,4,Ion Channel & Electrolyte Homeostasis Dysregulation
+12_NPC_neuronal_like_3,1,5,Synaptic Plasticity & Dendritic Maturation
+12_NPC_neuronal_like_3,1,6,Axonal Maintenance & Cytoskeletal Integrity
+12_NPC_neuronal_like_3,1,7,Apoptosis Resistance & Cell Survival Pathways
+12_NPC_neuronal_like_3,1,8,Retinoic Acid & MAPK-CaMKII Signaling Integration
+12_NPC_neuronal_like_3,1,9,Metabolic Reprogramming & Warburg Effect Activation
+12_NPC_neuronal_like_3,1,10,Extracellular Matrix Remodeling & Cell Migration
+12_NPC_neuronal_like_3,1,11,G-Protein-Coupled Receptor & Neuroendocrine Signaling
+13_OPC_like_2,1,0,Oligodendroglial Differentiation Blockade
+13_OPC_like_2,1,1,Neural Stem Cell State Plasticity
+13_OPC_like_2,1,2,Matrix Metalloproteinase-Driven ECM Degradation
+13_OPC_like_2,1,3,Cadherins and Adhesion-Regulated Invasion
+13_OPC_like_2,1,4,Potassium and Calcium Channel-Driven Invasiveness
+13_OPC_like_2,1,5,Lipid and Sterol Metabolism Adaptation
+13_OPC_like_2,1,6,Immune Checkpoint and T-Cell Suppression
+13_OPC_like_2,1,7,Notch Pathway-Driven Stemness
+13_OPC_like_2,1,8,Semaphorin-Neuropilin Axis
+13_OPC_like_2,1,9,Homologous Recombination and DNA Repair
+13_OPC_like_2,1,10,Transcriptional Regulation of Neural Differentiation
+13_OPC_like_2,1,11,Thyroid Hormone Activation and H2S Metabolism
+13_OPC_like_2,2,0,Oligodendrocyte Differentiation and Myelination
+13_OPC_like_2,2,1,White Matter Invasion and Demyelination Response
+13_OPC_like_2,2,2,GPR17-Mediated OPC Arrest and Tumor Suppression
+13_OPC_like_2,2,3,Neuron-Glioma Synaptic Plasticity and Growth Promotion
+13_OPC_like_2,2,4,Cell Adhesion and Invasion Suppression
+13_OPC_like_2,2,5,Semaphorin-Plexin Axon Guidance and Angiogenesis Regulation
+13_OPC_like_2,2,6,Thrombospondin-1 Immunosuppression and Vascular Regulation
+13_OPC_like_2,2,7,Immune Checkpoint and Phagocytosis Regulation
+13_OPC_like_2,2,8,Lipid Transport and Myelin Lipid Homeostasis
+13_OPC_like_2,2,9,Kinesin-Mediated Intracellular Transport and Neuronal Development
+13_OPC_like_2,2,10,Notch Signaling and Intratumoral Heterogeneity
+13_OPC_like_2,2,11,BMP Signaling and Tumor Angiogenesis
+13_OPC_like_2,2,12,Glutamate Excitotoxicity and Neuronal Damage
+13_OPC_like_2,2,13,Transcriptional Regulation of Oligodendroglial Programs
+13_OPC_like_2,2,14,Neuronal Activity-Dependent Dendritic Plasticity in GBM
+13_OPC_like_2,2,15,Tumor Microenvironment Remodeling and Hypoxia Response
