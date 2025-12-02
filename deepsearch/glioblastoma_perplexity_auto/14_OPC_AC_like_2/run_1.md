@@ -352,7 +352,9 @@ I continue to map out the complex molecular landscape of glioblastoma, identifyi
     "NTN4",
     "SEZ6L",
     "ELMO1",
-    "ATP10B
+    "ATP10B"
+  ]
+}
 
 ## Citations
 
