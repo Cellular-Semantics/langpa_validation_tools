@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import sys
 from pathlib import Path
 
 os.environ.setdefault("MPLCONFIGDIR", str(Path(__file__).resolve().parent.parent / ".mpl-cache"))
@@ -28,22 +29,47 @@ def jaccard(a, b):
     return (overlap / union if union else 0.0), overlap
 
 
-def render_plot(folder_name, annotation, run1, run2, output_dir: Path):
+def render_plot(
+    folder_name,
+    annotation,
+    run1,
+    run2,
+    output_dir: Path,
+    match_map: dict[tuple[int, int], float],
+) -> bool:
     row_ids = [f"R1-{i+1}" for i in range(len(run1))]
     col_ids = [f"R2-{j+1}" for j in range(len(run2))]
     x_vals = []
     y_vals = []
     overlaps = []
-    jac_vals = []
+    sim_vals = []
+    missing_pairs = 0
     for i, r in run1.iterrows():
         for j, c in run2.iterrows():
+            key = (int(r["program_index"]), int(c["program_index"]))
+            sim_val = match_map.get(key)
+            if sim_val is None:
+                missing_pairs += 1
+                continue
             jac, overlap = jaccard(r["genes"], c["genes"])
             if overlap == 0:
                 continue
             x_vals.append(j)
             y_vals.append(i)
             overlaps.append(overlap)
-            jac_vals.append(jac)
+            sim_vals.append(sim_val)
+
+    if not x_vals:
+        print(
+            f"Warning: no valid combined similarity pairs for {folder_name}; skipping bubble plot.",
+            file=sys.stderr,
+        )
+        return False
+    if missing_pairs:
+        print(
+            f"Warning: missing {missing_pairs} combined similarity pairs for {folder_name}; plotting available matches only.",
+            file=sys.stderr,
+        )
 
     width = 1.6 * max(4, len(run2)) + 4
     height = 1.6 * max(4, len(run1))
@@ -55,7 +81,7 @@ def render_plot(folder_name, annotation, run1, run2, output_dir: Path):
         x_vals,
         y_vals,
         s=[max(60, o * 80) for o in overlaps],
-        c=jac_vals,
+        c=sim_vals,
         cmap="viridis",
         vmin=0,
         vmax=1,
@@ -77,12 +103,12 @@ def render_plot(folder_name, annotation, run1, run2, output_dir: Path):
     ax.set_xlabel("Run 2 programs")
     ax.set_ylabel("Run 1 programs")
     ax.set_title(
-        f"{annotation} ({folder_name})\nBubble size = overlap gene count, color = Jaccard overlap",
+        f"{annotation} ({folder_name})\nBubble size = overlap gene count, color = Combined similarity",
         fontsize=12,
     )
     ax.grid(True, which="both", linestyle="--", linewidth=0.5, alpha=0.5)
     cbar = fig.colorbar(scatter, ax=ax, fraction=0.046, pad=0.04)
-    cbar.set_label("Jaccard overlap")
+    cbar.set_label("Combined similarity")
 
     legend_ax.set_xlim(0, 1)
     legend_ax.set_ylim(0, 1)
@@ -118,6 +144,17 @@ def generate_heatmaps(project: str) -> None:
 
     programs = pd.read_csv(data_dir / "deepsearch_programs.csv")
     programs["genes"] = programs["supporting_genes"].apply(json.loads)
+    match_map_all = {}
+    matches_path = data_dir / "deepsearch_program_matches.csv"
+    if matches_path.exists() and matches_path.stat().st_size > 0:
+        try:
+            match_df = pd.read_csv(matches_path)
+            for row in match_df.itertuples(index=False):
+                key = (row.folder, int(row.program_a_index), int(row.program_b_index))
+                match_map_all[key] = float(row.combined_similarity)
+        except Exception as exc:  # noqa: BLE001
+            print(f"Warning: failed to load match map from {matches_path}: {exc}")
+            match_map_all = {}
     duplicates_path = data_dir / "deepsearch_duplicate_runs.csv"
     duplicate_folders: set[str] = set()
     if duplicates_path.exists():
@@ -137,7 +174,18 @@ def generate_heatmaps(project: str) -> None:
             fig.savefig(output_dir / f"{folder_name}_bubble.png", dpi=200)
             plt.close(fig)
             continue
-        render_plot(folder_name, annotation, run1, run2, output_dir)
+        folder_match_map = {
+            (int(r.program_a_index), int(r.program_b_index)): float(r.combined_similarity)
+            for r in match_df[match_df["folder"] == folder_name].itertuples(index=False)
+        } if "match_df" in locals() else {}
+        if not folder_match_map:
+            print(
+                f"Warning: no combined similarity entries for {folder_name}; skipping bubble plot.",
+                file=sys.stderr,
+            )
+            continue
+        if not render_plot(folder_name, annotation, run1, run2, output_dir, folder_match_map):
+            continue
 
 
 def main() -> None:

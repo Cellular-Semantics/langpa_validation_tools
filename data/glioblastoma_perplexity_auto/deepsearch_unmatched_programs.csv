@@ -1,0 +1,85 @@
+run_id,program_index,program_name,folder,metamodule,annotation
+0_Gliosis_run2,11,Inflammatory Lipid Mediator Signaling,0_Gliosis,0,Gliosis
+0_Gliosis_run2,12,Cellularity and Structural Organization,0_Gliosis,0,Gliosis
+0_Gliosis_run2,14,DNA Damage Response and Genomic Stability,0_Gliosis,0,Gliosis
+1_OPC_AC_like_1_run1,0,CD44-mediated Invasive Adhesion,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,1,Integrin-mediated Migration and EMT,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,2,N-cadherin-dependent Context-specific Migration,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,3,Extracellular Matrix Remodeling,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,4,Metabolic Reprogramming and Redox Homeostasis,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,5,Immune Evasion and Checkpoint Regulation,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,6,Ganglioside and Glycosylation-based Signaling,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,7,Neural-like Developmental Signaling,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,8,GFAP Isoform-dependent Malignancy,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,9,Long Non-Coding RNA Regulatory Networks,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,10,PI3K/AKT Signaling Modulation,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,11,Calcium-dependent Cell Adhesion,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,12,Transcriptional Co-regulator Activity,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,13,Heparan Sulfate Proteoglycan Signaling,1_OPC_AC_like_1,1,OPC-AC-like 1
+1_OPC_AC_like_1_run1,14,Histamine Receptor Signaling,1_OPC_AC_like_1,1,OPC-AC-like 1
+2_NPC_neuronal_like_1_run1,0,Ciliary Dysfunction and Motility Defects,2_NPC_neuronal_like_1,2,NPC-neuronal-like 1
+2_NPC_neuronal_like_1_run1,1,IL-6-Mediated Immunosuppression,2_NPC_neuronal_like_1,2,NPC-neuronal-like 1
+2_NPC_neuronal_like_1_run1,2,Tumor-Suppressive Chromatin Remodeling,2_NPC_neuronal_like_1,2,NPC-neuronal-like 1
+2_NPC_neuronal_like_1_run1,3,Extracellular Matrix Remodeling and Invasion,2_NPC_neuronal_like_1,2,NPC-neuronal-like 1
+2_NPC_neuronal_like_1_run1,4,Metabolic Reprogramming and Energy Homeostasis,2_NPC_neuronal_like_1,2,NPC-neuronal-like 1
+2_NPC_neuronal_like_1_run1,5,Neurotransmitter Signaling and Synaptic Communication,2_NPC_neuronal_like_1,2,NPC-neuronal-like 1
+2_NPC_neuronal_like_1_run1,6,BMP-Mediated Developmental Signaling,2_NPC_neuronal_like_1,2,NPC-neuronal-like 1
+3_NPC_neuronal_like_2_run1,8,Spatial Gene Expression Heterogeneity,3_NPC_neuronal_like_2,3,NPC-neuronal-like 2
+4_AC_gliosis_like_1_run1,7,Renin-Angiotensin System and Vascular Signaling,4_AC_gliosis_like_1,4,AC-gliosis-like 1
+4_AC_gliosis_like_1_run1,9,Epigenetic and Transcriptional Heterogeneity,4_AC_gliosis_like_1,4,AC-gliosis-like 1
+5_AC_neuronal_like_run1,5,Angiogenesis and Vascular Development,5_AC_neuronal_like,5,AC-neuronal-like
+5_AC_neuronal_like_run1,7,Epithelial-Mesenchymal Transition and Invasion,5_AC_neuronal_like,5,AC-neuronal-like
+5_AC_neuronal_like_run1,9,Lipid Metabolism and Signaling,5_AC_neuronal_like,5,AC-neuronal-like
+5_AC_neuronal_like_run2,5,Cholinergic immune modulation,5_AC_neuronal_like,5,AC-neuronal-like
+8_Gliosis_hypoxia_run1,0,Hypoxia-Driven Angiogenesis,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,1,Epithelial-Mesenchymal Transition and Invasion,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,2,Aberrant Receptor Tyrosine Kinase Signaling,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,3,Inflammatory Signaling and Immune Evasion,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,4,Autophagy and Cellular Stress Response,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,5,Integrin-Mediated Cell Adhesion and Survival,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,6,Metabolic Enzyme Dysregulation,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,7,Long Non-Coding RNA Regulatory Networks,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,8,Transcriptional Control of Differentiation and Stemness,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,9,Redox Homeostasis and Oxidative Stress Response,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+8_Gliosis_hypoxia_run1,10,Extracellular Matrix Composition and Immune Targeting,8_Gliosis_hypoxia,8,Gliosis-hypoxia
+9_Proliferative_2_run2,0,DNA Replication Licensing and Origin Recognition,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,1,DNA Polymerase Alpha-Primase Priming,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,2,Leading and Lagging Strand DNA Synthesis,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,3,Nucleotide Metabolism and dNTP Synthesis,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,4,DNA Damage Response and Cell Cycle Checkpoints,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,5,Homologous Recombination DNA Repair,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,6,Fanconi Anemia Pathway and Interstrand Crosslink Repair,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,7,Trans-Lesion Synthesis and Post-Replication Repair,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,8,G1/S Cell Cycle Checkpoint and E2F-Dependent Proliferation,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,9,FOXM1-ADAM17 Feedback Loop and Epithelial-Mesenchymal Transition,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,10,Centrosome Organization and Centriole Duplication,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,11,Centromeric and Kinetochore Function,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,12,Chromatin Remodeling and Histone Chaperones,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,13,Sister Chromatid Cohesion and Separation,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,14,Aurora Kinase B and Mitotic Checkpoint Regulation,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,15,Epigenetic Modifier Targeting and Cell Cycle Inhibition,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,16,Mitotic Spindle Assembly and Checkpoint Control,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,17,FAM111B-PI3K/AKT Pathway and Glioma Malignancy,9_Proliferative_2,9,Proliferative 2
+9_Proliferative_2_run2,18,Antigen Presentation and Immunotherapy Response,9_Proliferative_2,9,Proliferative 2
+10_AC_gliosis_like_2_run2,8,Tetraspanin-Mediated Cell Adhesion,10_AC_gliosis_like_2,10,AC-gliosis-like 2
+11_OPC_like_1_run1,9,Lin28-let-7 axis regulating stemness and differentiation,11_OPC_like_1,11,OPC-like 1
+11_OPC_like_1_run2,9,Proteolytic Processing and Proteasomal Activity,11_OPC_like_1,11,OPC-like 1
+11_OPC_like_1_run2,11,Endosomal Recycling and Receptor Trafficking,11_OPC_like_1,11,OPC-like 1
+12_NPC_neuronal_like_3_run1,0,Terminal Neuronal Differentiation Blockade,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,1,GABAergic Synaptic Tumor Promotion,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,2,Axon Guidance & Cell Adhesion Dysregulation,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,3,Vascular Growth Factor Signaling & Angiogenesis,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,4,Ion Channel & Electrolyte Homeostasis Dysregulation,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,5,Synaptic Plasticity & Dendritic Maturation,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,6,Axonal Maintenance & Cytoskeletal Integrity,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,7,Apoptosis Resistance & Cell Survival Pathways,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,8,Retinoic Acid & MAPK-CaMKII Signaling Integration,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,9,Metabolic Reprogramming & Warburg Effect Activation,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,10,Extracellular Matrix Remodeling & Cell Migration,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+12_NPC_neuronal_like_3_run1,11,G-Protein-Coupled Receptor & Neuroendocrine Signaling,12_NPC_neuronal_like_3,12,NPC-neuronal-like 3
+13_OPC_like_2_run1,9,Homologous Recombination and DNA Repair,13_OPC_like_2,13,OPC-like 2
+13_OPC_like_2_run2,2,GPR17-Mediated OPC Arrest and Tumor Suppression,13_OPC_like_2,13,OPC-like 2
+13_OPC_like_2_run2,6,Thrombospondin-1 Immunosuppression and Vascular Regulation,13_OPC_like_2,13,OPC-like 2
+13_OPC_like_2_run2,9,Kinesin-Mediated Intracellular Transport and Neuronal Development,13_OPC_like_2,13,OPC-like 2
+13_OPC_like_2_run2,12,Glutamate Excitotoxicity and Neuronal Damage,13_OPC_like_2,13,OPC-like 2
+13_OPC_like_2_run2,14,Neuronal Activity-Dependent Dendritic Plasticity in GBM,13_OPC_like_2,13,OPC-like 2

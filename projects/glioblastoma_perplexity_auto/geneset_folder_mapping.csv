@@ -1,0 +1,16 @@
+metamodule,annotation,original_folder,new_folder
+0,Gliosis,geneset_1,0_Gliosis
+1,OPC-AC-like 1,geneset_2,1_OPC_AC_like_1
+2,NPC-neuronal-like 1,geneset_3,2_NPC_neuronal_like_1
+3,NPC-neuronal-like 2,geneset_4,3_NPC_neuronal_like_2
+4,AC-gliosis-like 1,geneset_5,4_AC_gliosis_like_1
+5,AC-neuronal-like,geneset_6,5_AC_neuronal_like
+6,OPC-NPC-like,geneset_7,6_OPC_NPC_like
+7,Proliferative,geneset_8,7_Proliferative
+8,Gliosis-hypoxia,geneset_9,8_Gliosis_hypoxia
+9,Proliferative 2,geneset_10,9_Proliferative_2
+10,AC-gliosis-like 2,geneset_11,10_AC_gliosis_like_2
+11,OPC-like 1,geneset_12,11_OPC_like_1
+12,NPC-neuronal-like 3,geneset_13,12_NPC_neuronal_like_3
+13,OPC-like 2,geneset_14,13_OPC_like_2
+14,OPC-AC-like 2,geneset_15,14_OPC_AC_like_2

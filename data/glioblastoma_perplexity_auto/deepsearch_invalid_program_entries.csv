@@ -1,0 +1,28 @@
+run_id,metamodule,annotation,folder,run_index,program_index,raw_entry
+1_OPC_AC_like_1_run2,1,OPC-AC-like 1,1_OPC_AC_like_1,2,0,type
+1_OPC_AC_like_1_run2,1,OPC-AC-like 1,1_OPC_AC_like_1,2,1,minItems
+1_OPC_AC_like_1_run2,1,OPC-AC-like 1,1_OPC_AC_like_1,2,2,items
+2_NPC_neuronal_like_1_run2,2,NPC-neuronal-like 1,2_NPC_neuronal_like_1,2,0,type
+2_NPC_neuronal_like_1_run2,2,NPC-neuronal-like 1,2_NPC_neuronal_like_1,2,1,minItems
+2_NPC_neuronal_like_1_run2,2,NPC-neuronal-like 1,2_NPC_neuronal_like_1,2,2,items
+6_OPC_NPC_like_run1,6,OPC-NPC-like,6_OPC_NPC_like,1,0,type
+6_OPC_NPC_like_run1,6,OPC-NPC-like,6_OPC_NPC_like,1,1,minItems
+6_OPC_NPC_like_run1,6,OPC-NPC-like,6_OPC_NPC_like,1,2,items
+6_OPC_NPC_like_run2,6,OPC-NPC-like,6_OPC_NPC_like,2,0,type
+6_OPC_NPC_like_run2,6,OPC-NPC-like,6_OPC_NPC_like,2,1,minItems
+6_OPC_NPC_like_run2,6,OPC-NPC-like,6_OPC_NPC_like,2,2,items
+7_Proliferative_run1,7,Proliferative,7_Proliferative,1,0,type
+7_Proliferative_run1,7,Proliferative,7_Proliferative,1,1,minItems
+7_Proliferative_run1,7,Proliferative,7_Proliferative,1,2,items
+7_Proliferative_run2,7,Proliferative,7_Proliferative,2,0,type
+7_Proliferative_run2,7,Proliferative,7_Proliferative,2,1,minItems
+7_Proliferative_run2,7,Proliferative,7_Proliferative,2,2,items
+8_Gliosis_hypoxia_run2,8,Gliosis-hypoxia,8_Gliosis_hypoxia,2,0,type
+8_Gliosis_hypoxia_run2,8,Gliosis-hypoxia,8_Gliosis_hypoxia,2,1,minItems
+8_Gliosis_hypoxia_run2,8,Gliosis-hypoxia,8_Gliosis_hypoxia,2,2,items
+9_Proliferative_2_run1,9,Proliferative 2,9_Proliferative_2,1,0,type
+9_Proliferative_2_run1,9,Proliferative 2,9_Proliferative_2,1,1,minItems
+9_Proliferative_2_run1,9,Proliferative 2,9_Proliferative_2,1,2,items
+12_NPC_neuronal_like_3_run2,12,NPC-neuronal-like 3,12_NPC_neuronal_like_3,2,0,type
+12_NPC_neuronal_like_3_run2,12,NPC-neuronal-like 3,12_NPC_neuronal_like_3,2,1,minItems
+12_NPC_neuronal_like_3_run2,12,NPC-neuronal-like 3,12_NPC_neuronal_like_3,2,2,items

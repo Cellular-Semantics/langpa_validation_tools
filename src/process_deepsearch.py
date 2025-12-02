@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -178,6 +179,11 @@ def build_parser() -> argparse.ArgumentParser:
         description="Process DeepSearch runs for a project and compute run-pair similarities."
     )
     add_project_argument(parser)
+    parser.add_argument(
+        "--skip-bad",
+        action="store_true",
+        help="Skip malformed run markdown files instead of failing.",
+    )
     return parser
 
 
@@ -212,6 +218,8 @@ def main(argv: Optional[List[str]] = None) -> None:
     invalid_program_rows: List[Dict] = []
     duplicate_rows: List[Dict] = []
 
+    skipped_runs: List[Dict] = []
+
     for _, row in mapping.iterrows():
         folder = paths.deepsearch_dir / row["new_folder"]
         meta = int(row["metamodule"])
@@ -225,6 +233,16 @@ def main(argv: Optional[List[str]] = None) -> None:
             try:
                 data = parse_run(file)
             except Exception as exc:  # noqa: BLE001
+                if args.skip_bad:
+                    skipped_runs.append(
+                        {
+                            "folder": folder.name,
+                            "run_file": file.name,
+                            "error": str(exc),
+                        }
+                    )
+                    print(f"Warning: skipping malformed run file {file} ({exc})", file=sys.stderr)
+                    continue
                 raise RuntimeError(f"Failed parsing {file}") from exc
             run_id = f"{folder.name}_run{idx}"
             signature = compute_signature(data.get("programs", []))
@@ -287,6 +305,12 @@ def main(argv: Optional[List[str]] = None) -> None:
             run_payloads.append({"id": run_id, "programs": program_list, "signature": signature})
 
         # compute similarities between the two runs
+        if len(run_payloads) != 2:
+            if args.skip_bad:
+                print(f"Warning: insufficient valid runs for {folder.name}; skipping similarity computation.", file=sys.stderr)
+                continue
+            raise RuntimeError(f"Insufficient valid runs for {folder.name}")
+
         run_a, run_b = run_payloads
         duplicate_pair = run_a.get("signature") == run_b.get("signature")
         duplicate_rows.append(
@@ -383,6 +407,12 @@ def main(argv: Optional[List[str]] = None) -> None:
     pd.DataFrame(duplicate_rows).to_csv(
         paths.data_dir / "deepsearch_duplicate_runs.csv", index=False
     )
+    if skipped_runs:
+        pd.DataFrame(skipped_runs).to_csv(paths.data_dir / "deepsearch_skipped_runs.csv", index=False)
+        print(
+            f"Skipped {len(skipped_runs)} malformed run files (see {paths.data_dir / 'deepsearch_skipped_runs.csv'}).",
+            file=sys.stderr,
+        )
     print(f"Processed DeepSearch runs for project '{paths.project}' and wrote CSV outputs in {paths.data_dir}.")
 
 

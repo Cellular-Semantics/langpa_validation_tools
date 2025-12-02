@@ -9,6 +9,9 @@ import argparse
 from pathlib import Path
 from typing import Dict, List
 
+import re
+import sys
+
 import pandas as pd
 from .process_deepsearch import parse_run  # type: ignore
 from .project_paths import add_project_argument, resolve_paths
@@ -18,7 +21,13 @@ def load_run_markdown(run_file: Path) -> Dict:
     return parse_run(run_file)
 
 
-def build_citation_map(programs: List[Dict]) -> Dict[str, Dict]:
+def extract_numeric_citations(text: str) -> Dict[str, str]:
+    """Parse simple numeric citation list: '1. http://...\\n2. http://...'. Return id->url."""
+    pattern = re.compile(r"^\\s*(\\d+)\\.\\s*(\\S+)", re.MULTILINE)
+    return {m.group(1): m.group(2) for m in pattern.finditer(text)}
+
+
+def build_citation_map(programs: List[Dict], fallback_urls: Dict[str, str]) -> Dict[str, Dict]:
     """Return a dict of source_id -> citation info."""
     citation_map: Dict[str, Dict] = {}
     for program in programs:
@@ -29,7 +38,16 @@ def build_citation_map(programs: List[Dict]) -> Dict[str, Dict]:
             for entry in entries:
                 if isinstance(entry, dict):
                     cits = entry.get("citation") if section.startswith("atomic") else [entry]
+                elif isinstance(entry, str):
+                    # support simple "1. url" style strings
+                    match = re.match(r"\\s*(\\d+)\\.\\s*(\\S+)", entry)
+                    if match:
+                        cits = [{"source_id": match.group(1), "url": match.group(2)}]
+                    else:
+                        cits = []
                 else:
+                    cits = []
+                if cits is None:
                     cits = []
                 for cit in cits:
                     source_id = (
@@ -37,15 +55,17 @@ def build_citation_map(programs: List[Dict]) -> Dict[str, Dict]:
                     )
                     if not source_id:
                         continue
-                    entry = citation_map.setdefault(
+                    entry_map = citation_map.setdefault(
                         source_id,
-                        {"notes": [], "url": (cit.get("url") or "").strip()},
+                        {"notes": [], "url": (cit.get("url") or fallback_urls.get(source_id, "")).strip()},
                     )
                     note = cit.get("notes", "").strip()
                     if note:
-                        entry["notes"].append(note)
-                    if cit.get("url") and not entry["url"]:
-                        entry["url"] = cit["url"]
+                        entry_map["notes"].append(note)
+                    if cit.get("url") and not entry_map["url"]:
+                        entry_map["url"] = cit["url"]
+                    if not entry_map["url"] and source_id in fallback_urls:
+                        entry_map["url"] = fallback_urls[source_id]
     return citation_map
 
 
@@ -108,7 +128,15 @@ def render_program(program: Dict) -> str:
 
 
 def load_go_tables(data_dir: Path) -> Dict[str, Dict]:
-    table_rows = pd.read_csv(data_dir / "comparison_table_rows.csv")
+    table_path = data_dir / "comparison_table_rows.csv"
+    if not table_path.exists() or table_path.stat().st_size == 0:
+        print(f"Warning: no comparison table rows found at {table_path}; GO sections will be skipped.")
+        return {}
+    try:
+        table_rows = pd.read_csv(table_path)
+    except pd.errors.EmptyDataError:
+        print(f"Warning: empty comparison table at {table_path}; GO sections will be skipped.")
+        return {}
     unmatched_path = data_dir / "comparison_unmatched_go_terms.csv"
     if unmatched_path.exists() and unmatched_path.stat().st_size > 0:
         try:
@@ -139,9 +167,15 @@ def generate_reports(project: str) -> None:
         if len(run_files) != 2:
             continue
         for idx, run_file in enumerate(run_files, start=1):
-            data = load_run_markdown(run_file)
+            try:
+                raw_text = run_file.read_text()
+                data = load_run_markdown(run_file)
+            except Exception as exc:  # noqa: BLE001
+                print(f"Warning: skipping malformed run file {run_file} ({exc})", file=sys.stderr)
+                continue
             programs = data.get("programs", [])
-            citation_map = build_citation_map(programs)
+            fallback_urls = extract_numeric_citations(raw_text)
+            citation_map = build_citation_map(programs, fallback_urls)
             if not citation_map:
                 print(f"Skipping {run_file} due to missing citation source_ids.")
                 continue

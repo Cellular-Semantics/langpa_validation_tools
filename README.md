@@ -23,6 +23,9 @@ python -m src.init_project --project my_project
 # then fill projects/my_project/description.md and geneset_folder_mapping.csv,
 # add runs under deepsearch/my_project/, comparisons under Comparisons/my_project/,
 # and run with PROJECT=my_project make master_report
+
+# If run markdowns are malformed, you can skip bad ones:
+PROJECT=my_project make data SKIP_BAD=1  # or python -m src.process_deepsearch --project my_project --skip-bad
 ```
 Targets: `data` (parse runs), `comparisons` (parse GO tables), `figures`, `heatmaps`, `run_reports`, `master_report`. Environment variables `MPLCONFIGDIR` and `XDG_CACHE_HOME` default to repo-local caches.
 

@@ -2,6 +2,7 @@ PYTHON ?= .venv/bin/python
 # override PYTHON to use an active interpreter, e.g. `PYTHON=$(which python) make ...`
 SYSTEM_PYTHON ?= python3
 PROJECT ?= glioblastoma_perplexity_manual
+SKIP_BAD ?= 1
 MPLCONFIGDIR ?= $(PWD)/.mpl-cache
 XDG_CACHE_HOME ?= $(PWD)/.cache
 ENV_VARS = MPLCONFIGDIR=$(MPLCONFIGDIR) XDG_CACHE_HOME=$(XDG_CACHE_HOME)
@@ -17,7 +18,7 @@ cache_dirs:
 
 .PHONY: data
 data: cache_dirs
-	$(ENV_VARS) $(PYTHON) -m src.process_deepsearch --project $(PROJECT)
+	$(ENV_VARS) $(PYTHON) -m src.process_deepsearch --project $(PROJECT) $(if $(filter 1 true True,$(SKIP_BAD)),--skip-bad,)
 
 .PHONY: comparisons
 comparisons: data cache_dirs

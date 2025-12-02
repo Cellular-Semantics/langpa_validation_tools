@@ -81,8 +81,17 @@ def main(argv=None) -> None:
         data_dir / "deepsearch_programs.csv",
         usecols=["folder", "run_index", "program_index", "program_name", "supporting_genes"],
     )
-    component_map = pd.read_csv(data_dir / "component_mapping.csv")
-    component_matches = pd.read_csv(data_dir / "component_program_matches.csv")
+    comp_map_path = data_dir / "component_mapping.csv"
+    comp_matches_path = data_dir / "component_program_matches.csv"
+    if comp_map_path.exists() and comp_map_path.stat().st_size > 0:
+        component_map = pd.read_csv(comp_map_path)
+    else:
+        print(f"Warning: no component mapping at {comp_map_path}; component coverage will be skipped.")
+        component_map = pd.DataFrame(columns=["folder", "component_token", "annotation", "expanded_name", "component_key"])
+    if comp_matches_path.exists() and comp_matches_path.stat().st_size > 0:
+        component_matches = pd.read_csv(comp_matches_path)
+    else:
+        component_matches = pd.DataFrame(columns=["folder", "component_token", "program_name"])
 
     program_catalog["gene_set"] = program_catalog["supporting_genes"].apply(parse_genes)
     gene_lookup = {

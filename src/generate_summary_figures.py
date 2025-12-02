@@ -57,7 +57,15 @@ def plot_run_consistency(data_dir: Path, out_dir: Path) -> None:
 
 
 def plot_go_coverage(data_dir: Path, out_dir: Path) -> None:
-    summary = pd.read_csv(data_dir / "comparison_summary.csv")
+    summary_path = data_dir / "comparison_summary.csv"
+    if not summary_path.exists() or summary_path.stat().st_size == 0:
+        print(f"Skipping GO coverage plot: no comparison summary at {summary_path}")
+        return
+    try:
+        summary = pd.read_csv(summary_path)
+    except pd.errors.EmptyDataError:
+        print(f"Skipping GO coverage plot: empty comparison summary at {summary_path}")
+        return
     summary["go_match_pct"] = (
         summary["matched_go_terms_estimated"] / summary["total_gsea_terms"] * 100
     )
