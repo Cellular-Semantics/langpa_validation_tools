@@ -103,7 +103,9 @@ def extract_json_block(text: str) -> str:
 
 
 def parse_run(file_path: Path) -> Dict:
-    """Parse a DeepSearch markdown file into a structured dict."""
+    """Parse a DeepSearch markdown or JSON file into a structured dict."""
+    if file_path.suffix.lower() == ".json":
+        return json.loads(file_path.read_text())
     text = file_path.read_text()
     payload = extract_json_block(text)
     payload = re.sub(r'";\s*(?=[}\]])', '"', payload)
@@ -224,7 +226,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         folder = paths.deepsearch_dir / row["new_folder"]
         meta = int(row["metamodule"])
         annotation = row["annotation"]
-        run_files = sorted(folder.glob("*.md"))
+        run_files = sorted(list(folder.glob("*.md")) + list(folder.glob("*.json")))
         if len(run_files) != 2:
             raise RuntimeError(f"Expected 2 run files in {folder}, found {len(run_files)}.")
 
